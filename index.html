@@ -1,0 +1,2199 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regulator.IA Farma — Demo MVP Colombia</title>
+<style>
+  :root{
+    /* Marca Regulator.IA Farma — Navy #1E3A8A · Cobalt #2563EB · Sky #7DD3FC */
+    --navy:#1E3A8A; --cobalt:#2563EB; --sky:#7DD3FC;
+    --bg:#F5F8FC; --surface:#FFFFFF; --surface2:#EDF2F8; --ink:#0A1424; --muted:#54657E;
+    --line:#DCE4F0; --accent:#2563EB; --accent-soft:#E3ECFB; --accent-ink:#FFFFFF;
+    --grad-cta:linear-gradient(135deg,#2563EB,#1E3A8A);
+    /* wordmark en el azul del vertical Farma (patrón DM: cada vertical pinta el wordmark con su matiz) */
+    --wm1:#1E3A8A; --wm2:#2563EB;
+    --ok:#15803D; --ok-bg:#E3F1E8; --warn:#C2410C; --warn-bg:#F8E9DD; --crit:#B91C1C; --crit-bg:#F9E4E2;
+    --pending:#64748B; --pending-bg:#EEF1F5; --progress:#B45309; --progress-bg:#FBF0DE;
+    --info:#1D4ED8; --info-bg:#E3ECFB; --chip:#EDF2F8; --code-bg:#0A1424; --code-ink:#C7DFF8;
+    --shadow:0 1px 2px rgba(10,20,36,.06), 0 4px 16px rgba(10,20,36,.05);
+  }
+  /* Identidad Farma: consola clínica SIEMPRE clara (sidebar blanca, azul Cobalt).
+     Deliberadamente opuesta a la consola oscura/teal del vertical DM. Sin modo oscuro. */
+  :root, :root[data-theme="dark"], :root[data-theme="light"]{color-scheme:light}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:14.5px; line-height:1.5;
+  }
+  .mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+  .num{font-variant-numeric:tabular-nums}
+
+  .shell{display:grid; grid-template-columns:236px 1fr; min-height:100vh}
+  .sidebar{
+    background:var(--surface); border-right:1px solid var(--line);
+    padding:20px 14px; display:flex; flex-direction:column; gap:4px; position:sticky; top:0; height:100vh; overflow-y:auto;
+  }
+  /* logo estilo consola (mismo patrón que DM): wordmark + pill del vertical en una fila */
+  .brand{display:flex; align-items:center; gap:8px; padding:4px 10px 16px}
+  .navlabel{font-size:10.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); padding:14px 10px 4px}
+  .navbtn{
+    display:flex; align-items:center; gap:10px; width:100%; text-align:left; border:0; background:none; color:var(--ink);
+    padding:9px 10px; border-radius:8px; font-size:13.5px; cursor:pointer; font-family:inherit;
+  }
+  .navbtn:hover{background:var(--surface2)}
+  .navbtn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  .navbtn.active{background:var(--accent-soft); color:var(--accent); font-weight:600}
+  .navbtn .ic{width:20px; text-align:center; flex:none}
+  .navbtn .count{margin-left:auto; font-size:11px; background:var(--chip); border-radius:99px; padding:1px 8px; color:var(--muted)}
+  .navbtn.active .count{background:var(--accent); color:var(--accent-ink)}
+  .sidefoot{margin-top:auto; padding:12px 10px; border-top:1px solid var(--line); font-size:11.5px; color:var(--muted)}
+  .sidefoot b{color:var(--ink)}
+
+  .lk-main{
+    font-weight:800;font-size:16.5px;letter-spacing:-.02em;
+    background:linear-gradient(135deg,var(--wm1),var(--wm2));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .lk-sub{
+    display:inline-block;padding:2px 8px;border-radius:20px;
+    background:linear-gradient(135deg,var(--cobalt),var(--navy));color:#fff;
+    font-size:.6rem;font-weight:800;letter-spacing:.08em;
+  }
+  .navlabel.p1{color:var(--info)} .navlabel.p2{color:var(--warn)}
+  .navbtn .pronto{margin-left:auto;font-size:8.5px;font-weight:800;letter-spacing:.07em;color:var(--warn);border:1px solid currentColor;border-radius:5px;padding:1px 5px}
+  .navbtn.is-pronto{opacity:.55;cursor:default}
+  .navbtn.is-pronto:hover{background:none}
+
+  .search{flex:1;max-width:340px;display:flex;align-items:center;gap:8px;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:7px 12px;color:var(--muted);font-size:12.5px}
+  @media (max-width:1050px){.search{display:none}}
+
+  .kpi{position:relative}
+  .sev{position:absolute;top:13px;right:13px;font-size:9px;font-weight:800;letter-spacing:.06em;padding:2px 8px;border-radius:6px}
+  .sev.crit{background:var(--crit-bg);color:var(--crit)}
+  .sev.warnb{background:var(--warn-bg);color:var(--warn)}
+  .sev.mut{background:var(--chip);color:var(--muted)}
+  .kpi .ic{font-size:17px;margin-bottom:6px;display:block}
+
+  .prio{display:flex;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line);align-items:flex-start}
+  .prio:last-child{border-bottom:0}
+  .prio .code{font-size:10.5px;color:var(--muted)}
+  .prio b{font-size:13px;display:block;margin:1px 0}
+  .prio .who{font-size:11.5px;color:var(--muted)}
+  .prio .plazo{margin-left:auto;text-align:right;flex:none}
+  .prio .plazo .pl{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+  .prio .plazo .pv{font-size:12.5px;font-weight:700;white-space:nowrap}
+  .prio .plazo .pv.crit{color:var(--crit)} .prio .plazo .pv.warn{color:var(--warn)}
+
+  .vig-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:12.5px}
+  .vig-row:last-child{border-bottom:0}
+  .vig-row .num{margin-left:auto;font-weight:700}
+  .vig-bar{height:4px;border-radius:99px;background:var(--surface2);flex:1;max-width:120px;overflow:hidden}
+  .vig-bar i{display:block;height:100%;border-radius:99px}
+
+  .donut{position:relative;flex:none}
+  .donut .donut-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;letter-spacing:-.5px}
+  .bk-counters{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
+  .bk-counters div{font-size:12px;color:var(--muted)}
+  .bk-counters b{display:block;font-size:19px;letter-spacing:-.4px;color:var(--ink)}
+  .bk-counters .c-ok b{color:var(--ok)} .bk-counters .c-falt b{color:var(--crit)} .bk-counters .c-borr b{color:var(--warn)} .bk-counters .c-dup b{color:var(--info)}
+
+  .main{min-width:0}
+  .topbar{
+    display:flex; align-items:center; gap:14px; padding:14px 26px; border-bottom:1px solid var(--line);
+    background:linear-gradient(90deg,var(--cobalt),var(--sky)) top/100% 3px no-repeat, var(--surface);
+    position:sticky; top:0; z-index:5;
+  }
+  .topbar h1{font-size:16.5px; margin:0; letter-spacing:-.2px; font-family:"Avenir Next","Segoe UI Variable Display",-apple-system,sans-serif}
+  .ctx{display:flex; gap:8px; margin-left:auto; align-items:center; flex-wrap:wrap}
+  .ctxchip{display:flex; align-items:center; gap:6px; background:var(--chip); border:1px solid var(--line); border-radius:8px; padding:5px 10px; font-size:12px; color:var(--muted)}
+  .ctxchip b{color:var(--ink); font-weight:600}
+  .demo-tag{background:var(--warn-bg); color:var(--warn); border:1px solid transparent; border-radius:8px; padding:5px 10px; font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em}
+
+  .content{padding:26px; max-width:1180px}
+  .view{display:none}
+  .view.active{display:block; animation:fadein .25s ease}
+  @keyframes fadein{from{opacity:0; transform:translateY(4px)}to{opacity:1; transform:none}}
+  /* entrada escalonada de tarjetas al abrir una vista */
+  .view.active > .kpis > .kpi, .view.active > .card, .view.active > .split > .card{animation:cardin .5s cubic-bezier(.2,.7,.3,1) both}
+  .view.active > .kpis > .kpi:nth-child(2){animation-delay:.06s}
+  .view.active > .kpis > .kpi:nth-child(3){animation-delay:.12s}
+  .view.active > .kpis > .kpi:nth-child(4){animation-delay:.18s}
+  .view.active > .card{animation-delay:.1s}
+  .view.active > .split > .card:nth-child(2){animation-delay:.16s}
+  @keyframes cardin{from{opacity:0; transform:translateY(10px)}to{opacity:1; transform:none}}
+  .sev.crit{animation:sevpulse 2.2s ease-in-out infinite}
+  @keyframes sevpulse{0%,100%{opacity:1}50%{opacity:.55}}
+  .vig-bar i{transition:width .7s cubic-bezier(.2,.7,.3,1)}
+  @media (prefers-reduced-motion: reduce){ .view.active,.view.active > .kpis > .kpi,.view.active > .card,.view.active > .split > .card,.sev.crit{animation:none!important} *{transition:none!important} }
+
+  /* gráfico de actividad (SVG) */
+  .chartwrap{position:relative}
+  .chartleg{display:flex;gap:16px;font-size:11.5px;color:var(--muted);margin-bottom:6px}
+  .chartleg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+
+  /* CTA de contratación */
+  .hirecta{
+    background:linear-gradient(160deg,#081D40 0%,var(--navy) 55%,#071B3C 100%);
+    border-radius:14px; padding:28px 30px; color:#fff; margin-bottom:20px;
+    display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+  }
+  .hirecta .hleft{flex:1; min-width:260px}
+  .hirecta h3{margin:0 0 6px; font-size:19px; letter-spacing:-.3px; color:#fff}
+  .hirecta p{margin:0; font-size:13px; color:rgba(255,255,255,.72); max-width:52ch}
+  .hirecta .roi{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+  .hirecta .roi span{background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.18); border-radius:50px; padding:5px 13px; font-size:11.5px; font-weight:700}
+  .hirecta .hbtns{display:flex; flex-direction:column; gap:10px; flex:none}
+  .hirecta .btn-white{background:#fff; color:var(--navy); border:0; border-radius:10px; padding:12px 22px; font-weight:800; font-size:13.5px; cursor:pointer; font-family:inherit}
+  .hirecta .btn-white:hover{transform:translateY(-1px); box-shadow:0 6px 18px rgba(0,0,0,.3)}
+  .hirecta .btn-ghostw{background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.35); border-radius:10px; padding:11px 22px; font-weight:700; font-size:13px; cursor:pointer; font-family:inherit}
+  .hirecta .htag{font-size:10px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--sky); margin-bottom:8px}
+
+  /* urgencia regulatoria */
+  .urgency{display:flex; align-items:center; gap:10px; background:var(--warn-bg); color:var(--warn); border:1px solid rgba(194,65,12,.2); border-radius:10px; padding:9px 14px; font-size:12.5px; font-weight:600; margin-bottom:18px}
+  .urgency b{font-weight:800}
+
+  /* timelines con línea conectora */
+  .feed.timeline .feeditem{position:relative}
+  .feed.timeline .feeditem::before{content:''; position:absolute; left:var(--tl-x,21.5px); top:22px; bottom:-10px; width:2px; background:var(--line)}
+  .feed.timeline .feeditem:last-child::before{display:none}
+  .feed.timeline .dot.crit{box-shadow:0 0 0 4px var(--crit-bg)}
+
+  /* hallazgo nuevo en Scout */
+  @keyframes slideFlash{0%{opacity:0; transform:translateY(-8px); background:var(--accent-soft)}60%{background:var(--accent-soft)}100%{opacity:1; transform:none; background:transparent}}
+  .feeditem.newfind{animation:slideFlash 1.6s ease-out}
+
+  /* transmisión eCTD: flujo vivo */
+  .txflow.sending .txarrow{animation:arrowpulse .9s ease-in-out infinite; color:var(--accent)}
+  @keyframes arrowpulse{0%,100%{opacity:.35}50%{opacity:1; transform:scale(1.15)}}
+  .txnode.okflash{animation:okFlash 1.4s ease-out 1}
+  @keyframes okFlash{0%{background:var(--ok-bg); box-shadow:0 0 0 4px var(--ok-bg)}100%{background:var(--surface2); box-shadow:none}}
+
+  /* calculadora de ahorro */
+  .roi-calc input[type=range]{width:100%; accent-color:var(--accent)}
+  .roi-out{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:12px}
+  .roi-out div{background:var(--surface2); border-radius:10px; padding:12px 14px}
+  .roi-out .lab{font-size:10px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); font-weight:700}
+  .roi-out b{font-size:19px; letter-spacing:-.4px; display:block; margin-top:2px}
+  .roi-out .save b{color:var(--ok)}
+  @media (prefers-reduced-motion: reduce){ .feeditem.newfind,.txflow.sending .txarrow,.txnode.okflash,.sev.crit{animation:none!important} }
+
+  .pagehead{margin:0 0 6px; font-size:21px; letter-spacing:-.3px; font-family:"Avenir Next","Segoe UI Variable Display",-apple-system,sans-serif; text-wrap:balance}
+  .pagesub{color:var(--muted); margin:0 0 22px; max-width:68ch}
+
+  .kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-bottom:22px}
+  .kpi{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px 16px 14px; box-shadow:var(--shadow)}
+  .kpi .lab{font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted)}
+  .kpi .val{font-size:26px; font-weight:700; letter-spacing:-.5px; margin:4px 0 2px}
+  .kpi .sub{font-size:12px; color:var(--muted)}
+  .kpi .sub.ok{color:var(--ok)} .kpi .sub.warn{color:var(--warn)} .kpi .sub.crit{color:var(--crit)}
+
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); margin-bottom:20px; overflow:hidden}
+  .card > .chead{display:flex; align-items:center; gap:10px; padding:14px 18px; border-bottom:1px solid var(--line)}
+  .card > .chead h3{margin:0; font-size:14.5px; letter-spacing:-.1px}
+  .card > .chead .right{margin-left:auto; display:flex; gap:8px; align-items:center}
+  .card > .cbody{padding:18px}
+  .card > .cbody.flush{padding:0}
+
+  table{width:100%; border-collapse:collapse; font-size:13px}
+  th{font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); text-align:left; padding:10px 14px; border-bottom:1px solid var(--line); font-weight:600}
+  td{padding:11px 14px; border-bottom:1px solid var(--line); vertical-align:middle}
+  tr:last-child td{border-bottom:0}
+  tbody tr:hover{background:var(--surface2)}
+  .tscroll{overflow-x:auto}
+  tr.prodrow{cursor:pointer}
+  tr.prodrow.sel td, tr.prodrow.open td{background:var(--accent-soft)}
+  tr.prodrow.sel td:first-child, tr.prodrow.open td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+  tr.prodrow .chev{display:inline-block; color:var(--muted); transition:transform .18s; font-size:11px}
+  tr.prodrow.open .chev{transform:rotate(90deg); color:var(--accent)}
+  tr.proddetail-row td{padding:0; border-bottom:1px solid var(--line)}
+  .proddetail{background:var(--surface2); padding:18px 20px 22px}
+  .proddetail-summary{display:flex; gap:22px; align-items:center; flex-wrap:wrap; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px 18px; margin-bottom:14px}
+  .proddetail-tree{background:var(--surface); border:1px solid var(--line); border-radius:12px; overflow:hidden}
+  .proddetail-tree .chead{padding:12px 16px}
+  .proddetail-tree .chead h4{margin:0; font-size:13.5px}
+  .filterbar{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+  .filterbar input{padding:7px 12px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); font-family:inherit; font-size:13px; min-width:220px}
+  .filterbar input:focus{outline:2px solid var(--accent); outline-offset:-1px}
+
+  .pill{display:inline-flex; align-items:center; gap:5px; border-radius:99px; padding:2.5px 9px; font-size:11.5px; font-weight:600; white-space:nowrap}
+  .pill::before{content:""; width:6px; height:6px; border-radius:99px; background:currentColor}
+  .pill.ok{background:var(--ok-bg); color:var(--ok)}
+  .pill.warn{background:var(--warn-bg); color:var(--warn)}
+  .pill.crit{background:var(--crit-bg); color:var(--crit)}
+  .pill.info{background:var(--info-bg); color:var(--info)}
+  .pill.mut{background:var(--chip); color:var(--muted)}
+  .tag{display:inline-block; background:var(--chip); border:1px solid var(--line); color:var(--muted); border-radius:6px; padding:1px 7px; font-size:11px; font-weight:600}
+
+  .bar{height:6px; background:var(--surface2); border-radius:99px; overflow:hidden; min-width:90px}
+  .bar > i{display:block; height:100%; border-radius:99px; background:var(--accent); transition:width .6s ease}
+  .bar.warn > i{background:var(--warn)} .bar.crit > i{background:var(--crit)}
+  .barrow{display:flex; align-items:center; gap:10px}
+  .barrow .num{font-size:12px; color:var(--muted); width:38px; text-align:right}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); background:var(--surface);
+    color:var(--ink); border-radius:9px; padding:8px 14px; font-size:13px; font-weight:600; cursor:pointer; font-family:inherit;
+  }
+  .btn:hover{background:var(--surface2)}
+  .btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  .btn.primary{background:var(--grad-cta); border-color:transparent; color:#fff}
+  .btn.primary:hover{filter:brightness(1.1); transform:translateY(-1px); box-shadow:0 4px 14px rgba(37,99,235,.35)}
+  .btn:disabled{opacity:.45; cursor:not-allowed}
+  .btn.sm{padding:5px 10px; font-size:12px; border-radius:7px}
+
+  .agents{display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:16px}
+  .agent{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:10px}
+  .agent .top{display:flex; align-items:center; gap:12px}
+  .agent .av{width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:19px; flex:none; background:var(--accent-soft)}
+  .agent .av.fv{background:var(--info-bg)}
+  .agent h4{margin:0; font-size:15px; letter-spacing:-.1px}
+  .agent .src{font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.07em}
+  .agent p{margin:0; color:var(--muted); font-size:13px}
+  .agent .foot{display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; padding-top:6px}
+  .agent .metric{font-size:12px; color:var(--muted)}
+  .agent .metric b{color:var(--ink)}
+
+  .feed{display:flex; flex-direction:column}
+  .feeditem{display:flex; gap:14px; padding:13px 18px; border-bottom:1px solid var(--line)}
+  .feeditem:last-child{border-bottom:0}
+  .feeditem .dot{width:9px; height:9px; border-radius:99px; margin-top:6px; flex:none}
+  .feeditem .dot.crit{background:var(--crit)} .feeditem .dot.warn{background:var(--warn)} .feeditem .dot.info{background:var(--info)} .feeditem .dot.ok{background:var(--ok)}
+  .feeditem b{font-size:13.5px}
+  .feeditem p{margin:2px 0 0; font-size:12.5px; color:var(--muted)}
+  .feeditem .meta{margin-left:auto; text-align:right; flex:none; font-size:11.5px; color:var(--muted); white-space:nowrap}
+
+  .tree{font-size:13px; padding:6px 0}
+  .tnode{border-bottom:1px solid var(--line)}
+  .tnode:last-child{border-bottom:0}
+  .thead{display:flex; align-items:center; gap:10px; padding:11px 18px; cursor:pointer; user-select:none}
+  .thead:hover{background:var(--surface2)}
+  .thead .car{transition:transform .2s; color:var(--muted); font-size:11px; width:12px}
+  .tnode.open .thead .car{transform:rotate(90deg)}
+  .thead .mod{font-weight:700; font-size:13.5px}
+  .thead .role{margin-left:4px}
+  .thead .right{margin-left:auto; display:flex; align-items:center; gap:12px}
+  .tkids{display:none; background:var(--surface2); padding:4px 0}
+  .tnode.open .tkids{display:block}
+  .tdoc{display:flex; align-items:center; gap:10px; padding:7px 18px 7px 44px; font-size:12.5px}
+  .tdoc .name{min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .tdoc .right{margin-left:auto; display:flex; align-items:center; gap:10px; flex:none}
+  .tdoc .fmeta{color:var(--muted); font-size:11px}
+
+  /* Subcarpetas dentro de cada módulo (nivel intermedio: módulo > subcarpeta > documento) */
+  .tsub{border-top:1px dashed var(--line)}
+  .tkids > .tsub:first-child{border-top:0}
+  .tsubhead{display:flex; align-items:center; gap:9px; padding:8px 18px 8px 34px; cursor:pointer; user-select:none; font-size:12.5px}
+  .tsubhead:hover{background:var(--surface)}
+  .tsubhead .car{transition:transform .2s; color:var(--muted); font-size:10px; width:12px}
+  .tsub.open .tsubhead .car{transform:rotate(90deg)}
+  .tsubhead .sfic{color:var(--muted); font-size:12px}
+  .tsubhead .name{font-weight:600}
+  .tsubhead .right{margin-left:auto; display:flex; align-items:center; gap:8px}
+  .tsubkids{display:none; background:var(--surface); padding:2px 0}
+  .tsub.open .tsubkids{display:block}
+  .tsub .tdoc{padding-left:64px}
+  .tsub .tdoc .name.mono{color:var(--muted)}
+
+  /* Estado de documento — pastilla clicable con 4 estados (Pendiente → En proceso → Aprobado → Vencido) */
+  .docstate{border:none; cursor:pointer; font:inherit; font-size:11px; font-weight:700; padding:3px 11px; border-radius:999px; white-space:nowrap; transition:transform .12s ease}
+  .docstate:hover{transform:translateY(-1px)}
+  .docstate:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  .docstate-pending{background:var(--pending-bg); color:var(--pending)}
+  .docstate-progress{background:var(--progress-bg); color:var(--progress)}
+  .docstate-ok{background:var(--ok-bg); color:var(--ok)}
+  .docstate-late{background:var(--crit-bg); color:var(--crit)}
+  .modmissing{padding:2px 18px 9px 44px; font-size:11.5px; color:var(--warn); display:none}
+  .modmissing b{color:inherit}
+
+  /* Monitor (ConkoSafe IA) */
+  .pavs-hero{background:linear-gradient(135deg,#0B2E6B,#1D5FD6); color:#fff; border-radius:14px; padding:20px 24px; margin-bottom:18px; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:14px}
+  .pavs-hero h2{margin:0; font-size:19px; color:#fff; letter-spacing:-.2px}
+  .pavs-hero .sub{font-size:11.5px; opacity:.82; margin-top:4px}
+  .pavs-hero .right{display:flex; gap:8px; flex-wrap:wrap}
+  .pavs-hero .btn{background:rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.35)}
+  .pavs-hero .btn:hover{background:rgba(255,255,255,.24)}
+  .pavs-note{font-size:11.5px; color:var(--muted); background:var(--surface2); border:1px solid var(--line); border-radius:10px; padding:9px 14px; margin-bottom:16px}
+  .pavs-filters{display:grid; grid-template-columns:2fr repeat(4,1fr); gap:10px}
+  .pavs-filters label{font-size:10px; text-transform:uppercase; letter-spacing:.03em; color:var(--muted); display:block; margin-bottom:4px}
+  .pavs-filters input, .pavs-filters select{width:100%; padding:7px 10px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); font-family:inherit; font-size:12.5px}
+  .pavs-filters2{display:flex; gap:10px; align-items:flex-end; margin-top:12px; flex-wrap:wrap}
+  .pavs-filters2 label{font-size:10px; text-transform:uppercase; letter-spacing:.03em; color:var(--muted); display:block; margin-bottom:4px}
+  .pavs-filters2 select{padding:7px 10px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); font-family:inherit; font-size:12.5px; min-width:160px}
+  .pavs-stats{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:18px 0}
+  .pavs-stat{background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:12px 16px}
+  .pavs-stat .n{font-size:24px; font-weight:800; line-height:1.1}
+  .pavs-stat .l{font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.03em; margin-top:2px}
+  .pavs-chart-row{display:flex; align-items:center; gap:8px; margin:7px 0; font-size:11.5px}
+  .pavs-chart-row .yl{width:78px; color:var(--muted); flex:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .pavs-chart-row .bwrap{flex:1; background:var(--surface2); border-radius:6px; height:13px; overflow:hidden}
+  .pavs-chart-row .bfill{height:100%; background:linear-gradient(90deg,#2563EB,#7DD3FC); border-radius:6px}
+  .pavs-chart-row .vv{width:36px; text-align:right; color:var(--ink); font-weight:700; flex:none}
+  .tipo-chip{display:inline-block; padding:2px 8px; border-radius:6px; font-size:10px; font-weight:700; white-space:nowrap}
+  .tipo-falsificacion{background:var(--crit-bg); color:var(--crit)}
+  .tipo-calidad{background:var(--pending-bg); color:var(--pending)}
+  .tipo-seguridad{background:var(--progress-bg); color:var(--progress)}
+  .tipo-retiro{background:var(--warn-bg); color:var(--warn)}
+  .tipo-desabastecimiento{background:var(--ok-bg); color:var(--ok)}
+  table.pavs-table{font-size:11.5px}
+  table.pavs-table th{white-space:nowrap}
+  table.pavs-table td{vertical-align:top}
+
+  .steps{display:flex; gap:0; border-bottom:1px solid var(--line); background:var(--surface)}
+  .step{
+    flex:1; border:0; background:none; font-family:inherit; cursor:pointer; padding:13px 10px 11px; font-size:12.5px;
+    color:var(--muted); border-bottom:2px solid transparent; display:flex; flex-direction:column; align-items:center; gap:3px;
+  }
+  .step .n{width:22px; height:22px; border-radius:99px; background:var(--surface2); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700}
+  .step.active{color:var(--accent); border-bottom-color:var(--accent); font-weight:600}
+  .step.active .n{background:var(--accent); color:var(--accent-ink)}
+  .step.done .n{background:var(--ok-bg); color:var(--ok)}
+  .step:focus-visible{outline:2px solid var(--accent); outline-offset:-2px}
+  .stepbody{display:none; padding:20px}
+  .stepbody.active{display:block; animation:fadein .2s ease}
+
+  .frm{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px}
+  .field label{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); margin-bottom:5px; font-weight:600}
+  .field select,.field input{
+    width:100%; padding:9px 10px; border:1px solid var(--line); border-radius:8px; background:var(--surface);
+    color:var(--ink); font-family:inherit; font-size:13.5px;
+  }
+  .field select:focus,.field input:focus{outline:2px solid var(--accent); outline-offset:-1px}
+  .note{background:var(--info-bg); color:var(--info); border-radius:9px; padding:11px 14px; font-size:12.5px; margin-top:16px}
+  .note.warn{background:var(--warn-bg); color:var(--warn)}
+  .note b{font-weight:700}
+
+  .checks{display:flex; flex-direction:column; gap:0}
+  .check{display:flex; align-items:center; gap:12px; padding:10px 4px; border-bottom:1px dashed var(--line); font-size:13px}
+  .check:last-child{border-bottom:0}
+  .check .st{width:22px; height:22px; border-radius:99px; flex:none; display:flex; align-items:center; justify-content:center; font-size:12px; background:var(--surface2); color:var(--muted)}
+  .check.pass .st{background:var(--ok-bg); color:var(--ok)}
+  .check.fail .st{background:var(--crit-bg); color:var(--crit)}
+  .check.warnst .st{background:var(--warn-bg); color:var(--warn)}
+  .check.running .st{background:var(--info-bg); color:var(--info)}
+  .check .desc{color:var(--muted); font-size:12px}
+  .check .right{margin-left:auto; flex:none}
+  .spin{display:inline-block; width:12px; height:12px; border:2px solid var(--info); border-top-color:transparent; border-radius:99px; animation:rot .7s linear infinite}
+  @keyframes rot{to{transform:rotate(360deg)}}
+
+  pre.code{
+    background:var(--code-bg); color:var(--code-ink); border-radius:10px; padding:16px 18px; overflow-x:auto;
+    font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:12px; line-height:1.65; margin:0;
+  }
+  pre.code .tagx{color:#7FB8E8} pre.code .att{color:#E3C57E} pre.code .val{color:#D8A2E0} pre.code .cm{color:#5B7699}
+
+  .txflow{display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:10px; align-items:stretch; margin-bottom:18px}
+  .txnode{background:var(--surface2); border:1px solid var(--line); border-radius:10px; padding:13px; text-align:center}
+  .txnode b{display:block; font-size:13px}
+  .txnode span{font-size:11.5px; color:var(--muted)}
+  .txarrow{display:flex; align-items:center; color:var(--muted); font-size:16px}
+  .txlog{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:12px; background:var(--code-bg); color:var(--code-ink); border-radius:10px; padding:14px 16px; min-height:130px; overflow-x:auto}
+  .txlog .ok{color:#6FD3A8} .txlog .dim{color:#5B7699}
+
+  .split{display:grid; grid-template-columns:1fr 1fr; gap:20px}
+  @media (max-width:980px){ .split{grid-template-columns:1fr} .txflow{grid-template-columns:1fr; } .txarrow{transform:rotate(90deg); justify-content:center} }
+  @media (max-width:860px){
+    .shell{grid-template-columns:1fr}
+    .sidebar{position:static; height:auto; flex-direction:row; flex-wrap:wrap; align-items:center; border-right:0; border-bottom:1px solid var(--line)}
+    .brand{padding-bottom:4px} .navlabel,.sidefoot{display:none}
+    .content{padding:18px}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <nav class="sidebar" aria-label="Navegación principal">
+    <div class="brand"><span class="lk-main">Regulator.IA</span><span class="lk-sub">FARMA</span></div>
+    <button class="navbtn active" data-view="dash"><span class="ic">◫</span> Dashboard</button>
+    <button class="navbtn" data-view="agents"><span class="ic">⬡</span> Agentes <span class="count">6</span></button>
+    <div class="navlabel p1">● Fase I — Registro sanitario</div>
+    <button class="navbtn" data-view="binder"><span class="ic">🗂</span> Binder <span class="count">22</span></button>
+    <button class="navbtn" data-view="ectd"><span class="ic">⧉</span> Constructor eCTD</button>
+    <button class="navbtn" data-view="agent-scout"><span class="ic">🛰</span> Scout</button>
+    <button class="navbtn" data-view="agent-compass"><span class="ic">🧭</span> Compass</button>
+    <button class="navbtn is-pronto" type="button" aria-disabled="true"><span class="ic">✅</span> Auditor <span class="pronto">PRONTO</span></button>
+    <button class="navbtn is-pronto" type="button" aria-disabled="true"><span class="ic">🏷</span> Scribe <span class="pronto">PRONTO</span></button>
+    <div class="navlabel p2">● Fase II — Farmacovigilancia</div>
+    <button class="navbtn" data-view="pavs-monitor"><span class="ic">⚠</span> Conkosafe IA <span class="count">7</span></button>
+    <button class="navbtn" data-view="agent-adr"><span class="ic">📋</span> ALESSA Database</button>
+    <button class="navbtn" data-view="agent-ips"><span class="ic">⚖️</span> ALESSA IPS</button>
+    <div class="sidefoot">
+      <b>Laboratorios Andina S.A.S.</b><br>Bogotá · Colombia<br>6 países · CO · PE · AR · CL · MX · ES
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="topbar">
+      <h1 id="viewtitle">Dashboard</h1>
+      <div class="search">🔍 Buscar en el dossier…</div>
+      <div class="ctx">
+        <span class="ctxchip">Autoridad <b>INVIMA · CO</b></span>
+        <span class="ctxchip">Usuario <b>Dir. Asuntos Regulatorios</b></span>
+        <span class="demo-tag">Demo · datos simulados</span>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- ============ PANEL ============ -->
+      <section class="view active" id="view-dash">
+        <div style="display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:20px">
+          <div style="flex:1;min-width:260px">
+            <div style="font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;align-items:center">Panel operacional <span class="tag" style="color:var(--warn)">Datos de demostración</span></div>
+            <h2 class="pagehead" style="margin:6px 0 4px">Resumen del Sistema</h2>
+            <div style="font-size:12px;color:var(--muted)">⟳ Última sincronización: 27-08-2026 · 08:40 · Laboratorios Andina S.A.S.</div>
+          </div>
+          <div style="display:flex;gap:10px"><button class="btn">Exportar resumen</button><button class="btn primary">Nueva evaluación</button></div>
+        </div>
+
+        <div class="urgency">⏳ <span><b>CTD obligatorio en Colombia</b> — Circular Externa 1000-0017-2026 en vigencia. Quedan <b id="cd-dias" class="num">—</b> días de la ventana de transición estimada (01-dic-2026), y hay ~250 plantas en la misma carrera.</span><button class="btn sm" data-open="binder" style="margin-left:auto;flex:none">Ver mi brecha CTD →</button></div>
+
+        <div class="kpis">
+          <div class="kpi"><span class="sev warnb">Atención</span><span class="ic">🗂</span><div class="lab">Registros en cartera</div><div class="val num">22</div><div class="sub">dossiers CTD · 2 vencen en menos de 90 días</div></div>
+          <div class="kpi"><span class="sev warnb">Atención</span><span class="ic">🛰</span><div class="lab">Señales regulatorias</div><div class="val num">14</div><div class="sub">eventos vivos · 2 críticas · 52 fuentes vigiladas</div></div>
+          <div class="kpi"><span class="sev crit">Crítico</span><span class="ic">🚨</span><div class="lab">Alertas de farmacovigilancia</div><div class="val num">7</div><div class="sub crit">1 con obligación de reporte en 72 h</div></div>
+          <div class="kpi"><span class="sev crit">Crítico</span><span class="ic">📨</span><div class="lab">Requerimientos de autoridad</div><div class="val num">3</div><div class="sub">expedientes · el plazo más corto vence en 5 días hábiles</div></div>
+        </div>
+
+        <div class="split" style="grid-template-columns:1.5fr 1fr">
+          <div class="card">
+            <div class="chead"><h3>Acciones prioritarias</h3><div class="right"><span class="tag">ordenadas por plazo real</span></div></div>
+            <div class="cbody flush">
+              <div class="prio"><span class="pill crit">Crítico</span><div><span class="code mono">FDA ALR-2026-0412</span><b>Evaluar impacto NDMA y reportar a INVIMA</b><span class="who">Losartán Andina · API Hetero Labs · Responsable: QPPV</span></div><div class="plazo"><div class="pl">Plazo</div><div class="pv crit">61 horas</div></div></div>
+              <div class="prio"><span class="pill crit">Crítico</span><div><span class="code mono">INVIMA REQ-2026-08-1174</span><b>Responder requerimiento: validación de método analítico (M3.2.P.4)</b><span class="who">Amoxicilina MK · Responsable: Dir. Asuntos Regulatorios</span></div><div class="plazo"><div class="pl">Plazo</div><div class="pv crit">5 días hábiles</div></div></div>
+              <div class="prio"><span class="pill crit">Crítico</span><div><span class="code mono">ADR-2026-0187</span><b>Confirmar causalidad y reportar caso grave en formato E2B</b><span class="who">Amoxicilina MK · anafilaxia · Responsable: QPPV</span></div><div class="plazo"><div class="pl">Plazo</div><div class="pv crit">9 días</div></div></div>
+              <div class="prio"><span class="pill warn">Atención</span><div><span class="code mono">eCTD M1.5</span><b>Cargar comprobante de pago de tarifa — bloquea la transmisión</b><span class="who">Amoxicilina MK · secuencia 0000 lista para validar</span></div><div class="plazo"><div class="pl">Hito</div><div class="pv warn">antes de transmitir</div></div></div>
+              <div class="prio"><span class="pill warn">Atención</span><div><span class="code mono">M3.2.S</span><b>Renovar CoA del estándar de referencia</b><span class="who">Losartán Andina · esperando laboratorio</span></div><div class="plazo"><div class="pl">Vence</div><div class="pv warn">12-sep · 16 días</div></div></div>
+              <div class="prio"><span class="pill warn">Atención</span><div><span class="code mono">IPS S1-2026</span><b>Firma del epidemiólogo pendiente en informe de seguridad</b><span class="who">Losartán Andina · Dra. C. Mendoza</span></div><div class="plazo"><div class="pl">Ciclo</div><div class="pv warn">10 días</div></div></div>
+              <div class="prio"><span class="pill mut">Seguimiento</span><div><span class="code mono">DIGEMID · consulta</span><b>Comentar proyecto de intercambiabilidad (incluye metformina)</b><span class="who">Metformina Andina PE · consulta pública</span></div><div class="plazo"><div class="pl">Cierra</div><div class="pv">30-sep</div></div></div>
+              <div class="prio"><span class="pill mut">Seguimiento</span><div><span class="code mono">RENOV</span><b>Iniciar expediente de renovación</b><span class="who">Loratadina Andina · registro vence en 2027</span></div><div class="plazo"><div class="pl">Ventana</div><div class="pv">65 días</div></div></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="chead"><h3>Cartera de registros</h3><div class="right"><span class="tag">vigencia</span></div></div>
+            <div class="cbody">
+              <div style="font-size:26px;font-weight:800;letter-spacing:-.5px">22 <span style="font-size:12.5px;font-weight:600;color:var(--muted)">registros y trámites</span></div>
+              <div style="margin-top:10px">
+                <div class="vig-row"><span>Vence en menos de 90 días</span><div class="vig-bar"><i style="width:14%;background:var(--crit)"></i></div><span class="num">2</span></div>
+                <div class="vig-row"><span>Vence dentro del año</span><div class="vig-bar"><i style="width:30%;background:var(--warn)"></i></div><span class="num">5</span></div>
+                <div class="vig-row"><span>Vigente</span><div class="vig-bar"><i style="width:60%;background:var(--ok)"></i></div><span class="num">13</span></div>
+                <div class="vig-row"><span>En trámite (sec. 0000)</span><div class="vig-bar"><i style="width:16%;background:var(--accent)"></i></div><span class="num">2</span></div>
+              </div>
+              <div style="margin-top:16px"><button class="btn sm primary" data-open="binder">Abrir Binder →</button></div>
+              <div style="margin-top:18px;border-top:1px solid var(--line);padding-top:14px">
+                <div class="lab" style="font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700;margin-bottom:8px">Métricas de cartera</div>
+                <div class="vig-row" style="border:0;padding:4px 0"><span>Completitud promedio CTD</span><span class="num">78%</span></div>
+                <div class="vig-row" style="border:0;padding:4px 0"><span>Fuentes vigiladas por Scout</span><span class="num">52</span></div>
+                <div class="vig-row" style="border:0;padding:4px 0"><span>Casos ADR asociados (30 d)</span><span class="num">41</span></div>
+                <div class="vig-row" style="border:0;padding:4px 0"><span>Duplicados bloqueados</span><span class="num">3</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="chead"><h3>Requerimientos de autoridad en curso</h3><div class="right"><span class="tag">3 expedientes · borradores del agente Defender</span></div></div>
+          <div class="cbody flush tscroll">
+            <table>
+              <thead><tr><th>Auto / oficio</th><th>Producto</th><th>Módulo cuestionado</th><th>Base legal del plazo</th><th>Plazo</th><th>Respuesta</th></tr></thead>
+              <tbody>
+                <tr><td class="mono">Auto 20260081174 · 21-ago</td><td>Amoxicilina MK 🇨🇴</td><td class="mono">M3.2.P.4</td><td>10 días hábiles · Dec. 677/1995</td><td><span class="pill crit">5 días hábiles</span></td><td><div class="barrow"><div class="bar warn"><i style="width:60%"></i></div><span class="num">60%</span></div><span style="font-size:11px;color:var(--muted)">Borrador IA · en revisión del químico</span></td></tr>
+                <tr><td class="mono">Oficio DIGEMID 3312-2026 · 14-ago</td><td>Metformina Andina 🇵🇪</td><td class="mono">M3.2.P.8</td><td>30 días · D.S. 016-2011-SA</td><td><span class="pill warn">17 días</span></td><td><div class="barrow"><div class="bar"><i style="width:85%"></i></div><span class="num">85%</span></div><span style="font-size:11px;color:var(--muted)">Listo para firma del director técnico</span></td></tr>
+                <tr><td class="mono">Requerimiento ANMAT · 05-ago</td><td>Amlodipino MK 🇦🇷</td><td class="mono">M1 · rotulado</td><td>30 días hábiles · Dec. 150/92</td><td><span class="pill mut">26 días</span></td><td><div class="barrow"><div class="bar"><i style="width:100%"></i></div><span class="num">100%</span></div><span style="font-size:11px;color:var(--muted)">Respondido como secuencia 0001 (replace)</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="chead"><h3>Actividad regulatoria · últimas 12 semanas</h3><div class="right"><span class="tag">detectada por Scout y Conkosafe IA</span></div></div>
+          <div class="cbody chartwrap">
+            <div class="chartleg"><span><i style="background:var(--accent)"></i>Señales normativas</span><span><i style="background:var(--crit)"></i>Alertas de farmacovigilancia</span><span><i style="background:var(--ok)"></i>Documentos completados</span></div>
+            <svg viewBox="0 0 720 150" width="100%" height="150" role="img" aria-label="Actividad regulatoria de las últimas 12 semanas">
+              <g stroke="var(--line)" stroke-width="1">
+                <line x1="0" y1="30" x2="720" y2="30"/><line x1="0" y1="70" x2="720" y2="70"/><line x1="0" y1="110" x2="720" y2="110"/>
+              </g>
+              <polygon fill="rgba(37,99,235,.10)" points="0,150 0,96 60,90 120,98 180,80 240,84 300,66 360,72 420,55 480,60 540,44 600,50 660,34 720,38 720,150"/>
+              <polyline fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round" points="0,96 60,90 120,98 180,80 240,84 300,66 360,72 420,55 480,60 540,44 600,50 660,34 720,38"/>
+              <polyline fill="none" stroke="var(--crit)" stroke-width="2" stroke-dasharray="1 0" stroke-linejoin="round" points="0,128 60,124 120,130 180,120 240,126 300,114 360,122 420,108 480,118 540,102 600,112 660,96 720,104"/>
+              <polyline fill="none" stroke="var(--ok)" stroke-width="2" stroke-linejoin="round" points="0,140 60,132 120,126 180,118 240,108 300,100 360,88 420,82 480,70 540,64 600,52 660,46 720,36"/>
+              <circle cx="660" cy="34" r="4" fill="var(--accent)"/>
+              <circle cx="660" cy="96" r="3.5" fill="var(--crit)"/>
+              <text x="655" y="22" font-size="11" font-weight="700" fill="var(--accent)" text-anchor="end">+14 esta semana</text>
+            </svg>
+            <p style="margin:8px 0 0;font-size:12px;color:var(--muted)">El repunte de señales coincide con la adopción del CTD por INVIMA (Circular 1000-0017-2026). Los documentos completados crecen porque Binder hereda entre dossiers en lugar de recargar.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="chead"><h3>Cobertura regulatoria · 6 países</h3><div class="right"><span class="tag">22 registros y trámites</span></div></div>
+          <div class="cbody" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px">
+            <div style="background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center">
+              <div style="font-size:26px">🇨🇴</div><b style="font-size:13.5px">INVIMA</b><div style="font-size:11px;color:var(--muted)">Colombia</div>
+              <div class="num" style="font-size:21px;font-weight:800;margin:4px 0 6px">13</div><span class="pill ok">Mercado base</span>
+            </div>
+            <div style="background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center">
+              <div style="font-size:26px">🇵🇪</div><b style="font-size:13.5px">DIGEMID</b><div style="font-size:11px;color:var(--muted)">Perú</div>
+              <div class="num" style="font-size:21px;font-weight:800;margin:4px 0 6px">2</div><span class="pill info">Piloto</span>
+            </div>
+            <div style="background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center">
+              <div style="font-size:26px">🇦🇷</div><b style="font-size:13.5px">ANMAT</b><div style="font-size:11px;color:var(--muted)">Argentina</div>
+              <div class="num" style="font-size:21px;font-weight:800;margin:4px 0 6px">2</div><span class="pill ok">Activo</span>
+            </div>
+            <div style="background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center">
+              <div style="font-size:26px">🇨🇱</div><b style="font-size:13.5px">ISP</b><div style="font-size:11px;color:var(--muted)">Chile</div>
+              <div class="num" style="font-size:21px;font-weight:800;margin:4px 0 6px">2</div><span class="pill ok">Activo</span>
+            </div>
+            <div style="background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center">
+              <div style="font-size:26px">🇲🇽</div><b style="font-size:13.5px">COFEPRIS</b><div style="font-size:11px;color:var(--muted)">México</div>
+              <div class="num" style="font-size:21px;font-weight:800;margin:4px 0 6px">2</div><span class="pill ok">Activo</span>
+            </div>
+            <div style="background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center">
+              <div style="font-size:26px">🇪🇸</div><b style="font-size:13.5px">AEMPS</b><div style="font-size:11px;color:var(--muted)">España</div>
+              <div class="num" style="font-size:21px;font-weight:800;margin:4px 0 6px">1</div><span class="pill warn">Exportación</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="chead"><h3>Productos y estado de registro</h3><div class="right"><span class="tag">CO · PE · AR · CL · MX · ES</span></div></div>
+          <div class="cbody flush tscroll">
+            <table>
+              <thead><tr><th>Producto</th><th>Forma / concentración</th><th>Trámite</th><th>País</th><th>Completitud CTD</th><th>Estado</th><th>Próximo hito</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><b>Amoxicilina MK</b></td><td>Tabletas 500 mg</td><td>Registro nuevo</td><td>🇨🇴 INVIMA</td>
+                  <td><div class="barrow"><div class="bar"><i style="width:92%"></i></div><span class="num">92%</span></div></td>
+                  <td><span class="pill ok">Listo p/ validar</span></td><td>Ensamble eCTD · sec. 0000</td>
+                </tr>
+                <tr>
+                  <td><b>Losartán Andina</b></td><td>Tabletas 50 mg</td><td>Renovación</td><td>🇨🇴 INVIMA</td>
+                  <td><div class="barrow"><div class="bar"><i style="width:81%"></i></div><span class="num">81%</span></div></td>
+                  <td><span class="pill warn">Docs por vencer</span></td><td>CoA lote piloto vence 12-sep</td>
+                </tr>
+                <tr>
+                  <td><b>Metformina Andina</b></td><td>Tabletas 850 mg</td><td>Registro nuevo</td><td>🇵🇪 DIGEMID</td>
+                  <td><div class="barrow"><div class="bar warn"><i style="width:64%"></i></div><span class="num">64%</span></div></td>
+                  <td><span class="pill info">En construcción</span></td><td>Faltan estudios M4 (2)</td>
+                </tr>
+                <tr>
+                  <td><b>Atorvastatina MK</b></td><td>Tabletas 20 mg</td><td>Registro nuevo</td><td>🇨🇴 INVIMA</td>
+                  <td><div class="barrow"><div class="bar"><i style="width:100%"></i></div><span class="num">100%</span></div></td>
+                  <td><span class="pill ok">Transmitido</span></td><td>Radicado 2026-07-098114 · resp. est. oct-2026</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="card">
+            <div class="chead"><h3>Actividad de agentes (últimas 24 h)</h3></div>
+            <div class="cbody flush feed">
+              <div class="feeditem"><span class="dot info"></span><div><b>Scout</b> detectó actualización normativa INVIMA<p>Circular sobre codificación de excipientes en etiquetado. Impacto estimado: 2 dossiers.</p></div><div class="meta">hace 2 h</div></div>
+              <div class="feeditem"><span class="dot warn"></span><div><b>Binder</b> marcó documento por vencer<p>CoA estándar de referencia (M3) de Losartán vence en 29 días.</p></div><div class="meta">hace 5 h</div></div>
+              <div class="feeditem"><span class="dot ok"></span><div><b>Binder</b> bloqueó carga duplicada<p>«Validación de método analítico v2.pdf» ya existe en M3.2.P.4 con checksum idéntico.</p></div><div class="meta">hace 9 h</div></div>
+              <div class="feeditem"><span class="dot crit"></span><div><b>ConkosadeIA</b> insertó alerta sanitaria FDA<p>Retiro voluntario de lotes de losartán por impureza NDMA en un fabricante de API de la India.</p></div><div class="meta">hace 11 h</div></div>
+              <div class="feeditem"><span class="dot info"></span><div><b>Compass</b> recalculó requisitos DIGEMID<p>Metformina PE: se agregó requisito de estudio de estabilidad zona IVb.</p></div><div class="meta">ayer</div></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="chead"><h3>Vencimientos próximos</h3><div class="right"><span class="tag">90 días</span></div></div>
+            <div class="cbody flush tscroll">
+              <table>
+                <thead><tr><th>Documento</th><th>Dossier</th><th>Módulo</th><th>Vence</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td>CoA estándar de referencia</td><td>Losartán CO</td><td class="mono">M3.2.S</td><td class="num">12-sep-26</td><td><span class="pill crit">29 días</span></td></tr>
+                  <tr><td>BPM planta API (agencia origen)</td><td>Losartán CO</td><td class="mono">M1</td><td class="num">30-sep-26</td><td><span class="pill crit">47 días</span></td></tr>
+                  <tr><td>Certificado de venta libre (CPP)</td><td>Metformina PE</td><td class="mono">M1</td><td class="num">18-oct-26</td><td><span class="pill warn">65 días</span></td></tr>
+                  <tr><td>Estabilidad acelerada 6M</td><td>Amoxicilina CO</td><td class="mono">M3.2.P</td><td class="num">02-nov-26</td><td><span class="pill warn">80 días</span></td></tr>
+                  <tr><td>Poder de representación legal</td><td>Atorvastatina CO</td><td class="mono">M1</td><td class="num">09-nov-26</td><td><span class="pill mut">87 días</span></td></tr>
+                  <tr><td>Certificado BPF del fabricante (ANMAT)</td><td>Amlodipino AR</td><td class="mono">M1</td><td class="num">15-nov-26</td><td><span class="pill mut">93 días</span></td></tr>
+                  <tr><td>Carta de acceso al ASMF del API</td><td>Salbutamol ES</td><td class="mono">M3.2.S</td><td class="num">28-nov-26</td><td><span class="pill mut">106 días</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="card roi-calc">
+          <div class="chead"><h3>Calcula tu ahorro anual</h3><div class="right"><span class="tag">estimación de demo vs. suite enterprise</span></div></div>
+          <div class="cbody">
+            <label for="roi-n" style="font-size:12.5px;color:var(--muted)">Dossiers activos en tu portafolio: <b id="roi-nval" class="num" style="color:var(--ink)">22</b></label>
+            <input type="range" id="roi-n" min="5" max="80" value="22" step="1">
+            <div class="roi-out">
+              <div><span class="lab">Suite enterprise (est.)</span><b class="num" id="roi-vv">US$83.000/año</b></div>
+              <div><span class="lab">Regulator.IA Farma (est.)</span><b class="num" id="roi-us">US$8.500/año</b></div>
+              <div class="save"><span class="lab">Ahorro estimado</span><b class="num" id="roi-save">US$74.500 · 90%</b></div>
+            </div>
+            <p style="margin:10px 0 0;font-size:11.5px;color:var(--muted)">Estimación referencial para comparar órdenes de magnitud (licencia + implementación prorrateada + validación anual). El precio final se cotiza por agentes, países y volumen.</p>
+          </div>
+        </div>
+
+        <div class="hirecta">
+          <div class="hleft">
+            <div class="htag">Colombia exige CTD desde 2026 — Circular Externa 1000-0017-2026</div>
+            <h3>Arma tu primer dossier CTD esta misma semana</h3>
+            <p>Sube tu archivo actual y los agentes lo clasifican contra el esqueleto de tu autoridad. Sin costo de implementación, con hipercare de 30–60 días y validación auditada por terceros.</p>
+            <div class="roi"><span>−80% tiempo de armado</span><span>4× más rápido compilando</span><span>&lt;2% de errores</span><span>Desde US$3.000/año</span></div>
+          </div>
+          <div class="hbtns">
+            <button class="btn-white" id="btn-hire">📅 Agenda una demo con tu portafolio</button>
+            <button class="btn-ghostw" data-open="agents">Conoce a los 6 agentes →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ AGENTES ============ -->
+      <section class="view" id="view-agents">
+        <h2 class="pagehead">Seis agentes, un solo flujo regulatorio</h2>
+        <p class="pagesub">Cada uno se contrata de forma modular.</p>
+
+        <div class="agents">
+          <div class="agent">
+            <div class="top"><div class="av">🛰</div><div><h4>Scout Farma</h4><div class="src">Regulator.IA · Inteligencia regulatoria</div></div></div>
+            <p>52 fuentes farmacéuticas en 6 países — INVIMA, DIGEMID, ANMAT, ISP, COFEPRIS y AEMPS (normatividad, alertas, listados de bioequivalencia) más agencias de referencia. Predice cambios: lo que EMA/FDA mueven hoy llega a LatAm en ~6 meses.</p>
+            <div class="metric">Fuentes farma activas <b class="num">52</b> · Cambios detectados este mes <b class="num">14</b></div>
+            <div class="foot"><span class="pill ok">Operativo</span><span class="tag">CO · PE · AR · CL · MX · ES</span><button class="btn sm primary" data-open="agent-scout" style="margin-left:auto">Ver mockup →</button></div>
+          </div>
+          <div class="agent">
+            <div class="top"><div class="av">🧭</div><div><h4>Compass Farma</h4><div class="src">Regulator.IA · Diagnóstico de requisitos</div></div></div>
+            <p>Árbol de decisión determinista: requisitos por país, vía de trámite (registro nuevo, renovación, variación) y tipo de producto (síntesis química, biológico). Genera la lista exacta de documentos que Binder usa como esqueleto del CTD.</p>
+            <div class="metric">Países configurados <b>CO · PE · AR · CL · MX · ES</b> · Vías de trámite <b class="num">5</b></div>
+            <div class="foot"><span class="pill ok">Operativo</span><span class="tag">Determinista</span><button class="btn sm primary" data-open="agent-compass" style="margin-left:auto">Ver mockup →</button></div>
+          </div>
+          <div class="agent">
+            <div class="top"><div class="av">🗂</div><div><h4>Binder Farma</h4><div class="src">Regulator.IA · Gestor documental CTD</div></div></div>
+            <p>Clasifica y organiza los 5 módulos con accesos por rol. Detecta duplicidad por checksum y contenido (MD), mide completitud en tiempo real y alerta vencimientos.</p>
+            <div class="metric">Docs gestionados <b class="num">412</b> · Duplicados evitados <b class="num">3</b></div>
+            <div class="foot"><span class="pill ok">Operativo</span><span class="tag">Depende de Compass</span><button class="btn sm primary" data-open="binder" style="margin-left:auto">Ver mockup →</button></div>
+          </div>
+          <div class="agent">
+            <div class="top"><div class="av fv">🚨</div><div><h4>Conkosafe IA · Alertas</h4><div class="src">API socio · Farmacovigilancia</div></div></div>
+            <p>Monitorea alertas sanitarias en países de alta vigilancia (FDA, EMA, INVIMA, DIGEMID) e inserta automáticamente las que afectan a tu portafolio: retiros, falsificaciones, desabastecimiento.</p>
+            <div class="metric">Alertas insertadas (30 d) <b class="num">23</b> · Relevantes <b class="num">7</b></div>
+            <div class="foot"><span class="pill ok">Conectado vía API</span><a class="btn sm" href="https://ia.conkomercoplataforma.com/" target="_blank" rel="noopener">🔗 ConkoSafe Acceso</a><button class="btn sm primary" data-open="agent-conkosafe" style="margin-left:auto">Ver mockup →</button></div>
+          </div>
+          <div class="agent">
+            <div class="top"><div class="av fv">📋</div><div><h4>ALESSA Database</h4><div class="src">ALESSA · Reacciones adversas</div></div></div>
+            <p>Consume casos ya procesados en ALESSA Database y los asocia al principio activo. Alimenta el módulo 5 del dossier sin construir otra base de datos.</p>
+            <div class="metric">Casos asociados (30 d) <b class="num">41</b> · Graves <b class="num">3</b></div>
+            <div class="foot"><span class="pill ok">Conectado vía API</span><a class="btn sm" href="https://alessadatabase.com/admin/alessa" target="_blank" rel="noopener">🔗 ALESSA Database</a><button class="btn sm primary" data-open="agent-adr" style="margin-left:auto">Ver mockup →</button></div>
+          </div>
+          <div class="agent">
+            <div class="top"><div class="av fv">⚖️</div><div><h4>ALESSA IPS</h4><div class="src">ALESSA Workspace · Informes periódicos de seguridad</div></div></div>
+            <p>Emite los informes periódicos de seguridad procesados en ALESSA database IPS. Un epidemiólogo valida cada informe antes de enviarlo a la autoridad: humano en el circuito, siempre.</p>
+            <div class="metric">IPS en curso <b class="num">2</b> · Validación humana <b>obligatoria</b></div>
+            <div class="foot"><span class="pill warn">1 pendiente de validación</span><button class="btn sm primary" data-open="agent-ips" style="margin-left:auto">Ver mockup →</button></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:20px">
+          <div class="chead"><h3>Cobertura de fuentes · Scout Farma</h3><div class="right"><span class="tag">52 fuentes · 6 países</span></div></div>
+          <div class="cbody flush tscroll">
+            <table>
+              <thead><tr><th>Grupo</th><th>Fuentes monitoreadas</th><th class="num">Nº</th><th>Frecuencia</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><b>🇨🇴 INVIMA · Colombia</b></td>
+                  <td>Normatividad y circulares · Alertas sanitarias e Invima Informa · Actas Sala Especializada de Medicamentos · Consulta CUM · Estado de trámites · Resoluciones MinSalud · Diario Oficial (salud) · Listados de precios (CNPMDM) · Farmacovigilancia</td>
+                  <td class="num">9</td><td>Diaria</td>
+                </tr>
+                <tr>
+                  <td><b>🇵🇪 DIGEMID · Perú</b></td>
+                  <td>Resoluciones directorales · Alertas DIGEMID · Registro sanitario (consulta) · Observatorio de precios · Notialertas · Normas MINSA · Perú Compras (medicamentos)</td>
+                  <td class="num">7</td><td>Diaria</td>
+                </tr>
+                <tr>
+                  <td><b>🇦🇷 ANMAT · Argentina</b></td>
+                  <td>Disposiciones y Boletín Oficial · Alertas y retiros · Vademécum nacional · Listado de bioequivalencia obligatoria · Trámites a distancia · Farmacovigilancia</td>
+                  <td class="num">6</td><td>Diaria</td>
+                </tr>
+                <tr>
+                  <td><b>🇨🇱 ISP · Chile</b></td>
+                  <td>Resoluciones ANAMED · Alertas y decomisos · Registro sanitario en línea (GICONA) · Listado de equivalencia terapéutica · Norma de folletos/QR · Boletín de farmacovigilancia</td>
+                  <td class="num">6</td><td>Diaria</td>
+                </tr>
+                <tr>
+                  <td><b>🇲🇽 COFEPRIS · México</b></td>
+                  <td>Acuerdos y NOM en el DOF · Alertas sanitarias · Consulta de registros · Listado de intercambiabilidad · Trámites COFEPRIS · Farmacovigilancia</td>
+                  <td class="num">6</td><td>Diaria</td>
+                </tr>
+                <tr>
+                  <td><b>🇪🇸 AEMPS · España</b></td>
+                  <td>CIMA fichas técnicas · Notas de seguridad · BOE (normativa de medicamentos) · Nomenclátor de prescripción</td>
+                  <td class="num">4</td><td>Diaria</td>
+                </tr>
+                <tr>
+                  <td><b>Agencias de referencia</b></td>
+                  <td>FDA Drug Safety &amp; recalls · FDA aprobaciones (Orange Book) · EMA referrals y EPARs · EMA fichas técnicas (SmPC) · MHRA · Health Canada · Swissmedic · TGA</td>
+                  <td class="num">8</td><td>Diaria</td>
+                </tr>
+                <tr>
+                  <td><b>Organismos y estándares</b></td>
+                  <td>OMS (alertas y precalificación) · OPS/PAHO · Guías ICH · PIC/S · Farmacopea USP-NF · Ph. Eur. (actualizaciones)</td>
+                  <td class="num">6</td><td>Semanal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:20px">
+          <div class="chead"><h3>Seguridad y cumplimiento</h3><div class="right"><span class="tag">las preguntas que hace tu área de calidad</span></div></div>
+          <div class="cbody" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px">
+            <div style="background:var(--surface2);border-radius:11px;padding:14px 16px"><b style="font-size:13px">🔐 Integridad de datos ALCOA+</b><p style="margin:4px 0 0;font-size:12px;color:var(--muted)">Cada documento con hash SHA-256, versión, autor y sello de tiempo. Historial inmutable visible en Binder.</p></div>
+            <div style="background:var(--surface2);border-radius:11px;padding:14px 16px"><b style="font-size:13px">👤 Acceso por rol y módulo</b><p style="margin:4px 0 0;font-size:12px;color:var(--muted)">La planta ve el M3, regulatorio el M1, clínica el M5. Sesiones individuales, trazabilidad completa de quién tocó qué.</p></div>
+            <div style="background:var(--surface2);border-radius:11px;padding:14px 16px"><b style="font-size:13px">☁️ Nube con cifrado</b><p style="margin:4px 0 0;font-size:12px;color:var(--muted)">Infraestructura cloud con cifrado en tránsito y reposo; IA con modelos comerciales vía Bedrock — tus datos no entrenan modelos.</p></div>
+            <div style="background:var(--surface2);border-radius:11px;padding:14px 16px"><b style="font-size:13px">✅ Validación acompañada</b><p style="margin:4px 0 0;font-size:12px;color:var(--muted)">Pruebas de instalación + documento de validación + hipercare 30–60 días + auditoría de un tercero. ISO 27001 en ruta 2027.</p></div>
+          </div>
+        </div>
+
+        <div class="note" style="margin-top:20px"><b>Modelo comercial:</b> agentes modulares con precio por tamaño de empresa, número de países y cantidad de dossiers. Sin costo de implementación; el humano siempre decide (QPPV firma, epidemiólogo valida).</div>
+      </section>
+
+      <!-- ============ BINDER ============ -->
+      <section class="view" id="view-binder">
+        <h2 class="pagehead">Binder — Portafolio de dossiers CTD</h2>
+        <p class="pagesub">En esta sección se estructura los documentos en formato CTD bajo el estándar ICH (International Council for Harmonisation).</p>
+
+        <div class="card">
+          <div class="chead"><h3>Portafolio · Laboratorios Andina</h3>
+            <div class="right filterbar">
+              <input type="search" id="prodfilter" placeholder="Buscar producto o principio activo…" aria-label="Buscar producto">
+              <span class="tag" id="prodcount">22 productos</span>
+            </div>
+          </div>
+          <div class="cbody flush tscroll">
+            <table>
+              <thead><tr><th style="width:22px"></th><th>Producto</th><th>Forma / concentración</th><th>País</th><th>Trámite</th><th>Nº expediente / RS</th><th>Completitud CTD</th><th>Estado</th></tr></thead>
+              <tbody id="prodrows"></tbody>
+            </table>
+          </div>
+          <div class="note" style="margin:14px 16px 16px"><b>Acordeón por producto:</b> haz clic en cualquier fila para desplegar su dossier — resumen de completitud y los 5 módulos CTD con sus subcarpetas. Vuelve a hacer clic para cerrarlo.</div>
+        </div>
+
+        <div class="card">
+          <div class="chead"><h3>Historial de cambios · integridad de datos ALCOA+</h3><div class="right"><span class="tag">firmado con hash</span></div></div>
+          <div class="cbody flush feed">
+            <div class="feeditem"><span class="dot ok"></span><div><b>C. Ramírez (Planta) cargó «estabilidad-acelerada-6m.pdf» en M3.2.P.8</b><p class="mono" style="font-size:11px">sha256:8c1f…a2e9 · versión 1 · operación: new</p></div><div class="meta">hoy · 10:22</div></div>
+            <div class="feeditem"><span class="dot info"></span><div><b>Dra. M. Torres (Regulatorio) firmó electrónicamente «ass-rsa-fm045-v3.pdf» (M1.1)</b><p class="mono" style="font-size:11px">sha256:9f3a…d47e · firma vinculada a sesión + sello de tiempo</p></div><div class="meta">ayer · 16:40</div></div>
+            <div class="feeditem"><span class="dot warn"></span><div><b>Binder bloqueó carga duplicada de «validacion-metodo-analitico-v2.pdf»</b><p class="mono" style="font-size:11px">checksum idéntico al documento vigente en M3.2.P.4 — se evitó doble versión</p></div><div class="meta">ayer · 09:15</div></div>
+            <div class="feeditem"><span class="dot info"></span><div><b>Administrador asignó rol «Planta» a C. Ramírez para el módulo 3 de Amoxicilina MK</b><p class="mono" style="font-size:11px">acceso por rol: M3 · sin visibilidad de M1/M5</p></div><div class="meta">hace 3 días</div></div>
+          </div>
+        </div>
+
+        <div class="note warn"><b>Trazabilidad:</b> cada carga, reemplazo o firma queda registrada con usuario, fecha y hash del archivo (principios de integridad de datos ALCOA+). El administrador asigna productos y roles por sesión.</div>
+      </section>
+
+      <!-- ============ eCTD ============ -->
+      <section class="view" id="view-ectd">
+        <h2 class="pagehead">Constructor eCTD — de la carpeta al envío electrónico</h2>
+        <p class="pagesub">Confección de la secuencia eCTD: estructura, backbone XML, validación técnica y transmisión a la autoridad. El XML estructura los metadatos; los archivos viajan comprimidos con llaves para el titular y para la entidad sanitaria.</p>
+
+        <div class="card">
+          <div class="steps" role="tablist">
+            <button class="step active" data-step="1" role="tab"><span class="n">1</span>Solicitud</button>
+            <button class="step" data-step="2" role="tab"><span class="n">2</span>Estructura</button>
+            <button class="step" data-step="3" role="tab"><span class="n">3</span>Backbone XML</button>
+            <button class="step" data-step="4" role="tab"><span class="n">4</span>Validación</button>
+            <button class="step" data-step="5" role="tab"><span class="n">5</span>Transmisión</button>
+          </div>
+
+          <!-- Paso 1 -->
+          <div class="stepbody active" data-body="1">
+            <div class="frm">
+              <div class="field"><label>Producto</label>
+                <select><option>Amoxicilina MK · Tabletas 500 mg</option><option>Losartán Andina · Tabletas 50 mg</option><option>Metformina Andina · Tabletas 850 mg</option></select>
+              </div>
+              <div class="field"><label>Autoridad / país</label>
+                <select><option>INVIMA · Colombia</option><option>DIGEMID · Perú</option><option>ANMAT · Argentina</option><option>ISP · Chile</option><option>COFEPRIS · México</option><option>AEMPS · España</option></select>
+              </div>
+              <div class="field"><label>Tipo de trámite</label>
+                <select><option>Registro sanitario nuevo</option><option>Renovación</option><option>Modificación (variación)</option></select>
+              </div>
+              <div class="field"><label>Secuencia</label>
+                <input class="mono" value="0000 — presentación inicial" readonly>
+              </div>
+            </div>
+            <div class="note"><b>Compass aplicó el perfil INVIMA:</b> 5 módulos, 73 documentos requeridos, regional M1 CO. El esqueleto se llenó desde Binder — no se vuelve a cargar nada que ya exista.</div>
+            <div style="margin-top:18px; text-align:right"><button class="btn primary" data-goto="2">Continuar → Estructura</button></div>
+          </div>
+
+          <!-- Paso 2 -->
+          <div class="stepbody" data-body="2">
+            <p style="margin:0 0 14px; color:var(--muted); font-size:13px">Carpeta física de la secuencia <span class="mono">0000</span>. Cada hoja del árbol es un PDF con checksum MD5 y operación de ciclo de vida <span class="mono">new</span>. Estructura completa: 5 módulos, 46 subcarpetas, 47 documentos.</p>
+            <pre class="code">co-amoxicilina-mk-500/
+└── <span class="tagx">0000</span>/
+    ├── <span class="att">index.xml</span>              <span class="cm">← backbone ICH eCTD</span>
+    ├── <span class="att">co-regional.xml</span>        <span class="cm">← M1 regional Colombia</span>
+    ├── util/dtd/ich-ectd-3-2.dtd
+    ├── m1/co/                                   <span class="cm">← Regional Administrative Information</span>
+    │   ├── 10-carta-presentacion/carta-presentacion-invima.pdf
+    │   ├── 11-formulario/ass-rsa-fm045-v3.pdf
+    │   ├── 11b-formularios-admin/poder-representacion.pdf
+    │   ├── 12-representacion/cert-existencia-2026.pdf
+    │   ├── 13-bpm/bpm-planta-cali-2027.pdf
+    │   ├── 13-bpm/comprobante-pago-tarifa.pdf
+    │   ├── 131-ipp/informacion-prescripcion.pdf
+    │   ├── 14-etiquetado/etiqueta-inserto-qr-v4.pdf
+    │   ├── 14b-empaque-arte/arte-final-empaque.pdf
+    │   └── 16-ambiental/declaracion-ambiental.pdf
+    ├── m2/                                      <span class="cm">← CTD Summaries / Overviews</span>
+    │   ├── 21-toc/indice-dossier.pdf
+    │   ├── 22-introduccion/introduccion-ctd.pdf
+    │   ├── 23-qos/resumen-global-calidad-v2.pdf
+    │   ├── 24-panorama-noclinico/panorama-no-clinico.pdf
+    │   ├── 25-panorama-clinico/panorama-clinico.pdf
+    │   ├── 26-resumenes-noclinicos/resumenes-tabulados.pdf
+    │   └── 27-resumen-clinico/resumen-clinico-integrado.pdf
+    ├── m3/                                      <span class="cm">← Quality (CMC)</span>
+    │   ├── 32s/dmf-amoxicilina-carta-acceso.pdf
+    │   ├── 32p1/composicion-producto-terminado.pdf
+    │   ├── 32p1/formula-cuali-cuantitativa.pdf
+    │   ├── 32p2/desarrollo-farmaceutico.pdf
+    │   ├── 32p3/proceso-fabricacion-validacion.pdf
+    │   ├── 32p3/controles-en-proceso-ipc.pdf
+    │   ├── 32p4/validacion-metodo-analitico-v2.pdf
+    │   ├── 32p4/excipientes-certificados.pdf
+    │   ├── 32p5/especificaciones-liberacion-vidautil.pdf
+    │   ├── 32p5/metodos-analiticos.pdf
+    │   ├── 32p5/analisis-lotes.pdf
+    │   ├── 32p7/envase-sistema-cierre.pdf
+    │   └── 32p8/estabilidad-acelerada-6m.pdf
+    ├── m4/                                      <span class="cm">← Nonclinical Study Reports</span>
+    │   ├── 421/farmacologia-literatura.pdf
+    │   ├── 422/farmacocinetica-adme.pdf
+    │   ├── 4231/toxicidad-aguda.pdf
+    │   ├── 4232/toxicidad-subcronica.pdf
+    │   ├── 4233/genotoxicidad.pdf
+    │   ├── 4234/carcinogenicidad-na.pdf
+    │   ├── 4235/toxicidad-reproductiva-na.pdf
+    │   ├── 4236/tolerancia-local-na.pdf
+    │   └── 4237/justificacion-bibliografica-tox.pdf
+    └── m5/                                      <span class="cm">← Clinical Study Reports</span>
+        ├── 531/informes-clinicos-na.pdf
+        ├── 5312/bioequivalencia-vs-innovador.pdf
+        ├── 5312/reporte-estadistico-be.pdf
+        ├── 5312/protocolo-enmiendas-be.pdf
+        ├── 533/farmacologia-clinica-na.pdf
+        ├── 535/resumen-eficacia.pdf
+        ├── 536/ips-borrador-agente.pdf
+        └── 54/fichas-tecnicas-referencia.pdf</pre>
+            <div style="margin-top:18px; display:flex; justify-content:space-between"><button class="btn" data-goto="1">← Volver</button><button class="btn primary" data-goto="3">Continuar → Backbone XML</button></div>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="stepbody" data-body="3">
+            <p style="margin:0 0 14px; color:var(--muted); font-size:13px">El backbone <span class="mono">index.xml</span> declara cada documento con su ubicación, checksum y operación. Es lo que la autoridad valida antes de aceptar la transmisión. Backbone completo: 5 secciones de módulo, 47 leaves declarados.</p>
+            <pre class="code">&lt;?<span class="tagx">xml</span> <span class="att">version</span>=<span class="val">"1.0"</span> <span class="att">encoding</span>=<span class="val">"UTF-8"</span>?&gt;
+&lt;!<span class="tagx">DOCTYPE</span> ectd:ectd SYSTEM <span class="val">"util/dtd/ich-ectd-3-2.dtd"</span>&gt;
+&lt;<span class="tagx">ectd:ectd</span> <span class="att">dtd-version</span>=<span class="val">"3.2"</span>&gt;
+  &lt;<span class="tagx">m1-administrative-information</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m1/co/10-carta-presentacion/carta-presentacion-invima.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"d01b0c…2a8e"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;Carta de presentación dirigida a la autoridad&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m1/co/11-formulario/ass-rsa-fm045-v3.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"af754d…063e"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;Formulario de solicitud INVIMA ASS-RSA-FM045&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m1/co/11b-formularios-admin/poder-representacion.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"1d8ba4…8081"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;Poder de representación / formularios complementarios&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m1/co/12-representacion/cert-existencia-2026.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"b67db9…01a5"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;Certificado de existencia y representación legal&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m1/co/13-bpm/bpm-planta-cali-2027.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"7f3c9c…2923"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;Certificado BPM planta fabricante&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m1/co/13-bpm/comprobante-pago-tarifa.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"d0a628…f842"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;Comprobante pago tarifa INVIMA&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m1/co/131-ipp/informacion-prescripcion.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"b7e00b…23b9"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;Información para prescripción (IPP)&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m1/co/14-etiquetado/etiqueta-inserto-qr-v4.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"15a2d2…6ab5"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;Proyecto de etiqueta e inserto (QR)&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m1/co/14b-empaque-arte/arte-final-empaque.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"0f60c4…488c"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;Arte final de empaque (carton) y estuche&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m1/co/16-ambiental/declaracion-ambiental.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"a689a3…55a0"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;Declaración ambiental / requisitos locales&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+  &lt;/<span class="tagx">m1-administrative-information</span>&gt;
+  &lt;<span class="tagx">m2-summary</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m2/21-toc/indice-dossier.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"c5701a…c156"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;2.1 Índice general del dossier CTD&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m2/22-introduccion/introduccion-ctd.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"6b2632…c498"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;2.2 Introducción del CTD&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m2/23-qos/resumen-global-calidad-v2.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"b51f41…4fb8"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;2.3 Resumen global de calidad (QOS)&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m2/24-panorama-noclinico/panorama-no-clinico.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"7b7f54…65d4"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;2.4 Panorama no clínico&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m2/25-panorama-clinico/panorama-clinico.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"a5d180…5675"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;2.5 Panorama clínico&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m2/26-resumenes-noclinicos/resumenes-tabulados.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"fd9212…b897"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;2.6 Resúmenes tabulados de estudios no clínicos&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m2/27-resumen-clinico/resumen-clinico-integrado.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"779592…fb7d"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;2.7 Resumen clínico integrado&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+  &lt;/<span class="tagx">m2-summary</span>&gt;
+  &lt;<span class="tagx">m3-quality</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32s/dmf-amoxicilina-carta-acceso.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"9094cc…c0cc"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.S Sustancia activa — amoxicilina trihidrato (DMF)&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32p1/composicion-producto-terminado.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"e5a428…31a5"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.P.1 Descripción y composición del producto terminado&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32p1/formula-cuali-cuantitativa.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"a3bc2d…6d66"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.P.1 Fórmula cuali-cuantitativa&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32p2/desarrollo-farmaceutico.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"491a79…2154"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.P.2 Informe de desarrollo farmacéutico&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32p3/proceso-fabricacion-validacion.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"3c849b…f338"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.P.3 Proceso de fabricación y validación&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32p3/controles-en-proceso-ipc.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"d51809…5e70"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.P.3 Controles en proceso (IPC)&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32p4/validacion-metodo-analitico-v2.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"0ae802…d2fa"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.P.4 Validación de método analítico&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32p4/excipientes-certificados.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"3081bc…843b"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.P.4 Certificados y especificaciones de excipientes&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32p5/especificaciones-liberacion-vidautil.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"2689d6…51db"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.P.5 Especificaciones de liberación y vida útil&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32p5/metodos-analiticos.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"b8bead…cbd3"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.P.5 Descripción de métodos analíticos&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32p5/analisis-lotes.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"ae1550…a630"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.P.5 Análisis de lotes piloto e industriales&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32p7/envase-sistema-cierre.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"64306d…7f87"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.P.7 Envase primario y sistema de cierre&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m3/32p8/estabilidad-acelerada-6m.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"43bce1…cb96"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;3.2.P.8 Estabilidad natural 12M zona IVb&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+  &lt;/<span class="tagx">m3-quality</span>&gt;
+  &lt;<span class="tagx">m4-nonclinical-study-reports</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m4/421/farmacologia-literatura.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"7b14ac…a8eb"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;4.2.1 Farmacología — literatura de referencia&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m4/422/farmacocinetica-adme.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"ff26b4…80f4"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;4.2.2 Estudios de farmacocinética (ADME)&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m4/4231/toxicidad-aguda.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"74e9df…0c87"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;4.2.3.1 Estudio de toxicidad aguda&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m4/4232/toxicidad-subcronica.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"8bb28a…5977"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;4.2.3.2 Estudio de toxicidad subcrónica&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m4/4233/genotoxicidad.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"0393d8…696e"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;4.2.3.3 Batería de ensayos de genotoxicidad&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m4/4234/carcinogenicidad-na.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"7c9962…57a5"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;4.2.3.4 Estudio de carcinogenicidad — no aplica&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m4/4235/toxicidad-reproductiva-na.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"1eedfc…9d55"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;4.2.3.5 Estudios de toxicidad reproductiva — no aplica&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m4/4236/tolerancia-local-na.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"6211a0…13fd"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;4.2.3.6 Estudio de tolerancia local — no aplica&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m4/4237/justificacion-bibliografica-tox.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"7f855d…27eb"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;4.2.3.7 Toxicología — justificación por producto conocido&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+  &lt;/<span class="tagx">m4-nonclinical-study-reports</span>&gt;
+  &lt;<span class="tagx">m5-clinical-study-reports</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m5/531/informes-clinicos-na.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"44f4d5…47cd"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;5.3.1–5.3.5 Informes de estudios clínicos pivotales — no aplica&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m5/5312/bioequivalencia-vs-innovador.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"4d30ff…0beb"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;5.3.1.2 Estudio de bioequivalencia vs. innovador&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m5/5312/reporte-estadistico-be.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"9d78f9…f988"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;5.3.1.2 Reporte estadístico del estudio de bioequivalencia&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m5/5312/protocolo-enmiendas-be.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"647768…0d97"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;5.3.1.2 Protocolo y enmiendas del estudio de BE&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m5/533/farmacologia-clinica-na.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"92cc99…7af1"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;5.3.3 Datos de farmacología clínica — no aplica&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m5/535/resumen-eficacia.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"179d09…d688"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;5.3.5 Resumen de datos de eficacia&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m5/536/ips-borrador-agente.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"a8e3e5…0e4f"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;5.3.6 Informe periódico de seguridad (IPS) — borrador agente&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+    &lt;<span class="tagx">leaf</span> <span class="att">xlink:href</span>=<span class="val">"m5/54/fichas-tecnicas-referencia.pdf"</span>
+          <span class="att">operation</span>=<span class="val">"new"</span> <span class="att">checksum</span>=<span class="val">"adaed7…f836"</span> <span class="att">checksum-type</span>=<span class="val">"md5"</span>&gt;
+      &lt;<span class="tagx">title</span>&gt;5.4 Fichas técnicas de referencia / documentos de soporte&lt;/<span class="tagx">title</span>&gt;
+    &lt;/<span class="tagx">leaf</span>&gt;
+  &lt;/<span class="tagx">m5-clinical-study-reports</span>&gt;
+&lt;/<span class="tagx">ectd:ectd</span>&gt;</pre>
+            <div style="margin-top:18px; display:flex; justify-content:space-between"><button class="btn" data-goto="2">← Volver</button><button class="btn primary" data-goto="4">Continuar → Validación</button></div>
+          </div>
+
+          <!-- Paso 4 -->
+          <div class="stepbody" data-body="4">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px">
+              <button class="btn primary" id="btn-validate">▶ Ejecutar validador técnico</button>
+              <span id="val-summary" style="font-size:13px; color:var(--muted)">10 verificaciones · perfil INVIMA + ICH eCTD 3.2</span>
+            </div>
+            <div class="checks" id="checklist">
+              <div class="check" data-res="pass"><span class="st">·</span><div><b>XML bien formado</b><div class="desc">index.xml y co-regional.xml parsean sin errores</div></div><span class="right"></span></div>
+              <div class="check" data-res="pass"><span class="st">·</span><div><b>Validación contra DTD ICH 3.2</b><div class="desc">Estructura de elementos y atributos conforme</div></div><span class="right"></span></div>
+              <div class="check" data-res="pass"><span class="st">·</span><div><b>Checksums MD5</b><div class="desc">73/73 archivos coinciden con el valor declarado</div></div><span class="right"></span></div>
+              <div class="check" data-res="pass"><span class="st">·</span><div><b>Referencias xlink:href</b><div class="desc">Todos los leaves apuntan a archivos existentes; sin huérfanos</div></div><span class="right"></span></div>
+              <div class="check" data-res="pass"><span class="st">·</span><div><b>Nombres de archivo y rutas</b><div class="desc">Sin espacios, ≤ 64 caracteres, profundidad conforme</div></div><span class="right"></span></div>
+              <div class="check" data-res="pass"><span class="st">·</span><div><b>PDFs analizables</b><div class="desc">Texto seleccionable, sin contraseñas, versión ≤ 1.7</div></div><span class="right"></span></div>
+              <div class="check" data-res="pass"><span class="st">·</span><div><b>Ciclo de vida</b><div class="desc">Secuencia 0000: todas las operaciones son "new"</div></div><span class="right"></span></div>
+              <div class="check" data-res="warn"><span class="st">·</span><div><b>Firmas electrónicas</b><div class="desc">2 documentos en borrador sin firma (M1.4 etiqueta, M4 justificación tox)</div></div><span class="right"></span></div>
+              <div class="check" data-res="fail"><span class="st">·</span><div><b>Completitud del perfil INVIMA</b><div class="desc">Falta comprobante de pago de tarifa (M1.5) — bloquea la transmisión</div></div><span class="right"></span></div>
+              <div class="check" data-res="pass"><span class="st">·</span><div><b>Duplicidad de contenido</b><div class="desc">Sin documentos duplicados entre módulos (análisis por hash + contenido)</div></div><span class="right"></span></div>
+            </div>
+            <div class="note warn" id="val-verdict" style="display:none"><b>Resultado: 8 conformes · 1 advertencia · 1 error.</b> Un validador humano debe resolver el error antes de habilitar el paso 5. En esta demo puedes continuar para ver el flujo completo.</div>
+            <div style="margin-top:18px; display:flex; justify-content:space-between"><button class="btn" data-goto="3">← Volver</button><button class="btn primary" data-goto="5">Continuar → Transmisión</button></div>
+          </div>
+
+          <!-- Paso 5 -->
+          <div class="stepbody" data-body="5">
+            <div class="note" style="margin:0 0 16px"><b>Cómo se radica hoy, autoridad por autoridad:</b>&nbsp;
+              <span class="pill ok">AEMPS · gateway eCTD (CESP)</span>&nbsp;
+              <span class="pill ok">COFEPRIS · DIGIPRiS</span>&nbsp;
+              <span class="pill info">INVIMA · DIGEMID · ANMAT · ISP: paquete validado + radicación asistida en ventanilla</span>
+              <span style="display:block;margin-top:6px;font-size:12px">El envío directo por gateway se activa por autoridad a medida que habilitan transmisión electrónica — mientras tanto, el validador garantiza que el paquete se acepte a la primera.</span>
+            </div>
+            <div class="txflow">
+              <div class="txnode"><b>Titular</b><span>Laboratorios Andina<br>Llave: <span class="mono">TIT-CO-8841</span></span></div>
+              <div class="txarrow">⇄</div>
+              <div class="txnode"><b>Regulator.IA Gateway</b><span>Paquete ZIP + backbone<br>Cifrado en tránsito</span></div>
+              <div class="txarrow">⇄</div>
+              <div class="txnode"><b>INVIMA</b><span>Ventanilla electrónica<br>Llave: <span class="mono">AUT-INV-0093</span></span></div>
+            </div>
+            <div style="display:flex; gap:10px; margin-bottom:14px; flex-wrap:wrap">
+              <button class="btn primary" id="btn-transmit">📦 Empaquetar y transmitir secuencia 0000</button>
+              <button class="btn" id="btn-acuse" disabled>Descargar acuse (simulado)</button>
+            </div>
+            <div class="txlog" id="txlog"><span class="dim">— listo para transmitir · la autoridad accede con su propia llave, sin reenvíos por correo —</span></div>
+            <div id="posttx" style="display:none; margin-top:16px; background:var(--ok-bg); border:1px solid rgba(21,128,61,.25); border-radius:11px; padding:14px 18px">
+              <b style="color:var(--ok)">Radicado obtenido en 4 minutos de demo.</b>
+              <span style="font-size:13px; color:var(--muted)"> Esto mismo, con tu dossier real y tu llave de titular, es lo que configuramos en el hipercare de 30–60 días.</span>
+              <div style="margin-top:10px"><button class="btn primary" id="btn-hire2">📅 Agenda una demo con tu portafolio</button></div>
+            </div>
+            <div style="margin-top:18px"><button class="btn" data-goto="4">← Volver</button></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MOCKUP: SCOUT ============ -->
+      <section class="view" id="view-agent-scout">
+        <p style="margin:0 0 10px"><button class="btn sm" data-open="agents">← Volver a Agentes</button></p>
+        <h2 class="pagehead">🛰 Scout Farma — inteligencia regulatoria</h2>
+        <p class="pagesub">Barre las 52 fuentes de los 6 países configurados, clasifica cada hallazgo y predice qué cambios de EMA/FDA llegarán a LatAm. Nadie del equipo vuelve a entrar a la página del INVIMA a mirar si hay novedades.</p>
+
+        <div class="kpis">
+          <div class="kpi"><div class="lab">Fuentes activas</div><div class="val num">52</div><div class="sub ok">Último barrido: hace 40 min</div></div>
+          <div class="kpi"><div class="lab">Hallazgos este mes</div><div class="val num">14</div><div class="sub">9 normativa · 5 alertas</div></div>
+          <div class="kpi"><div class="lab">Predicciones activas</div><div class="val num">3</div><div class="sub warn">1 con probabilidad &gt; 75%</div></div>
+          <div class="kpi"><div class="lab">Dossiers impactados</div><div class="val num">5</div><div class="sub">Notificados a sus responsables</div></div>
+        </div>
+
+        <div class="card">
+          <div class="chead"><h3>Hallazgos recientes</h3><div class="right"><button class="btn sm primary" id="btn-scan">▶ Ejecutar barrido ahora</button></div></div>
+          <div class="cbody flush feed" id="scoutfeed">
+            <div class="feeditem"><span class="dot info"></span><div><b>INVIMA · Circular sobre codificación de excipientes en etiquetado</b><p>Clasificación: <span class="tag">Normativa</span> · <span class="mono" style="font-size:11px">Circular 1000-0019-2026 · publicada 25-ago-2026</span> · Impacta: Amoxicilina CO, Losartán CO (M1.4). Acción sugerida: regenerar inserto con Scribe.</p></div><div class="meta">hoy · 09:12<br><span class="pill warn">Acción requerida</span></div></div>
+            <div class="feeditem"><span class="dot warn"></span><div><b>EMA · Nueva advertencia de interacción losartán + AINEs en SmPC de referencia</b><p>Clasificación: <span class="tag">Ficha técnica</span> · Predicción: INVIMA exigirá actualización del inserto en <b>~6 meses (prob. 78%)</b>, patrón histórico UE→LatAm.</p></div><div class="meta">hace 3 días<br><span class="pill info">Predicción</span></div></div>
+            <div class="feeditem"><span class="dot info"></span><div><b>DIGEMID · Proyecto de resolución: intercambiabilidad para 12 principios activos</b><p>Clasificación: <span class="tag">Consulta pública</span> · <span class="mono" style="font-size:11px">Proy. R.M. 456-2026/MINSA · comentarios hasta 30-sep-2026</span> · Incluye metformina: el registro PE necesitará bioequivalencia al pasar a definitivo.</p></div><div class="meta">hace 5 días<br><span class="pill info">En consulta</span></div></div>
+            <div class="feeditem"><span class="dot ok"></span><div><b>OMS · Actualización de lista de precalificación de APIs</b><p>Clasificación: <span class="tag">Referencia</span> · El fabricante del API de amoxicilina mantiene precalificación. Se adjuntó evidencia al M3.2.S.</p></div><div class="meta">hace 8 días<br><span class="pill ok">Archivado</span></div></div>
+            <div class="feeditem"><span class="dot warn"></span><div><b>COFEPRIS · Actualización del listado de intercambiabilidad</b><p>Clasificación: <span class="tag">Normativa</span> · Clopidogrel entra al listado: el registro MX requerirá perfil de disolución comparativo (NOM-177).</p></div><div class="meta">hace 9 días<br><span class="pill warn">Acción requerida</span></div></div>
+            <div class="feeditem"><span class="dot info"></span><div><b>ANMAT · Nueva disposición sobre trazabilidad de medicamentos</b><p>Clasificación: <span class="tag">Normativa</span> · Extiende el sistema de trazabilidad a nuevas formas farmacéuticas. Impacto: rotulado AR de amlodipino y sertralina.</p></div><div class="meta">hace 11 días<br><span class="pill info">En análisis</span></div></div>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="card">
+            <div class="chead"><h3>Predicciones normativas</h3><div class="right"><span class="tag">patrón UE/EE.UU. → LatAm</span></div></div>
+            <div class="cbody flush tscroll">
+              <table>
+                <thead><tr><th>Cambio esperado</th><th>Origen</th><th>Destino</th><th>Probabilidad</th><th>Horizonte</th></tr></thead>
+                <tbody>
+                  <tr><td>Actualización inserto losartán (AINEs)</td><td>EMA</td><td>INVIMA</td><td><div class="barrow"><div class="bar"><i style="width:78%"></i></div><span class="num">78%</span></div></td><td class="num">~6 meses</td></tr>
+                  <tr><td>Nitrosaminas: límites en sartanes</td><td>FDA/EMA</td><td>INVIMA · DIGEMID</td><td><div class="barrow"><div class="bar"><i style="width:64%"></i></div><span class="num">64%</span></div></td><td class="num">~9 meses</td></tr>
+                  <tr><td>Bioequivalencia obligatoria metformina</td><td>DIGEMID (consulta)</td><td>DIGEMID</td><td><div class="barrow"><div class="bar warn"><i style="width:55%"></i></div><span class="num">55%</span></div></td><td class="num">~12 meses</td></tr>
+                </tbody>
+              </table>
+              <p style="margin:10px 18px 14px;font-size:11.5px;color:var(--muted)"><b style="color:var(--ok)">Track record: 9 de 11 predicciones acertadas en 12 meses (82%).</b> La mayor: anticipamos la adopción del CTD por INVIMA 7 meses antes de la Circular 1000-0017-2026, cuando entró a agenda del Minsalud.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="chead"><h3>Salud del scraping</h3></div>
+            <div class="cbody flush tscroll">
+              <table>
+                <thead><tr><th>Fuente</th><th>Último barrido</th><th>Novedades</th><th>Estado</th></tr></thead>
+                <tbody>
+                  <tr><td>INVIMA · Alertas sanitarias</td><td class="num">hace 40 min</td><td class="num">1</td><td><span class="pill ok">OK</span></td></tr>
+                  <tr><td>INVIMA · Normatividad</td><td class="num">hace 40 min</td><td class="num">0</td><td><span class="pill ok">OK</span></td></tr>
+                  <tr><td>DIGEMID · Resoluciones</td><td class="num">hace 1 h</td><td class="num">0</td><td><span class="pill ok">OK</span></td></tr>
+                  <tr><td>EMA · SmPC referencia</td><td class="num">hace 2 h</td><td class="num">1</td><td><span class="pill ok">OK</span></td></tr>
+                  <tr><td>AEMPS-CIMA · Fichas técnicas</td><td class="num">hace 2 h</td><td class="num">0</td><td><span class="pill warn">Reintentando</span></td></tr>
+                  <tr><td>ANMAT · Boletín Oficial</td><td class="num">hace 3 h</td><td class="num">1</td><td><span class="pill ok">OK</span></td></tr>
+                  <tr><td>COFEPRIS · DOF y acuerdos</td><td class="num">hace 3 h</td><td class="num">1</td><td><span class="pill ok">OK</span></td></tr>
+                  <tr><td>ISP · Resoluciones ANAMED</td><td class="num">hace 4 h</td><td class="num">0</td><td><span class="pill ok">OK</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MOCKUP: COMPASS ============ -->
+      <section class="view" id="view-agent-compass">
+        <p style="margin:0 0 10px"><button class="btn sm" data-open="agents">← Volver a Agentes</button></p>
+        <h2 class="pagehead">🧭 Compass Farma — diagnóstico de requisitos</h2>
+        <p class="pagesub">Árbol de decisión determinista: seleccionas país, vía de trámite y tipo de producto, y Compass entrega la lista exacta de documentos. Esa lista es el esqueleto que Binder usa para armar las carpetas del CTD.</p>
+
+        <div class="card">
+          <div class="chead"><h3>Parámetros del diagnóstico</h3></div>
+          <div class="cbody">
+            <div class="frm">
+              <div class="field"><label>Autoridad / país</label>
+                <select id="cmp-country"><option value="co">INVIMA · Colombia</option><option value="pe">DIGEMID · Perú</option><option value="ar">ANMAT · Argentina</option><option value="cl">ISP · Chile</option><option value="mx">COFEPRIS · México</option><option value="es">AEMPS · España</option></select>
+              </div>
+              <div class="field"><label>Vía de trámite</label>
+                <select id="cmp-via"><option value="nuevo">Registro sanitario nuevo</option><option value="renov">Renovación</option><option value="var">Modificación (variación)</option></select>
+              </div>
+              <div class="field"><label>Tipo de producto</label>
+                <select id="cmp-tipo"><option>Síntesis química (genérico)</option><option>Biológico / biosimilar</option></select>
+              </div>
+            </div>
+            <div class="note" id="cmp-summary" style="margin-top:16px"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="chead"><h3>Requisitos por módulo</h3><div class="right"><span class="tag" id="cmp-tag">INVIMA · registro nuevo</span></div></div>
+          <div class="cbody flush tscroll">
+            <table>
+              <thead><tr><th>Módulo</th><th>Contenido</th><th class="num">Docs</th><th>Particularidad local</th></tr></thead>
+              <tbody id="cmp-rows"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="chead"><h3>Exigencia documental comparada · registro nuevo</h3><div class="right"><span class="tag">documentos requeridos por autoridad</span></div></div>
+          <div class="cbody">
+            <div class="vig-row" style="padding:9px 0"><span style="width:150px;flex:none">🇪🇸 AEMPS · España</span><div class="vig-bar" style="max-width:none;height:9px"><i style="width:100%;background:var(--grad-cta)"></i></div><span class="num" style="width:30px;text-align:right">76</span></div>
+            <div class="vig-row" style="padding:9px 0"><span style="width:150px;flex:none">🇨🇴 INVIMA · Colombia</span><div class="vig-bar" style="max-width:none;height:9px"><i style="width:96%;background:var(--grad-cta)"></i></div><span class="num" style="width:30px;text-align:right">73</span></div>
+            <div class="vig-row" style="padding:9px 0"><span style="width:150px;flex:none">🇲🇽 COFEPRIS · México</span><div class="vig-bar" style="max-width:none;height:9px"><i style="width:93%;background:var(--grad-cta)"></i></div><span class="num" style="width:30px;text-align:right">71</span></div>
+            <div class="vig-row" style="padding:9px 0"><span style="width:150px;flex:none">🇦🇷 ANMAT · Argentina</span><div class="vig-bar" style="max-width:none;height:9px"><i style="width:92%;background:var(--grad-cta)"></i></div><span class="num" style="width:30px;text-align:right">70</span></div>
+            <div class="vig-row" style="padding:9px 0"><span style="width:150px;flex:none">🇵🇪 DIGEMID · Perú</span><div class="vig-bar" style="max-width:none;height:9px"><i style="width:87%;background:var(--grad-cta)"></i></div><span class="num" style="width:30px;text-align:right">66</span></div>
+            <div class="vig-row" style="padding:9px 0"><span style="width:150px;flex:none">🇨🇱 ISP · Chile</span><div class="vig-bar" style="max-width:none;height:9px"><i style="width:84%;background:var(--grad-cta)"></i></div><span class="num" style="width:30px;text-align:right">64</span></div>
+            <p style="margin:12px 0 0;font-size:12px;color:var(--muted)">España exige el dossier más completo (eCTD 100% obligatorio); Chile el más liviano gracias a la vía abreviada para productos de países de alta vigilancia. El mismo dossier maestro cubre los seis mercados: Compass calcula el delta por autoridad.</p>
+          </div>
+        </div>
+
+        <div class="note warn"><b>Salida hacia Binder:</b> al confirmar el diagnóstico, Compass crea el esqueleto de carpetas con los documentos requeridos marcados como «faltantes» y hereda los que ya existen en otros dossiers del mismo producto (sin recargar nada).</div>
+      </section>
+
+      <!-- ============ MOCKUP: CONKOSAFE IA ============ -->
+      <section class="view" id="view-agent-conkosafe">
+        <p style="margin:0 0 10px; display:flex; gap:10px; flex-wrap:wrap"><button class="btn sm" data-open="agents">← Volver a Agentes</button><a class="btn sm primary" href="https://ia.conkomercoplataforma.com/" target="_blank" rel="noopener">🔗 ConkoSafe Acceso</a></p>
+        <h2 class="pagehead">🚨 Conkosafe IA — monitoreo de alertas sanitarias</h2>
+        <p class="pagesub">Consume la API del socio: vigila autoridades de alta vigilancia y cruza cada alerta contra tu portafolio (principio activo, fabricante de API, lote). Lo relevante se inserta solo; lo demás no te interrumpe.</p>
+
+        <div class="kpis">
+          <div class="kpi"><div class="lab">Alertas insertadas (30 d)</div><div class="val num">23</div><div class="sub">De 412 publicadas en fuentes</div></div>
+          <div class="kpi"><div class="lab">Relevantes al portafolio</div><div class="val num">7</div><div class="sub warn">Cruce por API y fabricante</div></div>
+          <div class="kpi"><div class="lab">Con obligación de reporte</div><div class="val num">1</div><div class="sub crit">Plazo: 61 h restantes</div></div>
+          <div class="kpi"><div class="lab">Tiempo medio de detección</div><div class="val num">2,1 h</div><div class="sub ok">Desde publicación en fuente</div></div>
+        </div>
+
+        <div class="card">
+          <div class="chead"><h3>Alerta en curso · ALR-2026-0412</h3><div class="right"><span class="pill crit">Reporte obligatorio · 61 h</span></div></div>
+          <div class="cbody">
+            <div class="split">
+              <div>
+                <b style="font-size:15px">NDMA sobre límite en lotes de losartán API — retiro voluntario (FDA)</b>
+                <p style="color:var(--muted); font-size:13px; margin:8px 0 14px">Fabricante: Hetero Labs Unit III (India). Cruce positivo: es el fabricante del API declarado en el DMF de <b>Losartán Andina CO</b>. Lotes importados potencialmente afectados: 3.</p>
+                <div class="feed timeline" style="--tl-x:3.5px">
+                  <div class="feeditem" style="padding-left:0"><span class="dot info"></span><div><b>08:14 · Detección</b><p>Alerta publicada por FDA; capturada por la API del socio.</p></div></div>
+                  <div class="feeditem" style="padding-left:0"><span class="dot info"></span><div><b>08:16 · Correlación</b><p>Coincidencia con DMF del dossier CO (fabricante + principio activo).</p></div></div>
+                  <div class="feeditem" style="padding-left:0"><span class="dot warn"></span><div><b>08:17 · Inserción y aviso</b><p>Alerta insertada en el módulo de FV; notificados QPPV y Dir. Regulatorio.</p></div></div>
+                  <div class="feeditem" style="padding-left:0"><span class="dot crit"></span><div><b>Pendiente · Evaluación de impacto</b><p>Confirmar lotes en Colombia y reportar a INVIMA dentro de 72 h.</p></div></div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="margin:0">
+                  <div class="chead"><h3>Acciones del agente</h3></div>
+                  <div class="cbody" style="display:flex; flex-direction:column; gap:10px">
+                    <button class="btn primary" id="btn-cocoreport">📝 Generar borrador de reporte a INVIMA</button>
+                    <button class="btn">Ver lotes importados (3)</button>
+                    <button class="btn">Adjuntar al IPS Losartán S1-2026</button>
+                    <p id="cocostatus" style="margin:4px 0 0; font-size:12.5px; color:var(--muted)">El borrador usa la plantilla eReporting de INVIMA y se entrega al QPPV para revisión — el agente nunca envía solo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="chead"><h3>Alertas recientes (cruzadas contra portafolio)</h3></div>
+          <div class="cbody flush tscroll">
+            <table>
+              <thead><tr><th>ID</th><th>Alerta</th><th>Fuente</th><th>Tipo</th><th>Cruce</th><th>Estado</th></tr></thead>
+              <tbody>
+                <tr><td class="mono">ALR-2026-0412</td><td>NDMA en losartán API</td><td>FDA</td><td>Retiro</td><td><span class="pill crit">Losartán CO</span></td><td>Evaluación de impacto</td></tr>
+                <tr><td class="mono">ALR-2026-0409</td><td>Falsificación amoxicilina canal informal</td><td>DIGEMID</td><td>Falsificación</td><td><span class="pill warn">Amoxicilina</span></td><td>Documentada para IPS</td></tr>
+                <tr><td class="mono">ALR-2026-0401</td><td>Desabastecimiento API metformina</td><td>INVIMA</td><td>Suministro</td><td><span class="pill ok">Cerrada</span></td><td>Suministro normalizado</td></tr>
+                <tr><td class="mono">ALR-2026-0396</td><td>Botox falsificado en 4 países</td><td>OMS</td><td>Falsificación</td><td><span class="pill mut">Sin cruce</span></td><td>No relevante · archivada</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MOCKUP: ADR ============ -->
+      <section class="view" id="view-agent-adr">
+        <p style="margin:0 0 10px"><button class="btn sm" data-open="agents">← Volver a Agentes</button></p>
+        <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap">
+          <h2 class="pagehead" style="margin:0">📋 ALESSA Database — reacciones adversas procesadas</h2>
+          <a class="btn sm primary" href="https://alessadatabase.com/admin/authentication" target="_blank" rel="noopener">🔗 ALESSA - Iniciar sesión</a>
+        </div>
+        <p class="pagesub">La API asocia los casos al prodcucto farmacéutico y actualiza el módulo 5 del dossier.</p>
+
+        <div class="kpis">
+          <div class="kpi"><div class="lab">Casos (30 d)</div><div class="val num">41</div><div class="sub">3 graves · 38 no graves</div></div>
+          <div class="kpi"><div class="lab">Pendientes de evaluación</div><div class="val num">2</div><div class="sub warn">1 grave con plazo corriendo</div></div>
+          <div class="kpi"><div class="lab">Plazo más próximo</div><div class="val num">9 días</div><div class="sub crit">Grave-inesperado · 15 días CO</div></div>
+          <div class="kpi"><div class="lab">Duplicados descartados</div><div class="val num">6</div><div class="sub ok">Mismo caso en FAERS y VigiFlow</div></div>
+        </div>
+
+        <div class="card">
+          <div class="chead"><h3>Caso destacado · ADR-2026-0187</h3><div class="right"><span class="pill crit">Grave</span></div></div>
+          <div class="cbody">
+            <div class="split">
+              <div>
+                <table>
+                  <tbody>
+                    <tr><td style="color:var(--muted)">Producto sospechoso</td><td><b>Amoxicilina MK 500 mg</b></td></tr>
+                    <tr><td style="color:var(--muted)">Reacción (MedDRA PT)</td><td><b>Reacción anafiláctica</b> · SOC: Trastornos del sistema inmunológico</td></tr>
+                    <tr><td style="color:var(--muted)">Paciente</td><td>F · 34 años · vía oral · dosis habitual</td></tr>
+                    <tr><td style="color:var(--muted)">Causalidad (Naranjo)</td><td><span class="pill warn">Probable · 6 pts</span></td></tr>
+                    <tr><td style="color:var(--muted)">Desenlace</td><td>Recuperado con tratamiento · hospitalización 24 h</td></tr>
+                    <tr><td style="color:var(--muted)">Fuente</td><td>FAERS · <span class="mono">US-FDA-26-3318842</span> · formato E2B(R3)</td></tr>
+                    <tr><td style="color:var(--muted)">Plazo de reporte</td><td><b>15 días calendario</b> (grave) · vence <b class="num">05-sep-26</b></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <div class="card" style="margin:0">
+                  <div class="chead"><h3>Pipeline del caso</h3></div>
+                  <div class="cbody flush feed timeline" style="padding:6px 0">
+                    <div class="feeditem"><span class="dot ok"></span><div><b>Ingesta vía API</b><p>Caso recibido en E2B(R3), validado contra esquema.</p></div></div>
+                    <div class="feeditem"><span class="dot ok"></span><div><b>Deduplicación</b><p>Sin coincidencia previa por paciente/fecha/reacción.</p></div></div>
+                    <div class="feeditem"><span class="dot ok"></span><div><b>Codificación MedDRA</b><p>PT y SOC asignados automáticamente (v27.0).</p></div></div>
+                    <div class="feeditem"><span class="dot warn"></span><div><b>Evaluación de causalidad</b><p>Naranjo automático: probable. Confirmación del QPPV pendiente.</p></div></div>
+                    <div class="feeditem"><span class="dot info"></span><div><b>Asociación al dossier</b><p>Vinculado a M5 del dossier Amoxicilina CO y al IPS S2-2026.</p></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="chead"><h3>Bandeja de casos</h3><div class="right"><span class="tag">últimos 30 días</span></div></div>
+          <div class="cbody flush tscroll">
+            <table>
+              <thead><tr><th>ID caso</th><th>Producto</th><th>Reacción (PT)</th><th>Fuente</th><th>Gravedad</th><th>Causalidad</th><th>Plazo</th><th>Estado</th></tr></thead>
+              <tbody>
+                <tr><td class="mono">ADR-2026-0187</td><td>Amoxicilina</td><td>Reacción anafiláctica</td><td>FAERS</td><td><span class="pill crit">Grave</span></td><td>Probable</td><td class="num">9 días</td><td>QPPV pendiente</td></tr>
+                <tr><td class="mono">ADR-2026-0186</td><td>Losartán</td><td>Angioedema</td><td>VigiFlow</td><td><span class="pill warn">Moderada</span></td><td>Posible</td><td class="num">—</td><td>En revisión</td></tr>
+                <tr><td class="mono">ADR-2026-0185</td><td>Metformina</td><td>Náuseas</td><td>FAERS</td><td><span class="pill mut">No grave</span></td><td>Posible</td><td class="num">—</td><td>Documentado · IPS</td></tr>
+                <tr><td class="mono">ADR-2026-0184</td><td>Amoxicilina</td><td>Erupción cutánea</td><td>VigiFlow</td><td><span class="pill mut">No grave</span></td><td>Probable</td><td class="num">—</td><td>Documentado · IPS</td></tr>
+                <tr><td class="mono">ADR-2026-0181</td><td>Losartán</td><td>Mareo</td><td>FAERS</td><td><span class="pill mut">No grave</span></td><td>Dudosa</td><td class="num">—</td><td>Documentado · IPS</td></tr>
+                <tr><td class="mono">ADR-2026-0179</td><td>Atorvastatina</td><td>Mialgia</td><td>VigiFlow</td><td><span class="pill warn">Moderada</span></td><td>Probable</td><td class="num">—</td><td>En revisión</td></tr>
+                <tr><td class="mono">ADR-2026-0176</td><td>Metformina</td><td>Acidosis láctica</td><td>FAERS</td><td><span class="pill crit">Grave</span></td><td>Posible</td><td class="num">14 días</td><td>QPPV pendiente</td></tr>
+                <tr><td class="mono">ADR-2026-0174</td><td>Omeprazol</td><td>Cefalea</td><td>VigiFlow</td><td><span class="pill mut">No grave</span></td><td>Posible</td><td class="num">—</td><td>Documentado · IPS</td></tr>
+                <tr><td class="mono">ADR-2026-0171</td><td>Ibuprofeno</td><td>Dispepsia</td><td>FAERS</td><td><span class="pill mut">No grave</span></td><td>Probable</td><td class="num">—</td><td>Documentado · IPS</td></tr>
+                <tr><td class="mono">ADR-2026-0168</td><td>Salbutamol</td><td>Temblor</td><td>VigiFlow</td><td><span class="pill mut">No grave</span></td><td>Probable</td><td class="num">—</td><td>Documentado · IPS</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MOCKUP: IPS ============ -->
+      <section class="view" id="view-agent-ips">
+        <p style="margin:0 0 10px"><button class="btn sm" data-open="agents">← Volver a Agentes</button></p>
+        <h2 class="pagehead">⚖️ ALESSA IPS — informe periódico de seguridad</h2>
+        <p class="pagesub">El agente actualiza el módulo 5 en la sección Informes Periódicos de Seguridad con toda la evidencia acumulada (casos, alertas, literatura), y el equipo regulatorio valida la información.</p>
+
+        <div class="txflow">
+          <div class="txnode"><b>1 · Agente redacta</b><span>Evidencia consolidada<br><span class="pill ok" style="margin-top:4px">Completado</span></span></div>
+          <div class="txarrow">→</div>
+          <div class="txnode"><b>2 · Epidemiólogo valida</b><span>Dra. C. Mendoza (QPPV)<br><span class="pill warn" style="margin-top:4px">En revisión</span></span></div>
+          <div class="txarrow">→</div>
+          <div class="txnode"><b>3 · Firma y envío</b><span>eReporting INVIMA<br><span class="pill mut" style="margin-top:4px">Bloqueado</span></span></div>
+        </div>
+
+        <div class="split">
+          <div class="card">
+            <div class="chead"><h3>IPS Losartán Andina · S1-2026 · borrador v3</h3></div>
+            <div class="cbody flush">
+              <div class="tdoc" style="padding-left:18px"><span class="name">1. Estado mundial de autorización</span><div class="right"><span class="pill ok">Generado</span></div></div>
+              <div class="tdoc" style="padding-left:18px"><span class="name">2. Acciones por razones de seguridad</span><div class="right"><span class="fmeta">incluye alerta NDMA</span><span class="pill ok">Generado</span></div></div>
+              <div class="tdoc" style="padding-left:18px"><span class="name">3. Exposición estimada de pacientes</span><div class="right"><span class="fmeta">ventas CO+PE</span><span class="pill ok">Generado</span></div></div>
+              <div class="tdoc" style="padding-left:18px"><span class="name">4. Resumen de casos individuales (18)</span><div class="right"><span class="fmeta">tablas desde ALESSA Database</span><span class="pill ok">Generado</span></div></div>
+              <div class="tdoc" style="padding-left:18px"><span class="name">5. Hallazgos de literatura (6 refs)</span><div class="right"><span class="fmeta">PubMed · monitoreo socio</span><span class="pill ok">Generado</span></div></div>
+              <div class="tdoc" style="padding-left:18px"><span class="name">6. Evaluación riesgo-beneficio</span><div class="right"><span class="pill warn">Requiere criterio humano</span></div></div>
+              <div class="tdoc" style="padding-left:18px"><span class="name">7. Conclusión y acciones propuestas</span><div class="right"><span class="pill warn">Requiere criterio humano</span></div></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="chead"><h3>Panel de validación · epidemiólogo</h3></div>
+            <div class="cbody" style="display:flex; flex-direction:column; gap:12px">
+              <div style="background:var(--surface2); border-radius:9px; padding:12px 14px; font-size:12.5px">
+                <b>Evidencia consolidada:</b> 18 casos ADR (1 grave) · 2 alertas sanitarias · 6 referencias de literatura · exposición estimada 1,2 M dosis diarias definidas.
+              </div>
+              <div style="background:var(--surface2); border-radius:9px; padding:12px 14px; font-size:12.5px">
+                <b>Conclusión preliminar del agente:</b> el balance riesgo-beneficio se mantiene <b>favorable</b>; se propone vigilancia reforzada de la impureza NDMA y actualización del inserto por interacción con AINEs.
+              </div>
+              <div style="background:var(--info-bg); color:var(--info); border-radius:9px; padding:12px 14px; font-size:12.5px">
+                💬 <b>Dra. Mendoza:</b> «Ajustar la sección 6: citar el resultado de los ensayos de NDMA de los 3 lotes locales antes de concluir. El resto está correcto.»
+              </div>
+              <div style="display:flex; gap:10px; flex-wrap:wrap">
+                <button class="btn primary" id="btn-ipsval">✓ Aprobar y firmar (simulado)</button>
+                <button class="btn">Devolver con comentarios</button>
+              </div>
+              <p id="ipsstatus" style="margin:0; font-size:12px; color:var(--muted)">La firma habilita el paso 3 (envío por eReporting) y queda registrada con sello de tiempo y hash del documento.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FARMACOVIGILANCIA ============ -->
+      <!-- ============ MONITOR PAVS (ConkoSafe IA) ============ -->
+      <section class="view" id="view-pavs-monitor">
+        <div class="pavs-hero">
+          <div>
+            <h2>ConkoSafe IA — Monitor PAVS-LATAM</h2>
+            <div class="sub">Alertas de Países de Alta Vigilancia Sanitaria - LATAM · FT-95 / D8043</div>
+          </div>
+          <div class="right">
+            <button class="btn sm" data-open="agents">← Volver a Agentes</button>
+            <span class="btn sm" style="cursor:default">Última alerta: <span id="pavs-last-date">—</span></span>
+          </div>
+        </div>
+
+        <div class="pavs-note"><b>Fuente de datos:</b> este monitor se alimenta del scraper <span class="mono">PAVS_Digemid</span>, ejecutado periódicamente como GitHub Action, que publica un CSV/JSON consolidado de alertas de FDA, EMA, ANSM, MHRA, BfArM, Health Canada, TGA, DIGEMID, AEMPS, AIFA, BASG e INVIMA, entre otras. Esta vista es una <b>muestra estática</b> para la demo — en producción, la tabla y las métricas se recalculan en cada corrida del Action.</div>
+
+        <div class="card">
+          <div class="cbody">
+            <div class="pavs-filters">
+              <div><label for="pavs-q">Buscar (título / producto / IFA)</label><input type="search" id="pavs-q" placeholder="Ej: metamizol, DRESS, fingolimod…"></div>
+              <div><label for="pavs-year">Año</label><select id="pavs-year"><option value="">Todos</option></select></div>
+              <div><label for="pavs-country">País</label><select id="pavs-country"><option value="">Todos</option></select></div>
+              <div><label for="pavs-agency">Agencia</label><select id="pavs-agency"><option value="">Todas</option></select></div>
+              <div><label for="pavs-type">Tipo de alerta</label><select id="pavs-type"><option value="">Todos</option></select></div>
+            </div>
+            <div class="pavs-filters2">
+              <div><label for="pavs-product">Producto</label><select id="pavs-product"><option value="">Todos</option></select></div>
+              <button class="btn sm" id="pavs-refresh">↻ Actualizar</button>
+              <button class="btn sm primary" id="pavs-export">⬇ Exportar CSV</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pavs-stats">
+          <div class="pavs-stat"><div class="n">1821</div><div class="l">Total alertas</div></div>
+          <div class="pavs-stat"><div class="n">465</div><div class="l">Este año</div></div>
+          <div class="pavs-stat"><div class="n">25</div><div class="l">Agencias</div></div>
+          <div class="pavs-stat"><div class="n">23</div><div class="l">Países</div></div>
+        </div>
+
+        <div class="split">
+          <div class="card">
+            <div class="chead"><h3>Alertas por año</h3></div>
+            <div class="cbody" id="pavs-chart-years"></div>
+          </div>
+          <div class="card">
+            <div class="chead"><h3>Top agencias</h3></div>
+            <div class="cbody" id="pavs-chart-agencies"></div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var titles={dash:"Dashboard",agents:"Agentes",binder:"Binder · Gestor documental",ectd:"Constructor eCTD",
+    "pavs-monitor":"Conkosafe IA · Monitor PAVS",
+    "agent-scout":"Scout Farma · mockup","agent-compass":"Compass Farma · mockup","agent-conkosafe":"Conkosafe IA · Alertas · mockup","agent-adr":"ALESSA Database · mockup","agent-ips":"ALESSA IPS · mockup"};
+  var navbtns=document.querySelectorAll(".navbtn");
+  function openView(key){
+    var el=document.getElementById("view-"+key);
+    if(!el) return;
+    document.querySelectorAll(".view").forEach(function(v){v.classList.remove("active")});
+    el.classList.add("active");
+    document.getElementById("viewtitle").textContent=titles[key]||key;
+    var navKey = key.indexOf("agent-")===0 ? "agents" : key;
+    navbtns.forEach(function(x){x.classList.toggle("active", x.dataset.view===navKey)});
+    window.scrollTo({top:0});
+  }
+  navbtns.forEach(function(b){ b.addEventListener("click",function(){openView(b.dataset.view)}) });
+  document.addEventListener("click",function(e){
+    var t=e.target.closest("[data-open]");
+    if(t) openView(t.dataset.open);
+  });
+
+  // ---- animaciones de entrada: contadores y barras ----
+  var noMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function animateView(view){
+    if(noMotion || !view) return;
+    // contadores: valores numéricos puros (con % opcional)
+    view.querySelectorAll(".kpi .val, .bk-counters b").forEach(function(el){
+      var m=/^(\d+)(%?)$/.exec(el.textContent.trim());
+      if(!m) return;
+      var target=+m[1], suf=m[2], t0=null;
+      function tick(ts){
+        if(!t0) t0=ts;
+        var p=Math.min((ts-t0)/650,1), eased=1-Math.pow(1-p,3);
+        el.textContent=Math.round(target*eased)+suf;
+        if(p<1) requestAnimationFrame(tick); else el.textContent=target+suf;
+      }
+      requestAnimationFrame(tick);
+    });
+    // barras: crecen desde cero hasta su ancho declarado
+    view.querySelectorAll(".bar > i, .vig-bar > i").forEach(function(i){
+      var w=i.style.width; if(!w) return;
+      i.style.width="0%"; void i.offsetWidth;
+      requestAnimationFrame(function(){ i.style.width=w });
+    });
+  }
+  var _openView=openView;
+  openView=function(key){ _openView(key); animateView(document.getElementById("view-"+key)) };
+  window.addEventListener("load",function(){ animateView(document.getElementById("view-dash")) });
+
+  // CTA de contratación
+  function wireHire(id){
+    var b=document.getElementById(id);
+    if(b) b.addEventListener("click",function(){
+      b.textContent="✓ Solicitud registrada — te contactamos en 24 h";
+      b.disabled=true; b.style.opacity=".85";
+    });
+  }
+  wireHire("btn-hire"); wireHire("btn-hire2");
+
+  // Calculadora de ahorro
+  var rn=document.getElementById("roi-n");
+  function fmt(x){ return "US$"+x.toLocaleString("de-DE") }
+  function roi(){
+    if(!rn) return;
+    var n=+rn.value, vv=50000+n*1500, us=3000+n*250, sv=vv-us, pct=Math.round(sv/vv*100);
+    document.getElementById("roi-nval").textContent=n;
+    document.getElementById("roi-vv").textContent=fmt(vv)+"/año";
+    document.getElementById("roi-us").textContent=fmt(us)+"/año";
+    document.getElementById("roi-save").textContent=fmt(sv)+" · "+pct+"%";
+  }
+  if(rn){ rn.addEventListener("input",roi); roi(); }
+
+  // cuenta regresiva de la ventana de transición CTD
+  var cd=document.getElementById("cd-dias");
+  if(cd){ var d=Math.max(0,Math.ceil((new Date("2026-12-01")-Date.now())/864e5)); cd.textContent=d; }
+
+  // CTD tree: delegación de eventos (funciona también para árboles generados dinámicamente por producto)
+  document.addEventListener("click",function(e){
+    var th=e.target.closest(".thead");
+    if(th){ th.parentElement.classList.toggle("open"); return; }
+    var tsh=e.target.closest(".tsubhead");
+    if(tsh){ e.stopPropagation(); tsh.parentElement.classList.toggle("open"); return; }
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.key!=="Enter"&&e.key!==" ") return;
+    var th=e.target.closest(".thead");
+    if(th){ e.preventDefault(); th.parentElement.classList.toggle("open"); return; }
+    var tsh=e.target.closest(".tsubhead");
+    if(tsh){ e.preventDefault(); tsh.parentElement.classList.toggle("open"); return; }
+  });
+
+  // eCTD steps
+  var steps=document.querySelectorAll(".step");
+  function gotoStep(n){
+    steps.forEach(function(s){
+      var sn=+s.dataset.step;
+      s.classList.toggle("active",sn===n);
+      s.classList.toggle("done",sn<n);
+    });
+    document.querySelectorAll(".stepbody").forEach(function(b){b.classList.toggle("active",+b.dataset.body===n)});
+  }
+  steps.forEach(function(s){s.addEventListener("click",function(){gotoStep(+s.dataset.step)})});
+  document.querySelectorAll("[data-goto]").forEach(function(b){b.addEventListener("click",function(){gotoStep(+b.dataset.goto)})});
+
+  // Validator animation
+  var bv=document.getElementById("btn-validate");
+  if(bv) bv.addEventListener("click",function(){
+    bv.disabled=true;
+    var checks=Array.prototype.slice.call(document.querySelectorAll("#checklist .check"));
+    checks.forEach(function(c){c.classList.remove("pass","fail","warnst","running");c.querySelector(".st").textContent="·";c.querySelector(".right").innerHTML=""});
+    document.getElementById("val-verdict").style.display="none";
+    var i=0;
+    function next(){
+      if(i>0){
+        var prev=checks[i-1], res=prev.dataset.res;
+        prev.classList.remove("running");
+        if(res==="pass"){prev.classList.add("pass");prev.querySelector(".st").textContent="✓";prev.querySelector(".right").innerHTML='<span class="pill ok">Conforme</span>'}
+        else if(res==="warn"){prev.classList.add("warnst");prev.querySelector(".st").textContent="!";prev.querySelector(".right").innerHTML='<span class="pill warn">Advertencia</span>'}
+        else{prev.classList.add("fail");prev.querySelector(".st").textContent="✕";prev.querySelector(".right").innerHTML='<span class="pill crit">Error</span>'}
+      }
+      if(i<checks.length){
+        checks[i].classList.add("running");
+        checks[i].querySelector(".st").innerHTML='<span class="spin"></span>';
+        i++;
+        setTimeout(next,320);
+      }else{
+        document.getElementById("val-verdict").style.display="block";
+        document.getElementById("val-summary").textContent="Validación completada · 8 ✓ · 1 ! · 1 ✕";
+        bv.disabled=false; bv.textContent="↻ Volver a ejecutar";
+      }
+    }
+    next();
+  });
+
+  // Transmission simulation
+  var bt=document.getElementById("btn-transmit"), ba=document.getElementById("btn-acuse"), log=document.getElementById("txlog");
+  if(bt) bt.addEventListener("click",function(){
+    bt.disabled=true;
+    var flow=document.querySelector("#view-ectd .txflow"); if(flow) flow.classList.add("sending");
+    var lines=[
+      ["dim","$ ectd package --seq 0000 --authority INVIMA"],
+      ["", "Comprimiendo 73 archivos + backbone… <span class='ok'>ZIP 148.2 MB</span>"],
+      ["", "Firmando paquete con llave del titular <span class='ok'>TIT-CO-8841</span>"],
+      ["", "Validación previa del backbone… <span class='ok'>OK (DTD ICH 3.2)</span>"],
+      ["", "Transmitiendo a ventanilla electrónica INVIMA…"],
+      ["", "Autoridad descifra con llave <span class='ok'>AUT-INV-0093</span> — sin intermediarios"],
+      ["ok","✓ Recibido · Radicado INVIMA nº 2026-08-114732 · 16:42 GMT-5"],
+      ["dim","— acuse de recibo disponible · la secuencia 0001 quedará ligada a este ciclo de vida —"]
+    ];
+    log.innerHTML="";
+    var i=0;
+    (function tick(){
+      if(i<lines.length){
+        var cls=lines[i][0]?(' class="'+lines[i][0]+'"'):"";
+        log.innerHTML+="<div"+cls+">"+lines[i][1]+"</div>";
+        i++; setTimeout(tick,520);
+      }else{
+        ba.disabled=false; bt.textContent="✓ Secuencia 0000 transmitida";
+        var flow=document.querySelector("#view-ectd .txflow");
+        if(flow){ flow.classList.remove("sending"); var nodes=flow.querySelectorAll(".txnode"); var last=nodes[nodes.length-1]; if(last) last.classList.add("okflash"); }
+        var pt=document.getElementById("posttx"); if(pt) pt.style.display="block";
+      }
+    })();
+  });
+  if(ba) ba.addEventListener("click",function(){
+    alert("Demo: aquí se descargaría el acuse de recibo firmado por la autoridad (PDF + XML).");
+  });
+
+  // ---- Binder: portafolio de 22 productos (tabla con acordeón por fila) ----
+  // st: ok/info/warn/crit → pill; total docs según país/vía
+  var BPRODS=[
+    {n:"Amoxicilina MK",f:"Tabletas 500 mg",c:"CO",v:"Registro nuevo",comp:92,st:["ok","Listo p/ validar"],dup:1,borr:2},
+    {n:"Losartán Andina",f:"Tabletas 50 mg",c:"CO",v:"Renovación",comp:81,st:["warn","Docs por vencer"],dup:0,borr:1},
+    {n:"Atorvastatina MK",f:"Tabletas 20 mg",c:"CO",v:"Registro nuevo",comp:100,st:["ok","Transmitido"],dup:0,borr:0},
+    {n:"Acetaminofén Andina",f:"Tabletas 500 mg",c:"CO",v:"Renovación",comp:100,st:["ok","Aprobado"],dup:0,borr:0},
+    {n:"Ibuprofeno Andina",f:"Tabletas 400 mg",c:"CO",v:"Registro nuevo",comp:95,st:["ok","Listo p/ validar"],dup:1,borr:1},
+    {n:"Naproxeno MK",f:"Tabletas 550 mg",c:"CL",v:"Registro nuevo",comp:91,st:["ok","Listo p/ validar"],dup:0,borr:2},
+    {n:"Clopidogrel MK",f:"Tabletas 75 mg",c:"MX",v:"Registro nuevo",comp:89,st:["ok","Listo p/ validar"],dup:0,borr:1},
+    {n:"Omeprazol MK",f:"Cápsulas 20 mg",c:"CO",v:"Registro nuevo",comp:88,st:["info","En construcción"],dup:1,borr:2},
+    {n:"Dexametasona MK",f:"Tabletas 4 mg",c:"PE",v:"Registro nuevo",comp:87,st:["ok","Listo p/ validar"],dup:0,borr:1},
+    {n:"Loratadina Andina",f:"Tabletas 10 mg",c:"CO",v:"Renovación",comp:83,st:["warn","Docs por vencer"],dup:0,borr:1},
+    {n:"Diclofenaco Andina",f:"Gel tópico 1%",c:"CO",v:"Variación",comp:80,st:["warn","Requerimiento INVIMA"],dup:0,borr:1},
+    {n:"Amlodipino MK",f:"Tabletas 5 mg",c:"AR",v:"Registro nuevo",comp:77,st:["info","En construcción"],dup:0,borr:2},
+    {n:"Cefalexina Andina",f:"Cápsulas 500 mg",c:"CL",v:"Renovación",comp:74,st:["warn","Docs por vencer"],dup:1,borr:1},
+    {n:"Azitromicina MK",f:"Tabletas 500 mg",c:"CO",v:"Registro nuevo",comp:71,st:["info","En construcción"],dup:0,borr:3},
+    {n:"Amoxicilina + Clavulánico",f:"Suspensión 250/62,5 mg/5 mL",c:"CO",v:"Registro nuevo",comp:69,st:["info","En construcción"],dup:0,borr:2},
+    {n:"Ciprofloxacino MK",f:"Tabletas 500 mg",c:"PE",v:"Registro nuevo",comp:66,st:["info","En construcción"],dup:0,borr:2},
+    {n:"Metformina Andina",f:"Tabletas 850 mg",c:"PE",v:"Registro nuevo",comp:64,st:["info","En construcción"],dup:0,borr:1},
+    {n:"Valsartán MK",f:"Tabletas 160 mg",c:"CO",v:"Registro nuevo",comp:62,st:["crit","Alerta NDMA · en evaluación"],dup:0,borr:1},
+    {n:"Enalapril Andina",f:"Tabletas 20 mg",c:"MX",v:"Registro nuevo",comp:58,st:["info","En construcción"],dup:0,borr:2},
+    {n:"Salbutamol Andina",f:"Inhalador 100 µg/dosis",c:"ES",v:"Registro nuevo",comp:53,st:["info","En construcción"],dup:0,borr:1},
+    {n:"Sertralina Andina",f:"Tabletas 50 mg",c:"AR",v:"Registro nuevo",comp:42,st:["info","En construcción"],dup:0,borr:2},
+    {n:"Insulina glargina AB",f:"Solución iny. 100 UI/mL · biológico",c:"CO",v:"Registro nuevo",comp:35,st:["info","En construcción"],dup:0,borr:1}
+  ];
+  var TOTALS={ "CO|Registro nuevo":73, "CO|Renovación":31, "CO|Variación":14,
+    "PE|Registro nuevo":66, "PE|Renovación":27,
+    "AR|Registro nuevo":70, "AR|Renovación":28,
+    "CL|Registro nuevo":64, "CL|Renovación":26,
+    "MX|Registro nuevo":71, "MX|Renovación":30,
+    "ES|Registro nuevo":76, "ES|Renovación":32 };
+  var AUTH={CO:"INVIMA", PE:"DIGEMID", AR:"ANMAT", CL:"ISP", MX:"COFEPRIS", ES:"AEMPS"};
+  var FLAG={CO:"🇨🇴", PE:"🇵🇪", AR:"🇦🇷", CL:"🇨🇱", MX:"🇲🇽", ES:"🇪🇸"};
+  // nº de expediente / registro sanitario simulado por producto
+  var REGS={ "Atorvastatina MK":"Rad. INVIMA 2026-07-098114", "Acetaminofén Andina":"RS INVIMA 2019M-0008814-R1",
+    "Losartán Andina":"RS INVIMA 2016M-0012345", "Loratadina Andina":"RS INVIMA 2017M-0009182-R1",
+    "Cefalexina Andina":"RS ISP F-24771/23", "Dexametasona PE":"EXP DIGEMID EE-2026-04471" };
+  function prodReg(p,i){ return REGS[p.n] || (AUTH[p.c]+" EXP-2026-0"+(8100+i)) }
+  function prodTotal(p){ return TOTALS[p.c+"|"+p.v]||73 }
+  function escHtml(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;") }
+
+  // Plantilla de los 5 módulos CTD y sus subcarpetas (según la guía ICH del PDF de referencia)
+  var CTD_TEMPLATE=[
+    {code:"M1", title:"Regional Administrative Information — Información administrativa y regional", role:"Regulatorio", subs:[
+      {name:"Carta de presentación (Cover letter)", code:"1.0", doc:"Carta de presentación dirigida a la autoridad"},
+      {name:"Formulario de solicitud (Application form)", code:"1.1", doc:"Formulario de solicitud de registro sanitario"},
+      {name:"Formularios administrativos (Administrative forms)", code:"1.1b", doc:"Poder de representación / formularios complementarios"},
+      {name:"Información del producto / rotulado (Product information / labeling)", code:"1.4", doc:"Proyecto de etiqueta e inserto (QR)"},
+      {name:"Información para prescripción (Prescribing information)", code:"1.3.1", doc:"Información para prescripción (IPP)"},
+      {name:"Empaque, inserto y arte final (Package insert / carton / artwork)", code:"1.4b", doc:"Arte final de empaque (carton) y estuche"},
+      {name:"Documentos legales (Legal documents)", code:"1.2", doc:"Certificado de existencia y representación legal"},
+      {name:"GMP / licencias / certificados (GMP / licenses / certificates)", code:"1.3", doc:"Certificado BPM planta fabricante"},
+      {name:"Declaraciones ambientales / locales (Environmental / local declarations)", code:"1.6", doc:"Declaración ambiental / requisitos locales"}
+    ]},
+    {code:"M2", title:"CTD Summaries / Overviews — Resúmenes del CTD", role:"Científico", subs:[
+      {name:"2.1 Tabla de contenidos (Table of contents)", code:"2.1", doc:"Índice general del dossier CTD"},
+      {name:"2.2 Introducción del CTD (CTD introduction)", code:"2.2", doc:"Introducción del CTD"},
+      {name:"2.3 Resumen global de calidad (Quality Overall Summary)", code:"2.3", doc:"Resumen global de calidad (QOS)"},
+      {name:"2.4 Panorama no clínico (Nonclinical overview)", code:"2.4", doc:"Panorama no clínico"},
+      {name:"2.5 Panorama clínico (Clinical overview)", code:"2.5", doc:"Panorama clínico"},
+      {name:"2.6 Resúmenes escritos y tabulados no clínicos", code:"2.6", doc:"Resúmenes tabulados de estudios no clínicos"},
+      {name:"2.7 Resumen clínico (Clinical summary)", code:"2.7", doc:"Resumen clínico integrado"}
+    ]},
+    {code:"M3", title:"Quality (CMC) — Calidad (química, fabricación y controles)", role:"Planta", subs:[
+      {name:"Sustancia activa (Drug substance / API)", code:"3.2.S", doc:"Sustancia activa — DMF / carta de acceso"},
+      {name:"Producto terminado (Drug product)", code:"3.2.P.1", doc:"Descripción y composición del producto terminado"},
+      {name:"Composición / formulación (Composition / formulation)", code:"3.2.P.1b", doc:"Fórmula cuali-cuantitativa"},
+      {name:"Proceso de fabricación (Manufacturing process)", code:"3.2.P.3", doc:"Proceso de fabricación y validación"},
+      {name:"Controles de proceso (Process controls)", code:"3.2.P.3d", doc:"Controles en proceso (IPC)"},
+      {name:"Especificaciones (Specifications)", code:"3.2.P.5.1", doc:"Especificaciones de liberación y vida útil"},
+      {name:"Métodos analíticos (Analytical methods)", code:"3.2.P.5.2", doc:"Descripción de métodos analíticos"},
+      {name:"Validación de métodos analíticos (Method validation)", code:"3.2.P.4", doc:"Validación de método analítico"},
+      {name:"Análisis de lotes (Batch analysis)", code:"3.2.P.5.4", doc:"Análisis de lotes piloto e industriales"},
+      {name:"Datos de estabilidad (Stability data)", code:"3.2.P.8", doc:"Estudio de estabilidad"},
+      {name:"Sistema de cierre del envase (Container closure system)", code:"3.2.P.7", doc:"Envase primario y sistema de cierre"},
+      {name:"Desarrollo farmacéutico (Pharmaceutical development)", code:"3.2.P.2", doc:"Informe de desarrollo farmacéutico"},
+      {name:"Información de excipientes (Excipient information)", code:"3.2.P.4.exc", doc:"Certificados y especificaciones de excipientes"}
+    ]},
+    {code:"M4", title:"Nonclinical Study Reports — Informes no clínicos", role:"Científico", subs:[
+      {name:"Farmacología (Pharmacology studies)", code:"4.2.1", doc:"Farmacología — literatura de referencia"},
+      {name:"Farmacocinética / toxicocinética (Pharmacokinetics / toxicokinetics)", code:"4.2.2", doc:"Estudios de farmacocinética (ADME)"},
+      {name:"Toxicidad a dosis única (Single-dose toxicity)", code:"4.2.3.1", doc:"Estudio de toxicidad aguda"},
+      {name:"Toxicidad a dosis repetida (Repeat-dose toxicity)", code:"4.2.3.2", doc:"Estudio de toxicidad subcrónica"},
+      {name:"Genotoxicidad (Genotoxicity)", code:"4.2.3.3", doc:"Batería de ensayos de genotoxicidad"},
+      {name:"Carcinogenicidad (Carcinogenicity, si aplica)", code:"4.2.3.4", doc:"Estudio de carcinogenicidad"},
+      {name:"Toxicidad reproductiva y del desarrollo (Reproductive / developmental toxicity)", code:"4.2.3.5", doc:"Estudios de toxicidad reproductiva"},
+      {name:"Tolerancia local (Local tolerance)", code:"4.2.3.6", doc:"Estudio de tolerancia local"},
+      {name:"Otros estudios especiales de toxicología (Other special toxicology studies)", code:"4.2.3.7", doc:"Toxicología — justificación por producto conocido"}
+    ]},
+    {code:"M5", title:"Clinical Study Reports — Informes de estudios clínicos", role:"Clínico", subs:[
+      {name:"Informes de estudios clínicos — Fase I/II/III (Clinical study reports)", code:"5.3.1–5.3.5", doc:"Informes de estudios clínicos pivotales"},
+      {name:"Bioequivalencia / biodisponibilidad (Bioavailability / bioequivalence studies)", code:"5.3.1.2", doc:"Estudio de bioequivalencia vs. innovador"},
+      {name:"Farmacología clínica (Clinical pharmacology data)", code:"5.3.3", doc:"Datos de farmacología clínica"},
+      {name:"Datos de eficacia (Efficacy data)", code:"5.3.5", doc:"Resumen de datos de eficacia"},
+      {name:"Datos de seguridad (Safety data)", code:"5.3.6", doc:"Informe periódico de seguridad (IPS)"},
+      {name:"Reportes estadísticos (Statistical reports)", code:"5.3.1.2s", doc:"Reporte estadístico del estudio de bioequivalencia"},
+      {name:"Protocolos y enmiendas (Protocols / amendments)", code:"5.3.1.2p", doc:"Protocolo y enmiendas del estudio de BE"},
+      {name:"Resúmenes integrados / documentos de soporte (Integrated summaries / supportive clinical documents)", code:"5.4", doc:"Fichas técnicas de referencia / documentos de soporte"}
+    ]}
+  ];
+
+  // Estados de documento: ciclo Pendiente → En proceso → Aprobado → Vencido
+  var DOC_STATES=["pending","progress","ok","late"];
+  var DOC_STATE_LABEL={pending:"Pendiente", progress:"En proceso", ok:"Aprobado", late:"Vencido"};
+  var DOC_STATE_WEIGHT={pending:10, progress:55, ok:100, late:0};
+
+  // Estado inicial determinista por producto, coherente con su % de completitud
+  function buildStatusMapForTemplate(template, p, i){
+    var flat=[]; template.forEach(function(m){ m.subs.forEach(function(s){ flat.push(m.code+"·"+s.code) }) });
+    var total=flat.length;
+    var incompletos=Math.max(0, Math.min(total-p.borr, Math.round((100-p.comp)/100*total)));
+    var vencidos=Math.min(incompletos, p.dup); // certificados/CoA vencidos → coincide con los "duplicados" reportados
+    var pendientes=incompletos-vencidos;
+    var idx=flat.map(function(_,k){return k});
+    var seed=(i+1)*97+13;
+    for(var k=idx.length-1;k>0;k--){ seed=(seed*9301+49297)%233280; var j=Math.floor((seed/233280)*(k+1)); var t=idx[k]; idx[k]=idx[j]; idx[j]=t; }
+    var map={}, pos=0;
+    for(var a=0;a<vencidos;a++){ map[flat[idx[pos++]]]="late" }
+    for(var b=0;b<pendientes;b++){ map[flat[idx[pos++]]]="pending" }
+    for(var c=0;c<p.borr && pos<idx.length;c++){ map[flat[idx[pos++]]]="progress" }
+    while(pos<idx.length){ map[flat[idx[pos]]]="ok"; pos++ }
+    return map;
+  }
+  function buildStatusMap(p, i){ return buildStatusMapForTemplate(CTD_TEMPLATE, p, i) }
+
+  function buildTreeForTemplate(template, statusMap, idPrefix){
+    return template.map(function(m){
+      var subsHtml=m.subs.map(function(s){
+        var st=statusMap[m.code+"·"+s.code]||"pending";
+        var docId=idPrefix+"-"+m.code+"-"+s.code.replace(/[^a-zA-Z0-9]/g,"");
+        var pillBtn="<button type='button' class='docstate docstate-"+st+"' data-doc-id='"+docId+"' title='Clic para cambiar el estado'>"+DOC_STATE_LABEL[st]+"</button>";
+        return "<div class='tsub'><div class='tsubhead' role='button' tabindex='0'><span class='car'>▶</span><span class='sfic'>📁</span><span class='name'>"+escHtml(s.name)+"</span><div class='right'><span class='tag'>1 doc</span></div></div>"+
+          "<div class='tsubkids'><div class='tdoc'><span class='name mono'>"+escHtml(s.code)+"</span><span class='name'>"+escHtml(s.doc)+"</span><div class='right'>"+pillBtn+"</div></div></div></div>";
+      }).join("");
+      return "<div class='tnode'><div class='thead' role='button' tabindex='0'><span class='car'>▶</span><span class='mod mono'>"+m.code+"</span> "+escHtml(m.title)+
+        "<span class='role tag'>Rol: "+m.role+"</span><div class='right'><div class='barrow'><div class='bar'><i style='width:0%'></i></div><span class='num'>0%</span></div></div></div>"+
+        "<div class='modmissing'></div>"+
+        "<div class='tkids'>"+subsHtml+"</div></div>";
+    }).join("");
+  }
+  function buildProductTree(p, i){ return buildTreeForTemplate(CTD_TEMPLATE, buildStatusMap(p,i), "d"+i) }
+
+  // Recalcula, en vivo, el % de un módulo y qué subcarpetas todavía no tienen su documento en estado "Aprobado"
+  function recomputeModulePct(tnode){
+    var subs=tnode.querySelectorAll(":scope > .tkids > .tsub");
+    var total=subs.length, wsum=0, missing=[];
+    subs.forEach(function(sub){
+      var btn=sub.querySelector(".docstate");
+      var st=btn ? (DOC_STATES.filter(function(s){ return btn.classList.contains("docstate-"+s) })[0]||"pending") : "pending";
+      wsum+=DOC_STATE_WEIGHT[st];
+      if(st!=="ok"){
+        var nameEl=sub.querySelector(".tsubhead .name");
+        missing.push({name: nameEl ? nameEl.textContent : "", state: st});
+      }
+    });
+    var pct=total? Math.round(wsum/total) : 100;
+    var barrow=tnode.querySelector(":scope > .thead .barrow");
+    if(barrow){
+      barrow.querySelector(".bar i").style.width=pct+"%";
+      barrow.querySelector(".bar").className="bar"+(pct<60?" warn":"");
+      barrow.querySelector(".num").textContent=pct+"%";
+    }
+    var missEl=tnode.querySelector(":scope > .modmissing");
+    if(missEl){
+      if(pct>=100 || missing.length===0){
+        missEl.style.display="none"; missEl.textContent="";
+      }else{
+        var shown=missing.slice(0,3).map(function(x){ return escHtml(x.name)+" ("+DOC_STATE_LABEL[x.state]+")" }).join(" · ");
+        var extra=missing.length>3 ? " · +"+(missing.length-3)+" más" : "";
+        missEl.style.display="block";
+        missEl.innerHTML="<b>"+pct+"%</b> — faltan documentos en: "+shown+extra;
+      }
+    }
+  }
+
+  // Clic sobre una pastilla de estado: avanza al siguiente estado del ciclo (sesión actual, no persiste al recargar)
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest(".docstate");
+    if(!btn) return;
+    e.stopPropagation();
+    var cur=DOC_STATES.filter(function(s){ return btn.classList.contains("docstate-"+s) })[0] || "pending";
+    var next=DOC_STATES[(DOC_STATES.indexOf(cur)+1)%DOC_STATES.length];
+    btn.classList.remove("docstate-"+cur);
+    btn.classList.add("docstate-"+next);
+    btn.textContent=DOC_STATE_LABEL[next];
+    var tnode=btn.closest(".tnode");
+    if(tnode) recomputeModulePct(tnode);
+  });
+
+  var openIdx=null;
+  function closeAllProdDetails(){
+    document.querySelectorAll("#prodrows tr.prodrow.open").forEach(function(r){ r.classList.remove("open") });
+    document.querySelectorAll("#prodrows tr.proddetail-row").forEach(function(r){ r.remove() });
+    openIdx=null;
+  }
+  function openProdDetail(i){
+    var p=BPRODS[i]; if(!p) return;
+    var total=prodTotal(p), disp=Math.round(p.comp/100*total), falt=Math.max(total-disp-p.borr,0);
+    var row=document.querySelector("#prodrows tr.prodrow[data-i='"+i+"']");
+    if(!row) return;
+    closeAllProdDetails();
+    row.classList.add("open");
+    openIdx=i;
+    var detail=document.createElement("tr");
+    detail.className="proddetail-row";
+    var gid="gradRing"+i;
+    detail.innerHTML="<td colspan='8'><div class='proddetail'>"+
+      "<div class='proddetail-summary'>"+
+        "<div class='donut'><svg width='84' height='84' viewBox='0 0 104 104' aria-hidden='true'>"+
+          "<defs><linearGradient id='"+gid+"' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#2563EB'/><stop offset='1' stop-color='#7DD3FC'/></linearGradient></defs>"+
+          "<circle cx='52' cy='52' r='40' fill='none' stroke='var(--surface2)' stroke-width='10'/>"+
+          "<circle cx='52' cy='52' r='40' fill='none' stroke='url(#"+gid+")' stroke-width='10' stroke-linecap='round' stroke-dasharray='251.3' stroke-dashoffset='"+(251.3*(1-p.comp/100)).toFixed(1)+"' transform='rotate(-90 52 52)'/></svg>"+
+          "<div class='donut-num' style='font-size:16px'>"+p.comp+"%</div></div>"+
+        "<div style='flex:1;min-width:220px'>"+
+          "<h3 style='margin:0;font-size:15.5px;letter-spacing:-.2px'>Dossier CTD · "+escHtml(p.n)+" · "+escHtml(p.f)+"</h3>"+
+          "<div style='font-size:12.5px;color:var(--muted);margin-top:2px'>"+disp+" de "+total+" documentos · "+FLAG[p.c]+" "+AUTH[p.c]+" · "+p.v+" · "+escHtml(prodReg(p,i))+"</div>"+
+          "<div class='bk-counters'>"+
+            "<div class='c-ok'><b class='num'>"+disp+"</b>Disponibles</div>"+
+            "<div class='c-falt'><b class='num'>"+falt+"</b>Faltantes</div>"+
+            "<div class='c-borr'><b class='num'>"+p.borr+"</b>En borrador</div>"+
+            "<div class='c-dup'><b class='num'>"+p.dup+"</b>Duplicados bloqueados</div>"+
+          "</div></div></div>"+
+      "<div class='proddetail-tree'><div class='chead'><h4>Estructura CTD · "+AUTH[p.c]+" · "+p.v+"</h4><div class='right'><button class='btn sm' data-expand-i='"+i+"'>Expandir todo</button></div></div>"+
+      "<div style='padding:0 16px 10px;font-size:11.5px;color:var(--muted)'>Haz clic en la pastilla de cada documento para avanzar su estado: <span class='docstate docstate-pending' style='cursor:default'>Pendiente</span> → <span class='docstate docstate-progress' style='cursor:default'>En proceso</span> → <span class='docstate docstate-ok' style='cursor:default'>Aprobado</span> → <span class='docstate docstate-late' style='cursor:default'>Vencido</span></div>"+
+      "<div class='cbody flush tree'>"+buildProductTree(p,i)+"</div></div>"+
+    "</div></td>";
+    row.parentNode.insertBefore(detail, row.nextSibling);
+    detail.querySelectorAll(".proddetail-tree .tnode").forEach(recomputeModulePct);
+  }
+  function toggleProdDetail(i){ if(openIdx===i){ closeAllProdDetails() } else { openProdDetail(i) } }
+
+  // Botón "Expandir/Contraer todo" dentro del panel de un producto (delegado)
+  document.addEventListener("click",function(e){
+    var bx=e.target.closest("[data-expand-i]");
+    if(!bx) return;
+    var root=bx.closest(".proddetail"); if(!root) return;
+    var willExpand=bx.textContent.indexOf("Expandir")!==-1;
+    root.querySelectorAll(".tnode").forEach(function(n){ n.classList.toggle("open",willExpand) });
+    root.querySelectorAll(".tsub").forEach(function(n){ n.classList.toggle("open",willExpand) });
+    bx.textContent=willExpand?"Contraer todo":"Expandir todo";
+  });
+
+  function renderProds(filter){
+    var tb=document.getElementById("prodrows"); if(!tb) return;
+    var q=(filter||"").toLowerCase(), shown=0;
+    closeAllProdDetails();
+    tb.innerHTML=BPRODS.map(function(p,i){
+      if(q && (p.n+" "+p.f).toLowerCase().indexOf(q)===-1) return "";
+      shown++;
+      return "<tr class='prodrow' data-i='"+i+"'>"+
+        "<td><span class='chev'>▶</span></td>"+
+        "<td><b>"+escHtml(p.n)+"</b></td><td>"+escHtml(p.f)+"</td><td>"+FLAG[p.c]+" "+AUTH[p.c]+"</td><td>"+p.v+"</td>"+
+        "<td class='mono' style='font-size:11px'>"+escHtml(prodReg(p,i))+"</td>"+
+        "<td><div class='barrow'><div class='bar"+(p.comp<60?" warn":"")+"'><i style='width:"+p.comp+"%'></i></div><span class='num'>"+p.comp+"%</span></div></td>"+
+        "<td><span class='pill "+p.st[0]+"'>"+p.st[1]+"</span></td></tr>";
+    }).join("");
+    document.getElementById("prodcount").textContent=shown+" de "+BPRODS.length+" productos";
+    tb.querySelectorAll("tr.prodrow").forEach(function(r){
+      r.addEventListener("click",function(){ toggleProdDetail(+r.dataset.i) });
+    });
+  }
+  var pf=document.getElementById("prodfilter");
+  if(pf) pf.addEventListener("input",function(){ renderProds(pf.value) });
+  renderProds("");
+  // por defecto, el primer producto (Amoxicilina MK) abre su acordeón — mismo comportamiento que antes
+  if(document.querySelector("#prodrows tr.prodrow[data-i='0']")) openProdDetail(0);
+
+  // ---- Monitor PAVS (ConkoSafe IA): filtros y exportación CSV sobre una muestra estática ----
+  var PAVS_DATA=[
+    {y:2026,fecha:"2026-08-31",pais:"EEUU",agencia:"FDA",tipo:"falsificacion",tipoLabel:"Falsificación",titulo:"FDA: Retiro voluntario nacional de Lipofit Extreme 2.0 Fat Burner por contener fluoxetina y 2,4-dinitrofenol (DNP) no declarados",producto:"Suplemento",ifa:"Fluoxetina y 2,4-dinitrofenol (DNP) no declarados (suplemento Lipofit Extreme 2.0)",atc:"Sin ATC"},
+    {y:2026,fecha:"2026-08-31",pais:"Canadá",agencia:"Health Canada",tipo:"calidad",tipoLabel:"Calidad",titulo:"Health Canada: Retiro de JAMP Temozolomide 140 mg (lote RLTS0225A) — principio activo fuera de especificación (Assay)",producto:"Farmaco",ifa:"Temozolomide (JAMP Temozolomide 140 mg, DIN 02516829, lote RLTS0225A)",atc:"L01AX03"},
+    {y:2026,fecha:"2026-08-31",pais:"Francia",agencia:"ANSM",tipo:"seguridad",tipoLabel:"Seguridad",titulo:"ANSM: información de seguridad — bacteriología, autómatas DxU 840m Iris, DxU 850m Iris, IQ200 Elite/Select/Sprint (Beckman Coulter)",producto:"Dispositivo Médico de diagnóstico in vitro",ifa:"Autómatas DxU 840m Iris, DxU 850m Iris, IQ200 Elite, IQ200 Select, IQ200 Sprint (Beckman Coulter)",atc:"Sin ATC"},
+    {y:2026,fecha:"2026-08-14",pais:"EEUU",agencia:"FDA",tipo:"retiro",tipoLabel:"Retiro",titulo:"FDA: retiro voluntario de losartán API por NDMA sobre límite (Hetero Labs Unit III)",producto:"Farmaco",ifa:"Losartán potásico (API) — lotes de exportación afectados",atc:"C09CA01"},
+    {y:2026,fecha:"2026-08-13",pais:"Perú",agencia:"DIGEMID",tipo:"falsificacion",tipoLabel:"Falsificación",titulo:"DIGEMID: falsificación de amoxicilina 500 mg detectada en canal informal (Lima)",producto:"Farmaco",ifa:"Amoxicilina 500 mg cápsulas — presentación falsificada",atc:"J01CA04"},
+    {y:2026,fecha:"2026-08-11",pais:"España",agencia:"AEMPS",tipo:"seguridad",tipoLabel:"Seguridad",titulo:"AEMPS: nota de seguridad — riesgo de uso excesivo de SABA (salbutamol) en asma",producto:"Farmaco",ifa:"Salbutamol inhalador 100 µg/dosis",atc:"R03AC02"},
+    {y:2026,fecha:"2026-07-30",pais:"Argentina",agencia:"ANMAT",tipo:"retiro",tipoLabel:"Retiro",titulo:"ANMAT: retiro de lote de atorvastatina por defecto de blíster",producto:"Farmaco",ifa:"Atorvastatina 20 mg tabletas — defecto de empaque primario",atc:"C10AA05"},
+    {y:2026,fecha:"2026-07-22",pais:"Colombia",agencia:"INVIMA",tipo:"desabastecimiento",tipoLabel:"Desabastecimiento",titulo:"INVIMA: cierre de alerta de desabastecimiento de metformina — suministro normalizado",producto:"Farmaco",ifa:"Metformina 850 mg tabletas",atc:"A10BA02"},
+    {y:2026,fecha:"2026-06-18",pais:"Reino Unido",agencia:"MHRA",tipo:"seguridad",tipoLabel:"Seguridad",titulo:"MHRA: alerta de seguridad — riesgo de síndrome de Stevens-Johnson con lamotrigina",producto:"Farmaco",ifa:"Lamotrigina tabletas — todas las presentaciones",atc:"N03AX09"},
+    {y:2026,fecha:"2026-05-09",pais:"Alemania",agencia:"BfArM",tipo:"calidad",tipoLabel:"Calidad",titulo:"BfArM: retiro de lote de heparina sódica por variabilidad en potencia",producto:"Farmaco",ifa:"Heparina sódica inyectable — lote afectado",atc:"B01AB01"},
+    {y:2026,fecha:"2026-04-27",pais:"Australia",agencia:"TGA",tipo:"retiro",tipoLabel:"Retiro",titulo:"TGA: retiro de dispositivo de infusión por riesgo de sobredosificación",producto:"Dispositivo Médico",ifa:"Bomba de infusión ambulatoria — modelo específico",atc:"Sin ATC"},
+    {y:2026,fecha:"2026-03-15",pais:"Italia",agencia:"AIFA",tipo:"seguridad",tipoLabel:"Seguridad",titulo:"AIFA: actualización de ficha técnica — interacción entre estatinas y macrólidos",producto:"Farmaco",ifa:"Atorvastatina + claritromicina — advertencia de interacción",atc:"C10AA05"},
+    {y:2026,fecha:"2026-02-02",pais:"Austria",agencia:"BASG",tipo:"calidad",tipoLabel:"Calidad",titulo:"BASG: retiro de lote de solución oftálmica por contaminación microbiana",producto:"Farmaco",ifa:"Solución oftálmica — lote contaminado",atc:"S01XA20"},
+    {y:2025,fecha:"2025-12-19",pais:"México",agencia:"COFEPRIS",tipo:"falsificacion",tipoLabel:"Falsificación",titulo:"COFEPRIS: alerta por medicamento falsificado de sildenafilo vendido sin receta",producto:"Farmaco",ifa:"Sildenafilo — presentación falsificada",atc:"G04BE03"},
+    {y:2025,fecha:"2025-11-06",pais:"Chile",agencia:"ISP",tipo:"retiro",tipoLabel:"Retiro",titulo:"ISP: retiro voluntario de cefalexina por resultados fuera de especificación en disolución",producto:"Farmaco",ifa:"Cefalexina 500 mg cápsulas",atc:"J01DB01"},
+    {y:2025,fecha:"2025-09-24",pais:"EEUU",agencia:"FDA",tipo:"seguridad",tipoLabel:"Seguridad",titulo:"FDA: advertencia de caja negra ampliada para fluoroquinolonas",producto:"Farmaco",ifa:"Ciprofloxacino y otras fluoroquinolonas orales/IV",atc:"J01MA02"},
+    {y:2025,fecha:"2025-07-11",pais:"Francia",agencia:"ANSM",tipo:"falsificacion",tipoLabel:"Falsificación",titulo:"ANSM: alerta de falsificación de test de embarazo distribuido fuera de canal oficial",producto:"Dispositivo Médico de diagnóstico in vitro",ifa:"Test de embarazo — kit falsificado",atc:"Sin ATC"},
+    {y:2025,fecha:"2025-05-30",pais:"Canadá",agencia:"Health Canada",tipo:"seguridad",tipoLabel:"Seguridad",titulo:"Health Canada: riesgo de reacciones cutáneas graves con carbamazepina en pacientes HLA-B*1502",producto:"Farmaco",ifa:"Carbamazepina — recomienda genotipado previo",atc:"N03AF01"},
+    {y:2025,fecha:"2025-03-08",pais:"Perú",agencia:"DIGEMID",tipo:"desabastecimiento",tipoLabel:"Desabastecimiento",titulo:"DIGEMID: alerta de desabastecimiento de insulina NPH en regiones altoandinas",producto:"Farmaco",ifa:"Insulina NPH humana",atc:"A10AC01"},
+    {y:2025,fecha:"2025-01-21",pais:"Reino Unido",agencia:"MHRA",tipo:"retiro",tipoLabel:"Retiro",titulo:"MHRA: retiro de lote de paracetamol pediátrico por dosificación imprecisa del gotero",producto:"Farmaco",ifa:"Paracetamol gotas pediátricas — lote específico",atc:"N02BE01"},
+    {y:2024,fecha:"2024-11-04",pais:"Alemania",agencia:"BfArM",tipo:"calidad",tipoLabel:"Calidad",titulo:"BfArM: hallazgo de nitrosaminas sobre el límite en metformina de liberación prolongada",producto:"Farmaco",ifa:"Metformina XR — lotes de un fabricante de API",atc:"A10BA02"},
+    {y:2024,fecha:"2024-08-19",pais:"España",agencia:"AEMPS",tipo:"seguridad",tipoLabel:"Seguridad",titulo:"AEMPS: refuerzo de vigilancia de valproato en mujeres en edad fértil (programa de prevención de embarazo)",producto:"Farmaco",ifa:"Ácido valproico y derivados",atc:"N03AG01"},
+    {y:2024,fecha:"2024-05-02",pais:"Colombia",agencia:"INVIMA",tipo:"falsificacion",tipoLabel:"Falsificación",titulo:"INVIMA: alerta por venta de antibióticos falsificados en plataformas de comercio informal",producto:"Farmaco",ifa:"Amoxicilina + ácido clavulánico — presentación falsificada",atc:"J01CR02"},
+    {y:2024,fecha:"2024-02-14",pais:"Italia",agencia:"AIFA",tipo:"retiro",tipoLabel:"Retiro",titulo:"AIFA: retiro de lote de jarabe pediátrico por desviación de viscosidad",producto:"Farmaco",ifa:"Jarabe pediátrico — lote con desviación de calidad",atc:"Sin ATC"},
+    {y:2023,fecha:"2023-10-27",pais:"Australia",agencia:"TGA",tipo:"seguridad",tipoLabel:"Seguridad",titulo:"TGA: alerta de seguridad por reacciones alérgicas graves a colorante en cápsulas",producto:"Farmaco",ifa:"Cápsulas con colorante — múltiples marcas",atc:"Sin ATC"},
+    {y:2023,fecha:"2023-06-09",pais:"Argentina",agencia:"ANMAT",tipo:"calidad",tipoLabel:"Calidad",titulo:"ANMAT: suspensión de lote de solución parenteral por partículas visibles",producto:"Farmaco",ifa:"Solución parenteral — lote suspendido",atc:"Sin ATC"},
+    {y:2022,fecha:"2022-09-15",pais:"EEUU",agencia:"FDA",tipo:"retiro",tipoLabel:"Retiro",titulo:"FDA: retiro de lotes de ranitidina por presencia de NDMA",producto:"Farmaco",ifa:"Ranitidina — todas las presentaciones orales",atc:"A02BA02"},
+    {y:2021,fecha:"2021-04-03",pais:"Francia",agencia:"ANSM",tipo:"seguridad",tipoLabel:"Seguridad",titulo:"ANSM: restricción de uso de hidroxicloroquina fuera de ensayos clínicos autorizados",producto:"Farmaco",ifa:"Hidroxicloroquina",atc:"P01BA02"},
+    {y:2020,fecha:"2020-07-28",pais:"Canadá",agencia:"Health Canada",tipo:"calidad",tipoLabel:"Calidad",titulo:"Health Canada: retiro de lotes de valsartán por impurezas de nitrosaminas",producto:"Farmaco",ifa:"Valsartán — múltiples fabricantes de API",atc:"C09CA03"},
+    {y:2019,fecha:"2019-11-12",pais:"España",agencia:"AEMPS",tipo:"retiro",tipoLabel:"Retiro",titulo:"AEMPS: retiro de lotes de irbesartán por impureza no autorizada",producto:"Farmaco",ifa:"Irbesartán",atc:"C09CA04"}
+  ];
+  var PAVS_YEAR_CHART=[["2019",152],["2020",228],["2021",209],["2022",265],["2023",92],["2024",132],["2025",278],["2026",465]];
+  var PAVS_AGENCY_CHART=[["ANSM",397],["MHRA",207],["BfArM",179],["Health Canada",158],["TGA",146],["DIGEMID",144],["FDA",109],["AEMPS",81],["AIFA",80],["BASG",54]];
+
+  function pavsRenderCharts(){
+    var yEl=document.getElementById("pavs-chart-years");
+    if(yEl){
+      var maxY=Math.max.apply(null, PAVS_YEAR_CHART.map(function(d){return d[1]}));
+      yEl.innerHTML=PAVS_YEAR_CHART.map(function(d){
+        return "<div class='pavs-chart-row'><span class='yl'>"+d[0]+"</span><span class='bwrap'><span class='bfill' style='width:"+Math.round(d[1]/maxY*100)+"%'></span></span><span class='vv'>"+d[1]+"</span></div>";
+      }).join("");
+    }
+    var aEl=document.getElementById("pavs-chart-agencies");
+    if(aEl){
+      var maxA=Math.max.apply(null, PAVS_AGENCY_CHART.map(function(d){return d[1]}));
+      aEl.innerHTML=PAVS_AGENCY_CHART.map(function(d){
+        return "<div class='pavs-chart-row'><span class='yl'>"+escHtml(d[0])+"</span><span class='bwrap'><span class='bfill' style='width:"+Math.round(d[1]/maxA*100)+"%'></span></span><span class='vv'>"+d[1]+"</span></div>";
+      }).join("");
+    }
+  }
+
+  function pavsPopulateFilters(){
+    function uniq(arr){ return arr.filter(function(v,i){ return arr.indexOf(v)===i }) }
+    function fill(sel, values){
+      if(!sel) return;
+      values.slice().sort().forEach(function(v){
+        var o=document.createElement("option"); o.value=v; o.textContent=v; sel.appendChild(o);
+      });
+    }
+    fill(document.getElementById("pavs-country"), uniq(PAVS_DATA.map(function(d){return d.pais})));
+    fill(document.getElementById("pavs-agency"), uniq(PAVS_DATA.map(function(d){return d.agencia})));
+    fill(document.getElementById("pavs-product"), uniq(PAVS_DATA.map(function(d){return d.producto})));
+    var yearSel=document.getElementById("pavs-year");
+    if(yearSel){
+      uniq(PAVS_DATA.map(function(d){return String(d.y)})).sort().reverse().forEach(function(v){
+        var o=document.createElement("option"); o.value=v; o.textContent=v; yearSel.appendChild(o);
+      });
+    }
+    var typeSel=document.getElementById("pavs-type");
+    if(typeSel){
+      var seen={};
+      PAVS_DATA.forEach(function(d){
+        if(!seen[d.tipo]){ seen[d.tipo]=true; var o=document.createElement("option"); o.value=d.tipo; o.textContent=d.tipoLabel; typeSel.appendChild(o); }
+      });
+    }
+  }
+
+  function pavsFilteredRows(){
+    var q=((document.getElementById("pavs-q")||{}).value||"").toLowerCase();
+    var year=(document.getElementById("pavs-year")||{}).value||"";
+    var country=(document.getElementById("pavs-country")||{}).value||"";
+    var agency=(document.getElementById("pavs-agency")||{}).value||"";
+    var type=(document.getElementById("pavs-type")||{}).value||"";
+    var product=(document.getElementById("pavs-product")||{}).value||"";
+    return PAVS_DATA.filter(function(d){
+      if(year && String(d.y)!==year) return false;
+      if(country && d.pais!==country) return false;
+      if(agency && d.agencia!==agency) return false;
+      if(type && d.tipo!==type) return false;
+      if(product && d.producto!==product) return false;
+      if(q && (d.titulo+" "+d.producto+" "+d.ifa).toLowerCase().indexOf(q)===-1) return false;
+      return true;
+    });
+  }
+
+  function pavsRenderTable(){
+    var rows=pavsFilteredRows();
+    var tb=document.getElementById("pavs-rows");
+    if(tb){
+      tb.innerHTML=rows.map(function(d){
+        return "<tr><td class='mono'>"+d.y+"</td><td class='mono'>"+d.fecha+"</td><td>"+escHtml(d.pais)+"</td><td>"+escHtml(d.agencia)+"</td>"+
+          "<td><span class='tipo-chip tipo-"+d.tipo+"'>"+escHtml(d.tipoLabel)+"</span></td>"+
+          "<td style='max-width:280px'>"+escHtml(d.titulo)+"</td><td>"+escHtml(d.producto)+"</td><td style='max-width:220px'>"+escHtml(d.ifa)+"</td><td class='mono'>"+escHtml(d.atc)+"</td>"+
+          "<td><a class='btn sm' href='#' onclick='return false' title='Enlace de referencia (demo)'>Ver</a></td></tr>";
+      }).join("");
+    }
+    var cnt=document.getElementById("pavs-count");
+    if(cnt) cnt.textContent=rows.length+" alertas";
+  }
+
+  function pavsExportCSV(){
+    var rows=pavsFilteredRows();
+    var headers=["Año","Fecha emisión","País","Agencia","Tipo","Título","Producto","IFA","ATC"];
+    var lines=[headers.join(",")];
+    rows.forEach(function(d){
+      var vals=[d.y,d.fecha,d.pais,d.agencia,d.tipoLabel,d.titulo,d.producto,d.ifa,d.atc].map(function(v){
+        return '"'+String(v).replace(/"/g,'""')+'"';
+      });
+      lines.push(vals.join(","));
+    });
+    var blob=new Blob([lines.join("\n")],{type:"text/csv;charset=utf-8;"});
+    var url=URL.createObjectURL(blob);
+    var a=document.createElement("a");
+    a.href=url; a.download="pavs_alertas_muestra.csv";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  if(document.getElementById("pavs-chart-years")){
+    var pavsLast=PAVS_DATA.reduce(function(m,d){ return d.fecha>m?d.fecha:m },"");
+    var pavsLastEl=document.getElementById("pavs-last-date");
+    if(pavsLastEl) pavsLastEl.textContent=pavsLast;
+    pavsRenderCharts();
+    pavsPopulateFilters();
+    pavsRenderTable();
+    ["pavs-year","pavs-country","pavs-agency","pavs-type","pavs-product"].forEach(function(id){
+      var el=document.getElementById(id);
+      if(el) el.addEventListener("change", pavsRenderTable);
+    });
+    var pq=document.getElementById("pavs-q");
+    if(pq) pq.addEventListener("input", pavsRenderTable);
+    var prb=document.getElementById("pavs-refresh");
+    if(prb) prb.addEventListener("click", function(){
+      var qEl=document.getElementById("pavs-q"); if(qEl) qEl.value="";
+      ["pavs-year","pavs-country","pavs-agency","pavs-type","pavs-product"].forEach(function(id){
+        var el=document.getElementById(id); if(el) el.value="";
+      });
+      pavsRenderTable();
+    });
+    var peb=document.getElementById("pavs-export");
+    if(peb) peb.addEventListener("click", pavsExportCSV);
+  }
+
+  // ---- Mockup Compass: diagnóstico dinámico ----
+  var CMP={
+    co:{
+      auth:"INVIMA", total:{nuevo:73,renov:31,var:14},
+      rows:[
+        ["M1","Regional Colombia: formulario ASS-RSA-FM045, poder legal, BPM, CPP, etiqueta/inserto, tarifa","12","Formato de etiquetado propio + resumen en español"],
+        ["M2","Resúmenes QOS, panorama no clínico y clínico","3","Acepta resúmenes en formato ICH sin cambios"],
+        ["M3","Calidad: API (DMF/carta de acceso), producto terminado, estabilidad","31","Estabilidad zona IVb obligatoria · 12M natural + 6M acelerada"],
+        ["M4","No clínico: puede sustentarse con literatura para moléculas conocidas","9","Acepta justificación bibliográfica (producto conocido)"],
+        ["M5","Clínico: bioequivalencia vs. innovador para genéricos","18","Listado de referencia propio para comparador"]
+      ]
+    },
+    pe:{
+      auth:"DIGEMID", total:{nuevo:66,renov:27,var:12},
+      rows:[
+        ["M1","Regional Perú: solicitud DIGEMID, CPP, BPM, proyecto de rotulado","10","Clasificación por categorías 1/2/3 según país de origen (Ley 29459)"],
+        ["M2","Resúmenes QOS, panorama no clínico y clínico","3","Acepta resúmenes en formato ICH sin cambios"],
+        ["M3","Calidad: API, producto terminado, estabilidad","28","Estabilidad zona IVb · acepta estudios en curso con compromiso"],
+        ["M4","No clínico: literatura aceptada para moléculas conocidas","8","Menor exigencia para categoría 1 (países de alta vigilancia)"],
+        ["M5","Clínico: intercambiabilidad en implementación gradual","17","Bioequivalencia según listado priorizado (metformina en consulta)"]
+      ]
+    },
+    ar:{
+      auth:"ANMAT", total:{nuevo:70,renov:28,var:12},
+      rows:[
+        ["M1","Regional Argentina: formularios ANMAT, certificado de libre venta, BPF","11","Vía según Anexo I/II del Dec. 150/92: origen en país de alta vigilancia acorta el trámite"],
+        ["M2","Resúmenes del CTD","3","Formato ICH aceptado"],
+        ["M3","Calidad: API (DMF), producto terminado, estabilidad","29","Estabilidad zonas II/IVa según región · lotes en escala industrial"],
+        ["M4","No clínico: literatura para IFAs conocidos","9","Justificación bibliográfica aceptada para similares"],
+        ["M5","Clínico: bioequivalencia por riesgo sanitario","18","Listado de IFAs de bioequivalencia obligatoria (Disp. 3185/99 y sucesivas)"]
+      ]
+    },
+    cl:{
+      auth:"ISP", total:{nuevo:64,renov:26,var:11},
+      rows:[
+        ["M1","Regional Chile: solicitud GICONA, CPP, BPM, folleto y rotulado","9","Registro simplificado/abreviado si el producto viene de país de alta vigilancia (DS 3/2010)"],
+        ["M2","Resúmenes del CTD","3","Formato ICH aceptado"],
+        ["M3","Calidad: API, producto terminado, estabilidad","27","Estabilidad zona II/IVa · inserto con QR según norma de folletos"],
+        ["M4","No clínico: literatura para principios conocidos","8","Exigencia reducida en vía abreviada"],
+        ["M5","Clínico: equivalencia terapéutica por decreto","17","Listado de principios activos con EQT obligatoria (bioexención posible)"]
+      ]
+    },
+    mx:{
+      auth:"COFEPRIS", total:{nuevo:71,renov:30,var:13},
+      rows:[
+        ["M1","Regional México: formato de registro, representante legal en MX, CLV, BPF (NOM-059)","12","Exige representante legal local y etiquetado NOM-072"],
+        ["M2","Resúmenes del CTD","3","Formato ICH aceptado (acuerdos de equivalencia para agencias reconocidas)"],
+        ["M3","Calidad: API, producto terminado, estabilidad","30","Estabilidad NOM-073 · fabricante de API con carta de acceso"],
+        ["M4","No clínico: literatura para moléculas conocidas","8","Justificación bibliográfica aceptada para genéricos"],
+        ["M5","Clínico: pruebas de intercambiabilidad NOM-177","18","Perfil de disolución o bioequivalencia según listado del Consejo de Salubridad"]
+      ]
+    },
+    es:{
+      auth:"AEMPS", total:{nuevo:76,renov:32,var:14},
+      rows:[
+        ["M1","Regional UE/España: formulario electrónico, tasas AEMPS, RCP y prospecto","13","eCTD 100% obligatorio · procedimiento nacional, descentralizado o de reconocimiento mutuo"],
+        ["M2","Resúmenes del CTD","3","Formato ICH obligatorio"],
+        ["M3","Calidad: API (ASMF/CEP), producto terminado, estabilidad","31","Acepta CEP de la EDQM · estabilidad zona II"],
+        ["M4","No clínico: dossier completo o referencia a medicamento autorizado","9","Vía genérico (art. 10) exige referencia UE con 8+ años"],
+        ["M5","Clínico: bioequivalencia obligatoria para genéricos","20","Guía EMA de bioequivalencia · lectura cruzada con EPARs"]
+      ]
+    }
+  };
+  var VIAS={nuevo:"registro nuevo",renov:"renovación",var:"variación"};
+  function renderCompass(){
+    var c=document.getElementById("cmp-country"); if(!c) return;
+    var d=CMP[c.value], via=document.getElementById("cmp-via").value;
+    document.getElementById("cmp-tag").textContent=d.auth+" · "+VIAS[via];
+    var extra = via==="renov" ? " Se reutiliza ~70% del dossier vigente; Binder hereda los documentos no vencidos."
+              : via==="var"   ? " Solo se presentan los módulos afectados por el cambio + M1 actualizado."
+              : " Compass generó el esqueleto completo de carpetas para Binder.";
+    document.getElementById("cmp-summary").innerHTML="<b>"+d.total[via]+" documentos requeridos</b> para "+VIAS[via]+" ante "+d.auth+"."+extra;
+    document.getElementById("cmp-rows").innerHTML=d.rows.map(function(r){
+      return "<tr><td class='mono'><b>"+r[0]+"</b></td><td>"+r[1]+"</td><td class='num'>"+r[2]+"</td><td>"+r[3]+"</td></tr>";
+    }).join("");
+  }
+  ["cmp-country","cmp-via","cmp-tipo"].forEach(function(id){
+    var el=document.getElementById(id); if(el) el.addEventListener("change",renderCompass);
+  });
+  renderCompass();
+
+  // ---- Mockup Scout: barrido manual ----
+  var bs=document.getElementById("btn-scan");
+  if(bs) bs.addEventListener("click",function(){
+    bs.disabled=true; bs.textContent="Barriendo 52 fuentes…";
+    setTimeout(function(){
+      var item=document.createElement("div");
+      item.className="feeditem newfind";
+      item.innerHTML='<span class="dot warn"></span><div><b>INVIMA · Proyecto de resolución: transmisión electrónica de CTD (consulta pública)</b><p>Clasificación: <span class="tag">Normativa</span> · Impacta: todos los dossiers CO. Define el estándar XML de la ventanilla — insumo directo para el validador del constructor eCTD.</p></div><div class="meta">ahora<br><span class="pill warn">Nuevo hallazgo</span></div>';
+      document.getElementById("scoutfeed").prepend(item);
+      bs.disabled=false; bs.textContent="✓ Barrido completado · 1 hallazgo";
+    },1600);
+  });
+
+  // ---- Mockup Conkosafe IA: borrador de reporte ----
+  var bc=document.getElementById("btn-conkosafereport");
+  if(bc) bc.addEventListener("click",function(){
+    bc.disabled=true; bc.textContent="Generando borrador…";
+    setTimeout(function(){
+      bc.textContent="✓ Borrador en bandeja del QPPV";
+      document.getElementById("conkosafestatus").innerHTML="<b>Borrador REP-INV-2026-0075 generado</b> con la plantilla eReporting de INVIMA: producto, lotes afectados, evaluación preliminar y plan de acción. Pendiente de revisión y envío por el QPPV.";
+    },1400);
+  });
+
+  // ---- Mockup IPS: firma del epidemiólogo ----
+  var bi=document.getElementById("btn-ipsval");
+  if(bi) bi.addEventListener("click",function(){
+    bi.disabled=true; bi.textContent="✓ Firmado por Dra. Mendoza";
+    document.getElementById("ipsstatus").innerHTML="<b>IPS firmado</b> · sello de tiempo 28-ago-2026 17:05 GMT-5 · hash <span class='mono'>sha256:2fa9…c1d4</span>. El paso 3 (envío por eReporting) quedó habilitado.";
+    document.querySelectorAll("#view-agent-ips .txnode .pill")[1].outerHTML='<span class="pill ok" style="margin-top:4px">Validado</span>';
+    document.querySelectorAll("#view-agent-ips .txnode .pill")[2].outerHTML='<span class="pill warn" style="margin-top:4px">Listo para envío</span>';
+  });
+})();
+</script>
+</body>
+</html>
