@@ -48,6 +48,15 @@ jobs:
         run: |
           mkdir -p ~/.config/rclone
           printf '%s' "$RCLONE_CONF" > ~/.config/rclone/rclone.conf
+          echo "RCLONE_CONFIG=$HOME/.config/rclone/rclone.conf" >> "$GITHUB_ENV"
+          echo "--- Diagnostico (sin tokens): secciones halladas en el config ---"
+          grep -E '^\[' ~/.config/rclone/rclone.conf || echo "(NINGUNA seccion [x] encontrada -> el secreto RCLONE_CONF esta incompleto)"
+          echo "--- Remotes que ve rclone ---"
+          rclone listremotes || true
+          if ! rclone listremotes | grep -q '^onedrive:'; then
+            echo "::error::El secreto RCLONE_CONF no contiene un remote 'onedrive:'. Pega TODO el rclone.conf (incluida la linea [onedrive])."
+            exit 1
+          fi
 
       - name: "Paso 0 · traer xlsx nuevos de OneDrive"
         if: env.RCLONE_CONF != ''
