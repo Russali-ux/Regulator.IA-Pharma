@@ -72,6 +72,10 @@ jobs:
         if: env.SUPABASE_SERVICE_ROLE_KEY != ''
         run: python scripts/3_sync_to_supabase.py
 
+      - name: "Paso 4 · enriquecer ATC del monitor desde Supabase"
+        if: env.SUPABASE_SERVICE_ROLE_KEY != ''
+        run: python scripts/4_enrich_monitor_atc.py
+
       - name: Commit de raw data + monitor json
         run: |
           git config user.name "github-actions[bot]"

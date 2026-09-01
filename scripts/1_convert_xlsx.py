@@ -243,9 +243,21 @@ def write_monitor_json(records):
             "enlace": r.get("enlace") or "",
         })
 
+    # Estadísticas del dashboard (sobre todo el histórico)
+    max_year = max((int(y) for y in by_year), default=None)
+    this_year = by_year.get(str(max_year), 0) if max_year else 0
+    n_agencies = len({r.get("agencia") for r in records if r.get("agencia")})
+    n_countries = len({r.get("pais") for r in records if r.get("pais")})
+
     out = {
         "generatedAt": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
         "total": len(records),
+        "stats": {
+            "total": len(records),
+            "thisYear": this_year,
+            "agencies": n_agencies,
+            "countries": n_countries,
+        },
         "yearChart": year_chart,
         "agencyChart": agency_chart,
         "data": data,

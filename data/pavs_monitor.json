@@ -1,6 +1,12 @@
 {
-  "generatedAt": "2026-09-01T22:34:55Z",
+  "generatedAt": "2026-09-01T23:13:06Z",
   "total": 2007,
+  "stats": {
+    "total": 2007,
+    "thisYear": 559,
+    "agencies": 25,
+    "countries": 23
+  },
   "yearChart": [
     [
       "2019",
@@ -179,7 +185,7 @@
       "titulo": "DHPC - Gabapentin Viatris (gabapentina): etiquetado incorrecto de las cápsulas",
       "producto": "Farmaco",
       "ifa": "Gabapentina",
-      "atc": "Sin ATC",
+      "atc": "N02BF01 — GABAPENTINA",
       "enlace": "https://www.swissmedic.ch/swissmedic/en/home/humanarzneimittel/market-surveillance/health-professional-communication--hpc-/dhpc-gabapentin-viatris-gabapentinum.html"
     },
     {
@@ -296,7 +302,7 @@
       "titulo": "FDA: Retiro voluntario nacional de 0.9% Sodium Chloride Injection USP 100 mL en contenedor PAB 150 mL (B. Braun)",
       "producto": "Farmaco",
       "ifa": "Cloruro de sodio 0.9% inyectable (B. Braun)",
-      "atc": "Sin ATC",
+      "atc": "A12CA01 — CLORURO DE SODIO",
       "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/b-braun-medical-inc-issues-voluntary-nationwide-recall-09-sodium-chloride-injection-usp-100-ml-150"
     },
     {
@@ -1336,7 +1342,7 @@
       "titulo": "FDA: Retiro voluntario a nivel nacional de un lote de Tyenne (tocilizumab-aazg) inyectable 400 mg/20 mL por presencia de particulas de vidrio (Fresenius Kabi)",
       "producto": "Farmaco",
       "ifa": "Tocilizumab (tocilizumab-aazg)",
-      "atc": "Sin ATC",
+      "atc": "L04AC07 — TOCILIZUMAB",
       "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/fresenius-kabi-issues-nationwide-recall-tyenner-tocilizumab-aazg-injection-400-mg20-ml-vials-due"
     },
     {
@@ -1505,7 +1511,7 @@
       "titulo": "EMA (DHPC): Litfulo (ritlecitinib): recomendaciones actualizadas para minimizar los riesgos de eventos cardiovasculares mayores, neoplasias malignas, tromboembolismo venoso, infecciones graves y mortalidad",
       "producto": "Farmaco",
       "ifa": "Ritlecitinib (Litfulo)",
-      "atc": "Sin ATC",
+      "atc": "L04AF08 — RITLECITINIB",
       "enlace": "https://www.ema.europa.eu/en/medicines/dhpc/litfulo"
     },
     {
@@ -1518,7 +1524,7 @@
       "titulo": "Alerta farmaceutica R_31/2026: MOVICOL polvo para solucion oral en sobre",
       "producto": "Farmaco",
       "ifa": "Macrogol 3350, cloruro de potasio, bicarbonato sodico, cloruro de sodio",
-      "atc": "Sin ATC",
+      "atc": "A06AD65 — MACROGOL, COMBINACIONES",
       "enlace": "https://www.aemps.gob.es/comunicacion/alertas/alertas-farmaceuticas-y-retiradas-de-lotes-de-medicamentos-de-uso-humano-por-defectos-de-calidad/"
     },
     {
@@ -1583,7 +1589,7 @@
       "titulo": "DIGEMID/INDECOPI: Alerta por lotes de Cetirizina Hydrochloride Tablets USP 5 mg (Unique Pharmaceutical Laboratories, div. J.B. Chemicals & Pharmaceuticals Ltd.) por posible contaminacion cruzada con ranitidina",
       "producto": "Farmaco",
       "ifa": "Cetirizina (Cetirizine Hydrochloride 5 mg)",
-      "atc": "Sin ATC",
+      "atc": "R06AE07 — CETIRIZINA",
       "enlace": "https://gestion.pe/peru/alertan-por-retiro-de-medicamento-con-cetirizina-indecopi-evalua-si-llego-al-peru-noticia/"
     },
     {
@@ -1687,7 +1693,7 @@
       "titulo": "FDA: Retiro voluntario a nivel nacional de un lote de Morphine Sulfate Injection USP, Simplist 2 mg/1 mL (Fresenius Kabi) por mezcla de etiquetado: el MicroVault rotulado como Morfina 2 mg/1 mL puede contener una jeringa precargada de Dilaudid (hidromorfona HCl) 0.5 mg/0.5 mL",
       "producto": "Farmaco",
       "ifa": "Sulfato de morfina / Dilaudid (Hidromorfona HCl)",
-      "atc": "Sin ATC",
+      "atc": "N02AA01 — MORFINA",
       "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/fresenius-kabi-issues-voluntary-nationwide-recall-one-lot-morphine-sulfate-injection-usp-simplistr"
     },
     {
@@ -1700,7 +1706,7 @@
       "titulo": "FDA: Retiro voluntario a nivel nacional de ciertos lotes de Glutation Compuesto (Compounded Glutathione) 200 mg/mL viales multidosis (Victory Medical Center Pharmacy) por niveles elevados de endotoxinas",
       "producto": "Farmaco",
       "ifa": "Glutation (Compounded Glutathione)",
-      "atc": "Sin ATC",
+      "atc": "V03AB32 — GLUTATIÓN",
       "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/victory-medical-center-pharmacy-issues-voluntary-nationwide-recall-certain-lots-compounded"
     },
     {
@@ -1726,7 +1732,7 @@
       "titulo": "ALERTA DIGEMID N° 84-2026: Retiro del mercado de un lote de producto farmacéutico observado por resultado crítico de control de calidad (Piperacilina + Tazobactam)",
       "producto": "Farmaco",
       "ifa": "Piperacilina + Tazobactam",
-      "atc": "Sin ATC",
+      "atc": "J01CR05 — PIPERACILINA E INHIBIDOR DE LA BETALACTAMASA",
       "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-84-2026/"
     },
     {
@@ -1739,7 +1745,7 @@
       "titulo": "ALERTA DIGEMID N° 85-2026: Retiro del mercado de un lote de producto farmacéutico observado por resultado crítico de control de calidad (Flevral)",
       "producto": "Farmaco",
       "ifa": "Flevral",
-      "atc": "Sin ATC",
+      "atc": "N02BB02 — METAMIZOL SÓDICO",
       "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-85-2026/"
     },
     {
@@ -1765,7 +1771,7 @@
       "titulo": "ALERTA DIGEMID N° 87-2026: Producto farmacéutico falsificado incautado en acciones de control y vigilancia sanitaria (ZALDIAR)",
       "producto": "Farmaco",
       "ifa": "ZALDIAR (Tramadol + Paracetamol)",
-      "atc": "Sin ATC",
+      "atc": "N02AJ13 — TRAMADOL Y PARACETAMOL",
       "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-87-2026/"
     },
     {
@@ -1778,7 +1784,7 @@
       "titulo": "ALERTA DIGEMID N° 88-2026: Producto farmacéutico falsificado incautado en acciones de control y vigilancia sanitaria (DOLO CORDRALAN)",
       "producto": "Farmaco",
       "ifa": "DOLO CORDRALAN",
-      "atc": "Sin ATC",
+      "atc": "D11AX18 — DICLOFENACO",
       "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-88-2026/"
     },
     {
@@ -1830,7 +1836,7 @@
       "titulo": "FDA: Retiro voluntario a nivel nacional de Optiray Imaging Bulk Package (IBP) 350, 500mL en vial (Ioversol Injection 74% 350 mg yodo/ml) por presencia de material particulado (polietileno y otros plasticos, acero inoxidable y vidrio) - Liebel-Flarsheim Company, LLC",
       "producto": "Farmaco",
       "ifa": "Ioversol (Optiray)",
-      "atc": "Sin ATC",
+      "atc": "V08AB07 — IOVERSOL",
       "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/liebel-flarsheim-company-llc-issues-recall-optiray-imaging-bulk-package-350-500ml-vial-nationwide"
     },
     {
@@ -1869,7 +1875,7 @@
       "titulo": "ANSM: Retiro de producto - Pomalidomide Stragen 1/2/3/4 mg cápsulas (Stragen France)",
       "producto": "Farmaco",
       "ifa": "Pomalidomida (Pomalidomide Stragen)",
-      "atc": "Sin ATC",
+      "atc": "L04AX06 — POMALIDOMIDA",
       "enlace": "https://ansm.sante.fr/informations-de-securite/pomalidomide-stragen-1-mg-2-mg-3-mg-4-mg-gelule-stragen-france"
     },
     {
@@ -1921,7 +1927,7 @@
       "titulo": "ALERTA DIGEMID N° 82-2026: Riesgo de encefalopatia hiperamonemica asociado al uso de sunitinib",
       "producto": "Farmaco",
       "ifa": "Sunitinib",
-      "atc": "Sin ATC",
+      "atc": "L01EX01 — SUNITINIB",
       "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-82-2026/"
     },
     {
@@ -1947,7 +1953,7 @@
       "titulo": "Alerta farmaceutica R_30/2026: MOVICOL polvo para solucion oral en sobre",
       "producto": "Farmaco",
       "ifa": "Macrogol 3350, cloruro de potasio, bicarbonato sodico, cloruro de sodio",
-      "atc": "Sin ATC",
+      "atc": "A06AD65 — MACROGOL, COMBINACIONES",
       "enlace": "https://www.aemps.gob.es/comunicacion/alertas/alertas-farmaceuticas-y-retiradas-de-lotes-de-medicamentos-de-uso-humano-por-defectos-de-calidad/"
     },
     {
@@ -2051,7 +2057,7 @@
       "titulo": "Alerta farmaceutica R_29/2026: METOCLOPRAMIDA KERN PHARMA 5 mg/ml solucion inyectable EFG",
       "producto": "Farmaco",
       "ifa": "Metoclopramida hidrocloruro",
-      "atc": "Sin ATC",
+      "atc": "A06AD65 — MACROGOL, COMBINACIONES",
       "enlace": "https://www.aemps.gob.es/comunicacion/alertas/alertas-farmaceuticas-y-retiradas-de-lotes-de-medicamentos-de-uso-humano-por-defectos-de-calidad/"
     },
     {
@@ -2532,7 +2538,7 @@
       "titulo": "Alerta farmaceutica R_28/2026: Sueros B. Braun (Fisiologico 0,9%, Glucosado 10%, Glucosalino isotonico)",
       "producto": "Farmaco",
       "ifa": "Cloruro de sodio, glucosa",
-      "atc": "Sin ATC",
+      "atc": "A06AD65 — MACROGOL, COMBINACIONES",
       "enlace": "https://www.aemps.gob.es/comunicacion/alertas/alertas-farmaceuticas-y-retiradas-de-lotes-de-medicamentos-de-uso-humano-por-defectos-de-calidad/"
     },
     {
@@ -3572,7 +3578,7 @@
       "titulo": "Alerta farmaceutica R_27/2026: CHLORAPREP INCOLORO 20 mg/ml + 0,70 ml/ml solucion cutanea",
       "producto": "Farmaco",
       "ifa": "Clorhexidina digluconato, alcohol isopropilico",
-      "atc": "Sin ATC",
+      "atc": "A06AD65 — MACROGOL, COMBINACIONES",
       "enlace": "https://www.aemps.gob.es/comunicacion/alertas/alertas-farmaceuticas-y-retiradas-de-lotes-de-medicamentos-de-uso-humano-por-defectos-de-calidad/"
     },
     {
@@ -4040,7 +4046,7 @@
       "titulo": "Alerta farmaceutica R_26/2026: ALERLISIN 10 mg comprimidos recubiertos con pelicula",
       "producto": "Farmaco",
       "ifa": "Cetirizina dihidrocloruro",
-      "atc": "Sin ATC",
+      "atc": "A06AD65 — MACROGOL, COMBINACIONES",
       "enlace": "https://www.aemps.gob.es/comunicacion/alertas/alertas-farmaceuticas-y-retiradas-de-lotes-de-medicamentos-de-uso-humano-por-defectos-de-calidad/"
     },
     {
@@ -4664,7 +4670,7 @@
       "titulo": "Alerta farmaceutica R_25/2026: EMULIQUEN LAXANTE emulsion oral en sobres",
       "producto": "Farmaco",
       "ifa": "Parafina liquida, picosulfato sodico",
-      "atc": "Sin ATC",
+      "atc": "A06AD65 — MACROGOL, COMBINACIONES",
       "enlace": "https://www.aemps.gob.es/comunicacion/alertas/alertas-farmaceuticas-y-retiradas-de-lotes-de-medicamentos-de-uso-humano-por-defectos-de-calidad/"
     },
     {
@@ -4820,7 +4826,7 @@
       "titulo": "Alerta farmaceutica R_24/2026: CLOPIDOGREL PHARMA COMBIX 75 mg comprimidos recubiertos EFG",
       "producto": "Farmaco",
       "ifa": "Clopidogrel",
-      "atc": "Sin ATC",
+      "atc": "A06AD65 — MACROGOL, COMBINACIONES",
       "enlace": "https://www.aemps.gob.es/comunicacion/alertas/alertas-farmaceuticas-y-retiradas-de-lotes-de-medicamentos-de-uso-humano-por-defectos-de-calidad/"
     },
     {
@@ -4846,7 +4852,7 @@
       "titulo": "Alerta farmaceutica R_23/2026: CITORSAL polvo para solucion oral en sobre",
       "producto": "Farmaco",
       "ifa": "Sales de rehidratacion oral (citrato/glucosa/electrolitos)",
-      "atc": "Sin ATC",
+      "atc": "A06AD65 — MACROGOL, COMBINACIONES",
       "enlace": "https://www.aemps.gob.es/comunicacion/alertas/alertas-farmaceuticas-y-retiradas-de-lotes-de-medicamentos-de-uso-humano-por-defectos-de-calidad/"
     },
     {
@@ -4872,7 +4878,7 @@
       "titulo": "Alerta farmaceutica R_22/2026: IMULDOSA 130 mg concentrado para solucion para perfusion",
       "producto": "Farmaco",
       "ifa": "Ustekinumab",
-      "atc": "Sin ATC",
+      "atc": "A06AD65 — MACROGOL, COMBINACIONES",
       "enlace": "https://www.aemps.gob.es/comunicacion/alertas/alertas-farmaceuticas-y-retiradas-de-lotes-de-medicamentos-de-uso-humano-por-defectos-de-calidad/"
     },
     {

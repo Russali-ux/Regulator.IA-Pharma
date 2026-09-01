@@ -1467,10 +1467,10 @@
         </div>
 
         <div class="pavs-stats">
-          <div class="pavs-stat"><div class="n">1821</div><div class="l">Total alertas</div></div>
-          <div class="pavs-stat"><div class="n">465</div><div class="l">Este año</div></div>
-          <div class="pavs-stat"><div class="n">25</div><div class="l">Agencias</div></div>
-          <div class="pavs-stat"><div class="n">23</div><div class="l">Países</div></div>
+          <div class="pavs-stat"><div class="n" id="pavs-stat-total">1821</div><div class="l">Total alertas</div></div>
+          <div class="pavs-stat"><div class="n" id="pavs-stat-year">465</div><div class="l">Este año</div></div>
+          <div class="pavs-stat"><div class="n" id="pavs-stat-agencies">25</div><div class="l">Agencias</div></div>
+          <div class="pavs-stat"><div class="n" id="pavs-stat-countries">23</div><div class="l">Países</div></div>
         </div>
 
         <div class="split">
@@ -1481,6 +1481,25 @@
           <div class="card">
             <div class="chead"><h3>Top agencias</h3></div>
             <div class="cbody" id="pavs-chart-agencies"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="chead" style="display:flex;align-items:center;justify-content:space-between">
+            <h3>Alertas — detalle</h3>
+            <span class="count" id="pavs-count" style="font-size:11px;color:var(--muted)">—</span>
+          </div>
+          <div class="cbody" style="overflow-x:auto">
+            <table class="pavs-table">
+              <thead>
+                <tr>
+                  <th>Año</th><th>Fecha Emisión</th><th>País</th><th>Agencia</th>
+                  <th>Tipo</th><th>Título</th><th>Producto</th><th>IFA</th>
+                  <th>ATC</th><th>Enlace</th>
+                </tr>
+              </thead>
+              <tbody id="pavs-rows"></tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -2215,6 +2234,14 @@
         pavsRenderCharts();
         pavsPopulateFilters();
         pavsRenderTable();
+        // dashboard dinámico
+        if(j.stats){
+          var setN=function(id,v){ var e=document.getElementById(id); if(e && v!=null) e.textContent=(typeof v==="number"?v.toLocaleString("es"):v); };
+          setN("pavs-stat-total", j.stats.total);
+          setN("pavs-stat-year", j.stats.thisYear);
+          setN("pavs-stat-agencies", j.stats.agencies);
+          setN("pavs-stat-countries", j.stats.countries);
+        }
         var last=PAVS_DATA.reduce(function(m,d){ return (d.fecha>m)?d.fecha:m; },"");
         var le=document.getElementById("pavs-last-date");
         if(le && last) le.textContent=last;
