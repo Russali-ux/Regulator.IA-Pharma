@@ -1,0 +1,10 @@
+# Vercel solo sirve el sitio estatico (index.html + data/pavs_monitor.json).
+# Todo lo del pipeline PAVS es para el GitHub Action, no para Vercel.
+requirements.txt
+.env.example
+scripts/
+sql/
+.github/
+data/raw/
+data/csv/
+data/json/
