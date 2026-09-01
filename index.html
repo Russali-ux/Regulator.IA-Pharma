@@ -2194,6 +2194,34 @@
     document.querySelectorAll("#view-agent-ips .txnode .pill")[2].outerHTML='<span class="pill warn" style="margin-top:4px">Listo para envío</span>';
   });
 })();
+
+  // ---- Monitor PAVS: hidratación automática desde data/pavs_monitor.json ----
+  // El Action diario (sync-pavs.yml) regenera este archivo; si no existe aún
+  // (antes de la primera corrida) se mantiene la muestra estática de arriba.
+  (function(){
+    if(!document.getElementById("pavs-chart-years")) return;
+    fetch("data/pavs_monitor.json?_="+Date.now(),{cache:"no-store"})
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(j){
+        if(!j || !Array.isArray(j.data) || !j.data.length) return;
+        PAVS_DATA = j.data;
+        if(Array.isArray(j.yearChart) && j.yearChart.length) PAVS_YEAR_CHART = j.yearChart;
+        if(Array.isArray(j.agencyChart) && j.agencyChart.length) PAVS_AGENCY_CHART = j.agencyChart;
+        // limpiar opciones de filtros previamente agregadas (deja el placeholder)
+        ["pavs-year","pavs-country","pavs-agency","pavs-type","pavs-product"].forEach(function(id){
+          var el=document.getElementById(id);
+          if(el){ while(el.options.length>1){ el.remove(1); } }
+        });
+        pavsRenderCharts();
+        pavsPopulateFilters();
+        pavsRenderTable();
+        var last=PAVS_DATA.reduce(function(m,d){ return (d.fecha>m)?d.fecha:m; },"");
+        var le=document.getElementById("pavs-last-date");
+        if(le && last) le.textContent=last;
+      })
+      .catch(function(){ /* sin conexión o sin archivo: se queda la muestra */ });
+  })();
+
 </script>
 </body>
 </html>

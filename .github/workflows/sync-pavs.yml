@@ -1,0 +1,76 @@
+name: Sync PAVS (OneDrive -> repo -> Supabase)
+
+on:
+  schedule:
+    # 06:00 hora Perú = 11:00 UTC, todos los días
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-pavs
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Cache de modelos de Hugging Face
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-paraphrase-multilingual-MiniLM-L12-v2
+
+      - name: Instalar rclone
+        if: env.RCLONE_CONF != ''
+        run: sudo apt-get update && sudo apt-get install -y rclone
+
+      - name: Configurar rclone (desde secreto)
+        if: env.RCLONE_CONF != ''
+        run: |
+          mkdir -p ~/.config/rclone
+          printf '%s' "$RCLONE_CONF" > ~/.config/rclone/rclone.conf
+
+      - name: "Paso 0 · traer xlsx nuevos de OneDrive"
+        if: env.RCLONE_CONF != ''
+        run: python scripts/0_fetch_from_onedrive.py
+
+      - name: "Paso 1 · convertir xlsx -> csv/json + monitor json"
+        run: python scripts/1_convert_xlsx.py
+
+      - name: "Paso 2 · generar embeddings locales"
+        run: python scripts/2_generate_embeddings.py
+
+      - name: "Paso 3 · upsert a Supabase"
+        if: env.SUPABASE_SERVICE_ROLE_KEY != ''
+        run: python scripts/3_sync_to_supabase.py
+
+      - name: Commit de raw data + monitor json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/raw/*.xlsx data/pavs_monitor.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Sin cambios que commitear."
+          else
+            git commit -m "chore(pavs): sync diario $(date -u +%Y-%m-%d)"
+            git push
+          fi
