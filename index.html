@@ -1447,7 +1447,7 @@
           </div>
         </div>
 
-        <div class="pavs-note"><b>Fuente de datos:</b> este monitor se alimenta del scraper <span class="mono">PAVS_Digemid</span>, ejecutado periódicamente como GitHub Action, que publica un CSV/JSON consolidado de alertas de FDA, EMA, ANSM, MHRA, BfArM, Health Canada, TGA, DIGEMID, AEMPS, AIFA, BASG e INVIMA, entre otras. Esta vista es una <b>muestra estática</b> para la demo — en producción, la tabla y las métricas se recalculan en cada corrida del Action.</div>
+        <div class="pavs-note"><b>Fuente de datos:</b> Este monitor se actualiza cada 24 horas <span class="mono">PAVS_Digemid</span>, monitorea más de 25 agencias reguladoras <b>muestra estática</b> tablas automatizadas.</div>
 
         <div class="card">
           <div class="cbody">
@@ -2212,8 +2212,6 @@
     document.querySelectorAll("#view-agent-ips .txnode .pill")[1].outerHTML='<span class="pill ok" style="margin-top:4px">Validado</span>';
     document.querySelectorAll("#view-agent-ips .txnode .pill")[2].outerHTML='<span class="pill warn" style="margin-top:4px">Listo para envío</span>';
   });
-})();
-
   // ---- Monitor PAVS: hidratación automática desde data/pavs_monitor.json ----
   // El Action diario (sync-pavs.yml) regenera este archivo; si no existe aún
   // (antes de la primera corrida) se mantiene la muestra estática de arriba.
@@ -2248,6 +2246,7 @@
       })
       .catch(function(){ /* sin conexión o sin archivo: se queda la muestra */ });
   })();
+})();
 
 </script>
 </body>
