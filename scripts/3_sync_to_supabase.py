@@ -17,7 +17,9 @@ CHUNK = 400
 COLUMNS = [
     "anio", "mes", "fecha_emision", "fecha_revision", "pais", "agencia",
     "tipo_alerta", "titulo_alerta", "tipo_producto", "ifa",
-    "reaccion_adversa", "enlace", "atc", "embedding", "fuente_archivo",
+    "reaccion_adversa", "enlace", "embedding", "fuente_archivo",
+    # OJO: NO enviar "atc" — la tabla usa "atc_code" (curado a mano,
+    # con catalogo/historial); el sync no debe tocarlo.
 ]
 
 

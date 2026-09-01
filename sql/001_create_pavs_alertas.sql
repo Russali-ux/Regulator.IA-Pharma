@@ -17,7 +17,6 @@ create table if not exists public.pavs_alertas (
   ifa              text,
   reaccion_adversa text,
   enlace           text unique,
-  atc              text,
   embedding        vector(384),
   fuente_archivo   text,
   created_at       timestamptz not null default now(),
