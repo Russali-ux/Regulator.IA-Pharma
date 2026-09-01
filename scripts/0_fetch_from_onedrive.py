@@ -26,7 +26,7 @@ def main():
     print(f"[0] rclone copy '{src}' -> '{RAW_DIR}' (solo *.xlsx nuevos)")
 
     cmd = ["rclone", "copy", src, str(RAW_DIR),
-           "--include", "*.xlsx", "--ignore-existing", "--progress"]
+           "--include", "FT-95*.xlsx", "--ignore-existing", "--progress"]
     try:
         subprocess.run(cmd, check=True)
     except FileNotFoundError:

@@ -42,14 +42,17 @@ HEADER_MAP = {
     "tipo_alerta": "tipo_alerta", "tipo_de_alerta": "tipo_alerta",
     "tipo": "tipo_alerta", "clasificacion": "tipo_alerta",
     "titulo_alerta": "titulo_alerta", "titulo": "titulo_alerta",
+    "titulo_de_alerta": "titulo_alerta",
     "titulo_de_la_alerta": "titulo_alerta", "descripcion": "titulo_alerta",
     "asunto": "titulo_alerta",
     "tipo_producto": "tipo_producto", "tipo_de_producto": "tipo_producto",
     "producto": "tipo_producto",
     "ifa": "ifa", "principio_activo": "ifa", "nombre_generico": "ifa",
-    "dci": "ifa",
+    "dci": "ifa", "ifa_nombre_generico": "ifa",
     "reaccion_adversa": "reaccion_adversa", "ram": "reaccion_adversa",
     "reaccion": "reaccion_adversa", "evento_adverso": "reaccion_adversa",
+    "reaccion_adversa_incidente_adverso": "reaccion_adversa",
+    "incidente_adverso": "reaccion_adversa",
     "enlace": "enlace", "link": "enlace", "url": "enlace", "fuente": "enlace",
     "atc": "atc", "codigo_atc": "atc",
 }
@@ -73,7 +76,11 @@ def norm_header(h) -> str:
 
 
 def find_latest_xlsx() -> Path:
-    files = list(RAW_DIR.glob("*.xlsx"))
+    files = [f for f in RAW_DIR.glob("*.xlsx")
+             if f.name.lower().startswith("ft-95")
+             or "monitoreo de alertas de pavs" in f.name.lower()]
+    if not files:
+        files = list(RAW_DIR.glob("*.xlsx"))
     if not files:
         sys.exit("ERROR: no hay .xlsx en data/raw/. Corre primero el paso 0.")
 
