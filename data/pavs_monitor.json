@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-02T00:13:25Z",
-  "total": 2007,
+  "generatedAt": "2026-09-02T14:56:46Z",
+  "total": 2011,
   "stats": {
-    "total": 2007,
-    "thisYear": 559,
+    "total": 2011,
+    "thisYear": 563,
     "agencies": 25,
     "countries": 23
   },
@@ -38,7 +38,7 @@
     ],
     [
       "2026",
-      559
+      563
     ]
   ],
   "agencyChart": [
@@ -68,7 +68,7 @@
     ],
     [
       "DIGEMID",
-      145
+      149
     ],
     [
       "FDA",
@@ -148,6 +148,58 @@
       "ifa": "Fluoxetina y 2,4-dinitrofenol (DNP) no declarados (suplemento Lipofit Extreme 2.0)",
       "atc": "Sin ATC",
       "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/ana-salazar-modela-tu-cuerpo-inc-issues-nationwide-voluntary-recall-lipofit-extreme-fat-burner-20"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-31",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 101-2026: Comercialización ilegal por redes sociales del producto farmacéutico (suplemento dietético) sin registro sanitario - SUPLEMENTO DIETETICO",
+      "producto": "Farmaco",
+      "ifa": "SUPLEMENTO DIETETICO",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-101-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-31",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 102-2026: Comercialización ilegal por página web de productos farmacéuticos sin registro sanitario - VYVANSE (lisdexanfetamina)",
+      "producto": "Farmaco",
+      "ifa": "VYVANSE (lisdexanfetamina)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-102-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-31",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 103-2026: Comercialización ilegal por redes sociales y página web de productos sanitarios (cosméticos) sin notificación sanitaria - EURIALE Acondicionador Natural",
+      "producto": "Cosmetico",
+      "ifa": "EURIALE Acondicionador Natural",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-103-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-31",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 104-2026: Productos sanitarios (cosméticos) falsificados incautados en acciones de control y vigilancia sanitaria - CHANCE EAU TENDRE EAU DE TOILETTE / HUGO HUGO BOSS MAN EAU DE TOILETTE",
+      "producto": "Cosmetico",
+      "ifa": "CHANCE EAU TENDRE EAU DE TOILETTE / HUGO HUGO BOSS MAN EAU DE TOILETTE",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-104-2026/"
     },
     {
       "y": 2026,
