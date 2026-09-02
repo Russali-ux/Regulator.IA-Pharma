@@ -21,7 +21,7 @@ CSV_OUT = ROOT / "data" / "csv" / "PAVS_BD_latest.csv"
 JSON_OUT = ROOT / "data" / "json" / "PAVS_BD_latest.json"
 MONITOR_OUT = ROOT / "data" / "pavs_monitor.json"
 SHEET = "PAVS_BD"
-MONITOR_MAX_ROWS = 500  # filas (más recientes) que se publican al sitio
+MONITOR_MAX_ROWS = 5000  # filas publicadas al sitio (cubre todo el histórico)
 
 # Campos destino (coinciden con la tabla public.pavs_alertas)
 TARGET_FIELDS = [

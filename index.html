@@ -1982,21 +1982,29 @@
   var PAVS_AGENCY_CHART=[["ANSM",397],["MHRA",207],["BfArM",179],["Health Canada",158],["TGA",146],["DIGEMID",144],["FDA",109],["AEMPS",81],["AIFA",80],["BASG",54]];
 
   function pavsRenderCharts(){
+    var rows=pavsFilteredRows();
     var yEl=document.getElementById("pavs-chart-years");
     if(yEl){
-      var maxY=Math.max.apply(null, PAVS_YEAR_CHART.map(function(d){return d[1]}));
-      yEl.innerHTML=PAVS_YEAR_CHART.map(function(d){
-        return "<div class='pavs-chart-row'><span class='yl'>"+d[0]+"</span><span class='bwrap'><span class='bfill' style='width:"+Math.round(d[1]/maxY*100)+"%'></span></span><span class='vv'>"+d[1]+"</span></div>";
-      }).join("");
+      var byY={};
+      rows.forEach(function(d){ var y=String(d.y); if(y&&y!=="undefined") byY[y]=(byY[y]||0)+1; });
+      var years=Object.keys(byY).sort();
+      var maxY=Math.max.apply(null, years.map(function(y){return byY[y]}))||1;
+      yEl.innerHTML=years.length? years.map(function(y){
+        return "<div class='pavs-chart-row'><span class='yl'>"+y+"</span><span class='bwrap'><span class='bfill' style='width:"+Math.round(byY[y]/maxY*100)+"%'></span></span><span class='vv'>"+byY[y]+"</span></div>";
+      }).join("") : "<div style='padding:8px;font-size:12px;color:var(--muted)'>Sin datos para el filtro</div>";
     }
     var aEl=document.getElementById("pavs-chart-agencies");
     if(aEl){
-      var maxA=Math.max.apply(null, PAVS_AGENCY_CHART.map(function(d){return d[1]}));
-      aEl.innerHTML=PAVS_AGENCY_CHART.map(function(d){
-        return "<div class='pavs-chart-row'><span class='yl'>"+escHtml(d[0])+"</span><span class='bwrap'><span class='bfill' style='width:"+Math.round(d[1]/maxA*100)+"%'></span></span><span class='vv'>"+d[1]+"</span></div>";
-      }).join("");
+      var byA={};
+      rows.forEach(function(d){ var a=d.agencia; if(a) byA[a]=(byA[a]||0)+1; });
+      var ags=Object.keys(byA).sort(function(p,q){return byA[q]-byA[p]}).slice(0,10);
+      var maxA=Math.max.apply(null, ags.map(function(a){return byA[a]}))||1;
+      aEl.innerHTML=ags.length? ags.map(function(a){
+        return "<div class='pavs-chart-row'><span class='yl'>"+escHtml(a)+"</span><span class='bwrap'><span class='bfill' style='width:"+Math.round(byA[a]/maxA*100)+"%'></span></span><span class='vv'>"+byA[a]+"</span></div>";
+      }).join("") : "<div style='padding:8px;font-size:12px;color:var(--muted)'>Sin datos para el filtro</div>";
     }
   }
+  function pavsRerender(){ pavsRenderCharts(); pavsRenderTable(); }
 
   function pavsPopulateFilters(){
     function uniq(arr){ return arr.filter(function(v,i){ return arr.indexOf(v)===i }) }
@@ -2084,17 +2092,17 @@
     pavsRenderTable();
     ["pavs-year","pavs-country","pavs-agency","pavs-type","pavs-product"].forEach(function(id){
       var el=document.getElementById(id);
-      if(el) el.addEventListener("change", pavsRenderTable);
+      if(el) el.addEventListener("change", pavsRerender);
     });
     var pq=document.getElementById("pavs-q");
-    if(pq) pq.addEventListener("input", pavsRenderTable);
+    if(pq) pq.addEventListener("input", pavsRerender);
     var prb=document.getElementById("pavs-refresh");
     if(prb) prb.addEventListener("click", function(){
       var qEl=document.getElementById("pavs-q"); if(qEl) qEl.value="";
       ["pavs-year","pavs-country","pavs-agency","pavs-type","pavs-product"].forEach(function(id){
         var el=document.getElementById(id); if(el) el.value="";
       });
-      pavsRenderTable();
+      pavsRerender();
     });
     var peb=document.getElementById("pavs-export");
     if(peb) peb.addEventListener("click", pavsExportCSV);
