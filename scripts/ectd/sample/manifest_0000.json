@@ -1,0 +1,11 @@
+{
+  "application": {"number":"CO-2026-00125","product":"Amoxicilina MK 500 mg","applicant":"Laboratorios Andina","applicant_key":"TIT-CO-8841","authority":"INVIMA","country":"co","submission_type":"initial"},
+  "sequence": {"number":"0000","ectd_version":"3.2","submission_date":"2026-09-02","submission_type":"initial","related_sequence":null},
+  "source_dir": "sources",
+  "leaves": [
+    {"module":1,"backbone_element":"m1-administrative-information","section":"1.0","title":"Carta de presentación dirigida a INVIMA","rel_path":"m1/co/10-carta-presentacion/carta-presentacion.pdf","source":"carta.pdf","operation":"new","sort_order":1},
+    {"module":1,"backbone_element":"m1-administrative-information","section":"1.4","title":"Proyecto de etiqueta e inserto","rel_path":"m1/co/14-etiquetado/etiqueta-inserto.pdf","source":"etiqueta.pdf","operation":"new","sort_order":2},
+    {"module":3,"backbone_element":"m3-quality","section":"3.2.P.4","title":"3.2.P.4 Validación de método analítico","rel_path":"m3/32p4/validacion-metodo-analitico.pdf","source":"metodo.pdf","operation":"new","sort_order":3},
+    {"module":3,"backbone_element":"m3-quality","section":"3.2.P.5","title":"3.2.P.5 Especificaciones de liberación y vida útil","rel_path":"m3/32p5/especificaciones.pdf","source":"especificaciones.pdf","operation":"new","sort_order":4}
+  ]
+}

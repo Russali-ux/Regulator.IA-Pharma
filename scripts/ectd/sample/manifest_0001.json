@@ -1,0 +1,8 @@
+{
+  "application": {"number":"CO-2026-00125","product":"Amoxicilina MK 500 mg","applicant":"Laboratorios Andina","applicant_key":"TIT-CO-8841","authority":"INVIMA","country":"co","submission_type":"initial"},
+  "sequence": {"number":"0001","ectd_version":"3.2","submission_date":"2026-10-01","submission_type":"response","related_sequence":"0000"},
+  "source_dir": "sources",
+  "leaves": [
+    {"module":3,"backbone_element":"m3-quality","section":"3.2.P.4","title":"3.2.P.4 Validación de método analítico (v2)","rel_path":"m3/32p4/validacion-metodo-analitico-v2.pdf","source":"metodo-v2.pdf","operation":"replace","modified_rel_path":"m3/32p4/validacion-metodo-analitico.pdf","sort_order":1}
+  ]
+}

@@ -5,3 +5,6 @@ data/csv/*.csv
 data/json/*.json
 !data/csv/.gitkeep
 !data/json/.gitkeep
+
+# salida del eCTD generator
+build_ectd/
