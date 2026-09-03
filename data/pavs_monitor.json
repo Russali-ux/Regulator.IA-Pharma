@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-02T14:56:46Z",
-  "total": 2011,
+  "generatedAt": "2026-09-03T14:52:32Z",
+  "total": 2028,
   "stats": {
-    "total": 2011,
-    "thisYear": 563,
+    "total": 2028,
+    "thisYear": 580,
     "agencies": 25,
     "countries": 23
   },
@@ -38,17 +38,17 @@
     ],
     [
       "2026",
-      563
+      580
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      367
+      377
     ],
     [
       "MHRA",
-      210
+      211
     ],
     [
       "BfArM",
@@ -60,7 +60,7 @@
     ],
     [
       "Health Canada",
-      180
+      183
     ],
     [
       "TGA",
@@ -68,7 +68,7 @@
     ],
     [
       "DIGEMID",
-      149
+      152
     ],
     [
       "FDA",
@@ -84,6 +84,214 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-09-03",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: Retiro de producto - Producto viscoelastico, Eyefill C (Bausch & Lomb)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Eyefill C (Bausch & Lomb)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/produit-viscoelastique-eyefill-c-bausch-lomb"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-03",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Informacion de seguridad - Sistema de anestesia Carestation 850 y Carestation 850c (Datex Ohmeda / GE HealthCare)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Carestation 850 y Carestation 850c (Datex Ohmeda / GE HealthCare)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/systeme-danesthesie-carestation-850-et-carestation-850c-datex-ohmeda-ge-healthcare"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-03",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Informacion de seguridad - Reactivo MAS Omni Immune Pro (Microgenics Corporation, Thermo Fisher Scientific)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Reactivo MAS Omni Immune Pro (Microgenics Corporation, Thermo Fisher Scientific)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/reactif-mas-omni-immune-pro-microgenics-corporation-thermo-fisher-scientific"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-03",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Informacion de seguridad - Silla de ruedas electrica, Sistema de asistencia electrica e-Motion M25 (Alber GmbH)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistema de asistencia electrica e-Motion M25 (Alber GmbH)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/fauteuil-roulant-electrique-systeme-dassistance-electrique-e-motion-m25-alber-gmbh"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-03",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Informacion de seguridad - IRM, Sistemas IRM con versiones de software R5 y R11 (Philips)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas IRM con versiones de software R5 y R11 (Philips)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/irm-systemes-irm-avec-les-versions-logicielles-r5-et-r11-philips"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 106-2026: Comercialización ilegal por página web de producto farmacéutico (biológico) sin registro sanitario - RETATRUTIDE",
+      "producto": "Farmaco",
+      "ifa": "RETATRUTIDE",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-106-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 107-2026: Falsificación del producto farmacéutico CHAO NF 500mg + 5mg + 2mg tableta recubierta",
+      "producto": "Farmaco",
+      "ifa": "CHAO NF 500mg + 5mg + 2mg tableta recubierta",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-107-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Reino Unido",
+      "agencia": "MHRA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "MHRA (DSI/2026/011): Deben usarse filtros durante la administración de nutrición parenteral en todos los entornos asistenciales - riesgo de embolia (desenlace mortal)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Administración de nutrición parenteral (uso de filtro)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gov.uk/drug-device-alerts/filters-should-be-used-during-the-administration-of-parenteral-nutrition-for-patients-in-all-care-settings-dsi-slash-2026-slash-011"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: Retiro de producto - Cateter de imagen intravascular, Imager II Angiographic Catheter (Boston Scientific)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Imager II Angiographic Catheter (Boston Scientific)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/catheter-dimagerie-intravasculaire-imager-ii-angiographic-catheter-boston-scientific"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Informacion de seguridad - CEC/ECMO, Intercambiador de calor Quantum PureFlow Standard Heat Exchanger High Flow (Spectrum Medical)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Quantum PureFlow Standard Heat Exchanger High Flow (Spectrum Medical)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/cec-ecmo-echangeur-de-chaleur-quantum-pureflow-standard-heat-exchanger-high-flow-spectrum-medical-s-r-l"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Informacion de seguridad - Software de ayuda a la prescripcion (LAP) Netsoins (Teranga Software)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Software de ayuda a la prescripcion Netsoins (Teranga Software)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/lap-logiciel-daide-a-la-prescription-netsoins-teranga-software-3"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de Quantum PureFlow Standard Heat Exchanger High Flow (Spectrum Medical)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Quantum PureFlow Standard Heat Exchanger High Flow",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/quantum-pureflow-standard-heat-exchanger-high-flow"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de LIFEPAK 35 Monitor/Defibrillator",
+      "producto": "Dispositivo Medico",
+      "ifa": "LIFEPAK 35 Monitor/Defibrillator",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/lifepak-r-35-monitordefibrillator"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de BiCOAG Hemostasis Probe",
+      "producto": "Dispositivo Medico",
+      "ifa": "BiCOAG Hemostasis Probe",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/bicoag-hemostasis-probe"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-01",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Informacion de seguridad - Estetica, DermaV (Lutronic Corporation)",
+      "producto": "Dispositivo Medico",
+      "ifa": "DermaV (Lutronic Corporation)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/esthetique-dermav-lutronic-corporation"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-01",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: Retiro de producto - Farmaco-toxicologia, Reactivo Vitros Chemistry Products Valp (QuidelOrtho)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Reactivo Vitros Chemistry Products Valp (QuidelOrtho)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/pharmaco-toxicologie-reactif-vitros-chemistry-products-valp-quidelortho"
+    },
     {
       "y": 2026,
       "fecha": "2026-08-31",
@@ -172,7 +380,7 @@
       "titulo": "ALERTA DIGEMID N° 102-2026: Comercialización ilegal por página web de productos farmacéuticos sin registro sanitario - VYVANSE (lisdexanfetamina)",
       "producto": "Farmaco",
       "ifa": "VYVANSE (lisdexanfetamina)",
-      "atc": "Sin ATC",
+      "atc": "N06BA12 — LISDEXANFETAMINA",
       "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-102-2026/"
     },
     {
@@ -200,6 +408,19 @@
       "ifa": "CHANCE EAU TENDRE EAU DE TOILETTE / HUGO HUGO BOSS MAN EAU DE TOILETTE",
       "atc": "Sin ATC",
       "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-104-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-31",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ALERTA DIGEMID N° 105-2026: Retiro del mercado de un lote de producto farmacéutico observado por resultado crítico de control de calidad - KENALER (Ketotifeno)",
+      "producto": "Farmaco",
+      "ifa": "KENALER (Ketotifeno)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-105-2026/"
     },
     {
       "y": 2026,
