@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-04T14:45:39Z",
-  "total": 2028,
+  "generatedAt": "2026-09-05T13:40:59Z",
+  "total": 2035,
   "stats": {
-    "total": 2028,
-    "thisYear": 580,
+    "total": 2035,
+    "thisYear": 587,
     "agencies": 25,
     "countries": 23
   },
@@ -38,13 +38,13 @@
     ],
     [
       "2026",
-      580
+      587
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      377
+      379
     ],
     [
       "MHRA",
@@ -60,7 +60,7 @@
     ],
     [
       "Health Canada",
-      183
+      187
     ],
     [
       "TGA",
@@ -72,7 +72,7 @@
     ],
     [
       "FDA",
-      120
+      121
     ],
     [
       "AIFA",
@@ -84,6 +84,71 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-09-04",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Informacion de seguridad - Circuito de ventilacion de paciente, VentStar Resus Neo y VentStar Resuscitaire (Dräger)",
+      "producto": "Dispositivo Medico",
+      "ifa": "VentStar Resus Neo y VentStar Resuscitaire (Dräger)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/circuit-de-ventilation-patient-ventstar-resus-neo-et-ventstar-resuscitaire-drager"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-04",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Informacion de seguridad - Aparato de radiologia intervencionista RX, Intuis (Philips Medical Systems Nederland BV)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Intuis (Philips Medical Systems Nederland BV)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/appareil-de-radiologie-interventionnelle-rx-intuis-philips-medical-systems-nederland-bv"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-04",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de GORE® VIABAHN® Endoprosthesis with PROPATEN Bioactive por procesamiento con equipo fuera del rango validado",
+      "producto": "Dispositivo Medico",
+      "ifa": "GORE® VIABAHN® Endoprosthesis with PROPATEN Bioactive",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/gorer-viabahnr-endoprosthesis-propaten-bioactive"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-04",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de Imager™ II Angiographic Catheter por reduccion de agentes estabilizadores en las puntas",
+      "producto": "Dispositivo Medico",
+      "ifa": "Imager™ II Angiographic Catheter (Boston Scientific)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/imagertm-ii-angiographic-catheter"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-04",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de LIFEPAK® 35 Monitor/Defibrillator por conectores de puerto de acceso de impresora/modem no asentados completamente",
+      "producto": "Dispositivo Medico",
+      "ifa": "LIFEPAK® 35 Monitor/Defibrillator (Stryker)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/lifepak-r-35-monitordefibrillator-0"
+    },
     {
       "y": 2026,
       "fecha": "2026-09-03",
@@ -148,6 +213,19 @@
       "ifa": "Sistemas IRM con versiones de software R5 y R11 (Philips)",
       "atc": "Sin ATC",
       "enlace": "https://ansm.sante.fr/informations-de-securite/irm-systemes-irm-avec-les-versions-logicielles-r5-et-r11-philips"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-03",
+      "pais": "EEUU",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "FDA: Retiro voluntario nacional de B. Braun 0.9% Sodium Chloride Injection USP, 100 mL (envase PAB de 150 mL) por presencia de material particulado",
+      "producto": "Farmaco",
+      "ifa": "Cloruro de sodio 0.9% solucion inyectable (B. Braun Medical Inc.)",
+      "atc": "A12CA01 — CLORURO DE SODIO",
+      "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/b-braun-medical-inc-issues-voluntary-nationwide-recall-09-sodium-chloride-injection-usp-100-ml-150"
     },
     {
       "y": 2026,
@@ -265,6 +343,19 @@
       "ifa": "BiCOAG Hemostasis Probe",
       "atc": "Sin ATC",
       "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/bicoag-hemostasis-probe"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de LEO+ Intracranial Self Expandable Stent And Delivery System (conectores ANRYV, Balt Extrusion) por resultados no conformes en la prueba de endotoxinas bacterianas",
+      "producto": "Dispositivo Medico",
+      "ifa": "LEO+ Intracranial Self Expandable Stent And Delivery System (Balt Extrusion)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/leo-intracranial-self-expandable-stent-and-delivery-system"
     },
     {
       "y": 2026,
