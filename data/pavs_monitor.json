@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-06T13:56:28Z",
-  "total": 2035,
+  "generatedAt": "2026-09-07T16:17:31Z",
+  "total": 2041,
   "stats": {
-    "total": 2035,
-    "thisYear": 587,
+    "total": 2041,
+    "thisYear": 593,
     "agencies": 25,
     "countries": 23
   },
@@ -38,13 +38,13 @@
     ],
     [
       "2026",
-      587
+      593
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      379
+      382
     ],
     [
       "MHRA",
@@ -64,7 +64,7 @@
     ],
     [
       "TGA",
-      154
+      155
     ],
     [
       "DIGEMID",
@@ -72,7 +72,7 @@
     ],
     [
       "FDA",
-      121
+      123
     ],
     [
       "AIFA",
@@ -84,6 +84,58 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-09-07",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: Retiro de producto - Endoprotesis Gore Viabahn con revestimiento bioactivo de heparina / Propaten - Gore (R2626318)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Endoprotesis Gore Viabahn / Propaten (Gore)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/endoprothese-gore-viabahn-a-revetement-bioactif-a-lheparine-propaten-gore"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-07",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: Retiro de producto - Dispositivo de irrigacion/aspiracion StrykeFlow PS y tubuladuras Atho - Stryker (R2624308)",
+      "producto": "Dispositivo Medico",
+      "ifa": "StrykeFlow PS y tubuladuras Atho (Stryker)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/dispositif-dirrigation-aspiration-strykeflow-ps-et-tubulures-atho-stryker"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-07",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Informacion de seguridad - Bioquimica, Reactivo Atellica CH Revised C-Reactive Protein (RCRP) - Siemens Healthcare Diagnostics (R2625739)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Reactivo Atellica CH Revised C-Reactive Protein (RCRP) (Siemens Healthcare Diagnostics)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/biochimie-reactif-atellica-ch-revised-c-reactive-protein-rcrp-siemens-healthcare-diagnostics-2"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-07",
+      "pais": "Australia",
+      "agencia": "TGA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "TGA: Retiro urgente de dos lotes (V772, V773) de Deep Heat Extra Strength 100g Cream (Mentholatum Australasia) por contaminacion microbiologica",
+      "producto": "Farmaco",
+      "ifa": "Deep Heat Extra Strength 100g Cream (medicamento OTC de uso topico) - Mentholatum Australasia",
+      "atc": "Sin ATC",
+      "enlace": "https://www.tga.gov.au/safety/recalls-and-other-market-actions/market-actions/deep-heat-extra-strength-100g-cream"
+    },
     {
       "y": 2026,
       "fecha": "2026-09-04",
@@ -148,6 +200,19 @@
       "ifa": "LIFEPAK® 35 Monitor/Defibrillator (Stryker)",
       "atc": "Sin ATC",
       "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/lifepak-r-35-monitordefibrillator-0"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-04",
+      "pais": "EEUU",
+      "agencia": "FDA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "FDA: Retiro voluntario nacional de Business Pill y Branch Manager for Men (SUPPLX.com) por contener yohimbina no declarada",
+      "producto": "Farmaco",
+      "ifa": "Yohimbina no declarada - suplementos para mejora sexual masculina (Business Pill, Branch Manager for Men)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/supplxcom-issues-voluntary-nationwide-recall-business-pill-and-branch-manager-men-due-undeclared"
     },
     {
       "y": 2026,
@@ -226,6 +291,19 @@
       "ifa": "Cloruro de sodio 0.9% solucion inyectable (B. Braun Medical Inc.)",
       "atc": "A12CA01 — CLORURO DE SODIO",
       "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/b-braun-medical-inc-issues-voluntary-nationwide-recall-09-sodium-chloride-injection-usp-100-ml-150"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-03",
+      "pais": "EEUU",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "FDA: Retiro voluntario nacional de tres lotes de Epinephrine Injection USP 30 mg/30 mL (1 mg/mL) multidosis de American Regent por material particulado y falta de garantia de esterilidad",
+      "producto": "Farmaco",
+      "ifa": "Epinefrina (Epinephrine Injection USP 30 mg/30 mL) - American Regent",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/american-regent-inc-issues-voluntary-nationwide-recall-three-lots-epinephrine-injection-usp-30-mg-30"
     },
     {
       "y": 2026,
