@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-07T16:17:31Z",
-  "total": 2041,
+  "generatedAt": "2026-09-08T14:54:32Z",
+  "total": 2048,
   "stats": {
-    "total": 2041,
-    "thisYear": 593,
+    "total": 2048,
+    "thisYear": 600,
     "agencies": 25,
     "countries": 23
   },
@@ -38,13 +38,13 @@
     ],
     [
       "2026",
-      593
+      600
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      382
+      385
     ],
     [
       "MHRA",
@@ -56,7 +56,7 @@
     ],
     [
       "AEMPS",
-      191
+      194
     ],
     [
       "Health Canada",
@@ -80,10 +80,49 @@
     ],
     [
       "EMA",
-      57
+      58
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-09-08",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: Retiro de producto - Cirugia asistida por ordenador, Esferas pasivas NDI y Kit de aguja de biopsia (Medtronic / Northern Digital Inc.) (R2626613)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Esferas pasivas NDI y Kit de aguja de biopsia (Medtronic / Northern Digital Inc.)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/chirurgie-assistee-par-ordinateur-spheres-passives-ndi-et-kit-daiguille-a-biopsie-medtronic-northern-digital-inc"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-08",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: Retiro de producto - Canula de traqueotomia Shiley Hi-Lo Evac Tracheostomy Tube Cuffed (Covidien LLC) (R2626020)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Canula de traqueotomia Shiley Hi-Lo Evac Tracheostomy Tube Cuffed (Covidien LLC)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/canule-de-tracheotomie-shiley-hi-lo-evac-tracheostomy-tube-cuffed-covidien-llc"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-08",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: Retiro de producto - Componentes de implantes ortopedicos en UHMWPE (polietileno): insertos tibiales, protesis de rotula, recubrimientos y cotilos acetabulares antiguos, componentes de implantes de hombro y extremidades (Stryker) (R2624903)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Componentes de implantes ortopedicos en UHMWPE / polietileno (Stryker)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/composants-dimplants-orthopediques-en-uhmwpe-polyethylene-inserts-tibiaux-protheses-de-rotule-revetements-et-cupules-acetabulaires-anciens-anciens-composants-dimplants-pour-lepaule-et-extremites-stryker"
+    },
     {
       "y": 2026,
       "fecha": "2026-09-07",
@@ -216,6 +255,32 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-09-04",
+      "pais": "España",
+      "agencia": "AEMPS",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AEMPS (PS 39/2026): La AEMPS informa de un fallo en determinados respiradores Newport HT70 Plus y piezas de recambio (PCBA)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Respiradores Newport HT70 Plus y piezas de recambio PCBA",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aemps.gob.es/informa/la-aemps-informa-de-un-fallo-en-determinados-respiradores-newport-ht70-plus-y-piezas-de-recambio-pcba/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-04",
+      "pais": "Europa",
+      "agencia": "EMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "EMA/PRAC (reunion 31 agosto - 3 septiembre 2026): Inicio de revision de seguridad de medicamentos inyectables con hierro por riesgo de hipofosfatemia y osteomalacia",
+      "producto": "Farmaco",
+      "ifa": "Medicamentos inyectables con hierro (hierro carboximaltosa / ferric carboxymaltose y otros)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.ema.europa.eu/en/news/meeting-highlights-pharmacovigilance-risk-assessment-committee-prac-31-august-3-september-2026"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-09-03",
       "pais": "Francia",
       "agencia": "ANSM",
@@ -304,6 +369,32 @@
       "ifa": "Epinefrina (Epinephrine Injection USP 30 mg/30 mL) - American Regent",
       "atc": "Sin ATC",
       "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/american-regent-inc-issues-voluntary-nationwide-recall-three-lots-epinephrine-injection-usp-30-mg-30"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-03",
+      "pais": "España",
+      "agencia": "AEMPS",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AEMPS (PS 38/2026): La AEMPS informa de un riesgo de acceso no autorizado en el sistema Albert e-motion M25 de accionamiento adicional para sillas de ruedas",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistema Albert e-motion M25 (grupo Invacare) para sillas de ruedas",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aemps.gob.es/informa/la-aemps-informa-de-un-riesgo-de-acceso-no-autorizado-en-el-sistema-albert-e-motion-m25-de-accionamiento-adicional-para-sillas-de-ruedas/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-03",
+      "pais": "España",
+      "agencia": "AEMPS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "AEMPS (COS 19/2026): Cese de comercializacion, retirada del mercado y recuperacion de varios lotes de FluorKin infantil fresa enjuague bucal por contaminacion microbiologica",
+      "producto": "Cosmetico",
+      "ifa": "FluorKin infantil fresa enjuague bucal (lotes 26B01, 26B04, 26B05, 26B06)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aemps.gob.es/informa/la-aemps-informa-del-cese-de-comercializacion-retirada-del-mercado-y-recuperacion-de-varios-lotes-de-fluorkin-infantil-fresa-enjuague-bucal-por-contaminacion-microbiologica/"
     },
     {
       "y": 2026,
@@ -588,7 +679,7 @@
       "titulo": "ALERTA DIGEMID N° 105-2026: Retiro del mercado de un lote de producto farmacéutico observado por resultado crítico de control de calidad - KENALER (Ketotifeno)",
       "producto": "Farmaco",
       "ifa": "KENALER (Ketotifeno)",
-      "atc": "Sin ATC",
+      "atc": "R06AX17 — KETOTIFEN",
       "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-105-2026/"
     },
     {
@@ -1433,7 +1524,7 @@
       "titulo": "ALERTA DIGEMID N° 98-2026: Productos farmacéuticos falsificados incautados en acciones de control y vigilancia sanitaria - Panadol",
       "producto": "Farmaco",
       "ifa": "Panadol",
-      "atc": "Sin ATC",
+      "atc": "N02BE01 — PARACETAMOL",
       "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-98-2026/"
     },
     {
