@@ -361,6 +361,20 @@
     color:var(--ink); font-family:inherit; font-size:13.5px;
   }
   .field select:focus,.field input:focus{outline:2px solid var(--accent); outline-offset:-1px}
+
+  /* ---- Modal: crear nueva molecula ---- */
+  .modal-ov{position:fixed; inset:0; background:rgba(15,23,42,.55); backdrop-filter:blur(2px); display:flex; align-items:flex-start; justify-content:center; padding:6vh 16px 16px; z-index:120; overflow-y:auto}
+  .modal-ov[hidden]{display:none}
+  .modal{background:var(--surface); border:1px solid var(--line); border-radius:14px; box-shadow:0 24px 60px rgba(15,23,42,.35); width:100%; max-width:560px; overflow:hidden}
+  .modal .mhead{display:flex; align-items:center; gap:10px; padding:16px 20px; border-bottom:1px solid var(--line)}
+  .modal .mhead h3{margin:0; font-size:15.5px; letter-spacing:-.2px}
+  .modal .mhead .x{margin-left:auto; border:0; background:transparent; font-size:20px; line-height:1; color:var(--muted); cursor:pointer; padding:2px 6px; border-radius:7px}
+  .modal .mhead .x:hover{background:var(--surface2); color:var(--ink)}
+  .modal .mbody{padding:18px 20px}
+  .modal .mbody .frm{grid-template-columns:1fr 1fr}
+  .modal .mbody .full{grid-column:1 / -1}
+  .modal .mfoot{display:flex; justify-content:flex-end; gap:10px; padding:14px 20px; border-top:1px solid var(--line); background:var(--surface2)}
+  .modal .hint{margin:12px 0 0; font-size:12px; color:var(--muted)}
   .note{background:var(--info-bg); color:var(--info); border-radius:9px; padding:11px 14px; font-size:12.5px; margin-top:16px}
   .note.warn{background:var(--warn-bg); color:var(--warn)}
   .note b{font-weight:700}
@@ -763,6 +777,7 @@
             <div class="right filterbar">
               <input type="search" id="prodfilter" placeholder="Buscar producto o principio activo…" aria-label="Buscar producto">
               <span class="tag" id="prodcount">22 productos</span>
+              <button class="btn sm primary" id="btn-nueva-molecula" type="button"><span class="ic">➕</span> Nueva molécula</button>
             </div>
           </div>
           <div class="cbody flush tscroll">
@@ -785,6 +800,47 @@
         </div>
 
         <div class="note warn"><b>Trazabilidad:</b> cada carga, reemplazo o firma queda registrada con usuario, fecha y hash del archivo (principios de integridad de datos ALCOA+). El administrador asigna productos y roles por sesión.</div>
+
+        <!-- ==== Modal: crear nueva molecula ==== -->
+        <div class="modal-ov" id="molecula-modal" hidden role="dialog" aria-modal="true" aria-labelledby="molecula-modal-title">
+          <div class="modal">
+            <div class="mhead"><span class="ic">🧬</span><h3 id="molecula-modal-title">Nueva molécula · crear dossier CTD</h3><button class="x" type="button" data-close-molecula aria-label="Cerrar">×</button></div>
+            <div class="mbody">
+              <form id="molecula-form" autocomplete="off">
+                <div class="frm">
+                  <div class="field full"><label for="mol-producto">Producto</label>
+                    <input id="mol-producto" name="producto" type="text" placeholder="p. ej. Rosuvastatina MK" required>
+                  </div>
+                  <div class="field full"><label for="mol-forma">Forma farmacéutica / concentración</label>
+                    <input id="mol-forma" name="forma" type="text" placeholder="p. ej. Tabletas 10 mg" required>
+                  </div>
+                  <div class="field"><label for="mol-pais">País</label>
+                    <select id="mol-pais" name="pais" required>
+                      <option value="CO">🇨🇴 Colombia · INVIMA</option>
+                      <option value="PE">🇵🇪 Perú · DIGEMID</option>
+                      <option value="AR">🇦🇷 Argentina · ANMAT</option>
+                      <option value="CL">🇨🇱 Chile · ISP</option>
+                      <option value="MX">🇲🇽 México · COFEPRIS</option>
+                      <option value="ES">🇪🇸 España · AEMPS</option>
+                    </select>
+                  </div>
+                  <div class="field"><label for="mol-tramite">Trámite</label>
+                    <select id="mol-tramite" name="tramite" required>
+                      <option value="Registro nuevo">Registro nuevo</option>
+                      <option value="Renovación">Renovación</option>
+                      <option value="Variación">Variación</option>
+                    </select>
+                  </div>
+                </div>
+                <p class="hint" id="mol-hint">El Módulo 1 se arma según el país seleccionado (modelo Colombia por defecto; modelo México para COFEPRIS). Los módulos 2 al 5 son comunes.</p>
+              </form>
+            </div>
+            <div class="mfoot">
+              <button class="btn" type="button" data-close-molecula>Cancelar</button>
+              <button class="btn primary" type="submit" form="molecula-form" id="mol-crear">Crear producto y carpetas</button>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- ============ eCTD ============ -->
@@ -1802,7 +1858,25 @@
     while(pos<idx.length){ map[flat[idx[pos]]]="ok"; pos++ }
     return map;
   }
-  function buildStatusMap(p, i){ return buildStatusMapForTemplate(CTD_TEMPLATE, p, i) }
+  // Estructura de dossier por pais (data/dossier_modulos.json): M1 cambia por pais, M2-M5 comunes.
+  // Si el JSON no carga, se usa CTD_TEMPLATE (plantilla estatica) como respaldo.
+  var DOSSIER=null;
+  function resolveM1(pais){
+    if(!DOSSIER || !DOSSIER.modulo1_por_pais) return null;
+    var m=DOSSIER.modulo1_por_pais;
+    var node=m[pais] || m["default"];
+    if(node && node.$ref) node=m[node.$ref];
+    return node || m["default"] || null;
+  }
+  function templateForCountry(pais){
+    if(DOSSIER){
+      var m1=resolveM1(pais);
+      if(m1 && m1.subs) return [m1].concat(DOSSIER.modulos_comunes||[]);
+    }
+    return CTD_TEMPLATE;
+  }
+
+  function buildStatusMap(p, i){ return buildStatusMapForTemplate(templateForCountry(p.c), p, i) }
 
   function buildTreeForTemplate(template, statusMap, idPrefix){
     return template.map(function(m){
@@ -1819,7 +1893,7 @@
         "<div class='tkids'>"+subsHtml+"</div></div>";
     }).join("");
   }
-  function buildProductTree(p, i){ return buildTreeForTemplate(CTD_TEMPLATE, buildStatusMap(p,i), "d"+i) }
+  function buildProductTree(p, i){ return buildTreeForTemplate(templateForCountry(p.c), buildStatusMap(p,i), "d"+i) }
 
   // Recalcula, en vivo, el % de un módulo y qué subcarpetas todavía no tienen su documento en estado "Aprobado"
   function recomputeModulePct(tnode){
@@ -1942,9 +2016,62 @@
   }
   var pf=document.getElementById("prodfilter");
   if(pf) pf.addEventListener("input",function(){ renderProds(pf.value) });
-  renderProds("");
-  // por defecto, el primer producto (Amoxicilina MK) abre su acordeón — mismo comportamiento que antes
-  if(document.querySelector("#prodrows tr.prodrow[data-i='0']")) openProdDetail(0);
+  function initBinderPortafolio(){
+    renderProds("");
+    // por defecto, el primer producto (Amoxicilina MK) abre su acordeón — mismo comportamiento que antes
+    if(document.querySelector("#prodrows tr.prodrow[data-i='0']")) openProdDetail(0);
+  }
+  // Carga la estructura de dossier por país; si falla, se usa la plantilla estática de respaldo.
+  fetch("data/dossier_modulos.json",{cache:"no-store"})
+    .then(function(r){ return r.ok ? r.json() : null })
+    .then(function(j){ if(j && j.modulo1_por_pais){ DOSSIER=j; } })
+    .catch(function(){ /* respaldo: CTD_TEMPLATE */ })
+    .then(function(){ initBinderPortafolio(); });
+
+  // ---- Crear nueva molécula: modal con 4 campos → agrega producto y genera sus carpetas ----
+  var molModal=document.getElementById("molecula-modal");
+  var molForm=document.getElementById("molecula-form");
+  var molHint=document.getElementById("mol-hint");
+  function openMolModal(){
+    if(!molModal) return;
+    if(molForm) molForm.reset();
+    if(molHint) molHint.textContent="El Módulo 1 se arma según el país seleccionado (modelo Colombia por defecto; modelo México para COFEPRIS). Los módulos 2 al 5 son comunes.";
+    molModal.hidden=false;
+    var f=document.getElementById("mol-producto"); if(f) f.focus();
+  }
+  function closeMolModal(){ if(molModal) molModal.hidden=true; }
+  var btnNueva=document.getElementById("btn-nueva-molecula");
+  if(btnNueva) btnNueva.addEventListener("click",openMolModal);
+  if(molModal){
+    molModal.addEventListener("click",function(e){
+      if(e.target===molModal || e.target.closest("[data-close-molecula]")) closeMolModal();
+    });
+    var molPais=document.getElementById("mol-pais");
+    if(molPais) molPais.addEventListener("change",function(){
+      if(!molHint) return;
+      molHint.textContent = molPais.value==="MX"
+        ? "México (COFEPRIS): el Módulo 1 usa el modelo mexicano (carpetas 1.1 a 1.21 + PGR y 1.13–1.17). Módulos 2 al 5 comunes."
+        : "El Módulo 1 usa el modelo Colombia (carpetas 1.1 a 1.12, con el 1.12 PGR). Módulos 2 al 5 comunes.";
+    });
+  }
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape" && molModal && !molModal.hidden) closeMolModal(); });
+  if(molForm) molForm.addEventListener("submit",function(e){
+    e.preventDefault();
+    var producto=(document.getElementById("mol-producto").value||"").trim();
+    var forma=(document.getElementById("mol-forma").value||"").trim();
+    var pais=document.getElementById("mol-pais").value;
+    var tramite=document.getElementById("mol-tramite").value;
+    if(!producto || !forma){ return; }
+    // Nuevo dossier: carpetas creadas, documentos aún pendientes (comp 0).
+    BPRODS.push({n:producto, f:forma, c:pais, v:tramite, comp:0, st:["info","En construcción"], dup:0, borr:0});
+    var newIdx=BPRODS.length-1;
+    closeMolModal();
+    var pf2=document.getElementById("prodfilter"); if(pf2) pf2.value="";
+    renderProds("");
+    openProdDetail(newIdx);
+    var newRow=document.querySelector("#prodrows tr.prodrow[data-i='"+newIdx+"']");
+    if(newRow && newRow.scrollIntoView) newRow.scrollIntoView({behavior:"smooth", block:"center"});
+  });
 
   // ---- Monitor PAVS (ConkoSafe IA): filtros y exportación CSV sobre una muestra estática ----
   var PAVS_DATA=[
