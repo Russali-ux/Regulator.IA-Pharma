@@ -429,10 +429,11 @@
     <button class="navbtn" data-view="agent-compass"><span class="ic">🧭</span> Compass</button>
     <button class="navbtn is-pronto" type="button" aria-disabled="true"><span class="ic">✅</span> Auditor <span class="pronto">PRONTO</span></button>
     <button class="navbtn is-pronto" type="button" aria-disabled="true"><span class="ic">🏷</span> Scribe <span class="pronto">PRONTO</span></button>
-    <div class="navlabel p2">● Fase II — Farmacovigilancia</div>
+    <div class="navlabel p2">● Fase II — Post registro</div>
     <button class="navbtn" data-view="pavs-monitor"><span class="ic">⚠</span> Conkosafe IA <span class="count">7</span></button>
     <button class="navbtn" data-view="agent-adr"><span class="ic">📋</span> ALESSA Database</button>
     <button class="navbtn" data-view="agent-ips"><span class="ic">⚖️</span> ALESSA IPS</button>
+    <button class="navbtn" data-view="control-cambios"><span class="ic">🔄</span> Control de Cambios</button>
     <div class="sidefoot">
       <b>Laboratorios Andina S.A.S.</b><br>Bogotá · Colombia<br>6 países · CO · PE · AR · CL · MX · ES
     </div>
@@ -1375,6 +1376,7 @@
         <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap">
           <h2 class="pagehead" style="margin:0">📋 ALESSA Database — reacciones adversas procesadas</h2>
           <a class="btn sm primary" href="https://alessadatabase.com/admin/authentication" target="_blank" rel="noopener">🔗 ALESSA - Iniciar sesión</a>
+          <button class="btn sm" data-open="control-cambios">🔄 Control de Cambios</button>
         </div>
         <p class="pagesub">La API asocia los casos al prodcucto farmacéutico y actualiza el módulo 5 del dossier.</p>
 
@@ -1443,7 +1445,10 @@
       <!-- ============ MOCKUP: IPS ============ -->
       <section class="view" id="view-agent-ips">
         <p style="margin:0 0 10px"><button class="btn sm" data-open="agents">← Volver a Agentes</button></p>
-        <h2 class="pagehead">⚖️ ALESSA IPS — informe periódico de seguridad</h2>
+        <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap">
+          <h2 class="pagehead" style="margin:0">⚖️ ALESSA IPS — informe periódico de seguridad</h2>
+          <button class="btn sm" data-open="control-cambios">🔄 Control de Cambios</button>
+        </div>
         <p class="pagesub">El agente actualiza el módulo 5 en la sección Informes Periódicos de Seguridad con toda la evidencia acumulada (casos, alertas, literatura), y el equipo regulatorio valida la información.</p>
 
         <div class="txflow">
@@ -1499,6 +1504,7 @@
           </div>
           <div class="right">
             <a class="btn sm primary" href="https://ia.conkomercoplataforma.com/" target="_blank" rel="noopener">🔓 ConkoSafe Acceso ↗</a>
+            <button class="btn sm" data-open="control-cambios">🔄 Control de Cambios</button>
             <button class="btn sm" data-open="agents">← Volver a Agentes</button>
             <span class="btn sm" style="cursor:default">Última alerta: <span id="pavs-last-date">—</span></span>
           </div>
@@ -1561,6 +1567,18 @@
         </div>
       </section>
 
+      <!-- ============ CONTROL DE CAMBIOS (Post registro) ============ -->
+      <section class="view" id="view-control-cambios">
+        <h2 class="pagehead">🔄 Control de Cambios — Post registro</h2>
+        <p class="pagesub">Formulario de Control de Cambios (CC) conforme a Buenas Prácticas de Fabricación (GMP) / ICH Q10. Gestiona los cambios post-registro que puedan impactar el dossier, el sistema de farmacovigilancia o la calidad del producto, con evaluación multidisciplinaria de impacto, análisis de riesgos, plan de acción y cierre.</p>
+        <div class="note"><b>Trazabilidad:</b> cada Control de Cambios queda vinculado a los productos afectados y alimenta a ConkoSafe IA (señales/alertas) y a ALESSA (casos e IPS) cuando el cambio tiene implicancias de seguridad.</div>
+        <div class="card">
+          <div class="cbody" style="padding:0">
+            <iframe id="cc-frame" src="control-cambios.html" title="Formulario de Control de Cambios" loading="lazy" style="width:100%; height:1600px; border:0; border-radius:12px; background:#fff; display:block"></iframe>
+          </div>
+        </div>
+      </section>
+
     </div>
   </div>
 </div>
@@ -1568,6 +1586,7 @@
 <script>
 (function(){
   var titles={dash:"Dashboard",agents:"Agentes",binder:"Binder · Gestor documental",ectd:"Constructor eCTD",
+    "control-cambios":"Control de Cambios · Post registro",
     "pavs-monitor":"Conkosafe IA · Monitor PAVS",
     "agent-scout":"Scout Farma · mockup","agent-compass":"Compass Farma · mockup","agent-conkosafe":"Conkosafe IA · Alertas · mockup","agent-adr":"ALESSA Database · mockup","agent-ips":"ALESSA IPS · mockup"};
   var navbtns=document.querySelectorAll(".navbtn");
@@ -1579,6 +1598,7 @@
     document.getElementById("viewtitle").textContent=titles[key]||key;
     var navKey = key.indexOf("agent-")===0 ? "agents" : key;
     navbtns.forEach(function(x){x.classList.toggle("active", x.dataset.view===navKey)});
+    if(key==="control-cambios" && window.__ccFit){ setTimeout(window.__ccFit,80); }
     window.scrollTo({top:0});
   }
   navbtns.forEach(function(b){ b.addEventListener("click",function(){openView(b.dataset.view)}) });
@@ -1586,6 +1606,30 @@
     var t=e.target.closest("[data-open]");
     if(t) openView(t.dataset.open);
   });
+
+  // ---- Control de Cambios: ajusta el alto del iframe embebido a su contenido (mismo origen) ----
+  (function(){
+    var frame=document.getElementById("cc-frame");
+    if(!frame) return;
+    function fit(){
+      try{
+        var doc=frame.contentDocument||frame.contentWindow.document;
+        if(!doc||!doc.body) return;
+        var h=Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight);
+        if(h>0) frame.style.height=(h+24)+"px";
+      }catch(e){}
+    }
+    window.__ccFit=fit;
+    frame.addEventListener("load",function(){
+      fit();
+      try{
+        var doc=frame.contentDocument||frame.contentWindow.document;
+        if(window.ResizeObserver && doc.body){ new ResizeObserver(fit).observe(doc.body); }
+        doc.addEventListener("click",function(){ setTimeout(fit,60); });
+        doc.addEventListener("input",function(){ setTimeout(fit,60); });
+      }catch(e){}
+    });
+  })();
 
   // ---- animaciones de entrada: contadores y barras ----
   var noMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
