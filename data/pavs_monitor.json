@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-08T14:54:32Z",
-  "total": 2048,
+  "generatedAt": "2026-09-09T15:01:48Z",
+  "total": 2056,
   "stats": {
-    "total": 2048,
-    "thisYear": 600,
-    "agencies": 25,
-    "countries": 23
+    "total": 2056,
+    "thisYear": 608,
+    "agencies": 27,
+    "countries": 25
   },
   "yearChart": [
     [
@@ -38,7 +38,7 @@
     ],
     [
       "2026",
-      600
+      608
     ]
   ],
   "agencyChart": [
@@ -72,7 +72,7 @@
     ],
     [
       "FDA",
-      123
+      124
     ],
     [
       "AIFA",
@@ -125,6 +125,19 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-09-08",
+      "pais": "EEUU",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "FDA: Retiro (Clase I) de Luna G3 APAP (Modelo LG3600) con firmware G3-2.00.76 por defecto de firmware",
+      "producto": "Dispositivo Medico",
+      "ifa": "Luna G3 APAP (Modelo LG3600) - equipo de presion positiva automatica en la via aerea (APAP)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/bmc-medical-co-ltd-recalls-luna-g3-apap-model-lg3600-firmware-g3-20076-due-firmware-defect"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-09-07",
       "pais": "Francia",
       "agencia": "ANSM",
@@ -174,6 +187,32 @@
       "ifa": "Deep Heat Extra Strength 100g Cream (medicamento OTC de uso topico) - Mentholatum Australasia",
       "atc": "Sin ATC",
       "enlace": "https://www.tga.gov.au/safety/recalls-and-other-market-actions/market-actions/deep-heat-extra-strength-100g-cream"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-07",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "INVIMA (Alerta Sanitaria N° 285-2026): Productos fraudulentos promocionados como suplementos dietarios en comercio electronico",
+      "producto": "Farmaco",
+      "ifa": "Suplementos dietarios fraudulentos comercializados en linea",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/medicamentos_pbiologicos/2026/SEPTIEMBRE/Alerta%20No_285-2026%20-PRODUCTOS%20COMERCIALIZADOS%20JOG.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-07",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "INVIMA (Alerta Sanitaria N° 282-2026): Producto fraudulento 24 HS SLIMMING BY ADELFASTFIT",
+      "producto": "Farmaco",
+      "ifa": "24 HS SLIMMING BY ADELFASTFIT (suplemento dietario para control de peso)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/medicamentos_pbiologicos/2026/SEPTIEMBRE/Alerta%20No_282-2026%20-%20PRODUCTO%2024%20HS%20SLIMMING%20BY%20ADELFASTFIT%20.pdf"
     },
     {
       "y": 2026,
@@ -525,6 +564,71 @@
       "ifa": "LEO+ Intracranial Self Expandable Stent And Delivery System (Balt Extrusion)",
       "atc": "Sin ATC",
       "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/leo-intracranial-self-expandable-stent-and-delivery-system"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS (Alerta sanitaria): Falsificacion y comercializacion del producto Zirabev® 100 mg/4 mL (Bevacizumab), Solucion",
+      "producto": "Farmaco",
+      "ifa": "Bevacizumab (Zirabev® 100 mg/4 mL)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1101229/Alerta_Sanitaria_Zirabev_02092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS (Alerta sanitaria): Falsificacion y comercializacion del producto Choragon® 5000 UI (Gonadotrofina Corionica Humana), Solucion Inyectable",
+      "producto": "Farmaco",
+      "ifa": "Gonadotrofina Corionica Humana (Choragon® 5000 UI)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1101231/Alerta_Sanitaria_Choragon_02092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS (Alerta sanitaria): Robo de los medicamentos Alin® Depot, Synalar®-C, Synalar® Simple, Synalar-O® y Neuralin®",
+      "producto": "Farmaco",
+      "ifa": "Alin Depot, Synalar-C, Synalar Simple, Synalar-O, Neuralin (Productos Farmaceuticos, S.A. de C.V.)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1101230/Alerta_Sanitaria_Robo_Productos_Farmaceuticos_02092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "COFEPRIS (Aviso de Riesgo): Retiro de LANTUS® 100 U/mL (Insulina Glargina), frasco ampula 10 mL, por particulas visibles en el vial",
+      "producto": "Farmaco",
+      "ifa": "Insulina Glargina (LANTUS® 100 U/mL, frasco ampula 10 mL)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1101224/Aviso_de_Riesgo_LANTUS_02092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS (Aviso de Riesgo): Comercializacion ilegal de la vacuna Qdenga® (Vacuna Tetravalente contra el Dengue) por distribuidores no autorizados",
+      "producto": "Farmaco",
+      "ifa": "Vacuna tetravalente de virus vivos atenuados contra el Dengue (Qdenga®)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1101225/Aviso_de_Riesgo_Qdenga__02092026.pdf"
     },
     {
       "y": 2026,
