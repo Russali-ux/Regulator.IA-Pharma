@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-09T15:01:48Z",
-  "total": 2056,
+  "generatedAt": "2026-09-10T14:46:46Z",
+  "total": 2067,
   "stats": {
-    "total": 2056,
-    "thisYear": 608,
+    "total": 2067,
+    "thisYear": 619,
     "agencies": 27,
     "countries": 25
   },
@@ -38,13 +38,13 @@
     ],
     [
       "2026",
-      608
+      619
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      385
+      392
     ],
     [
       "MHRA",
@@ -60,7 +60,7 @@
     ],
     [
       "Health Canada",
-      187
+      190
     ],
     [
       "TGA",
@@ -84,6 +84,149 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de IMN Screws System Advanced Locking Screw (Stryker T2 Alpha) por error de etiquetado",
+      "producto": "Dispositivo Medico",
+      "ifa": "IMN Screws System Advanced Locking Screw (T2 Alpha)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/imn-screws-system-advanced-locking-screw"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Información a usuarios: sistemas de imagen por resonancia magnética (IRM) con imagen por tensor de difusión (DTI) - Philips (R2626468)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas IRM con DTI (Philips)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/systemes-dimagerie-par-resonance-magnetique-irm-avec-imagerie-du-tenseur-de-diffusion-dti-philips"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Información a usuarios: cámara hiperbárica Haux-Starmed 2500/5,5/SC3 - Haux Life Support (R2626733)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Cámara hiperbárica Haux-Starmed 2500/5,5/SC3",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/caisson-hyperbare-haux-starmed-2500-5-5-sc3-haux-life-support"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Información a usuarios: casete de test Nadal Rota-Adenovirus - Nal Von Minden (R2626610)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Test Nadal Rota-Adenovirus (diagnóstico in vitro, virología)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/virologie-cassette-de-test-nadal-rota-adenovirus-test-nal-von-minden"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de producto: reactivo Anti-Annexin V IgG - Orgentec (R2626453)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Reactivo Anti-Annexin V IgG (diagnóstico in vitro, autoinmunidad)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/auto-immunite-reactif-anti-annexin-v-igg-orgentec"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de producto: dispositivos de comunicación asistida TD Navio Maxi y TD Navio Midi - Tobii Technology AB (R2621914)",
+      "producto": "Dispositivo Medico",
+      "ifa": "TD Navio Maxi / TD Navio Midi",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/dispositifs-de-communication-assistee-td-navio-maxi-et-td-navio-midi-tobii-technology-ab"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Información a usuarios: equipo de radiología fijo - generador de rayos X de alta tensión (tipo UD y ZUD) - Shimadzu (R2624514)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Generador de rayos X de alta tensión Shimadzu (UD / ZUD)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/appareil-de-radiologie-fixe-generateur-de-rayons-x-haute-tension-ud-type-and-zud-type-shimadzu"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-09",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de sistemas de resonancia magnética Philips Ingenia, Achieva e Intera",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas MR Philips Ingenia / Achieva / Intera",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/philips-ingenia-achieva-and-intera-mr-systems"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-09",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de sistemas móviles de arco en C Veradius Unity y BV Pulsera (versiones 9in. y 12in.)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Veradius Unity / BV Pulsera Mobile C-Arm",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/veradius-unity-and-bv-pulsera-mobile-c-arm-system-9in-and-12in-versions"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-09",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de producto: reactivo QIAstat-Dx Gastrointestinal Panel 2 - Qiagen (R2624620)",
+      "producto": "Dispositivo Medico",
+      "ifa": "QIAstat-Dx Gastrointestinal Panel 2 (diagnóstico in vitro)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/reactif-qiastat-dx-gastrointestinal-panel-2-qiagen"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-09",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "Alerta sanitaria sobre suplementos dietarios sin registro sanitario: FOLIC ACID WITH VITAMIN B-12 (NOW), PAPAYA ENZYME (Puritan's Pride), CANDIDA SUPPORT (NOW), BERBERINE GLUCOSE SUPPORT (NOW), NAC N-ACETIL CISTEÍNA (Swanson), B-6 (NOW), SELENIUM 200 mcg (NOW)",
+      "producto": "Farmaco",
+      "ifa": "Ácido fólico + vitamina B12, enzima de papaya, berberina, N-acetilcisteína, piridoxina, selenio",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/alertas-sanitarias-general"
+    },
     {
       "y": 2026,
       "fecha": "2026-09-08",
