@@ -8,3 +8,5 @@ data/json/*.json
 
 # salida del eCTD generator
 build_ectd/
+
+Claude outputs/
