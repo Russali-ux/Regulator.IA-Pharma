@@ -260,116 +260,6 @@
         display: block;
     }
 
-    /* Tipo de Cambio (Nivel de Riesgo Regulatorio) */
-    .risk-options {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 12px;
-        margin-top: 8px;
-    }
-
-    .risk-card {
-        border: 2px solid var(--border-color);
-        border-radius: 6px;
-        padding: 12px 14px;
-        cursor: pointer;
-        transition: all 0.15s ease;
-        background: #fff;
-    }
-
-    .risk-card:hover {
-        border-color: var(--secondary-color);
-        background: #f7fafc;
-    }
-
-    .risk-card label {
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-        cursor: pointer;
-        margin-bottom: 0;
-    }
-
-    .risk-card .risk-title {
-        font-weight: bold;
-        font-size: 14px;
-    }
-
-    .risk-card .risk-sub {
-        display: block;
-        font-weight: normal;
-        font-size: 12px;
-        color: #718096;
-        margin-top: 2px;
-    }
-
-    .risk-card.risk-alto { border-left: 8px solid #e53e3e; }
-    .risk-card.risk-moderado { border-left: 8px solid #b794cf; }
-    .risk-card.risk-bajo { border-left: 8px solid #ed8936; }
-
-    .risk-card.selected { background: #ebf8ff; border-color: var(--secondary-color); }
-
-    .glossary-box {
-        margin-top: 15px;
-        border: 1px solid var(--border-color);
-        border-radius: 6px;
-        overflow: hidden;
-    }
-
-    .glossary-box .glossary-header {
-        background: var(--primary-color);
-        color: #fff;
-        padding: 8px 14px;
-        font-size: 13px;
-        font-weight: bold;
-        letter-spacing: 0.3px;
-    }
-
-    .glossary-box dl {
-        margin: 0;
-        padding: 0;
-    }
-
-    .glossary-box dt {
-        font-weight: bold;
-        font-size: 13px;
-        padding: 10px 14px 2px;
-        color: var(--primary-color);
-    }
-
-    .glossary-box dt .badge {
-        display: inline-block;
-        font-size: 11px;
-        font-weight: bold;
-        color: #fff;
-        border-radius: 3px;
-        padding: 1px 6px;
-        margin-right: 6px;
-        vertical-align: middle;
-    }
-
-    .badge-alto { background: #e53e3e; }
-    .badge-moderado { background: #9f7aea; }
-    .badge-bajo { background: #ed8936; }
-
-    .glossary-box dd {
-        margin: 0;
-        padding: 0 14px 10px;
-        font-size: 12.5px;
-        color: var(--text-color);
-        border-bottom: 1px solid #edf2f7;
-    }
-
-    .glossary-box dd:last-child { border-bottom: none; }
-
-    .glossary-box dd .ref {
-        display: block;
-        margin-top: 3px;
-        font-size: 11.5px;
-        color: #718096;
-        font-style: italic;
-    }
-
     .btn-row {
         display: flex;
         gap: 15px;
@@ -485,64 +375,6 @@
             <label for="justificacion_cambio">Justificación del Cambio *</label>
             <textarea id="justificacion_cambio" placeholder="Optimización, ahorro, acción correctiva, mejora tecnológica, fin de vida útil, etc." required></textarea>
             <div class="error-message" id="err_justificacion_cambio">La justificación técnica de un cambio GMP es un requisito regulatorio obligatorio.</div>
-        </div>
-
-        <div class="form-group">
-            <label>Tipo de Cambio (Nivel de Riesgo Regulatorio) *</label>
-            <div class="risk-options">
-                <div class="risk-card risk-alto">
-                    <label>
-                        <input type="radio" name="tipo_cambio" value="alto" required>
-                        <span>
-                            <span class="risk-title">Alto Riesgo</span>
-                            <span class="risk-sub">Type II &nbsp;·&nbsp; FDA: PAS</span>
-                        </span>
-                    </label>
-                </div>
-                <div class="risk-card risk-moderado">
-                    <label>
-                        <input type="radio" name="tipo_cambio" value="moderado">
-                        <span>
-                            <span class="risk-title">Riesgo Moderado</span>
-                            <span class="risk-sub">Type IB &nbsp;·&nbsp; FDA: CBE-30</span>
-                        </span>
-                    </label>
-                </div>
-                <div class="risk-card risk-bajo">
-                    <label>
-                        <input type="radio" name="tipo_cambio" value="bajo">
-                        <span>
-                            <span class="risk-title">Riesgo Bajo</span>
-                            <span class="risk-sub">Type IA &nbsp;·&nbsp; FDA: Annual Report</span>
-                        </span>
-                    </label>
-                </div>
-            </div>
-            <div class="error-message" id="err_tipo_cambio">Seleccione el nivel de riesgo regulatorio del cambio.</div>
-
-            <div class="glossary-box">
-                <div class="glossary-header">Glosario — Clasificación del cambio por nivel de riesgo</div>
-                <dl>
-                    <dt><span class="badge badge-alto">Alto Riesgo</span> Type II &nbsp;/&nbsp; FDA: Prior Approval Supplement (PAS)</dt>
-                    <dd>
-                        Cambio mayor con potencial significativo de afectar adversamente la calidad, seguridad o eficacia del producto.
-                        <strong>Requiere aprobación previa de la autoridad sanitaria antes de implementar el cambio y liberar/distribuir el producto</strong> fabricado bajo la nueva condición.
-                        <span class="ref">UE: Variación Tipo II (aprobación previa). EE.UU. (FDA, 21 CFR 314.70): Prior Approval Supplement — el producto no puede distribuirse hasta que la FDA apruebe el suplemento.</span>
-                    </dd>
-                    <dt><span class="badge badge-moderado">Riesgo Moderado</span> Type IB &nbsp;/&nbsp; FDA: Changes Being Effected in 30 days (CBE-30)</dt>
-                    <dd>
-                        Variación menor que no es Tipo IA ni Tipo II. Sigue el enfoque <em>“notificar, esperar e implementar” (tell, wait and do)</em>:
-                        <strong>se somete la notificación a la autoridad y debe esperarse un periodo de 30 días</strong> desde el acuse de recibo de una notificación válida antes de implementar el cambio. Si la autoridad no objeta dentro de ese plazo, la notificación se considera aceptada.
-                        <span class="ref">UE: Variación Tipo IB (30 días tras acuse de validez). EE.UU. (FDA): CBE-30 — el cambio puede implementarse 30 días después de que la FDA reciba el suplemento, salvo que la Agencia se pronuncie en contra.</span>
-                    </dd>
-                    <dt><span class="badge badge-bajo">Riesgo Bajo</span> Type IA &nbsp;/&nbsp; FDA: Annual Report</dt>
-                    <dd>
-                        Cambio menor con impacto mínimo o nulo sobre la calidad, seguridad o eficacia. Sigue el enfoque <em>“implementar y notificar” (do and tell)</em>:
-                        <strong>no requiere esperar aprobación previa</strong>; puede ejecutarse y documentarse/notificarse a la autoridad posteriormente.
-                        <span class="ref">UE: Variación Tipo IA — notificación dentro de los 12 meses, o inmediata (IA-IN) cuando corresponde. EE.UU. (FDA): se registra en el Annual Report (informe anual) sin espera para implementar.</span>
-                    </dd>
-                </dl>
-            </div>
         </div>
 
         <!-- 3. EVALUACIÓN MULTIDISCIPLINARIA DE IMPACTO -->
@@ -808,18 +640,6 @@
         });
     }
 
-    document.querySelectorAll('input[name="tipo_cambio"]').forEach(function (radio) {
-        radio.addEventListener("change", function () {
-            document.querySelectorAll(".risk-card").forEach(function (card) {
-                card.classList.remove("selected");
-            });
-            if (radio.checked) {
-                var card = radio.closest(".risk-card");
-                if (card) { card.classList.add("selected"); }
-            }
-        });
-    });
-
     setupConditionalField("riesgo_nuevo", "si", "campo_mitigacion");
     setupConditionalField("desviaciones", "si", "campo_codigo_desviacion");
 
@@ -851,11 +671,11 @@
         var err = document.getElementById(errId);
         var group = document.querySelectorAll('input[name="' + name + '"]')[0].closest(".radio-group");
         if (!checked) {
-            if (group) { group.classList.add("input-error"); }
+            group.classList.add("input-error");
             if (err) { err.style.display = "block"; }
             isValidRef.value = false;
         } else {
-            if (group) { group.classList.remove("input-error"); }
+            group.classList.remove("input-error");
         }
         return checked;
     }
@@ -876,7 +696,6 @@
         validateRequiredText("conclusion_cierre", "err_conclusion_cierre", isValidRef);
 
         validateRadioGroup("departamento", "err_departamento", isValidRef);
-        validateRadioGroup("tipo_cambio", "err_tipo_cambio", isValidRef);
         if (document.getElementById("departamento_otro_radio").checked &&
             !document.getElementById("departamento_otro_texto").value.trim()) {
             markError(document.getElementById("departamento_otro_texto"), null);
