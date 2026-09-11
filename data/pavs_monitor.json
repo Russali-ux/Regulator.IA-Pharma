@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-10T14:46:46Z",
-  "total": 2067,
+  "generatedAt": "2026-09-11T14:50:39Z",
+  "total": 2077,
   "stats": {
-    "total": 2067,
-    "thisYear": 619,
-    "agencies": 27,
-    "countries": 25
+    "total": 2077,
+    "thisYear": 629,
+    "agencies": 28,
+    "countries": 26
   },
   "yearChart": [
     [
@@ -38,13 +38,13 @@
     ],
     [
       "2026",
-      619
+      629
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      392
+      393
     ],
     [
       "MHRA",
@@ -60,7 +60,7 @@
     ],
     [
       "Health Canada",
-      190
+      193
     ],
     [
       "TGA",
@@ -84,6 +84,19 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-09-11",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de producto: lector de glucemia True Metrix Go - Trividia Health (R2625232)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Lector de glucemia True Metrix Go",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/biochimie-lecteur-de-glycemie-true-metrix-go-trividia-health"
+    },
     {
       "y": 2026,
       "fecha": "2026-09-10",
@@ -177,6 +190,110 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "Suiza",
+      "agencia": "SWISSMEDIC",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "DHPC - Tavneos (avacopan): relación beneficio-riesgo negativa - revocación de la autorización de comercialización",
+      "producto": "Farmaco",
+      "ifa": "Avacopan (Tavneos)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.swissmedic.ch/swissmedic/en/home/humanarzneimittel/market-surveillance/health-professional-communication--hpc-/dhpc-tavneos-avacopan-1.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS (Alerta Sanitaria): Robo de medicamento a granel de Dapagliflozina notificado por ASTRAZENECA, S.A. DE C.V.",
+      "producto": "Farmaco",
+      "ifa": "Dapagliflozina",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1102587/Alerta_Sanitaria_Robo_AstraZeneca_10092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS (Alerta Sanitaria): Adulteración del producto Argliptin-D 50 mg/850 mg (Sitagliptina/Metformina) tabletas",
+      "producto": "Farmaco",
+      "ifa": "Sitagliptina / Metformina",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1102588/Alerta_Sanitaria_Argliptin-D_10092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "COFEPRIS (Aviso de Riesgo): Retiro voluntario del mercado de APOZEMIA XR MR (Metformina) 500 mg, lote 1108G24A",
+      "producto": "Farmaco",
+      "ifa": "Metformina",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1102586/Aviso_de_Riesgo_Apozemia_10092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de acetaminofén genérico de Teva por posible presencia de material extraño",
+      "producto": "Farmaco",
+      "ifa": "Acetaminofén (paracetamol)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/generic-acetaminophen-teva-recalled-because-it-may-contain-foreign-material"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de Dxc 500i Clinical Analyzer y Dxc 500 AU Clinical Chemistry Analyzer",
+      "producto": "Dispositivo Medico",
+      "ifa": "Dxc 500i / Dxc 500 AU Clinical Chemistry Analyzer",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/dxc-500i-clinical-analyzer-and-dxc-500-au-clinical-chemistry-analyzer"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de Centricity High Acuity Anesthesia",
+      "producto": "Dispositivo Medico",
+      "ifa": "Centricity High Acuity Anesthesia",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/centricity-high-acuity-anesthesia-1"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-10",
+      "pais": "Peru",
+      "agencia": "CENADIM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "CENADIM: EMA inicia revisión de seguridad de medicamentos inyectables que contienen hierro por riesgo de hipofosfatemia y alteraciones óseas",
+      "producto": "Farmaco",
+      "ifa": "Carboximaltosa férrica, derisomaltosa férrica, gluconato férrico, hierro dextrano, hierro sacarosa",
+      "atc": "Sin ATC",
+      "enlace": "https://bvcenadim.digemid.minsa.gob.pe/index.php/noticias/577-ema-inicia-revision-de-seguridad-de-medicamentos-inyectables"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-09-09",
       "pais": "Canada",
       "agencia": "Health Canada",
@@ -226,6 +343,19 @@
       "ifa": "Ácido fólico + vitamina B12, enzima de papaya, berberina, N-acetilcisteína, piridoxina, selenio",
       "atc": "Sin ATC",
       "enlace": "https://app.invima.gov.co/alertas/alertas-sanitarias-general"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-09",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT dispuso la baja de habilitación de la firma REHUE S.A. y prohibió sus productos importados (Disposición N° 5713/2026)",
+      "producto": "Establecimiento",
+      "ifa": "REHUE S.A. (importadora de productos médicos)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-dispuso-la-baja-de-habilitacion-de-la-firma-rehue-sa-y-prohibio-sus-productos"
     },
     {
       "y": 2026,
@@ -1212,7 +1342,7 @@
       "titulo": "DHPC - Alecensa (Alectinib): recomendaciones de manejo de la hipertrigliceridemia grave",
       "producto": "Farmaco",
       "ifa": "Alectinib",
-      "atc": "Sin ATC",
+      "atc": "L01ED03 — ALECTINIB",
       "enlace": "https://www.swissmedic.ch/swissmedic/en/home/humanarzneimittel/market-surveillance/health-professional-communication--hpc-/dhpc-alecensa-alectinib.html"
     },
     {
