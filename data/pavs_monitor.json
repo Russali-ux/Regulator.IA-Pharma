@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-11T14:50:39Z",
-  "total": 2077,
+  "generatedAt": "2026-09-12T13:51:37Z",
+  "total": 2081,
   "stats": {
-    "total": 2077,
-    "thisYear": 629,
+    "total": 2081,
+    "thisYear": 633,
     "agencies": 28,
     "countries": 26
   },
@@ -38,13 +38,13 @@
     ],
     [
       "2026",
-      629
+      633
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      393
+      394
     ],
     [
       "MHRA",
@@ -94,6 +94,58 @@
       "titulo": "Retiro de producto: lector de glucemia True Metrix Go - Trividia Health (R2625232)",
       "producto": "Dispositivo Medico",
       "ifa": "Lector de glucemia True Metrix Go",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/biochimie-lecteur-de-glycemie-true-metrix-go-trividia-health"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-11",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "RETIRO DEL MERCADO DE UN LOTE DE EMOTIVAL (Lorazepam 2 mg)",
+      "producto": "Farmaco",
+      "ifa": "Lorazepam",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/retiro-del-mercado-de-un-lote-de-emotival"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-11",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT emitió una Carta de Advertencia a CSL Behring S.A. por incumplimientos a las Buenas Prácticas de Fabricación",
+      "producto": "Establecimiento",
+      "ifa": "CSL Behring S.A.",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-emitio-una-carta-de-advertencia-csl-behring-sa-por-incumplimientos-las-buenas"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-11",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "Alerta Sanitaria 288-2026: FALSIFICACIÓN DE LÍNEA DE PRODUCTOS MARCA ARRURRÚ",
+      "producto": "Cosmetico",
+      "ifa": "ARRURRÚ (línea de productos cosméticos)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS SANITARIAS/Cosmeticos_aseo_higiene/2026/Septiembre/Alerta 288-2026 NF 11092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-11",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Rappel de producto: Lector de glucemia True Metrix Go - Trividia Health (acción de seguridad N° R2625232)",
+      "producto": "Dispositivo Medico",
+      "ifa": "True Metrix Go (lector de glucemia)",
       "atc": "Sin ATC",
       "enlace": "https://ansm.sante.fr/informations-de-securite/biochimie-lecteur-de-glycemie-true-metrix-go-trividia-health"
     },
