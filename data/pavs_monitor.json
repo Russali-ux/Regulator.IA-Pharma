@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-13T14:48:18Z",
-  "total": 2081,
+  "generatedAt": "2026-09-14T16:46:57Z",
+  "total": 2090,
   "stats": {
-    "total": 2081,
-    "thisYear": 633,
+    "total": 2090,
+    "thisYear": 642,
     "agencies": 28,
     "countries": 26
   },
@@ -38,17 +38,17 @@
     ],
     [
       "2026",
-      633
+      642
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      394
+      397
     ],
     [
       "MHRA",
-      211
+      212
     ],
     [
       "BfArM",
@@ -64,7 +64,7 @@
     ],
     [
       "TGA",
-      155
+      156
     ],
     [
       "DIGEMID",
@@ -72,7 +72,7 @@
     ],
     [
       "FDA",
-      124
+      125
     ],
     [
       "AIFA",
@@ -84,6 +84,110 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-09-14",
+      "pais": "Australia",
+      "agencia": "TGA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "La TGA analiza un producto falsificado de \"retatrutide\" tras la notificación de un evento adverso grave",
+      "producto": "Farmaco",
+      "ifa": "Retatrutide (producto falsificado que contenía semaglutida no declarada)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.tga.gov.au/safety/safety-monitoring-and-information/safety-alerts/tga-tests-counterfeit-retatrutide-product-following-serious-adverse-event-report"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-14",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ANMAT prohibió cualquier producto médico identificado como \"Tornillo acondicionado individualmente\" con la denominación \"BIO ASIST - IMPLANTS\" (Disposición N° 5738/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Tornillo acondicionado individualmente - marca BIO ASIST - IMPLANTS",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibio-cualquier-producto-medico-identificado-como-tornillo-acondicionado"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-14",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT prohibió una serie de productos médicos de la marca MINDRAY (Disposición N° 5722/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Ecógrafo Doppler Color portátil Mindray MX7 (serie HQ1-35004155); transductor cardiológico P4-2s (serie HP8N27073115); transductor lineal L13-3Ns (serie KJ6T27009710)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibio-una-serie-de-productos-medicos-de-la-marca-mindray"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-14",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Información de seguridad a usuarios: Monitor de vigilancia cardio-respiratoria IntelliVue MX750 / MX850 y AD75 / AD85 - Philips Medizin Systems Boblingen GmbH",
+      "producto": "Dispositivo Medico",
+      "ifa": "Monitor de vigilancia cardio-respiratoria IntelliVue MX750 / MX850 y AD75 / AD85",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/moniteur-de-surveillance-cardio-respiratoire-intellivue-mx750-mx850-et-ad75-ad85-philips-medizin-systems-boblingen-gmbh"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-14",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de producto: Hemostasia - Reactivo HemosIL AcuStar HIT-IgG (PF4-H) - Instrumentation Laboratory",
+      "producto": "Dispositivo Medico",
+      "ifa": "Reactivo de diagnóstico in vitro HemosIL AcuStar HIT-IgG (PF4-H)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/hemostase-reactif-hemosil-acustar-hit-igg-pf4-h-instrumentation-laboratory"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-14",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de producto: Virología - Reactivo Simplexa Covid-19 / Flu A/B & RSV Direct - Diasorin (acción de seguridad n° R2626878)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Reactivo de diagnóstico in vitro Simplexa Covid-19 / Flu A/B & RSV Direct",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/virologie-reactif-simplexa-covid-19-flu-a-b-rsv-direct-diasorin"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-14",
+      "pais": "Irlanda",
+      "agencia": "HPRA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Retiro de lotes de Flebogamma DIF 100 mg/ml solución para perfusión (EU/1/07/404/007-008) a nivel de paciente",
+      "producto": "Farmaco",
+      "ifa": "Inmunoglobulina humana normal (Flebogamma DIF 100 mg/ml - Instituto Grifols S.A.)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.hpra.ie/safety-information/safety-notices/article/flebogamma-dif-100-mg---ml-solution-for-infusion--eu-1-07-404-007-008--batch-recall"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-13",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Centric Compounding retira a nivel nacional Glutatión, Myer's Cocktail y Tri-Immune Boost por niveles elevados de endotoxinas",
+      "producto": "Farmaco",
+      "ifa": "Glutatión 200 mg/mL inyectable; Myer's Cocktail; Tri-Immune Boost (preparados magistrales estériles)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/centric-compounding-issues-nationwide-recall-glutathione-myers-cocktail-and-tri-immune-boost-due"
+    },
     {
       "y": 2026,
       "fecha": "2026-09-11",
@@ -980,6 +1084,19 @@
       "ifa": "Reactivo Vitros Chemistry Products Valp (QuidelOrtho)",
       "atc": "Sin ATC",
       "enlace": "https://ansm.sante.fr/informations-de-securite/pharmaco-toxicologie-reactif-vitros-chemistry-products-valp-quidelortho"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-01",
+      "pais": "Reino Unido",
+      "agencia": "MHRA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "MHRA suspende el uso de Avacopan Vifor en nuevos pacientes y anuncia la retirada de su autorización de comercialización en el Reino Unido",
+      "producto": "Dispositivo Medico",
+      "ifa": "Avacopan",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gov.uk/government/news/avacopan-vifor-suspended-for-new-patients-and-to-be-withdrawn-from-the-uk-market"
     },
     {
       "y": 2026,
