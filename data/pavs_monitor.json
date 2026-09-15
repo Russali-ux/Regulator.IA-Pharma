@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-14T16:46:57Z",
-  "total": 2090,
+  "generatedAt": "2026-09-15T15:27:21Z",
+  "total": 2097,
   "stats": {
-    "total": 2090,
-    "thisYear": 642,
+    "total": 2097,
+    "thisYear": 649,
     "agencies": 28,
     "countries": 26
   },
@@ -38,7 +38,7 @@
     ],
     [
       "2026",
-      642
+      649
     ]
   ],
   "agencyChart": [
@@ -56,11 +56,11 @@
     ],
     [
       "AEMPS",
-      194
+      195
     ],
     [
       "Health Canada",
-      193
+      194
     ],
     [
       "TGA",
@@ -72,7 +72,7 @@
     ],
     [
       "FDA",
-      125
+      126
     ],
     [
       "AIFA",
@@ -177,6 +177,58 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-09-14",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "TZIELD (teplizumab) y el riesgo de reactivación viral - comunicación de riesgo a profesionales de la salud",
+      "producto": "Farmaco",
+      "ifa": "Teplizumab",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/tzield-teplizumab-and-risk-viral-reactivation"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-14",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ANMAT prohibió cualquier producto médico identificado como 'Tornillo acondicionado individualmente' con la denominación 'BIO ASIST - IMPLANTS' (Disposición N° 5738/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Tornillo acondicionado individualmente marca 'BIO ASIST - IMPLANTS'",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibio-cualquier-producto-medico-identificado-como-tornillo-acondicionado"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-14",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT prohibió una serie de productos médicos de la marca MINDRAY (Disposición N° 5722/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Ecógrafo Doppler Color portátil Mindray MX7 serie HQ1-35004155 / Transductor cardiológico Mindray P4-2s serie HP8N27073115 / Transductor lineal Mindray L13-3Ns serie KJ6T27009710",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibio-una-serie-de-productos-medicos-de-la-marca-mindray"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-14",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "Alerta Sanitaria N° 287-2026: S-ARTRIT PLUS TABLETA y SIN ARTRIT FORTE TABLETA",
+      "producto": "Farmaco",
+      "ifa": "S-ARTRIT PLUS / SIN ARTRIT FORTE (productos promocionados para dolencias articulares)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/medicamentos_pbiologicos/2026/SEPTIEMBRE/Alerta%20No%20287-2026%20S-ARTRIT%20PLUS%20TABLETA%20-%20SIN%20ARTRIT%20FORTE%20TABLETA%20Copy.pdf"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-09-13",
       "pais": "EE.UU.",
       "agencia": "FDA",
@@ -185,6 +237,32 @@
       "titulo": "Centric Compounding retira a nivel nacional Glutatión, Myer's Cocktail y Tri-Immune Boost por niveles elevados de endotoxinas",
       "producto": "Farmaco",
       "ifa": "Glutatión 200 mg/mL inyectable; Myer's Cocktail; Tri-Immune Boost (preparados magistrales estériles)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/centric-compounding-issues-nationwide-recall-glutathione-myers-cocktail-and-tri-immune-boost-due"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-13",
+      "pais": "Irlanda",
+      "agencia": "HPRA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de lote de Flebogamma DIF 100 mg/ml solución para perfusión, EU/1/07/404/007-008",
+      "producto": "Farmaco",
+      "ifa": "Inmunoglobulina humana normal (Flebogamma DIF 100 mg/ml)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.hpra.ie/safety-information/safety-notices/article/flebogamma-dif-100-mg---ml-solution-for-infusion--eu-1-07-404-007-008--batch-recall"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-13",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Centric Compounding LLC realiza retiro nacional de Glutatión 200 mg/mL, Myer's Cocktail y Tri-Immune Boost por niveles elevados de endotoxinas",
+      "producto": "Farmaco",
+      "ifa": "Glutatión 200 mg/mL vial multidosis 30 mL / Myer's Cocktail vial multidosis 30 mL / Tri-Immune Boost vial multidosis 30 mL",
       "atc": "Sin ATC",
       "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/centric-compounding-issues-nationwide-recall-glutathione-myers-cocktail-and-tri-immune-boost-due"
     },
@@ -1058,6 +1136,19 @@
       "ifa": "Vacuna tetravalente de virus vivos atenuados contra el Dengue (Qdenga®)",
       "atc": "Sin ATC",
       "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1101225/Aviso_de_Riesgo_Qdenga__02092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "España",
+      "agencia": "AEMPS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "Nota Informativa ICM (MI) 03/2026: la AEMPS retira varios productos adelgazantes por contener sibutramina, un principio activo no autorizado en la UE por sus efectos adversos graves",
+      "producto": "Farmaco",
+      "ifa": "Sibutramina (y fenolftaleína en algunos productos) no declarada en el etiquetado de: Slim U, Slim U Pro, P57 Hoodia, Bikini Siluet Perfect, Slim 24, 14 Día, Fatzorb, AB Slim, Get Lean, Slimina, Burn and Slim, Body Slim, Black Panther, Aphrodite Thermoslim Coffe, Aphrodite Plus, Aphrodite LipoDetox, Aphrodite Green Plus, Aphrodite Forte Plus, Aphrodite Forte, Li Da Ultra, Pineapple Slimming Peptide y Pezo Mega",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aemps.gob.es/informa/la-aemps-retira-varios-productos-adelgazantes-por-contener-sibutramina-un-principio-activo-no-autorizado-en-la-ue-por-sus-efectos-adversos-graves/"
     },
     {
       "y": 2026,
