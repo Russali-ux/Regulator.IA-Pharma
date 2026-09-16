@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-15T15:27:21Z",
-  "total": 2097,
+  "generatedAt": "2026-09-16T15:20:09Z",
+  "total": 2117,
   "stats": {
-    "total": 2097,
-    "thisYear": 649,
+    "total": 2117,
+    "thisYear": 669,
     "agencies": 28,
     "countries": 26
   },
@@ -38,17 +38,17 @@
     ],
     [
       "2026",
-      649
+      669
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      397
+      399
     ],
     [
       "MHRA",
-      212
+      213
     ],
     [
       "BfArM",
@@ -56,23 +56,23 @@
     ],
     [
       "AEMPS",
-      195
+      196
     ],
     [
       "Health Canada",
-      194
+      195
+    ],
+    [
+      "DIGEMID",
+      157
     ],
     [
       "TGA",
       156
     ],
     [
-      "DIGEMID",
-      152
-    ],
-    [
       "FDA",
-      126
+      128
     ],
     [
       "AIFA",
@@ -84,6 +84,162 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-09-16",
+      "pais": "Reino Unido",
+      "agencia": "MHRA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Alerta Nacional de Seguridad del Paciente (NatPSA/2026/005/MHRA): grúas y arneses de transferencia de pacientes (todos los tipos) - riesgo de muerte y daño grave por caídas",
+      "producto": "Dispositivo Medico",
+      "ifa": "Grúas y arneses de transferencia de pacientes (todos los tipos)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gov.uk/drug-device-alerts/national-patient-safety-alert-patient-hoists-and-slings-all-types-risk-of-death-and-serious-harm-from-falls-natpsa-slash-2026-slash-005-slash-mhra"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-16",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de producto: Bomba de perfusión ambulatoria (accesorio) - Cassettes-reservorios CADD con conector NRFit - ICU Medical Inc. (Rappel n° R2625748)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Cassettes-reservorios CADD con conector NRFit (ICU Medical Inc.)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/pompe-a-perfusion-ambulatoire-accessoire-cassette-reservoirs-cadd-avec-raccord-nrfit-icu-medical-inc"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-16",
+      "pais": "España",
+      "agencia": "AEMPS",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AEMPS: recuerda cómo evitar errores de medicación por sobredosificación con vitamina D",
+      "producto": "Farmaco",
+      "ifa": "Vitamina D (colecalciferol)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aemps.gob.es/informa/la-aemps-recuerda-como-evitar-errores-de-medicacion-por-sobredosificacion-con-vitamina-d/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-15",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 108-2026: Falsificación del producto farmacéutico OPDIVO (nivolumab) 100 mg y 40 mg solución inyectable",
+      "producto": "Farmaco",
+      "ifa": "Nivolumab (OPDIVO 100 mg y 40 mg solución inyectable)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-108-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-15",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 109-2026: Falsificación del producto farmacéutico CHAO NF 500 mg + 5 mg + 2 mg tableta recubierta",
+      "producto": "Farmaco",
+      "ifa": "CHAO NF (500 mg + 5 mg + 2 mg tableta recubierta)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-109-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-15",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "FDA: A&P Creations LLC realiza retiro nacional de X10 Natural Enhancement Supplement por contener sildenafilo y tadalafilo no declarados",
+      "producto": "Farmaco",
+      "ifa": "X10 Natural Enhancement Supplement (sildenafilo y tadalafilo no declarados)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/ap-creations-llc-issues-nationwide-recall-x10-natural-enhancement-supplement-due-undeclared"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-15",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "FDA: A&P Creations LLC realiza retiro nacional de biQ-FEL (frasco de 500 mL) por contener sildenafilo y tadalafilo no declarados",
+      "producto": "Farmaco",
+      "ifa": "biQ-FEL 500 mL (sildenafilo y tadalafilo no declarados)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/ap-creations-llc-issues-nationwide-recall-biq-fel-due-undeclared-sildenafil-and-tadalafil"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-15",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de Organika Gummies por sitio extranjero no incluido en la licencia de establecimiento",
+      "producto": "Producto de salud natural / Suplemento",
+      "ifa": "Organika Gummies (productos de salud natural)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/organikar-gummies-foreign-site-not-listed-site-licence"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-15",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Información de seguridad a usuarios: Centricity Enterprise Archive, Centricity PACS, Centricity PACS Server, Core Services Hub V8, Enterprise Archive y Workflow Core Services - GE Healthcare (Información n° R2626994)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Centricity Enterprise Archive / Centricity PACS / Core Services Hub V8 (GE Healthcare)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/centricity-enterprise-archive-centricity-pacs-centricity-pacs-server-core-services-hub-v8-enterprise-archive-workflow-core-services-ge-healthcare"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-15",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT prohibió una unidad del MONITOR ABP de la marca Spacelabs Healthcare",
+      "producto": "Dispositivo Medico",
+      "ifa": "Monitor ABP (presión arterial ambulatoria) marca Spacelabs Healthcare",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibio-una-unidad-del-monitor-abp-de-la-marca-spacelabs-healthcare"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-15",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT inhibió las actividades productivas de la firma RIPEZZI S.R.L. y prohibió el uso de todos los productos médicos importados por la misma",
+      "producto": "Establecimiento",
+      "ifa": "RIPEZZI S.R.L. (y productos médicos importados por la firma)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-inhibio-las-actividades-productivas-de-la-firma-ripezzi-srl-y-prohibio-el-uso-de"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-15",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT levantó la inhibición de importación dispuesta a la firma GLAM DISTRIBUCIONES S.R.L.",
+      "producto": "Establecimiento",
+      "ifa": "GLAM DISTRIBUCIONES S.R.L.",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-levanto-la-inhibicion-de-importacion-dispuesta-la-firma-glam-distribuciones-srl"
+    },
     {
       "y": 2026,
       "fecha": "2026-09-14",
@@ -226,6 +382,19 @@
       "ifa": "S-ARTRIT PLUS / SIN ARTRIT FORTE (productos promocionados para dolencias articulares)",
       "atc": "Sin ATC",
       "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/medicamentos_pbiologicos/2026/SEPTIEMBRE/Alerta%20No%20287-2026%20S-ARTRIT%20PLUS%20TABLETA%20-%20SIN%20ARTRIT%20FORTE%20TABLETA%20Copy.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-14",
+      "pais": "Irlanda",
+      "agencia": "HPRA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "HPRA: Alertas del sistema Safety Gate de cosméticos con impacto en el mercado irlandés - agosto 2026",
+      "producto": "Cosmetico",
+      "ifa": "Diversos productos cosméticos notificados en Safety Gate (agosto 2026)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.hpra.ie/safety-information/safety-notices/article/cosmetic-safety-gate-alerts-impacting-the-irish-market---august-2026"
     },
     {
       "y": 2026,
@@ -645,6 +814,19 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-09-08",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INFARMED: Suspensión de fabricación y retirada de soluciones estériles del fabricante Sterisets Manufacturing, S.A.",
+      "producto": "Dispositivo Medico",
+      "ifa": "Soluciones estériles (Sterisets Manufacturing, S.A.)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/web/infarmed/infarmed/-/journal_content/56/15786/13524229"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-09-07",
       "pais": "Francia",
       "agencia": "ANSM",
@@ -824,6 +1006,19 @@
       "ifa": "Medicamentos inyectables con hierro (hierro carboximaltosa / ferric carboxymaltose y otros)",
       "atc": "Sin ATC",
       "enlace": "https://www.ema.europa.eu/en/news/meeting-highlights-pharmacovigilance-risk-assessment-committee-prac-31-august-3-september-2026"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-04",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INFARMED: Medicamentos con compuestos de hierro para administración intravenosa - inicio de la revisión de seguridad por riesgo de hipofosfatemia y problemas óseos",
+      "producto": "Farmaco",
+      "ifa": "Compuestos de hierro para administración intravenosa",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/web/infarmed/infarmed/-/journal_content/56/15786/13521417"
     },
     {
       "y": 2026,
@@ -1152,6 +1347,45 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "seguridad",
+      "tipoLabel": "Modificacion RS",
+      "titulo": "MODIFICACIONES N° 13 – 2026: Informe sobre seguridad de los productos farmacéuticos con los IFA APIXABÁN, RIVAROXABÁN y DABIGATRÁN",
+      "producto": "Farmaco",
+      "ifa": "Apixabán, Rivaroxabán, Dabigatrán",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/modificaciones-n-13-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "seguridad",
+      "tipoLabel": "Modificacion RS",
+      "titulo": "MODIFICACIONES N° 14 – 2026: Informe sobre seguridad de los productos farmacéuticos con el IFA ROCURONIO",
+      "producto": "Farmaco",
+      "ifa": "Rocuronio",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/modificaciones-n-14-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "seguridad",
+      "tipoLabel": "Modificacion RS",
+      "titulo": "MODIFICACIONES N° 15 – 2026: Informe sobre seguridad de los productos farmacéuticos con el IFA SUNITINIB",
+      "producto": "Farmaco",
+      "ifa": "Sunitinib",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/modificaciones-n-15-2026/"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-09-01",
       "pais": "Francia",
       "agencia": "ANSM",
@@ -1188,6 +1422,19 @@
       "ifa": "Avacopan",
       "atc": "Sin ATC",
       "enlace": "https://www.gov.uk/government/news/avacopan-vifor-suspended-for-new-patients-and-to-be-withdrawn-from-the-uk-market"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-01",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INFARMED: Retirada del medicamento Salofalk (mesalazina) 3000 mg, granulado gastrorresistente de liberación prolongada",
+      "producto": "Farmaco",
+      "ifa": "Mesalazina (Salofalk 3000 mg granulado gastrorresistente)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/web/infarmed/infarmed/-/journal_content/56/15786/13517026"
     },
     {
       "y": 2026,
@@ -1383,6 +1630,19 @@
       "ifa": "Software Engage v7.47 (Exolis)",
       "atc": "Sin ATC",
       "enlace": "https://ansm.sante.fr/informations-de-securite/logiciel-engage-v7-47-exolis"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-28",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INFARMED: Retirada del medicamento Meropenem Aurovitas 500 mg, polvo para solución inyectable o para perfusión",
+      "producto": "Farmaco",
+      "ifa": "Meropenem (Meropenem Aurovitas 500 mg)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/web/infarmed/infarmed/-/journal_content/56/15786/13514580"
     },
     {
       "y": 2026,
