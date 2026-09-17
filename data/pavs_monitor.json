@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-16T15:20:09Z",
-  "total": 2117,
+  "generatedAt": "2026-09-17T15:29:27Z",
+  "total": 2130,
   "stats": {
-    "total": 2117,
-    "thisYear": 669,
+    "total": 2130,
+    "thisYear": 682,
     "agencies": 28,
     "countries": 26
   },
@@ -38,13 +38,13 @@
     ],
     [
       "2026",
-      669
+      682
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      399
+      404
     ],
     [
       "MHRA",
@@ -55,12 +55,12 @@
       207
     ],
     [
-      "AEMPS",
-      196
+      "Health Canada",
+      198
     ],
     [
-      "Health Canada",
-      195
+      "AEMPS",
+      197
     ],
     [
       "DIGEMID",
@@ -72,7 +72,7 @@
     ],
     [
       "FDA",
-      128
+      129
     ],
     [
       "AIFA",
@@ -84,6 +84,58 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de producto: Fibras láser Soltive SuperPulsed - Gyrus Olympus (Retiro n° R2627560, destinado a farmacias de uso interno de establecimientos de salud y distribuidores)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Fibras láser Soltive SuperPulsed (Gyrus Olympus)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/fibres-laser-soltive-superpulsed-gyrus-olympus"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de lote: Prótesis total de rodilla de deslizamiento - Base tibial FHK Tibial Tray FB C/M S4 - Fournitures Hospitalières Industries (Retiro n° R2627000)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Prótesis total de rodilla - Base tibial FHK Tibial Tray FB C/M S4",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/prothese-totale-de-genou-a-glissement-embase-tibiale-fhk-tibial-tray-fb-c-m-s4-fournitures-hospitalieres-industries"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Retiro de producto: Equipo automatizado de masaje cardíaco - Batería recargable Li-Ion 28,8V 84,9Wh - Corpuls / GS Elektromedizinische Geräte G. Stemple GmbH (Retiro n° R2626030)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Batería recargable Li-Ion 28,8V 84,9Wh para equipo de masaje cardíaco Corpuls",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/appareil-automatise-de-massage-cardiaque-li-ion-rechargeable-battery-28-8v-84-9wh-corpuls-gs-elektromedizinische-gerate-g-stemple-gmbh"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Información a usuarios: Equipo de radiología fija - FDR Visinary Suite - Shimadzu (Información n° R2626738, destinada a establecimientos de salud y centros de imagenología)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Equipo de radiología fija FDR Visinary Suite (Shimadzu)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/appareil-de-radiologie-fixe-fdr-visinary-suite-shimadzu"
+    },
     {
       "y": 2026,
       "fecha": "2026-09-16",
@@ -122,6 +174,110 @@
       "ifa": "Vitamina D (colecalciferol)",
       "atc": "Sin ATC",
       "enlace": "https://www.aemps.gob.es/informa/la-aemps-recuerda-como-evitar-errores-de-medicacion-por-sobredosificacion-con-vitamina-d/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-16",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Información a usuarios: Medidores continuos de glucosa - Lector / Aplicación Dexcom G7 iOS, Dexcom G7 Android y Dexcom G7 Watch iOS - Dexcom Inc. (Informaciones n° R2625061 y n° R2625225)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistema de monitorización continua de glucosa Dexcom G7 (aplicación para smartphone)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/appareils-de-mesure-du-glucose-en-continu-lecteur-application-dexcom-g7-ios-dexcom-g7-android-dexcom-g7-watch-ios-dexcom-inc"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-16",
+      "pais": "España",
+      "agencia": "AEMPS",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AEMPS (MVET 12/2026): Actualización de la información de seguridad de los medicamentos veterinarios que contienen fenobarbital",
+      "producto": "Farmaco",
+      "ifa": "Fenobarbital (medicamentos veterinarios)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aemps.gob.es/informa/la-aemps-informa-de-la-actualizacion-de-la-informacion-de-seguridad-de-los-medicamentos-veterinarios-que-contienen-fenobarbital/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-16",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de NDI Passive Spheres™ (Northern Digital Inc.) por variación en el material reflectante",
+      "producto": "Dispositivo Medico",
+      "ifa": "NDI Passive Spheres™ (modelos 8801071, 8801074, 8801075)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/ndi-passive-spherestm"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-16",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de IntelliSpace Critical Care and Anesthesia (Philips) por cálculos incorrectos de balance hídrico",
+      "producto": "Dispositivo Medico",
+      "ifa": "IntelliSpace Critical Care and Anesthesia (ICCA), versiones J.06.01 y J.06.02",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/intellispace-critical-care-and-anesthesia"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-16",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de Platinum Naturals Easymulti Stress (men) por lotes con cantidad de vitamina B6 rotulada incorrectamente",
+      "producto": "Producto de salud natural / Suplemento",
+      "ifa": "Vitamina B6 (piridoxina) en multivitamínico Easymulti Stress (men)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/platinum-naturals-easymulti-stress-men-affected-lots-incorrectly-labelled-vitamin-b6"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-16",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT inhibió las actividades productivas, de control de calidad y comercialización de UGAL FARMACÉUTICA S.A. (Disposición N° 5870/2026)",
+      "producto": "Establecimiento",
+      "ifa": "UGAL FARMACÉUTICA S.A. (Ramos Mejía, Buenos Aires)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-inhibio-las-actividades-productivas-de-control-de-calidad-y-comercializacion-de-ugal"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-16",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT inhibió las actividades productivas del LABORATORIO TRIFARMA S.R.L. (Disposición N° 5865/2026)",
+      "producto": "Establecimiento",
+      "ifa": "LABORATORIO TRIFARMA S.R.L. (Rosario, Santa Fe)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-inhibio-las-actividades-productivas-del-laboratorio-trifarma-srl"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-16",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ANMAT prohíbe todas las series de equipo médico de alta frecuencia de la marca TEXEL (Disposición 5829/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Equipo de alta frecuencia TEXEL Modelo AF",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibe-todas-las-series-de-equipo-medico-de-alta-frecuencia-de-la-marca-texel"
     },
     {
       "y": 2026,
@@ -239,6 +395,19 @@
       "ifa": "GLAM DISTRIBUCIONES S.R.L.",
       "atc": "Sin ATC",
       "enlace": "https://www.argentina.gob.ar/noticias/anmat-levanto-la-inhibicion-de-importacion-dispuesta-la-firma-glam-distribuciones-srl"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-15",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "FDA aprueba información adicional en el etiquetado de Kybella (ácido desoxicólico) inyectable para advertir sobre reacciones adversas asociadas al uso no aprobado",
+      "producto": "Farmaco",
+      "ifa": "Ácido desoxicólico (Kybella)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/drugs/drug-safety-communications/fda-approves-additional-information-labeling-kybella-deoxycholic-acid-injection-warning-adverse"
     },
     {
       "y": 2026,
