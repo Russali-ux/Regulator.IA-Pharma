@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-17T16:20:09Z",
-  "total": 2130,
+  "generatedAt": "2026-09-18T14:47:30Z",
+  "total": 2156,
   "stats": {
-    "total": 2130,
-    "thisYear": 682,
-    "agencies": 28,
+    "total": 2156,
+    "thisYear": 708,
+    "agencies": 29,
     "countries": 26
   },
   "yearChart": [
@@ -38,17 +38,17 @@
     ],
     [
       "2026",
-      682
+      708
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      404
+      405
     ],
     [
       "MHRA",
-      213
+      215
     ],
     [
       "BfArM",
@@ -56,11 +56,11 @@
     ],
     [
       "Health Canada",
-      198
+      201
     ],
     [
       "AEMPS",
-      197
+      198
     ],
     [
       "DIGEMID",
@@ -76,14 +76,27 @@
     ],
     [
       "AIFA",
-      84
+      88
     ],
     [
-      "EMA",
-      58
+      "BASG",
+      62
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Suecia",
+      "agencia": "LAKEMEDELSVERKET",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Läkemedelsverket: Situación de desabastecimiento de Celeston Bifas que puede afectar la atención veterinaria",
+      "producto": "Farmaco",
+      "ifa": "Celeston Bifas (betametasona, uso veterinario/equino)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.lakemedelsverket.se/sv/nyheter/restsituation-for-celeston-bifas-kan-paverka-djursjukvarden"
+    },
     {
       "y": 2026,
       "fecha": "2026-09-17",
@@ -135,6 +148,97 @@
       "ifa": "Equipo de radiología fija FDR Visinary Suite (Shimadzu)",
       "atc": "Sin ATC",
       "enlace": "https://ansm.sante.fr/informations-de-securite/appareil-de-radiologie-fixe-fdr-visinary-suite-shimadzu"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "España",
+      "agencia": "AEMPS",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AEMPS (PS 40/2026): Error en el etiquetado de las prótesis vasculares Silver Graft y Silver Graft Helix",
+      "producto": "Dispositivo Medico",
+      "ifa": "Prótesis vasculares Silver Graft y Silver Graft Helix (B. Braun)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aemps.gob.es/informa/la-aemps-informa-de-un-error-en-el-etiquetado-de-las-protesis-vasculares-silver-graft-y-silver-graft-helix/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Información a usuarios: Medicina nuclear - Captus 4000e con números de serie entre 940548 y 941398 - Mirion Technologies (Capintec) (Información n° R2625402)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Captus 4000e (sistema de medicina nuclear), Mirion Technologies (Capintec)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/medecine-nucleaire-captus-4000e-dont-les-numeros-de-serie-sont-compris-entre-940548-et-941398-mirion-technologies-capintec"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Reino Unido",
+      "agencia": "MHRA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "MHRA (DSI/2026/012): Consideraciones de seguridad sobre radiofrecuencia (RF) en sistemas inalámbricos de monitorización cardiotocográfica (CTG)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas inalámbricos de cardiotocografía (CTG) con telemetría por radiofrecuencia",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gov.uk/drug-device-alerts/radiofrequency-rf-safety-considerations-for-wireless-cardiotocography-ctg-monitoring-systems-dsi-slash-2026-slash-012"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Reino Unido",
+      "agencia": "MHRA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MHRA EL(26)A/38 - Notificación de defecto de Clase 4: Martindale Pharmaceuticals Ltd, Clobazam Martindale Pharma 5 mg/5 mL y 10 mg/5 mL suspensión oral 150 mL",
+      "producto": "Farmaco",
+      "ifa": "Clobazam (suspensión oral 5 mg/5 mL y 10 mg/5 mL, 150 mL)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gov.uk/drug-device-alerts/class-4-medicines-defect-notification-martindale-pharmaceuticals-ltd-clobazam-martindale-pharma-5-mg-slash-5-ml-and-10-mg-slash-5-ml-oral-suspension-150ml-el-26-a-slash-38"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de RAPICIDE™ PA Desinfectante de Alto Nivel (Medivators Inc. / STERIS) por abombamiento de frascos de la Parte A",
+      "producto": "Dispositivo Medico",
+      "ifa": "RAPICIDE™ PA High Level Disinfectant (ML02-0116)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/rapicidetm-pa-high-level-disinfectant"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro del Trinity Biotech Oxalate Reagent Kit (Reactivo Oxalate B, lote 2500711) por variabilidad de desempeño",
+      "producto": "Dispositivo Medico",
+      "ifa": "Trinity Biotech Oxalate Reagent Kit - Oxalate Reagent B (código 591-2, lote 2500711)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/trinity-biotech-oxalate-reagent-kit"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de los sistemas de RM Philips Ingenia, Achieva e Intera por exportación incorrecta de datos de imagen por tensor de difusión (DTI)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas de resonancia magnética Philips Ingenia, Achieva e Intera",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/philips-ingenia-achieva-and-intera-mr-systems-0"
     },
     {
       "y": 2026,
@@ -278,6 +382,19 @@
       "ifa": "Equipo de alta frecuencia TEXEL Modelo AF",
       "atc": "Sin ATC",
       "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibe-todas-las-series-de-equipo-medico-de-alta-frecuencia-de-la-marca-texel"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-16",
+      "pais": "Peru",
+      "agencia": "DIGESA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ALERTA DE INOCUIDAD ALIMENTARIA N° 09-2026-DIGESA/MINSA: La autoridad sanitaria invoca a la población a no consumir agua de mesa marcas \"TIMONEL\" y \"LYBRE\" por riesgo a la salud pública",
+      "producto": "Alimentos",
+      "ifa": "Agua de mesa sin gas marcas TIMONEL y LYBRE, todas las presentaciones y lotes - Registro Sanitario P0652824N/NAINYY - INNOVACION Y COMERCIALIZACION BRANDS PERU S.A.C. (INCO BRANDS PERÚ S.A.C.)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digesa.minsa.gob.pe/COMUNICADO_09-2026-DIGESA-MINSA01.pdf"
     },
     {
       "y": 2026,
@@ -1308,6 +1425,19 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-09-03",
+      "pais": "Peru",
+      "agencia": "DIGESA",
+      "tipo": "seguridad",
+      "tipoLabel": "Modificacion RS",
+      "titulo": "COMUNICADO N° 08-2026-DIGESA/MINSA: Efectos de la Resolución N° 0184-2026/SEL-INDECOPI en la vigencia de la Validación Técnica Oficial del Plan HACCP",
+      "producto": "Alimentos",
+      "ifa": "Plan de Análisis de Peligros y Puntos Críticos de Control (Plan HACCP) - alimentos industrializados",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digesa.minsa.gob.pe/COMUNICADO_08-2026-DIGESA-MINSA-01.pdf"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-09-02",
       "pais": "Peru",
       "agencia": "DIGEMID",
@@ -1552,6 +1682,19 @@
       "ifa": "Sunitinib",
       "atc": "Sin ATC",
       "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/modificaciones-n-15-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Peru",
+      "agencia": "DIGESA",
+      "tipo": "seguridad",
+      "tipoLabel": "Modificacion RS",
+      "titulo": "COMUNICADO N° 07-2026-DIGESA/MINSA: Transferencia del registro de consultoras ambientales del sector salud al SENACE",
+      "producto": "Otro",
+      "ifa": "Registro de Entidades Autorizadas a elaborar Estudios Ambientales (sector Salud)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digesa.minsa.gob.pe/COMUNICADO_07-2026-DIGESA-MINSA-01.pdf"
     },
     {
       "y": 2026,
@@ -2868,6 +3011,32 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-08-13",
+      "pais": "Peru",
+      "agencia": "DIGESA",
+      "tipo": "seguridad",
+      "tipoLabel": "Modificacion RS",
+      "titulo": "COMUNICADO N° 06-2026-DIGESA/MINSA: Requisitos para solicitar la devolución de dinero por aprobación del nuevo TUPA (Decreto Supremo N° 011-2026-SA)",
+      "producto": "Alimentos",
+      "ifa": "Procedimientos administrativos DIGESA (registros sanitarios y certificaciones de alimentos)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digesa.minsa.gob.pe/COMUNICADO_06-2026-DIGESA-MINSA-01.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-13",
+      "pais": "Austria",
+      "agencia": "BASG",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BASG (DHPC): Recomendaciones actualizadas para minimizar los riesgos de eventos cardiovasculares adversos graves, neoplasias malignas, tromboembolismo venoso, infecciones graves y mortalidad con Litfulo",
+      "producto": "Farmaco",
+      "ifa": "Ritlecitinib (Litfulo)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.basg.gv.at/fileadmin/redakteure/06_Gesundheitsberufe/DHPC/2026/260813_Litfulo.pdf"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-08-12",
       "pais": "Canadá",
       "agencia": "Health Canada",
@@ -3141,6 +3310,32 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-08-10",
+      "pais": "Austria",
+      "agencia": "BASG",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BASG (DHPC): Riesgo de meningioma con medicamentos que contienen desogestrel y etonogestrel, y medidas de minimización del riesgo",
+      "producto": "Farmaco",
+      "ifa": "Desogestrel, Etonogestrel",
+      "atc": "Sin ATC",
+      "enlace": "https://www.basg.gv.at/fileadmin/redakteure/06_Gesundheitsberufe/DHPC/2026/260810_Desogestrel-_und_Etonogestrel-haltige_Arzneimittel.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-10",
+      "pais": "Italia",
+      "agencia": "AIFA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AIFA (NIIS/DHPC): Nota informativa importante de seguridad sobre Litfulo (ritlecitinib)",
+      "producto": "Farmaco",
+      "ifa": "Ritlecitinib (Litfulo)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aifa.gov.it/-/nota-informativa-importante-di-sicurezza-niis-su-litfulo-ritlecitinib-"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-08-07",
       "pais": "Canadá",
       "agencia": "Health Canada",
@@ -3281,6 +3476,19 @@
       "ifa": "Avacopan",
       "atc": "Sin ATC",
       "enlace": "https://www.swissmedic.ch/swissmedic/en/home/humanarzneimittel/market-surveillance/health-professional-communication--hpc-/dhpc-tavneos-avacopan.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-06",
+      "pais": "Italia",
+      "agencia": "AIFA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AIFA (NIIS/DHPC): Nota informativa importante sobre medicamentos que contienen desogestrel y etonogestrel",
+      "producto": "Farmaco",
+      "ifa": "Desogestrel, Etonogestrel",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aifa.gov.it/-/nota-informativa-importante-sicurezza-medicinali-contenenti-desogestrel-etonogestrel"
     },
     {
       "y": 2026,
@@ -3515,6 +3723,32 @@
       "ifa": "BD Intraosseous Vascular Access System Needle Sets",
       "atc": "Sin ATC",
       "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/bd-issues-nationwide-recall-specific-lots-bdr-intraosseous-vascular-access-system-needle-sets-due"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-03",
+      "pais": "Peru",
+      "agencia": "DIGESA",
+      "tipo": "seguridad",
+      "tipoLabel": "Modificacion RS",
+      "titulo": "COMUNICADO N° 05-2026-DIGESA/MINSA: Emisión de nuevo TUPA del MINSA y continuidad de registros sanitarios, certificaciones y habilitaciones sanitarias sin costo alguno",
+      "producto": "Alimentos",
+      "ifa": "Registros sanitarios, certificaciones y habilitaciones sanitarias de alimentos",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digesa.minsa.gob.pe/COMUNICADO_05-2026-DIGESA-MINSA-01.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-03",
+      "pais": "Italia",
+      "agencia": "AIFA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AIFA (NIIS/DHPC): Nota informativa importante sobre Bendamustina Accord 25 mg/mL concentrado para solución para perfusión",
+      "producto": "Farmaco",
+      "ifa": "Bendamustina (Bendamustine Accord 25 mg/mL)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aifa.gov.it/-/niis-bendamustina-accord"
     },
     {
       "y": 2026,
@@ -4152,6 +4386,19 @@
       "ifa": "Tirzepatida",
       "atc": "Sin ATC",
       "enlace": "https://www.swissmedic.ch/swissmedic/en/home/humanarzneimittel/market-surveillance/health-professional-communication--hpc-/dhpc-mounjaro-kwikpen-tirzepatidum.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-07-27",
+      "pais": "Austria",
+      "agencia": "BASG",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "BASG (DHPC): Necesidad de realizar inspección visual de viales de Vyvgart 1.000 mg solución inyectable de determinados lotes por riesgo de contaminación",
+      "producto": "Farmaco",
+      "ifa": "Efgartigimod alfa (Vyvgart 1.000 mg solución inyectable)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.basg.gv.at/fileadmin/redakteure/06_Gesundheitsberufe/DHPC/2026/260727_Vyvgart_1_000_mg_Injektionsl%C3%B6sung.pdf"
     },
     {
       "y": 2026,
@@ -4841,6 +5088,45 @@
       "ifa": "Avacopan",
       "atc": "Sin ATC",
       "enlace": "https://www.bfarm.de/SharedDocs/Risikoinformationen/Pharmakovigilanz/DE/RHB/2026/rhb-tavneos.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-07-16",
+      "pais": "Austria",
+      "agencia": "BASG",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BASG (DHPC): Recomendación de revocación de la autorización de comercialización de Tavneos en la UE por relación beneficio-riesgo desfavorable",
+      "producto": "Farmaco",
+      "ifa": "Avacopan (Tavneos)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.basg.gv.at/fileadmin/redakteure/06_Gesundheitsberufe/DHPC/2026/260716_Tavneos.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-07-16",
+      "pais": "Austria",
+      "agencia": "BASG",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BASG (DHPC): Restricción de uso de Ixchiq a personas con alto riesgo de infección por chikungunya",
+      "producto": "Farmaco",
+      "ifa": "Vacuna frente a chikungunya, viva atenuada (Ixchiq)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.basg.gv.at/fileadmin/redakteure/06_Gesundheitsberufe/DHPC/2026/260716_IXCHIQ.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-07-16",
+      "pais": "Italia",
+      "agencia": "AIFA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AIFA (NIIS/DHPC): Nota informativa importante de seguridad sobre Tavneos (avacopan)",
+      "producto": "Farmaco",
+      "ifa": "Avacopan (Tavneos)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aifa.gov.it/-/nota-informativa-importante-di-sicurezza-niis-su-tavneos-avacopan"
     },
     {
       "y": 2026,
@@ -6807,6 +7093,19 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-05-11",
+      "pais": "Peru",
+      "agencia": "DIGESA",
+      "tipo": "seguridad",
+      "tipoLabel": "Modificacion RS",
+      "titulo": "COMUNICADO N° 04-2026-DIGESA/MINSA: DIGESA brinda precisión sobre declaración de productos que contienen Tartrazina",
+      "producto": "Alimentos",
+      "ifa": "Tartrazina (aditivo alimentario SIN 102)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digesa.minsa.gob.pe/COMUNICADO_04-2026-DIGESA-MINSA-01.pdf"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-05-06",
       "pais": "España",
       "agencia": "AEMPS",
@@ -7860,6 +8159,19 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-03-09",
+      "pais": "Peru",
+      "agencia": "DIGESA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "COMUNICADO N° 03-2026-DIGESA/MINSA: DIGESA informa que los productos de la marca MAPED cuentan con registro nacional y autorización sanitaria vigentes",
+      "producto": "Otro",
+      "ifa": "Útiles escolares marca MAPED",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digesa.minsa.gob.pe/COMUNICADO_03-2026-DIGESA-MINSA-01.pdf"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-03-04",
       "pais": "Peru",
       "agencia": "CENADIM",
@@ -8809,6 +9121,19 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-01-23",
+      "pais": "Peru",
+      "agencia": "DIGESA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "COMUNICADO N° 02-2026-DIGESA/MINSA: Retiro voluntario y preventivo del mercado y no consumo de los productos marca ALULA GOLD PREMIUM 0 a 12 meses / ALULA GOLD 1, 2 y COMFORT PREMIUM, importados por SANULAC NUTRICIÓN PERÚ SAC",
+      "producto": "Alimentos",
+      "ifa": "Fórmulas infantiles Alula Gold Premium 0-12 meses, Alula Gold 1, 2 y Comfort Premium (Sanulac Nutrición Perú SAC)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digesa.minsa.gob.pe/COMUNICADO_02-2026-DIGESA-MINSA-01.pdf"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-01-22",
       "pais": "Reino Unido",
       "agencia": "MHRA",
@@ -8949,6 +9274,19 @@
       "ifa": "Tegretol 20 mg/ml",
       "atc": "Sin ATC",
       "enlace": "https://ansm.sante.fr/informations-de-securite/tegretol-20-mg-ml-suspension-buvable-restriction-dutilisation-chez-les-nouveau-nes-en-raison-de-la-concentration-de-lexcipient-propylene-glycol-depassant-le-seuil-recommande"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-01-06",
+      "pais": "Peru",
+      "agencia": "DIGESA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "COMUNICADO N° 01-2026-DIGESA/MINSA: Retiro voluntario y preventivo del mercado del producto NAN® SUPREME PRO2 lata x 800 g, Lote N° 52840742F2, importado por NESTLÉ MARCAS PERÚ SAC",
+      "producto": "Alimentos",
+      "ifa": "Fórmula infantil NAN® SUPREME PRO2 lata x 800 g, Lote N° 52840742F2 (Nestlé Marcas Perú SAC)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digesa.minsa.gob.pe/COMUNICADO_01-2026-DIGESA-MINSA-01.pdf"
     },
     {
       "y": 2025,
