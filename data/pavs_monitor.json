@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-20T14:28:33Z",
-  "total": 2156,
+  "generatedAt": "2026-09-21T16:46:56Z",
+  "total": 2184,
   "stats": {
-    "total": 2156,
-    "thisYear": 708,
+    "total": 2184,
+    "thisYear": 736,
     "agencies": 29,
     "countries": 26
   },
@@ -38,13 +38,13 @@
     ],
     [
       "2026",
-      708
+      736
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      405
+      407
     ],
     [
       "MHRA",
@@ -56,7 +56,7 @@
     ],
     [
       "Health Canada",
-      201
+      203
     ],
     [
       "AEMPS",
@@ -86,6 +86,58 @@
   "data": [
     {
       "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: Retiro de producto - Prolongador de media presion diam. 1,5 mm - Cair LGL (Retiro n° R2615855)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Prolongador de media presion diam. 1,5 mm (Cair LGL)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/prolongateur-moyenne-pression-diam-1-5mm-cair-lgl"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Informacion a usuarios - Automatizados DxC 500 AU Clinical Chemistry Analyzers y DxC 500i Clinical Analyzer - Beckman Coulter (Informacion n° R2627546)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Analizadores DxC 500 AU Clinical Chemistry Analyzers y DxC 500i Clinical Analyzer (Beckman Coulter)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/automates-dxc-500-au-clinical-chemistry-analyzers-dxc-500i-clinical-analyzer-beckman-coulter-1"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "Suiza",
+      "agencia": "SWISSMEDIC",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Swissmedic (DHPC): Apremilast Leman (apremilastum) comprimidos recubiertos - error en la fecha de caducidad codificada en el codigo 2D",
+      "producto": "Farmaco",
+      "ifa": "Apremilast (Apremilast Leman comprimidos recubiertos, N° de autorizacion 69514, lote 26936002 - Leman SKL SA)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.swissmedic.ch/swissmedic/en/home/humanarzneimittel/market-surveillance/health-professional-communication--hpc-/dhpc-apremilast-leman-filmtabletten.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ANMAT prohibe todos los productos medicos y medicamentos de la marca CAFLAB y CAFLAB Applied Science (Disposicion N° 5970/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Productos marca CAFLAB y/o CAFLAB Applied Science (entre ellos Acido Tricloroacetico 30%, tincion de Gram, Lugol, safranina, azul de metileno y solucion salina fisiologica)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibe-todos-los-productos-medicos-y-medicamentos-de-la-marca-caflab-y-caflab"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-09-18",
       "pais": "Suecia",
       "agencia": "LAKEMEDELSVERKET",
@@ -96,6 +148,162 @@
       "ifa": "Celeston Bifas (betametasona, uso veterinario/equino)",
       "atc": "S03BA03 — BETAMETASONA",
       "enlace": "https://www.lakemedelsverket.se/sv/nyheter/restsituation-for-celeston-bifas-kan-paverka-djursjukvarden"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de los sistemas de RM SIGNA(TM) Artist y SIGNA(TM) Artist Evo (GE Healthcare) por borde cortante expuesto en el gabinete de electronica",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas de resonancia magnetica SIGNA(TM) Artist y SIGNA(TM) Artist Evo (GE Healthcare)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/signatm-artist-and-signatm-artist-evo"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "Health Canada: Aviso publico sobre equipos falsificados de depilacion y terapia laser marca Soprano hallados en clinicas, con riesgo grave para la salud",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas de depilacion laser y de terapia laser de diodo marca Soprano fabricados por Beijing Perfectlaser Technology Co., Ltd.",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/counterfeit-laser-hair-removal-and-therapy-devices-found-some-clinics-and-may-pose"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Europa",
+      "agencia": "EMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "EMA/CHMP: Concluye la revision del oxibato de sodio (jarabe y solucion oral 175 mg/ml) en dependencia alcoholica - el balance beneficio-riesgo sigue siendo favorable, con estudios adicionales obligatorios",
+      "producto": "Farmaco",
+      "ifa": "Oxibato de sodio (sodium oxybate) jarabe y solucion oral 175 mg/ml (Alcover)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.ema.europa.eu/en/news/benefits-sodium-oxybate-continue-outweigh-risks-people-alcohol-dependency"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Europa",
+      "agencia": "EMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "EMA/CHMP: Concluye la revision de los medicamentos que contienen ipidacrina con restriccion de las indicaciones autorizadas",
+      "producto": "Farmaco",
+      "ifa": "Ipidacrina (Neiromidin, Ipigrix, Ipidacrine Grindeks y otros)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.ema.europa.eu/en/news/ema-concludes-review-ipidacrine-containing-medicines"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "INVIMA (Alerta Sanitaria N° 302-2026): Productos fraudulentos promocionados como suplementos dietarios a traves de comercio electronico - Parte 1",
+      "producto": "Farmaco",
+      "ifa": "Productos fraudulentos promocionados como suplementos dietarios en comercio electronico (Parte 1)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/medicamentos_pbiologicos/2026/SEPTIEMBRE/Alerta%20No_302-2026%20-TITAN%20NUTRITION%20Parte%201.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "INVIMA (Alerta Sanitaria N° 305-2026): Productos fraudulentos promocionados como medicamentos a traves de comercio electronico - Parte 2",
+      "producto": "Farmaco",
+      "ifa": "Productos fraudulentos promocionados como medicamentos en comercio electronico (Parte 2)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/medicamentos_pbiologicos/2026/SEPTIEMBRE/Alerta%20No_305-2026%20-%20%20TITAN%20NUTRITION%20Parte%202.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "INVIMA (Alerta Sanitaria N° 303-2026): Productos fraudulentos promocionados como medicamentos a traves de comercio electronico - Parte 3",
+      "producto": "Farmaco",
+      "ifa": "Productos fraudulentos promocionados como medicamentos en comercio electronico (Parte 3)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/medicamentos_pbiologicos/2026/SEPTIEMBRE/Alerta%20No_303-2026%20-%20%20titan%20nutrition%20Parte%203.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "INVIMA (Alerta Sanitaria N° 306-2026): Productos fraudulentos promocionados como medicamentos a traves de comercio electronico - Parte 4",
+      "producto": "Farmaco",
+      "ifa": "Productos fraudulentos promocionados como medicamentos en comercio electronico (Parte 4)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/medicamentos_pbiologicos/2026/SEPTIEMBRE/Alerta%20No_306-2026%20-%20TITAN%20NUTRITION%20-%20Parte%204.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "INVIMA (Alerta Sanitaria N° 307-2026): Productos fraudulentos promocionados como medicamentos a traves de comercio electronico - Parte 5",
+      "producto": "Farmaco",
+      "ifa": "Productos fraudulentos promocionados como medicamentos en comercio electronico (Parte 5)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/medicamentos_pbiologicos/2026/SEPTIEMBRE/Alerta%20No_307-2026%20-%20TITAN%20NUTRITION%20Parte%205%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "INVIMA (Alerta Sanitaria N° 308-2026): Productos fraudulentos promocionados como medicamentos a traves de comercio electronico - Parte 6",
+      "producto": "Farmaco",
+      "ifa": "Productos fraudulentos promocionados como medicamentos en comercio electronico (Parte 6)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/medicamentos_pbiologicos/2026/SEPTIEMBRE/Alerta%20No_%20308-2026%20-%20%20TITAN%20NUTRITIUN%20Parte%206.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "INVIMA (Alerta Sanitaria N° 304-2026): Melena de leon, Reishi Ganoderma, Cola de pavo, Ashwagandha y Psilocibina Microdosis - Aurum Hongos Medicinales",
+      "producto": "Farmaco",
+      "ifa": "Melena de leon, Reishi Ganoderma, Cola de pavo, Ashwagandha y Psilocibina Microdosis (Aurum Hongos Medicinales)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/medicamentos_pbiologicos/2026/SEPTIEMBRE/Alerta%20No_304-2026%20-%20Aurum%20Hongos%20Medicinales.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 281-2026): GC Gold Label 1 Luting & Lining Cement - ionomero de vidrio radiopaco autocurable para cementacion y base",
+      "producto": "Dispositivo Medico",
+      "ifa": "GC Gold Label 1 Luting & Lining Cement (ionomero de vidrio radiopaco autocurable para cementacion y base)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20281-2026.pdf"
     },
     {
       "y": 2026,
@@ -239,6 +447,136 @@
       "ifa": "Sistemas de resonancia magnética Philips Ingenia, Achieva e Intera",
       "atc": "Sin ATC",
       "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/philips-ingenia-achieva-and-intera-mr-systems-0"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INFARMED (Aviso de Seguranca DM 2026_264): Implante ortopedico - Howmedica Osteonics Corp.",
+      "producto": "Dispositivo Medico",
+      "ifa": "Implante ortopedico (Orthopaedic implant) - Howmedica Osteonics Corp.",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/documents/15786/12495804/Orthopaedic+implant/15b8bcba-efba-93f1-c437-0e1de4acc6a3"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INFARMED (Aviso de Seguranca DM 2026_263): VentStar Resus Neo / VentStar Resuscitaire - Drager",
+      "producto": "Dispositivo Medico",
+      "ifa": "VentStar Resus Neo / VentStar Resuscitaire (Drager)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/documents/15786/12495804/VentStar+Resus+Neo%C2%A0+VentStar+Resuscitaire/36eb538b-20d9-6bab-41b5-ecdd63f92a6c"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INFARMED (Aviso de Seguranca DM 2026_262): Cateteres angiograficos Imager II - Boston Scientific",
+      "producto": "Dispositivo Medico",
+      "ifa": "Cateteres angiograficos Imager II (Boston Scientific)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/documents/15786/12495804/Cateteres+angiogr%C3%A1ficos+Imager+II/2b0b125b-7245-8991-a889-6c2599ab0429"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INFARMED (Aviso de Seguranca DM 2026_261): PALACOS y COPAL pro - Heraeus Medical",
+      "producto": "Dispositivo Medico",
+      "ifa": "Cementos oseos PALACOS y COPAL pro (Heraeus Medical)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/documents/15786/12495804/PALACOS+e+COPAL+pro/67c7a607-7ccb-4dd4-b98e-9dfe3a8f9718"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INFARMED (Aviso de Seguranca DM 2026_260): Sonda de hemostasia BiCOAG - Olympus",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sonda de hemostasia BiCOAG (Olympus)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/documents/15786/12495804/Sonda+de+hemostasia+BiCOAG/368ae472-2101-b667-e99b-bb0318d20f53"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INFARMED (Aviso de Seguranca DM 2026_259): Conjuntos de tubos StrykeFlow PS y AHTO - Stryker",
+      "producto": "Dispositivo Medico",
+      "ifa": "Conjuntos de tubos StrykeFlow PS y AHTO (Stryker)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/documents/15786/12495804/Conjuntos+de+tubos+StrykeFlow+PS+e+AHTO/077081f2-d5f3-5bc4-32e8-76f169b0cea0"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INFARMED (Aviso de Seguranca DM 2026_258): Cable de oximetro ForeSight - BD",
+      "producto": "Dispositivo Medico",
+      "ifa": "Cable de oximetro ForeSight (BD)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/documents/15786/12495804/Cabo+de+ox%C3%ADmetro+ForeSight/51dad993-857c-5a6c-a43b-ff2d28168cc2"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INFARMED (Aviso de Seguranca DM 2026_257): Azurion - Philips",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistema de imagen intervencionista Azurion (Philips)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/documents/15786/12495804/Azurion/ef3a0913-b2d9-b845-f3da-e64b970200e2"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INFARMED (Aviso de Seguranca DM 2026_256): Dispositivo de colocacion de capsulas Bravo CF (5 unid. y 1 unid.) - Medtronic",
+      "producto": "Dispositivo Medico",
+      "ifa": "Dispositivo de colocacion de capsulas Bravo CF (Medtronic)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/documents/15786/12495804/Dispositivo+de+coloca%C3%A7%C3%A3o+de+c%C3%A1psulas+Bravo+CF/5ef896c5-e404-a96a-f95e-67551139f5e0"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-17",
+      "pais": "Portugal",
+      "agencia": "INFARMED",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INFARMED (Aviso de Seguranca DM 2026_255): Injertos de tejido CARDIOROOT - Getinge",
+      "producto": "Dispositivo Medico",
+      "ifa": "Injertos de tejido CARDIOROOT (Getinge)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.infarmed.pt/documents/15786/12495804/Enxertos+tecidos+CARDIOROOT/0b053548-868d-553a-f85d-ba5886f0ba10"
     },
     {
       "y": 2026,
@@ -525,6 +863,32 @@
       "ifa": "Ácido desoxicólico (Kybella)",
       "atc": "Sin ATC",
       "enlace": "https://www.fda.gov/drugs/drug-safety-communications/fda-approves-additional-information-labeling-kybella-deoxycholic-acid-injection-warning-adverse"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-15",
+      "pais": "Belgica",
+      "agencia": "FAMHP",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AFMPS (Flash VIG-news): Formas liquidas orales - atencion al riesgo de sobredosis por dispositivos dosificadores de capacidad superior a la dosis recomendada",
+      "producto": "Farmaco",
+      "ifa": "Toularynx Codeine Forte (codeina) jarabe y Toularynx Dextromethorphan Forte (dextrometorfano) jarabe",
+      "atc": "Sin ATC",
+      "enlace": "https://www.afmps.be/fr/news/flash_vig_news_formes_liquides_orales_attention_au_risque_de_surdosage"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-15",
+      "pais": "Noruega",
+      "agencia": "NORUEGA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "DMP (Noruega): Racionamiento de la insulina NPH Humulin ante la retirada del mercado de Insulatard el 30 de noviembre de 2026",
+      "producto": "Farmaco",
+      "ifa": "Insulina isofana NPH (Insulatard y Humulin NPH)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/nyheter/rasjonering-av-humulin-nph-insulin"
     },
     {
       "y": 2026,
