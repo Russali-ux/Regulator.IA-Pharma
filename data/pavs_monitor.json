@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-21T16:46:56Z",
-  "total": 2184,
+  "generatedAt": "2026-09-22T15:24:15Z",
+  "total": 2212,
   "stats": {
-    "total": 2184,
-    "thisYear": 736,
+    "total": 2212,
+    "thisYear": 764,
     "agencies": 29,
     "countries": 26
   },
@@ -38,13 +38,13 @@
     ],
     [
       "2026",
-      736
+      764
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      407
+      409
     ],
     [
       "MHRA",
@@ -56,7 +56,7 @@
     ],
     [
       "Health Canada",
-      203
+      204
     ],
     [
       "AEMPS",
@@ -64,7 +64,7 @@
     ],
     [
       "DIGEMID",
-      157
+      161
     ],
     [
       "TGA",
@@ -72,7 +72,7 @@
     ],
     [
       "FDA",
-      129
+      132
     ],
     [
       "AIFA",
@@ -84,6 +84,32 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-09-22",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: Retiro de producto - Desinfectante para lavadora-desinfectadora de endoscopios Rapicide PA Parte A, Medivators Inc. (Retiro n° R2626320)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Rapicide PA Parte A (desinfectante para lavadora-desinfectadora de endoscopios) - Medivators Inc. / Steris",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/desinfectant-pour-laveur-desinfecteur-a-endoscopes-rapicide-pa-partie-a-medivators-inc"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-22",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Retiro de lotes de Flebogamma DIF 50 mg/ml (400 mL) y Flebogamma DIF 100 mg/ml (100 mL y 200 mL) - Laboratorio Grifols France",
+      "producto": "Farmaco",
+      "ifa": "Inmunoglobulina humana normal (Flebogamma DIF)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/flebogamma-dif-50-mg-ml-solution-pour-perfusion-400-ml-et-flebogamma-dif-100-mg-ml-solution-pour-perfusion-100-ml-et-200-ml-laboratoire-grifols-france"
+    },
     {
       "y": 2026,
       "fecha": "2026-09-21",
@@ -135,6 +161,188 @@
       "ifa": "Productos marca CAFLAB y/o CAFLAB Applied Science (entre ellos Acido Tricloroacetico 30%, tincion de Gram, Lugol, safranina, azul de metileno y solucion salina fisiologica)",
       "atc": "Sin ATC",
       "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibe-todos-los-productos-medicos-y-medicamentos-de-la-marca-caflab-y-caflab"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ALERTA DIGEMID N° 110-2026: Posible riesgo de linfohistiocitosis hemofagocítica y síndrome de activación macrofágica con medicamentos que contienen la combinación amoxicilina + ácido clavulánico",
+      "producto": "Farmaco",
+      "ifa": "Amoxicilina + Ácido clavulánico",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-110-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "Peru",
+      "agencia": "CENADIM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "CENADIM: Health Canada advierte sobre riesgos potenciales asociados al uso de cabergolina en mujeres durante el período posparto",
+      "producto": "Farmaco",
+      "ifa": "Cabergolina",
+      "atc": "Sin ATC",
+      "enlace": "https://bvcenadim.digemid.minsa.gob.pe/index.php/noticias/578-health-canada-advierte-sobre-riesgos-potenciales-asociados-al-uso-de-cabergolina-en-mujeres-durante-el-periodo-posparto"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS (Alerta Sanitaria 329-2026): Robo de los medicamentos Sinuberase® y Neo-melubrina® notificado por la empresa Almacén de Drogas, S.A. de C.V.",
+      "producto": "Farmaco",
+      "ifa": "Sinuberase® (Saccharomyces boulardii) / Neo-melubrina® (Metamizol sódico)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1104119/Alerta_Sanitaria_Robo_Almacen_de_Drogas_21092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS (Alerta Sanitaria 328-2026): Falsificación del medicamento Meropenem 1 g, solución inyectable (informado por Laboratorios Jayor, S.A. de C.V.)",
+      "producto": "Farmaco",
+      "ifa": "Meropenem",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1104101/Alerta_Sanitaria_Meropenem_21092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS (Alerta Sanitaria 327-2026): Comercialización ilegal de Denoclast® (Denosumab) 60 mg/mL, jeringa prerrellenada, a través de plataformas de comercio electrónico",
+      "producto": "Farmaco",
+      "ifa": "Denosumab (Denoclast®)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1104100/Alerta_Sanitaria_Denoclast_21092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS (Alerta Sanitaria 326-2026): Falsificación del producto AGIN® 300/250/300 mg, tableta, lote 7825 (Química Franco Mexicana Nordin, S.A. de C.V.)",
+      "producto": "Farmaco",
+      "ifa": "Ácido acetilsalicílico / Ácido ascórbico / Sulfadiazina (AGIN®)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1104099/Alerta_Sanitaria_Agin_21092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS (Aviso de Riesgo 90-2026): Robo del medicamento Sydolil® 400/50/1 mg, tabletas",
+      "producto": "Farmaco",
+      "ifa": "Ácido acetilsalicílico / Cafeína / Ergotamina (Sydolil®)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1104115/Aviso_de_Riesgo_Robo_de_Sydolil_21092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "COFEPRIS (Aviso de Riesgo 89-2026): Retiro voluntario del mercado de Sortec (Sorafenib) 200 mg, caja con frasco de 112 comprimidos, realizado por ULSA TECH, S.A. de C.V.",
+      "producto": "Farmaco",
+      "ifa": "Sorafenib (Sortec)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1104098/Aviso_de_Riesgo_Sortec_21092026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT prohíbe productos médicos de la firma Medtronic sustraídos y de estado desconocido (Disposición N° 5979/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Reservorio Paradigm 3.0 mL, sets de infusión subcutánea y sensores - Medtronic",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibe-productos-medicos-de-la-firma-medtronic"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "FDA: Otsuka / ICU Medical LLC realiza retiro voluntario nacional de 0.9% Sodium Chloride Injection USP 100 mL por confusión de producto",
+      "producto": "Farmaco",
+      "ifa": "Cloruro de sodio 0.9% inyectable (0.9% Sodium Chloride Injection, USP)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/otsuka-icu-medical-llc-issues-voluntary-nationwide-recall-09-sodium-chloride-injection-usp-due"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "FDA: Par Health realiza retiro voluntario nacional de dos lotes de Dexmedetomidina HCl en 0.9% Sodium Chloride Injection 400 mcg/100 mL",
+      "producto": "Farmaco",
+      "ifa": "Dexmedetomidina clorhidrato",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/par-health-issues-voluntary-nationwide-recall-two-lots-dexmedetomidine-hcl-09-sodium-chloride"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "FDA: Global Mix Inc. retira Niwali Tejocote Capsules y Niwali Tejocote Pieces por posible riesgo a la salud",
+      "producto": "Farmaco",
+      "ifa": "Tejocote (suplemento dietético Niwali)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/global-mix-inc-recalls-niwali-tejocote-capsules-and-niwali-tejocote-pieces-because-possible-health"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "Canadá",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de Schwarzkopf Professional Osis Grip Mousse (200 mL) por riesgo de lesión (Henkel)",
+      "producto": "Cosmetico",
+      "ifa": "Schwarzkopf Professional Osis Grip Mousse",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/schwarzkopf-professional-osis-grip-mousse-recalled-due-injury-hazard"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "Noruega",
+      "agencia": "NORUEGA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "DMP (Noruega) - Nytt om legemidler N° 11 2026: Racionamiento de Humulin NPH y desregistro de productos de insulina por Novo Nordisk",
+      "producto": "Farmaco",
+      "ifa": "Insulina humana isofánica (Humulin NPH); productos de insulina de Novo Nordisk",
+      "atc": "Sin ATC",
+      "enlace": "https://www.dmp.no/nyheter/nytt-om-legemidler-nr.-11-2026"
     },
     {
       "y": 2026,
@@ -304,6 +512,123 @@
       "ifa": "GC Gold Label 1 Luting & Lining Cement (ionomero de vidrio radiopaco autocurable para cementacion y base)",
       "atc": "Sin ATC",
       "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20281-2026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 301-2026): Grapadoras quirúrgicas y unidades de carga de un solo uso",
+      "producto": "Dispositivo Medico",
+      "ifa": "Grapadoras quirúrgicas y unidades de carga de un solo uso",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20%23301-2026%20-%20Grapadoras%20quir%C3%BArgicas%20y%20unidades%20de%20carga%20de%20un%20solo%20uso%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 300-2026): Sistemas para incontinencia urinaria",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas para incontinencia urinaria",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20%23300-2026%20-%20Sistemas%20para%20incontinencia%20urinaria%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 299-2026): Sistema de cánulas, catéteres y accesorios / Sistema de cánulas y catéteres",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistema de cánulas, catéteres y accesorios",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20%23299-2026%20-%20Sistema%20de%20c%C3%A1nulas%2C%20cat%C3%A9teres%20y%20accesorios%20_%20Sistema%20de%20c%C3%A1nulas%20y%20cat%C3%A9teres%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 298-2026): Esterilizador de baja temperatura, accesorios y repuestos",
+      "producto": "Dispositivo Medico",
+      "ifa": "Esterilizador de baja temperatura, accesorios y repuestos",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20%23298-2026%20-%20Esterilizador%20de%20baja%20temperatura%2C%20accesorios%20y%20repuestos%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 297-2026): Activa Deep Brain Neurostimulation System / Sistema de Neuroestimulación Cerebral Profunda Activa",
+      "producto": "Dispositivo Medico",
+      "ifa": "Activa Deep Brain Neurostimulation System (Sistema de Neuroestimulación Cerebral Profunda Activa)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20%23297-2026%20-%20Activa%20Deep%20Brain%20Neurostimulation%20System%20_%20Sistema%20de%20Neuroestimulaci%C3%B3n%20Cerebral%20Profunda%20Activa%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 296-2026): EsteemBody™ Convex Soft Pouch - Bolsa blanda convexa EsteemBody™",
+      "producto": "Dispositivo Medico",
+      "ifa": "EsteemBody™ Convex Soft Pouch (bolsa blanda convexa)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20%23296-2026%20-%20EsteemBody%E2%84%A2%20Convex%20Soft%20Pouch%20-%20Bolsa%20blanda%20convexa%20EsteemBody%E2%84%A2%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INVIMA (Informe de Seguridad N° 138-2026): O-ARM O2 Imaging System / Sistema de Imágenes de Rayos X O-Arm 1000 Imaging System",
+      "producto": "Dispositivo Medico",
+      "ifa": "O-ARM O2 Imaging System / O-Arm 1000 Imaging System",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/INFORMES%20DE%20SEGURIDAD/Dispositivos/2026/Septiembre/Informe%20de%20seguridad%20No_%20%23138-2026%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INVIMA (Informe de Seguridad N° 137-2026): Monitor de paciente Mindray",
+      "producto": "Dispositivo Medico",
+      "ifa": "Monitor de paciente Mindray",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/INFORMES%20DE%20SEGURIDAD/Dispositivos/2026/Septiembre/Informe%20de%20seguridad%20No_%20%23137-2026%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INVIMA (Informe de Seguridad N° 136-2026): BD ONCLARITY™ HPV Cervical Brush Collection Kit - Kit de recogida de muestras con cepillo cervicouterino",
+      "producto": "Dispositivo Medico",
+      "ifa": "BD ONCLARITY™ HPV Cervical Brush Collection Kit",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/INFORMES%20DE%20SEGURIDAD/Dispositivos/2026/Septiembre/Informe%20de%20seguridad%20No_%20%23136-2026%20.pdf"
     },
     {
       "y": 2026,
@@ -2059,6 +2384,19 @@
       "ifa": "Registro de Entidades Autorizadas a elaborar Estudios Ambientales (sector Salud)",
       "atc": "Sin ATC",
       "enlace": "https://www.digesa.minsa.gob.pe/COMUNICADO_07-2026-DIGESA-MINSA-01.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-02",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "DIGEMID (Notiseguridad Dispositivos): Retirada del mercado del lote 00613922 del stent Silk Vista, fabricado por Balt Extrusion SAS (Francia)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Stent Silk Vista (Balt Extrusion SAS)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/notiseguridad/2026/retirada-del-mercado-del-lote-00613922-del-stent-silk-vista/"
     },
     {
       "y": 2026,
@@ -5907,6 +6245,32 @@
       "ifa": "Levetiracetam",
       "atc": "Sin ATC",
       "enlace": "https://www.bfarm.de/SharedDocs/Risikoinformationen/Pharmakovigilanz/DE/RHB/2026/rhb-keppra.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-07-08",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "DIGEMID (Notiseguridad Dispositivos): Retiro de dispositivos medicos - Generador de ablacion de campo pulsado FARASTAR™ (Boston Scientific)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Generador de ablacion de campo pulsado FARASTAR™ (Boston Scientific)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/notiseguridad/2026/retiro-de-dispositivos-medicos-generador-de-ablacion-de-campo-pulsado-farastartm/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-07-08",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "DIGEMID (Notiseguridad Dispositivos): Posible caida de la suspension MAVIG para monitor con sistema de riel cenital en sistemas de angiografia Innova y Allia",
+      "producto": "Dispositivo Medico",
+      "ifa": "Suspension MAVIG para monitor con sistema de riel cenital (sistemas de angiografia por rayos X Innova y Allia)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/notiseguridad/2026/posible-caida-de-la-suspension-mavig-para-monitor-con-sistema-de-riel-cenital/"
     },
     {
       "y": 2026,
