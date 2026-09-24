@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-23T15:18:53Z",
-  "total": 2212,
+  "generatedAt": "2026-09-24T15:46:28Z",
+  "total": 2237,
   "stats": {
-    "total": 2212,
-    "thisYear": 764,
+    "total": 2237,
+    "thisYear": 789,
     "agencies": 29,
     "countries": 26
   },
@@ -38,25 +38,25 @@
     ],
     [
       "2026",
-      764
+      789
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      409
+      413
     ],
     [
       "MHRA",
-      215
+      216
+    ],
+    [
+      "Health Canada",
+      208
     ],
     [
       "BfArM",
       207
-    ],
-    [
-      "Health Canada",
-      204
     ],
     [
       "AEMPS",
@@ -64,7 +64,7 @@
     ],
     [
       "DIGEMID",
-      161
+      163
     ],
     [
       "TGA",
@@ -84,6 +84,318 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-09-24",
+      "pais": "Canadá",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de los sistemas InterStim™ (extensiones percutáneas y kits de electrodo SureScan™ MRI) - Medtronic",
+      "producto": "Dispositivo Medico",
+      "ifa": "InterStim™ Percutaneous Extension / InterStim™ SureScan™ MRI Lead Kit (Medtronic)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/interstimtm-systems"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-24",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ANMAT prohíbe el uso y comercialización de todo producto que declare contener retatrutide o retatrutida (Disposición N° 6140/26)",
+      "producto": "Farmaco",
+      "ifa": "Retatrutide / Retatrutida",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibe-productos-que-declaren-contener-retatrutide-o-retatrutida"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-24",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT dispuso la baja de habilitación de la firma Royal Farma S.A. (Disposición N° 6139/26)",
+      "producto": "Establecimiento",
+      "ifa": "Royal Farma S.A. (CUIT 30-70858423-8)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-dispuso-la-baja-de-habilitacion-de-la-firma-royal-farma-sa"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-24",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Información a usuarios - Controlador automatizado para asistencia ventricular temporaria Impella - Abiomed (Información n° R2624900)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Controlador automatizado Impella (Abiomed)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/controleur-automatise-pour-assistance-ventriculaire-temporaire-impella-abiomed"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-24",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: Retiro de lotes - Escobillón para endoscopio - LTA Médical (Rappel n° R2627417)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Escobillón para endoscopio (LTA Médical / Getinge)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/ecouvillon-pour-endoscope-lta-medical"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-24",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: Retiro de lote - Prótesis vasculares Intergard Synergy Knitted e Intergard Standard Knitted - Getinge (Rappel n° R2625881)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Prótesis vasculares Intergard Synergy Knitted / Intergard Standard Knitted (Getinge)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/protheses-vasculaires-intergard-synergy-knitted-et-intergard-standard-knitted-getinge"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-24",
+      "pais": "Suecia",
+      "agencia": "LAKEMEDELSVERKET",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Läkemedelsverket: Los prescriptores deben iniciar el cambio desde Insulin lispro Sanofi por cese temporal de suministro en 2027",
+      "producto": "Farmaco",
+      "ifa": "Insulina lispro (Insulin lispro Sanofi)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.lakemedelsverket.se/sv/nyheter/forskrivare-behover-paborja-byte-fran-insulin-lispro-sanofi2"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ALERTA DIGEMID N° 111-2026: Retiro del mercado de un lote de un producto observado por resultado crítico de control de calidad - A-FIEBRIN",
+      "producto": "Farmaco",
+      "ifa": "A-FIEBRIN",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-111-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ALERTA DIGEMID N° 112-2026: Retiro del mercado de un lote de dispositivo médico observado por resultado crítico de control de calidad - Bolsa de orina estéril",
+      "producto": "Dispositivo Medico",
+      "ifa": "Bolsa de orina estéril",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-no-112-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: Información a usuarios - Centrífuga Rotofix 32 A - Andreas Hettich (acción de seguridad n° R2623977)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Centrífuga Rotofix 32 A (Andreas Hettich)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/centrifugeuse-rotofix-32-a-andreas-hettich"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Reino Unido",
+      "agencia": "MHRA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MHRA EL(26)A/39 - Notificación de defecto de Clase 4: B. Braun Melsungen AG, Meropenem 1000 mg polvo y disolvente para solución para perfusión",
+      "producto": "Farmaco",
+      "ifa": "Meropenem",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gov.uk/drug-device-alerts/class-4-medicines-defect-notification-b-braun-melsungen-ag-meropenem-1000-mg-powder-and-solvent-for-solution-for-infusion-el-26-a-slash-39"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Canadá",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro del electrodo OmniaSecure™ MRI SureScan™ modelos 3930M74 y 3930M79 (Medtronic)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Electrodo transvenoso OmniaSecure™ MRI SureScan™ (Medtronic)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/omniasecuretm-mri-surescantm"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Canadá",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de la aguja de inyección cistoscópica Williams (Cook, Incorporated) lote 16951548",
+      "producto": "Dispositivo Medico",
+      "ifa": "Aguja de inyección cistoscópica Williams (Cook)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/williams-cystoscopic-injection-needle"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Suecia",
+      "agencia": "LAKEMEDELSVERKET",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Läkemedelsverket: Cese permanente de suministro de Methergin 0,2 mg/ml solución inyectable (metilergometrina) en el mercado sueco",
+      "producto": "Farmaco",
+      "ifa": "Metilergometrina (Methergin)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.lakemedelsverket.se/sv/nyheter/permanent-forsaljningsuppehall-for-methergin-02-mgml"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ANMAT alerta sobre solicitudes de datos efectuadas por personas que se presentan como integrantes del organismo",
+      "producto": "Establecimiento",
+      "ifa": "ANMAT (suplantación de identidad del organismo)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-alerta-sobre-solicitudes-de-datos-en-nombre-del-organismo"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 309-2026): Alaris GW Volumetric Infusion Pumps - Bomba de infusión volumétrica GW Alaris™",
+      "producto": "Dispositivo Medico",
+      "ifa": "Bomba de infusión volumétrica GW Alaris™",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20%23309-2026%20-%20Alaris%20GW%20Volumetric%20Infusion%20Pumps%20-%20Bomba%20de%20infusi%C3%B3n%20volum%C3%A9trica%20GW%20Alaris%E2%84%A2%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 311-2026): Tubo endotraqueal con y sin balón preformado - reforzado SunMed",
+      "producto": "Dispositivo Medico",
+      "ifa": "Tubo endotraqueal preformado / reforzado SunMed",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20%23311-2026%20-%20Tubo%20endotraqueal%20con%20y%20sin%20bal%C3%B3n%20preformado%20-%20reforzado%20SunMed%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 312-2026): LightMix Kit BCR-ABL M/M/µ ABL1 +",
+      "producto": "Dispositivo Medico",
+      "ifa": "LightMix Kit BCR-ABL M/M/µ ABL1 + (reactivo de diagnóstico in vitro)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20%23312-2026%20-%20LightMix%20Kit%20BCR-ABL%20M_M_%C2%B5%20ABL1%20%2B%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 313-2026): Anti-Annexin V IgG",
+      "producto": "Dispositivo Medico",
+      "ifa": "Anti-Annexin V IgG (reactivo de diagnóstico in vitro)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20%23313-2026%20-%20Anti-Annexin%20V%20IgG%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 314-2026): BD Phoenix NMIC-486 / BD Phoenix™ NMIC-501",
+      "producto": "Dispositivo Medico",
+      "ifa": "BD Phoenix NMIC-486 / BD Phoenix™ NMIC-501 (paneles de susceptibilidad antimicrobiana)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20%23314-2026%20-%20BD%20Phoenix%20NMIC-486%20_%20BD%20Phoenix%E2%84%A2%20NMIC-501%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA (Alerta Sanitaria N° 315-2026): QIASTAT-DX® GASTROINTESTINAL PANEL 2",
+      "producto": "Dispositivo Medico",
+      "ifa": "QIAstat-Dx® Gastrointestinal Panel 2 (reactivo de diagnóstico in vitro)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/ALERTAS%20SANITARIAS/Dispositivos_Medicos/2026/Septiembre/Alerta%20No_%20%23315-2026%20-%20QIASTAT-DX%C2%AE%20GASTROINTESTINAL%20PANEL%202%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INVIMA (Informe de Seguridad N° 139-2026): AD Bio® Agar XLD. Kit x 20 placas de Petri de 90 mm",
+      "producto": "Dispositivo Medico",
+      "ifa": "AD Bio® Agar XLD (medio de cultivo, kit x 20 placas de Petri de 90 mm)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/INFORMES%20DE%20SEGURIDAD/Dispositivos/2026/Septiembre/Informe%20de%20seguridad%20No_%20%23139-2026%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INVIMA (Informe de Seguridad N° 141-2026): MAS® Omni•IMMUNE™ PRO Liquid Assayed Integrated Immunoassay Control",
+      "producto": "Dispositivo Medico",
+      "ifa": "MAS® Omni•IMMUNE™ PRO Liquid Assayed Integrated Immunoassay Control",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/INFORMES%20DE%20SEGURIDAD/Dispositivos/2026/Septiembre/Informe%20de%20seguridad%20No_%20%23141-2026%20.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INVIMA (Informe de Seguridad N° 142-2026): Alinity i Processing Module",
+      "producto": "Dispositivo Medico",
+      "ifa": "Alinity i Processing Module (Abbott)",
+      "atc": "Sin ATC",
+      "enlace": "https://app.invima.gov.co/alertas/ckfinder/userfiles/files/INFORMES%20DE%20SEGURIDAD/Dispositivos/2026/Septiembre/Informe%20de%20seguridad%20No_%20%23142-2026%20.pdf"
+    },
     {
       "y": 2026,
       "fecha": "2026-09-22",
@@ -343,6 +655,19 @@
       "ifa": "Insulina humana isofánica (Humulin NPH); productos de insulina de Novo Nordisk",
       "atc": "Sin ATC",
       "enlace": "https://www.dmp.no/nyheter/nytt-om-legemidler-nr.-11-2026"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-09-21",
+      "pais": "Canadá",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de lotes de IMAAVY (nipocalimab) solución 300 mg/1,62 mL - Janssen Inc.",
+      "producto": "Farmaco",
+      "ifa": "Nipocalimab (IMAAVY)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/imaavy-affected-lots-may-contain-glass-particles"
     },
     {
       "y": 2026,
