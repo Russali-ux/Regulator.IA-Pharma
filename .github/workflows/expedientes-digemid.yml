@@ -1,0 +1,81 @@
+name: "Expedientes DIGEMID - Estatus cada 3 dias"
+
+on:
+  schedule:
+    # 08:00 hora Lima = 13:00 UTC, cada 3 dias (igual que digemid-monitor)
+    - cron: "0 13 */3 * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (consulta pero no envia correo)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: expedientes-digemid
+  cancel-in-progress: false
+
+env:
+  TZ: "America/Lima"
+  EMAIL_FROM: "conkosafe.ai@gmail.com"
+  # Destinatarios: variable del repo EXPEDIENTES_EMAIL_TO (coma-separados).
+  # Si no existe, el correo llega solo a conkosafe.ai@gmail.com.
+  EMAIL_TO: ${{ vars.EXPEDIENTES_EMAIL_TO || 'conkosafe.ai@gmail.com' }}
+
+jobs:
+  estatus:
+    name: "Consultar expedientes y enviar estatus"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar Playwright + Chromium
+        run: |
+          pip install "playwright>=1.47"
+          python -m playwright install --with-deps chromium
+
+      - name: Consultar expedientes en DIGEMID
+        id: consulta
+        run: python scripts/expedientes/consulta_expediente.py
+
+      - name: Guardar capturas y reporte
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: expedientes-${{ github.run_id }}
+          path: |
+            /tmp/expedientes_*.png
+            /tmp/expedientes_reporte.json
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Enviar correo de estatus
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: python scripts/expedientes/send_status_email.py
+
+      - name: Commit del ultimo estatus conocido
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/expedientes/estado.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios de estatus."
+          else
+            git commit -m "chore(expedientes): estatus $(date +%Y-%m-%d)"
+            git pull --rebase
+            git push
+          fi

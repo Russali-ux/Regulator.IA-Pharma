@@ -1,0 +1,9 @@
+{
+  "_comentario": "Expedientes DIGEMID que el monitor consulta cada 3 dias. Formato del numero: AA-NNNNNN-S (ej. 26-046816-1). 'alias' es opcional y solo aparece en el correo.",
+  "expedientes": [
+    {
+      "numero": "26-046816-1",
+      "alias": "Inscripcion producto biologico - Pharmaris Peru"
+    }
+  ]
+}

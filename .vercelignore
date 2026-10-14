@@ -8,3 +8,5 @@ sql/
 data/raw/
 data/csv/
 data/json/
+config/
+data/expedientes/
