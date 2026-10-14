@@ -25,6 +25,7 @@ import re
 import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+import tempfile
 
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
@@ -32,8 +33,8 @@ URL = "https://www.digemid.minsa.gob.pe/consultaExpediente/"
 ROOT = Path(__file__).resolve().parents[2]
 CONFIG = ROOT / "config" / "expedientes.json"
 STATE = ROOT / "data" / "expedientes" / "estado.json"
-REPORT = Path(os.environ.get("REPORT_PATH", "/tmp/expedientes_reporte.json"))
-SHOTS = Path(os.environ.get("SHOTS_DIR", "/tmp"))
+REPORT = Path(os.environ.get("REPORT_PATH", Path(tempfile.gettempdir()) / "expedientes_reporte.json"))
+SHOTS = Path(os.environ.get("SHOTS_DIR", tempfile.gettempdir()))
 LIMA = timezone(timedelta(hours=-5))
 
 CAMPOS = {
@@ -206,6 +207,7 @@ def main():
         browser.close()
 
     STATE.parent.mkdir(parents=True, exist_ok=True)
+    SHOTS.mkdir(parents=True, exist_ok=True)
     STATE.write_text(json.dumps(estado, ensure_ascii=False, indent=2), encoding="utf-8")
     reporte = {"fecha": ahora_lima().strftime("%d/%m/%Y %H:%M"), "resultados": resultados}
     REPORT.write_text(json.dumps(reporte, ensure_ascii=False, indent=2), encoding="utf-8")

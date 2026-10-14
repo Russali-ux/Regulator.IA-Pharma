@@ -14,9 +14,10 @@ from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
+import tempfile
 
-REPORT = Path(os.environ.get("REPORT_PATH", "/tmp/expedientes_reporte.json"))
-SHOTS = Path(os.environ.get("SHOTS_DIR", "/tmp"))
+REPORT = Path(os.environ.get("REPORT_PATH", Path(tempfile.gettempdir()) / "expedientes_reporte.json"))
+SHOTS = Path(os.environ.get("SHOTS_DIR", tempfile.gettempdir()))
 URL = "https://www.digemid.minsa.gob.pe/consultaExpediente/"
 
 EMAIL_FROM = os.environ.get("EMAIL_FROM", "conkosafe.ai@gmail.com")
@@ -143,8 +144,8 @@ def main():
 
     print(f"Asunto: {asunto}\nDestinatarios: {len(EMAIL_TO)}")
     if DRY_RUN:
-        Path("/tmp/expedientes_email.html").write_text(doc, encoding="utf-8")
-        print("DRY_RUN: correo no enviado (HTML en /tmp/expedientes_email.html)")
+        (SHOTS / "expedientes_email.html").write_text(doc, encoding="utf-8")
+        print(f"DRY_RUN: correo no enviado (HTML en {SHOTS / 'expedientes_email.html'})")
         return
     with smtplib.SMTP(os.environ["SMTP_HOST"], int(os.environ.get("SMTP_PORT", "587"))) as s:
         s.starttls()

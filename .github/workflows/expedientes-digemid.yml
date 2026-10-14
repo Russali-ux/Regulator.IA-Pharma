@@ -1,5 +1,8 @@
 name: "Expedientes DIGEMID - Estatus cada 3 dias"
 
+# Corre en el runner self-hosted de la PC (IP residencial): Cloudflare de
+# minsa.gob.pe bloquea las IPs de los servidores de GitHub (HTTP 403).
+
 on:
   schedule:
     # 08:00 hora Lima = 13:00 UTC, cada 3 dias (igual que digemid-monitor)
@@ -19,32 +22,35 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  TZ: "America/Lima"
   EMAIL_FROM: "conkosafe.ai@gmail.com"
   # Destinatarios: variable del repo EXPEDIENTES_EMAIL_TO (coma-separados).
-  # Si no existe, el correo llega solo a conkosafe.ai@gmail.com.
   EMAIL_TO: ${{ vars.EXPEDIENTES_EMAIL_TO || 'conkosafe.ai@gmail.com' }}
+  PYTHONUTF8: "1"
+  PYTHONIOENCODING: "utf-8"
 
 jobs:
   estatus:
     name: "Consultar expedientes y enviar estatus"
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, regulator]
+    defaults:
+      run:
+        shell: powershell
+    env:
+      SHOTS_DIR: ${{ runner.temp }}\expedientes
+      REPORT_PATH: ${{ runner.temp }}\expedientes\expedientes_reporte.json
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Instalar Playwright + Chromium
+      - name: Instalar Playwright + Chromium (solo la primera vez tarda)
         run: |
-          pip install "playwright>=1.47"
-          python -m playwright install --with-deps chromium
+          python --version
+          python -m pip install --quiet --upgrade "playwright>=1.47"
+          python -m playwright install chromium
+          New-Item -ItemType Directory -Force -Path $env:SHOTS_DIR | Out-Null
+          Remove-Item "$env:SHOTS_DIR\*" -Force -ErrorAction SilentlyContinue
 
       - name: Consultar expedientes en DIGEMID
-        id: consulta
         run: python scripts/expedientes/consulta_expediente.py
 
       - name: Guardar capturas y reporte
@@ -52,9 +58,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: expedientes-${{ github.run_id }}
-          path: |
-            /tmp/expedientes_*.png
-            /tmp/expedientes_reporte.json
+          path: ${{ runner.temp }}\expedientes\
           retention-days: 30
           if-no-files-found: ignore
 
@@ -72,10 +76,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/expedientes/estado.json
-          if git diff --cached --quiet; then
-            echo "Sin cambios de estatus."
-          else
-            git commit -m "chore(expedientes): estatus $(date +%Y-%m-%d)"
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 0) {
+            Write-Host "Sin cambios de estatus."
+          } else {
+            git commit -m "chore(expedientes): estatus $(Get-Date -Format yyyy-MM-dd)"
             git pull --rebase
             git push
-          fi
+          }
+          exit 0
