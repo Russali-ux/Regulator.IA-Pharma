@@ -115,7 +115,20 @@ def extraer_campos(parsed):
 
 def consultar(page, numero):
     ano, num, sec = partir_numero(numero)
-    page.goto(URL, wait_until="networkidle", timeout=60000)
+    resp = page.goto(URL, wait_until="domcontentloaded", timeout=60000)
+    estado_http = resp.status if resp else "sin respuesta"
+    try:
+        page.wait_for_selector("select.form-select", timeout=30000)
+    except PWTimeout:
+        page.screenshot(path=str(SHOTS / f"expedientes_{numero}.png"), full_page=True)
+        texto = " ".join(page.inner_text("body").split())[:300]
+        raise RuntimeError(
+            f"DIGEMID no mostro el formulario (HTTP {estado_http}, titulo {page.title()!r}). "
+            f"La pagina respondio: {texto!r}")
+    try:
+        page.wait_for_load_state("networkidle", timeout=20000)
+    except PWTimeout:
+        pass
     page.select_option("select.form-select", "3")
     for model, tag, val in (("anoExpediente", "ano", ano),
                             ("numeroExpediente", "num", num),
