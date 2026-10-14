@@ -35,9 +35,6 @@ jobs:
     defaults:
       run:
         shell: powershell
-    env:
-      SHOTS_DIR: ${{ runner.temp }}\expedientes
-      REPORT_PATH: ${{ runner.temp }}\expedientes\expedientes_reporte.json
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -47,8 +44,11 @@ jobs:
           python --version
           python -m pip install --quiet --upgrade "playwright>=1.47"
           python -m playwright install chromium
-          New-Item -ItemType Directory -Force -Path $env:SHOTS_DIR | Out-Null
-          Remove-Item "$env:SHOTS_DIR\*" -Force -ErrorAction SilentlyContinue
+          $shots = Join-Path $env:RUNNER_TEMP "expedientes"
+          New-Item -ItemType Directory -Force -Path $shots | Out-Null
+          Remove-Item "$shots\*" -Force -ErrorAction SilentlyContinue
+          "SHOTS_DIR=$shots" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          "REPORT_PATH=$shots\expedientes_reporte.json" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
 
       - name: Consultar expedientes en DIGEMID
         run: python scripts/expedientes/consulta_expediente.py
