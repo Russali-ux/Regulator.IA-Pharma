@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-10T18:28:09Z",
-  "total": 2895,
+  "generatedAt": "2026-11-11T18:20:16Z",
+  "total": 2908,
   "stats": {
-    "total": 2895,
-    "thisYear": 1447,
+    "total": 2908,
+    "thisYear": 1460,
     "agencies": 28,
     "countries": 28
   },
@@ -38,21 +38,21 @@
     ],
     [
       "2026",
-      1447
+      1460
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      522
+      523
     ],
     [
       "BfArM",
-      306
+      309
     ],
     [
       "Health Canada",
-      298
+      301
     ],
     [
       "AEMPS",
@@ -72,15 +72,15 @@
     ],
     [
       "FDA",
-      152
+      154
     ],
     [
       "MFDS",
-      127
+      128
     ],
     [
       "INVIMA",
-      97
+      100
     ]
   ],
   "data": [
@@ -109,6 +109,175 @@
       "ifa": "Automata de inmunologia V8 UltraCE",
       "atc": "Sin ATC",
       "enlace": "https://ansm.sante.fr/informations-de-securite/immunologie-automate-v8-ultrace-helena-biosciences"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro del lote L49511 de Fucithalmic 1 por ciento gel oftalmico (Centre Specialites Pharmaceutiques)",
+      "producto": "Farmaco",
+      "ifa": "Acido fusidico (Fucithalmic 1 por ciento gel oftalmico)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/fucithalmic-1-pour-cent-gel-ophtalmique-laboratoire-centre-specialites-pharmaceutiques"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Vanta Implantable Neurostimulator (INS) de Medtronic Inc (ref. 16418/23)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Neuroestimulador implantable Vanta (INS)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/01/2023/16418-23_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre el software Vercise Neural Navigator 5 de Boston Scientific Neuromodulation (ref. 51694/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Software Vercise Neural Navigator 5",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/01/2026/51694-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Shockwave Reducer de Shockwave Medical (ref. 51153/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Shockwave Reducer (implante)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/11/2026/51153-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de los sistemas de anestesia Carestation 850 y 850c",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas de anestesia Carestation 850 / 850c",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/carestation-850-0"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro voluntario de lotes de Accell Connexus (IsoTis OrthoBiologics)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Accell Connexus (matriz osea desmineralizada)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/accell-connexusr"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de lotes del Surfacer Inside-Out Access Catheter System (Merit Medical)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Surfacer Inside-Out Access Catheter System (vaina Workstation y dilatador)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/surfacerr-inside-outr-access-catheter-system"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "FDA (Alerta temprana): Intersurgical Inc. retira del mercado los tubos y sistemas respiratorios Smoothbore de 22 mm",
+      "producto": "Dispositivo Medico",
+      "ifa": "Tubos y sistemas respiratorios Smoothbore 22 mm (Intersurgical)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/early-alert-intersurgical-inc-removes-22mm-smoothbore-breathing-tubes-and-systems"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "FDA (Alerta temprana): Arrow International (Teleflex) retira productos que contienen componentes de guia metalica en espiral (Spring Wire Guide)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Guias Arrow con recubrimiento hidrofilico y cateteres PICC/JACC Arrowg+ard Blue Advance",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/early-alert-arrow-international-removes-products-containing-spring-wire-guide-components"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "MFDS: carta de seguridad sobre los agonistas del receptor de GLP-1 (GLP-1 RA) y el riesgo de neuropatia optica isquemica anterior no arteritica (NAION)",
+      "producto": "Farmaco",
+      "ifa": "Agonistas del receptor del peptido similar al glucagon tipo 1 (GLP-1 RA)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBAC01/getItem?safeLetterNo=517"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 379-2026: producto fraudulento DETOX NOW",
+      "producto": "Farmaco",
+      "ifa": "DETOX NOW",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/producto-fraudulento-detox-now"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 380-2026: productos fraudulentos HIPERTONICA, OMEGAXL, AUDIOCALM y TORIX",
+      "producto": "Farmaco",
+      "ifa": "HIPERTONICA, OMEGAXL, AUDIOCALM, TORIX",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/productos-fraudulentos-hipertonica-omegaxl-audiocalm-torix"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-10",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 381-2026: producto fraudulento (falsificacion) SAL DE FRUTAS LUA lote 1M7500 DIC 2027",
+      "producto": "Farmaco",
+      "ifa": "Sal de frutas (SAL DE FRUTAS LUA) - bicarbonato de sodio / acido citrico",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/producto-fraudulento-falsificacion-sal-de-frutas-lua-lote-1m7500-dic-2027"
     },
     {
       "y": 2026,
