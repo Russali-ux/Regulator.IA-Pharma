@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-11T18:20:16Z",
-  "total": 2908,
+  "generatedAt": "2026-11-13T18:22:45Z",
+  "total": 2936,
   "stats": {
-    "total": 2908,
-    "thisYear": 1460,
+    "total": 2936,
+    "thisYear": 1488,
     "agencies": 28,
     "countries": 28
   },
@@ -38,33 +38,33 @@
     ],
     [
       "2026",
-      1460
+      1488
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      523
+      530
     ],
     [
       "BfArM",
-      309
+      314
     ],
     [
       "Health Canada",
-      301
+      307
     ],
     [
       "AEMPS",
-      256
+      257
     ],
     [
       "MHRA",
-      233
+      234
     ],
     [
       "DIGEMID",
-      185
+      186
     ],
     [
       "TGA",
@@ -76,7 +76,7 @@
     ],
     [
       "MFDS",
-      128
+      131
     ],
     [
       "INVIMA",
@@ -84,6 +84,357 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro de producto del tornillo de cirugia maxilofacial 2.0 Cortical Screw 19mm, HD6, 1/Pkg (Medartis)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Tornillo cortical 2.0 Cortical Screw 19 mm, HD6, 1/Pkg (cirugia maxilofacial, Medartis)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/vis-chirurgie-maxillo-faciale-2-0-cortical-screw-19mm-hd6-1-pkg-medartis"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro de producto de los reactivos Hydragel 15 ISO-PAL e Hydragel 7 ISO-PAL (Sebia)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Reactivos de bioquimica Hydragel 15 ISO-PAL e Hydragel 7 ISO-PAL (Sebia)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/biochimie-reactifs-hydragel-15-iso-pal-et-hydragel-7-iso-pal-sebia"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro de producto del reactivo Infinity Ammonia para analizadores quimicos Beckman Coulter AU (Fisher Diagnostics - Thermo Fisher Scientific)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Reactivo de bioquimica Infinity Ammonia para analizadores quimicos Beckman Coulter AU (Fisher Diagnostics / Thermo Fisher Scientific)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/biochimie-reactif-infinity-ammonia-pour-analyseurs-chimiques-beckman-coulter-au-fisher-diagnostics-thermo-fisher-scientific"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre la consola Rotaflow de ECMO/CEC (Getinge / Maquet Cardiopulmonary AG)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Consola Rotaflow para ECMO / circulacion extracorporea (Getinge / Maquet Cardiopulmonary AG)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/ecmo-cec-console-rotaflow-getinge-maquet-cardiopulmonary-ag"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el programador del medico de los sistemas de estimulacion cerebral profunda Vercise (Boston Scientific Neuromodulation)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Neuroestimulador implantable - programador del medico de los sistemas de estimulacion cerebral profunda Vercise",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/neurostimulateur-implantable-programmateur-du-medecin-concernant-les-systemes-de-stimulation-cerebrale-profonde-vercise-boston-scientific-neuromodulation-corporation"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre la grua de bipedestacion movil Majorque (Identites)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Grua / eleva-personas movil Majorque (Identites)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/leve-personne-mobile-majorque-identites"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre los automatas de hemostasia CN-series CN-3000, CN-3500, CN-6000 y CN-6500 (Sysmex)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Automatas de hemostasia CN-series CN-3000 / CN-3500 / CN-6000 / CN-6500 (Sysmex)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/hemostase-automates-cn-series-cn-3000-cn-3500-cn-6000-cn-6500-sysmex-1"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Reino Unido",
+      "agencia": "MHRA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MHRA EL(26)A/48: Class 4 Medicines Defect Notification - Star Pharmaceuticals Ltd, Enalapril maleato / Hidroclorotiazida 20 mg/12,5 mg comprimidos",
+      "producto": "Farmaco",
+      "ifa": "Enalapril maleato / hidroclorotiazida 20 mg / 12,5 mg comprimidos (Star Pharmaceuticals Ltd)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gov.uk/drug-device-alerts/class-4-medicines-defect-notification-star-pharmaceuticals-ltd-enalapril-maleate-slash-hydrochlorothiazide-20-mg-slash-12-dot-5-mg-tablets-el-26-a-slash-48"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro del lote 24009 de Pharma Rebamipide Tab (파마레바미피드정) de Korea Pharma por riesgo de materia extrana",
+      "producto": "Farmaco",
+      "ifa": "Rebamipida (파마레바미피드정 / Pharma Rebamipide Tab)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201403987"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro de lotes de Easylong Internal Liquid (이지롱내복액) de Aprogen Biologics por desviacion de pH",
+      "producto": "Farmaco",
+      "ifa": "이지롱내복액 (Easylong solucion oral)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=199300981"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ANMAT (Disposicion N° 7207/2026): se prohibe un lote falsificado del medicamento Dysport 500 IPSEN",
+      "producto": "Farmaco",
+      "ifa": "Toxina botulinica tipo A (Dysport 500 IPSEN, lote P081932, vto. 06/2029)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/se-prohibe-un-lote-falsificado-del-medicamento-dysport-500-ipsen"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANMAT (Disposicion N° 7250/2026): se prohiben todas las especialidades medicinales que contengan Monosialogangliosidos (GM1) y se cancelan sus registros",
+      "producto": "Farmaco",
+      "ifa": "Monosialogangliosidos (GM1)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/se-prohiben-todas-las-especialidades-medicinales-que-contengan-monosialogangliosidos-gm1"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ANMAT (Disposicion N° 7206/26): se prohiben los medicamentos de la marca CANNA OIL",
+      "producto": "Farmaco",
+      "ifa": "Aceite de cannabis y derivados (CANNA OIL - gotero y crema)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/se-prohiben-medicamentos-de-la-marca-canna-oil"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "Health Canada: aviso publico sobre peptidos no autorizados, incluidos peptidos inyectables contaminados vendidos por Sage & Summit Wellness Co. (Ottawa, ON)",
+      "producto": "Farmaco",
+      "ifa": "Peptidos no autorizados (formato inyectable y capsulas) incautados a Sage & Summit Wellness Co., 451 Preston Street, Ottawa, ON",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/health-canada-warns-about-unauthorized-peptides-including-contaminated-injectable"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de las Mini Blades de Beaver-Visitec International por problema de integridad del sellado",
+      "producto": "Dispositivo Medico",
+      "ifa": "Beaver-Visitec International Mini Blades (ref. 364823, 364820, 364822, BEAVER6900, BEAVER6700, BEAVER6400)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/beaver-visitec-international-mini-blades"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro del hotfix syngo MR XB20A-HF02 de los sistemas MAGNETOM Flow.Elite (Siemens Healthineers)",
+      "producto": "Dispositivo Medico",
+      "ifa": "MAGNETOM Flow.Elite MR, software VB20A-2510 (modelos 11851911 y 11878345) - hotfix syngo MR XB20A-HF02",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/magnetom-flowelite-mr-xb20a-hf02"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de bandejas General Procedure Tray de Cardinal Health por los equipos de infusion BD Alaris incluidos",
+      "producto": "Dispositivo Medico",
+      "ifa": "Cardinal Health General Procedure Tray (ref. RES307732C, RES3077323, RES3077322, RES3077321, RES307732A)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/cardinal-health-general-procedure-tray"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro del hotfix syngo MR XB10B-HF02 de los sistemas MAGNETOM Flow.Elite (Siemens Healthcare)",
+      "producto": "Dispositivo Medico",
+      "ifa": "MAGNETOM Flow.Elite MR, software VB10B-2510 (modelo 11851911, SN 234787 y 234789) - hotfix syngo MR XB10B-HF02",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/magnetom-flowelite-mr-xb10b-hf02"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de Centricity Universal Viewer de GE HealthCare por vulnerabilidad de ciberseguridad",
+      "producto": "Dispositivo Medico",
+      "ifa": "Centricity Universal Viewer (SW v7.0 hasta UV7.0 SP2.0.1) y Centricity PACS-IW (GE HealthCare IITS USA Corp)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/centricityr-universal-viewer"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Track-it software de PTW Freiburg (ref. 50781/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Track-it software (PTW Freiburg, Physikalisch-Technische Werkstatten Dr. Pychlau GmbH)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/18/2026/50781-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre ORBIS Medication de DH Healthcare GmbH (ref. 49578/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "ORBIS Medication (software de prescripcion / gestion de medicacion, DH Healthcare GmbH)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/09/2026/49578-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre preservativos de Richter Rubber Technology Sdn Bhd (ref. 52208/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Preservativos - Richter Rubber Technology (Richter Rubber Technology Sdn Bhd)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/05/2026/52208-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-11",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ALERTA DIGEMID N° 133-2026: retiro del mercado de un lote de dispositivo medico observado por resultado critico de control de calidad (GASA ESTERIL TIPO VI)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Gasa esteril tipo VI 10 cm x 10 cm, 8 pliegues, marca CORONA, sobre x 5 unidades (lote 201109015; RS DM0380N; Laboratorio Textiles Los Rosales S.A.C., Peru)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-n133-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-11",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Renodrain Nephrostomie de Urotech GmbH (ref. 50559/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Renodrain Nephrostomie (cateter de nefrostomia)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/07/2026/50559-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-11",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre BD Connecta de BD Switzerland Sarl (ref. 52353/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "BD Connecta (equipos y materiales de infusion)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/07/2026/52353-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-11",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro de lotes de Tosrong S Liquid (토스롱에스액) de Dongsung Pharm por desviacion en el contenido de escopolamina",
+      "producto": "Farmaco",
+      "ifa": "토스롱에스액 (Tosrong S solucion) - escopolamina bromhidrato hidratada",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202301116"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-11",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ANMAT (Disposicion N° 7199/26): prohibicion de tres endoprotesis GORE VIABAHN VBX sustraidas",
+      "producto": "Dispositivo Medico",
+      "ifa": "Endoprotesis expandible con balon Gore VIABAHN VBX (PM 266-82; ref. BXA055902H lote 28350476 y ref. BXA053902H lotes 29004355A y 29004356A), titular Emeclar S.A.",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibe-productos-medicos-de-la-marca-gore-viabahn-sustraidos"
+    },
     {
       "y": 2026,
       "fecha": "2026-11-10",
@@ -2306,6 +2657,19 @@
       "ifa": "Raiz de Bupleurum (Bupleurum falcatum, 시호 / 한약재)",
       "atc": "Sin ATC",
       "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200612424"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-10-29",
+      "pais": "España",
+      "agencia": "AEMPS",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AEMPS (Boletin de Seguridad de Medicamentos de Uso Humano, agosto y septiembre de 2026): micofenolato - reacciones anafilacticas",
+      "producto": "Farmaco",
+      "ifa": "Micofenolato (micofenolato de mofetilo / acido micofenolico)",
+      "atc": "L04AX04 — LENALIDOMIDA",
+      "enlace": "https://www.aemps.gob.es/informa/boletin-sobre-seguridad-de-medicamentos-de-uso-humano-agosto-y-septiembre-de-2026/"
     },
     {
       "y": 2026,
