@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-13T18:22:45Z",
-  "total": 2936,
+  "generatedAt": "2026-11-14T16:51:18Z",
+  "total": 2957,
   "stats": {
-    "total": 2936,
-    "thisYear": 1488,
+    "total": 2957,
+    "thisYear": 1509,
     "agencies": 28,
     "countries": 28
   },
@@ -38,7 +38,7 @@
     ],
     [
       "2026",
-      1488
+      1509
     ]
   ],
   "agencyChart": [
@@ -48,11 +48,11 @@
     ],
     [
       "BfArM",
-      314
+      318
     ],
     [
       "Health Canada",
-      307
+      310
     ],
     [
       "AEMPS",
@@ -80,7 +80,7 @@
     ],
     [
       "INVIMA",
-      100
+      112
     ]
   ],
   "data": [
@@ -135,6 +135,279 @@
       "ifa": "Consola Rotaflow para ECMO / circulacion extracorporea (Getinge / Maquet Cardiopulmonary AG)",
       "atc": "Sin ATC",
       "enlace": "https://ansm.sante.fr/informations-de-securite/ecmo-cec-console-rotaflow-getinge-maquet-cardiopulmonary-ag"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Peru",
+      "agencia": "CENADIM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "CENADIM: Nuevas advertencias de la FDA sobre un posible riesgo de eventos oculares graves por agonistas del receptor de GLP-1",
+      "producto": "Farmaco",
+      "ifa": "Agonistas del receptor de GLP-1 (semaglutida, tirzepatida, dulaglutida, liraglutida, exenatida)",
+      "atc": "Sin ATC",
+      "enlace": "https://bvcenadim.digemid.minsa.gob.pe/index.php/noticias/583-nuevas-advertencias-de-la-fda-sobre-un-posible-riesgo-de-eventos-oculares-graves-por-agonistas-del-receptor-de-glp-1"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT: retiro voluntario del mercado del lote CP100-1383 de CIPROFLOXACINA UGAL 200 mg solucion inyectable (UGAL FARMACEUTICA S.A.)",
+      "producto": "Farmaco",
+      "ifa": "Ciprofloxacino (CIPROFLOXACINA UGAL 200 mg/100 ml solucion inyectable)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/retiro-del-mercado-de-un-lote-de-ciprofloxacina-ugal"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Canadá",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro del Clinician Programmer de los sistemas de estimulacion cerebral profunda (DBS) Vercise de Boston Scientific Neuromodulation",
+      "producto": "Dispositivo Medico",
+      "ifa": "Clinician Programmer para sistemas Vercise DBS (Boston Scientific Neuromodulation)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/clinician-programmer-vercisetm-deep-brain-stimulation-dbs-systems"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Canadá",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro del sistema Azurion 7 M20 de Philips Medical Systems Nederland por dos fallas de software que pueden causar perdida de la imagen de rayos X",
+      "producto": "Dispositivo Medico",
+      "ifa": "Azurion 7 M20 (Philips Medical Systems Nederland B.V.)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/azurion-7-m20-3"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Canadá",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro del lote 26A35A de SECARIS NASAL GEL (Pendopharm) por posible presencia de materia extrana",
+      "producto": "Farmaco",
+      "ifa": "Macrogol 15% / propilenglicol 20% (SECARIS NASAL GEL, DIN 00551805)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/secaris-nasal-gel-affected-lot-may-contain-foreign-matter"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre VITROS Chemistry Products A1c Slides de QuidelOrtho (Ortho Clinical Diagnostics Inc) (ref. 49153/26)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "VITROS Chemistry Products A1c Slides (QuidelOrtho / Ortho Clinical Diagnostics Inc)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/08/2026/49153-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre LEONI 4 de Löwenstein Medical GmbH & Co. KG (ref. 52289/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "LEONI 4 (Löwenstein Medical GmbH & Co. KG)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/12/2026/52289-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre IntelliVue Patient Monitor de Philips Medizin Systeme Böblingen GmbH (ref. 40497/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "IntelliVue Patient Monitor (Philips Medizin Systeme Böblingen GmbH)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/10/2026/40497-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Gelweave Vascular Prosthesis de Vascutek Ltd (ref. 51231/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Gelweave Vascular Prosthesis (Vascutek Ltd)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/11/2026/51231-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ALERTA No. 382-2026: Centricity High Acuity Critical Care / Anesthesia (GE HealthCare)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Centricity High Acuity Anesthesia (CHA-A) y Centricity High Acuity Critical Care (CHA-CC) - GE HealthCare",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/centricity-high-acuity-critical-care-anesthesia"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ALERTA No. 383-2026: Noxboxi - Sistema para Administracion y Monitoreo de Oxido Nitrico",
+      "producto": "Dispositivo Medico",
+      "ifa": "NOxBOXi - sistema inteligente de entrega y monitoreo de oxido nitrico (modulo NOxMixer)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/noxboxi-sistema-para-administracion-y-monitoreo-de-oxido-nitrico"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ALERTA No. 384-2026: Sistema de RM SIGNA Artist / SIGNA Artist Evo (GE HealthCare)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas de resonancia magnetica SIGNA Artist y SIGNA Artist Evo (GE HealthCare)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/sistema-de-rm-signa-artist-signa-artist-evo"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 385-2026: producto fraudulento MYO & D-CHIRO INOSITOL",
+      "producto": "Farmaco",
+      "ifa": "MYO & D-CHIRO INOSITOL",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/producto-fraudulento-myo-d-chiro-inositol"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 386-2026: productos fraudulentos promocionados como suplementos dietarios a traves de pagina web - Parte 1 de 7",
+      "producto": "Farmaco",
+      "ifa": "Varios productos promocionados como suplementos dietarios (parte 1 de 7)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/productos-fraudulentos-promocionados-como-suplementos-dietarios-a-traves-de-pagina-web-1-de-7"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 387-2026: productos fraudulentos promocionados como suplementos dietarios a traves de pagina web - Parte 2 de 7",
+      "producto": "Farmaco",
+      "ifa": "Varios productos promocionados como suplementos dietarios (parte 2 de 7)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/productos-fraudulentos-promocionados-como-suplementos-dietarios-a-traves-de-pagina-web-parte-2-de-7"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 388-2026: productos fraudulentos promocionados como suplementos dietarios a traves de pagina web - Parte 3 de 7",
+      "producto": "Farmaco",
+      "ifa": "Varios productos promocionados como suplementos dietarios (parte 3 de 7)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/productos-fraudulentos-promocionados-como-suplementos-dietarios-a-traves-de-pagina-web-parte-3-de-7"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 389-2026: productos fraudulentos promocionados como suplementos dietarios a traves de pagina web - Parte 4 de 7",
+      "producto": "Farmaco",
+      "ifa": "Varios productos promocionados como suplementos dietarios (parte 4 de 7)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/productos-fraudulentos-promocionados-como-suplementos-dietarios-a-traves-de-pagina-web-parte-4-de-7"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 390-2026: productos fraudulentos promocionados como suplementos dietarios a traves de pagina web",
+      "producto": "Farmaco",
+      "ifa": "Varios productos promocionados como suplementos dietarios (publicacion sin indicacion de parte)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/productos-fraudulentos-promocionados-como-suplementos-dietarios-a-traves-de-pagina-web-390-2026"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 391-2026: productos fraudulentos promocionados como suplementos dietarios a traves de pagina web - Parte 7 de 7",
+      "producto": "Farmaco",
+      "ifa": "Varios productos promocionados como suplementos dietarios (KYOLIC de Wakunaga, L-LEUCINE y ASTAXANTHIN de Nutricost, 15-IN-1 MAGNESIUM COMPLEX, MAGNESIUM + ASHWAGANDHA y L-THEANINE de Vitalibre, entre otros)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/productos-fraudulentos-promocionados-como-suplementos-dietarios-a-traves-de-pagina-web-parte-7-de-7"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 392-2026: producto fraudulento FORMULAS - CONEXION COGNICION - Golden Teacher + Melena de Leon",
+      "producto": "Farmaco",
+      "ifa": "FORMULAS - CONEXION COGNICION - Golden Teacher + Melena de Leon (Psilocybe spp. / Hericium erinaceus)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/producto-fraudulento-formulas-conexion-cognicion-golden-teacher-melena-de-leon"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-13",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 393-2026: producto fraudulento ULTRASLIM GOLD CAPSULA",
+      "producto": "Farmaco",
+      "ifa": "ULTRASLIM GOLD capsula",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/ultraslim-gold-capsula"
     },
     {
       "y": 2026,
