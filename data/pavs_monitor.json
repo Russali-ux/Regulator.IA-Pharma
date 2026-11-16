@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-15T17:33:26Z",
-  "total": 2957,
+  "generatedAt": "2026-11-16T20:49:10Z",
+  "total": 2965,
   "stats": {
-    "total": 2957,
-    "thisYear": 1509,
+    "total": 2965,
+    "thisYear": 1517,
     "agencies": 28,
     "countries": 28
   },
@@ -38,17 +38,17 @@
     ],
     [
       "2026",
-      1509
+      1517
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      530
+      535
     ],
     [
       "BfArM",
-      318
+      319
     ],
     [
       "Health Canada",
@@ -76,7 +76,7 @@
     ],
     [
       "MFDS",
-      131
+      132
     ],
     [
       "INVIMA",
@@ -84,6 +84,110 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT: se prohibe la comercializacion interjurisdiccional de medicamentos, especialidades medicinales y productos medicos de KINFARMA S.A. (Disposicion N° 7338/2026)",
+      "producto": "Establecimiento",
+      "ifa": "KINFARMA S.A. (Villa Adelina, provincia de Buenos Aires)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/se-prohibio-la-comercializacion-interjurisdiccional-de-medicamentos-y-productos-medicos-de"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre TEGO Needlefree Hemodialysis Connector de ICU Medical Inc. (ref. 01211/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "TEGO Needlefree Hemodialysis Connector (ICU Medical Inc.)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/07/2026/01211-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro del lote 260930P de los sensores de medicion continua de glucosa FreeStyle Libre 2 Plus de Abbott Diabetes Care",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sensor de medicion continua de glucosa FreeStyle Libre 2 Plus (Abbott Diabetes Care Ltd)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/appareils-de-mesure-du-glucose-en-continu-capteur-freestyle-libre-2-plus-abbott-diabetes-care-ltd-rappel-de-produit-et-conduites-a-tenir"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el software EdgeLab de In Log",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Software de laboratorio EdgeLab (In Log)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/logiciel-edgelab-in-log-1"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el software de biologia molecular Ion Torrent Genexus Dx de Life Technologies Holdings",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Software Ion Torrent Genexus Dx (Life Technologies Holdings)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/biologie-moleculaire-logiciel-ion-torrent-genexus-dx-life-technologies-holdings"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el automata FlexLab X de Inpeco",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Automata de laboratorio FlexLab X (Inpeco; carta emitida por Siemens)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/automate-flexlab-x-inpeco"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el kit de preparacion para cateter de oclusion Philips Bridge de Merit Medical",
+      "producto": "Dispositivo Medico",
+      "ifa": "Kit de preparacion para cateter de oclusion Philips Bridge (Merit Medical)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/kit-de-preparation-pour-catheter-docclusion-philips-bridge-merit-medical"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote EPL25163-1 de 이풀잎강황 (rizoma de curcuma, 강황) de (주)이풀잎제약",
+      "producto": "Farmaco",
+      "ifa": "Curcuma longa / 강황 (curcumina, demetoxicurcumina y bisdemetoxicurcumina)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201004881"
+    },
     {
       "y": 2026,
       "fecha": "2026-11-13",
