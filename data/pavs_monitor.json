@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-16T20:49:10Z",
-  "total": 2965,
+  "generatedAt": "2026-11-17T19:33:36Z",
+  "total": 2981,
   "stats": {
-    "total": 2965,
-    "thisYear": 1517,
+    "total": 2981,
+    "thisYear": 1533,
     "agencies": 28,
     "countries": 28
   },
@@ -38,17 +38,17 @@
     ],
     [
       "2026",
-      1517
+      1533
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      535
+      538
     ],
     [
       "BfArM",
-      319
+      325
     ],
     [
       "Health Canada",
@@ -76,7 +76,7 @@
     ],
     [
       "MFDS",
-      132
+      139
     ],
     [
       "INVIMA",
@@ -84,6 +84,136 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre los equipos de radiologia intervencionista RX Azurion Systems de Philips Medical Systems Nederland (ref. R2631396)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Azurion Systems (equipos de radiologia intervencionista RX) - Philips Medical Systems Nederland B.V.",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/appareil-de-radiologie-interventionnelle-rx-azurion-systems-philips-medical-systems-nederland-bv"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre los equipos de radiologia intervencionista RX Artis icono y Artis pheno de Siemens Healthcare",
+      "producto": "Dispositivo Medico",
+      "ifa": "Artis icono / Artis pheno (equipos de radiologia intervencionista RX) - Siemens Healthcare GmbH",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/appareil-de-radiologie-interventionnelle-rx-artis-icono-artis-pheno-siemens-healthcare-gmbh-1"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el reactivo de hematologia Coulter DxH Diluent de Beckman Coulter (ref. R2634245)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Coulter DxH Diluent (reactivo diluyente para analizadores de hematologia) - Beckman Coulter",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/hematologie-reactif-coulter-dxh-diluent-beckman-coulter"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote SQ-25002-3 de 선일강활 de 농업회사법인선일생약주식회사",
+      "producto": "Farmaco",
+      "ifa": "Ostericum koreanum / 강활 (raiz, 한약재)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201108841"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote 2602-SL de 쉼표리빙보건용마스크(KF80) de (주)웰가드",
+      "producto": "Dispositivo Medico",
+      "ifa": "Mascarilla sanitaria KF80 (blanca, talla grande y pequena)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202004362"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote YDKG04710 de 영천약초도매시장산약 de 영천약초도매시장주식회사",
+      "producto": "Farmaco",
+      "ifa": "Dioscorea spp. / 산약 (한약재)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201503386"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote N250930103 de 허브팜절패모 de (주)허브팜",
+      "producto": "Farmaco",
+      "ifa": "Fritillaria thunbergii / 절패모 (한약재)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200505078"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote 26174-01 de 현진창출 de (주)현진제약",
+      "producto": "Farmaco",
+      "ifa": "Atractylodes spp. / 창출 (한약재)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200504484"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote 330-018-25-01 de 자연세상목단피 de (주)자연세상",
+      "producto": "Farmaco",
+      "ifa": "Paeonia suffruticosa (corteza de raiz) / 목단피 (한약재)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201304672"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote 25178-01 de 현진천마 de (주)현진제약",
+      "producto": "Farmaco",
+      "ifa": "Gastrodia elata / 천마 (한약재)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200504548"
+    },
     {
       "y": 2026,
       "fecha": "2026-11-16",
@@ -187,6 +317,84 @@
       "ifa": "Curcuma longa / 강황 (curcumina, demetoxicurcumina y bisdemetoxicurcumina)",
       "atc": "Sin ATC",
       "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201004881"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre 3Dimensions and Selenia Dimensions de Hologic, Inc Marlborough (ref. 51435/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "3Dimensions and Selenia Dimensions - Hologic, Inc Marlborough",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/17/2026/51435-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Flexible Injection Needle de Urotech GmbH (ref. 49990/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Flexible Injection Needle - Urotech GmbH",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/14/2026/49990-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre IntraSight Plus de Philips Image Guided Therapy Corporation (ref. 52577/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "IntraSight Plus - Philips Image Guided Therapy Corporation",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/19/2026/52577-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Custom Pack de M.E.D. Medical Products GmbH (ref. 52630/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Custom Pack - M.E.D. Medical Products GmbH",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/12/2026/52630-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Pleuracan de B. Braun Melsungen AG (ref. 45285/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Pleuracan - B. Braun Melsungen AG",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/07/2026/45285-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Vanta Implantable Neurostimulator (INS) de Medtronic Inc (ref. 52707/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Vanta Implantable Neurostimulator (INS) - Medtronic Inc",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/01/2026/52707-26_kundeninfo_de.html"
     },
     {
       "y": 2026,
