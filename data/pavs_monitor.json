@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-17T19:33:36Z",
-  "total": 2981,
+  "generatedAt": "2026-11-18T19:15:42Z",
+  "total": 2995,
   "stats": {
-    "total": 2981,
-    "thisYear": 1533,
+    "total": 2995,
+    "thisYear": 1547,
     "agencies": 28,
     "countries": 28
   },
@@ -38,21 +38,21 @@
     ],
     [
       "2026",
-      1533
+      1547
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      538
+      541
     ],
     [
       "BfArM",
-      325
+      330
     ],
     [
       "Health Canada",
-      310
+      312
     ],
     [
       "AEMPS",
@@ -64,7 +64,7 @@
     ],
     [
       "DIGEMID",
-      186
+      189
     ],
     [
       "TGA",
@@ -80,10 +80,49 @@
     ],
     [
       "INVIMA",
-      112
+      113
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro del lote 008825 de Mapakna LP 20 mg comprimido de liberacion prolongada de Laboratoires Majorelle",
+      "producto": "Farmaco",
+      "ifa": "Nifedipino (Mapakna LP 20 mg comprimido de liberacion prolongada, CIP 34009 550 924 1 4)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/mapakna-lp-20-mg-comprime-a-liberation-prolongee-laboratoires-majorelle"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre los manipuladores uterinos MyTube GYN, UTM GYN y COS GYN y accesorios de Trokamed (ref. R2630568)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Manipuladores uterinos MyTube GYN, UTM GYN y COS GYN, pasahilos para cierre fascial NHH LAP y piezas de mano Luer Lock universales 40100100 LAP - Trokamed",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/manipulateurs-uterins-mytube-gyn-utm-gyn-cos-gyn-passe-fils-pour-fermeture-fasciale-nhh-lap-et-pieces-a-main-luer-lock-universelles-40100100-lap-trokamed"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre los sistemas de anestesia Carestation 850 y Carestation 850c de GE Healthcare (ref. R2632280)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas de anestesia Carestation 850 y Carestation 850c - GE Healthcare",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/systeme-danesthesie-carestation-850-et-carestation-850-ge-healthcare"
+    },
     {
       "y": 2026,
       "fecha": "2026-11-17",
@@ -213,6 +252,97 @@
       "ifa": "Gastrodia elata / 천마 (한약재)",
       "atc": "Sin ATC",
       "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200504548"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 394-2026: productos fraudulentos promocionados como suplementos dietarios a traves de pagina web - Parte 5 de 7",
+      "producto": "Farmaco",
+      "ifa": "Varios productos promocionados como suplementos dietarios a traves de pagina web (parte 5 de 7 de la serie)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/productos-fraudulentos-promocionados-como-suplementos-dietarios-a-traves-de-pagina-web-parte-5-de-7"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de lotes de PegLyte Powder de Pendopharm por posible materia extrana",
+      "producto": "Farmaco",
+      "ifa": "Macrogol / Cloruro de potasio / Bicarbonato de sodio / Cloruro de sodio / Sulfato de sodio (PegLyte Powder, DIN 00777838)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/peglyte-powder-affected-lots-may-contain-foreign-matter"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre InteleShare de Intelerad Holdings USA LTD. (ref. 52034/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "InteleShare - Intelerad Holdings USA LTD.",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/17/2026/52034-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre NanoNeedle Scope de Arthrex Inc. (ref. 52054/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "NanoNeedle Scope - Arthrex Inc.",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/14/2026/52054-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre COPRA6 de COPRA System GmbH (ref. 49477/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "COPRA6 (software clinico) - COPRA System GmbH",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/09/2026/49477-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre cobas c 303 analytical unit de Hitachi High-Technologies Corporation (ref. 50868/26)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "cobas c 303 analytical unit - Hitachi High-Technologies Corporation",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/08/2026/50868-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-17",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre M-PDMS de Meierhofer Medizintechnik GmbH (ref. 49508/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "M-PDMS (sistema de gestion de datos de pacientes) - Meierhofer Medizintechnik GmbH",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/09/2026/49508-26_kundeninfo_de.html"
     },
     {
       "y": 2026,
@@ -395,6 +525,19 @@
       "ifa": "Vanta Implantable Neurostimulator (INS) - Medtronic Inc",
       "atc": "Sin ATC",
       "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/01/2026/52707-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-16",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de lotes de TARO-CANDESARTAN 8 mg por presencia de capsulas de esomeprazol 20 mg",
+      "producto": "Farmaco",
+      "ifa": "Candesartan cilexetilo 8 mg comprimidos (Taro-Candesartan, DIN 02380692)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/taro-candesartan-affected-lots-may-contain-esomeprazole-20mg-capsules"
     },
     {
       "y": 2026,
@@ -954,6 +1097,45 @@
       "ifa": "Preservativos - Richter Rubber Technology (Richter Rubber Technology Sdn Bhd)",
       "atc": "Sin ATC",
       "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/05/2026/52208-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 134-2026: Productos farmaceuticos falsificados incautados en acciones de control y vigilancia sanitaria (PANADOL, DOLOCORDRALAN)",
+      "producto": "Farmaco",
+      "ifa": "Paracetamol (PANADOL 80 mg tabletas masticables, lote 5Y8R), Clonixinato de lisina (DOLOCORDRALAN EXTRA FORTE tabletas recubiertas, lote 322942)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-n134-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 135-2026: Comercializacion ilegal de productos farmaceuticos por redes sociales (Ritalin, Concerta, Consiv, Elvenir)",
+      "producto": "Farmaco",
+      "ifa": "Metilfenidato (Ritalin, Concerta, Consiv), Elvenir y otros productos (ver anexo)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-n135-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-12",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 136-2026: Medicamentos falsificados comunicados a la OMS por diferentes paises a traves del Sistema Mundial de Vigilancia y Monitoreo (PHESGO, INFINZI, DARZALEX, JAKAVI)",
+      "producto": "Farmaco",
+      "ifa": "Pertuzumab/trastuzumab (PHESGO), Durvalumab (INFINZI), Daratumumab (DARZALEX), Ruxolitinib (JAKAVI)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-n136-2026/"
     },
     {
       "y": 2026,
