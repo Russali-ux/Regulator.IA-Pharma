@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-18T19:15:42Z",
-  "total": 2995,
+  "generatedAt": "2026-11-19T19:20:17Z",
+  "total": 3012,
   "stats": {
-    "total": 2995,
-    "thisYear": 1547,
+    "total": 3012,
+    "thisYear": 1564,
     "agencies": 28,
     "countries": 28
   },
@@ -38,21 +38,21 @@
     ],
     [
       "2026",
-      1547
+      1564
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      541
+      545
     ],
     [
       "BfArM",
-      330
+      334
     ],
     [
       "Health Canada",
-      312
+      316
     ],
     [
       "AEMPS",
@@ -72,7 +72,7 @@
     ],
     [
       "FDA",
-      154
+      155
     ],
     [
       "MFDS",
@@ -80,10 +80,62 @@
     ],
     [
       "INVIMA",
-      113
+      114
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro de producto de las endoprotesis toracicas Relay Plus y Relay Pro y la endoprotesis abdominal Treo de Terumo Aortic",
+      "producto": "Dispositivo Medico",
+      "ifa": "Endoprotesis toracicas Relay Plus y Relay Pro y endoprotesis abdominal Treo - Terumo Aortic",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/endoprotheses-thoraciques-relay-plus-et-relay-pro-et-endoprothese-abdominale-treo-terumo-aortic"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre las consolas de contrapulsacion intraaortica Cardiosave Hybrid y Cardiosave Rescue de Getinge",
+      "producto": "Dispositivo Medico",
+      "ifa": "Consolas de contrapulsacion intraaortica Cardiosave Hybrid y Cardiosave Rescue - Getinge",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/console-de-contre-pulsion-intra-aortique-cardiosave-hybrid-et-cardiosave-rescue-getinge"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro de dos lotes del test rapido de bacteriologia Xpert MRSA/SA SSTI de Cepheid",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Test rapido Xpert MRSA/SA SSTI - Cepheid",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/bacteriologie-test-rapide-xpert-mrsa-sa-ssti-cepheid"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "FDA Early Alert: Outset Medical actualiza las instrucciones de uso de la consola Tablo y del TabloCart with Prefiltration Drawer del sistema de hemodialisis",
+      "producto": "Dispositivo Medico",
+      "ifa": "Cables de alimentacion PN-0005746 y PN-0008460 de la consola Tablo y del TabloCart with Prefiltration Drawer - Outset Medical",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/early-alert-outset-medical-updates-use-instructions-tablo-console-and-tablocart-prefiltration-drawer"
+    },
     {
       "y": 2026,
       "fecha": "2026-11-18",
@@ -122,6 +174,175 @@
       "ifa": "Sistemas de anestesia Carestation 850 y Carestation 850c - GE Healthcare",
       "atc": "Sin ATC",
       "enlace": "https://ansm.sante.fr/informations-de-securite/systeme-danesthesie-carestation-850-et-carestation-850-ge-healthcare"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA No. 395-2026: producto fraudulento ZERO CUCARACHAS - PEST CONTROL COCKROACH sin registro sanitario",
+      "producto": "Producto de Higiene Domestica",
+      "ifa": "ZERO CUCARACHAS - PEST CONTROL COCKROACH",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/zero-cucarachas-pest-control-cockroach"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT: Disposicion N° 7368/2026 - prohibicion de uso, comercializacion, publicidad y distribucion de GEL NEUTRO marca SANICOL de ALCOFRAC SA",
+      "producto": "Dispositivo Medico",
+      "ifa": "GEL NEUTRO marca SANICOL (ALCOFRAC S.A.)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibe-el-producto-gel-neutro-de-la-firma-alcofrac-sa"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT: Disposicion N° 7383/2026 - baja de las habilitaciones de 55 establecimientos de transito interjurisdiccional de productos medicos y productos para diagnostico in vitro",
+      "producto": "Establecimiento",
+      "ifa": "Diversas firmas de transito interjurisdiccional de productos medicos y productos para diagnostico de uso in vitro",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-dio-de-baja-las-habilitaciones-de-55-establecimientos-que-realizan-transito"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANMAT: Disposicion N° 7212/26 - baja de la habilitacion de la firma FEMEDICAL S.A. y cancelacion del Legajo N° 236",
+      "producto": "Establecimiento",
+      "ifa": "FEMEDICAL S.A. (CUIT 30-71095936-2)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-dio-de-baja-la-habilitacion-de-la-firma-femedical-sa"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Dimension Urine Barbiturate Screen de Siemens Healthcare Diagnostics Inc. Newark (ref. 51654/26)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Dimension Urine Barbiturate Screen - Siemens Healthcare Diagnostics Inc. Newark",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/08/2026/51654-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Avantage Cup Gripper de Biomet UK Ltd (ref. 53537/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Avantage Cup Gripper - Biomet UK Ltd",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/06/2026/53537-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre BeFlow Iliac Covered Stent System de Bentley InnoMed GmbH (ref. 53450/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "BeFlow Iliac Covered Stent System - Bentley InnoMed GmbH",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/11/2026/53450-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Minimed Go Application de Medtronic Minimed (ref. 52787/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Minimed Go Application - Medtronic Minimed",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/09/2026/52787-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el software de radioterapia RayStation v 4.7.0 V2026 de RaySearch Laboratories AB",
+      "producto": "Dispositivo Medico",
+      "ifa": "Software de radioterapia RayStation v 4.7.0 V2026 - RaySearch Laboratories AB",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/logiciel-de-radiotherapie-raystation-v-4-7-0-v2026-raysearch-laboratories-ab"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro del analizador DxC 500i Clinical Analyzer y del modulo DxC 500i AU Chemistry de Beckman Coulter por error de conversion de unidades",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "DxC 500i Clinical Analyzer y DxC 500i AU Chemistry Module (software 1.5.0 e inferior) - Beckman Coulter",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/dxc-500i-clinical-analyzer-and-dxc-500i-au-chemistry-module"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de asientos de las sillas de ducha e inodoro Raz Shower Commode Chairs por fabricacion fuera de especificaciones",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sillas de ducha e inodoro Raz Shower Commode Chairs (asientos moldeados y VFI) - Raz Design",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/raz-shower-commode-chairs"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro del software de planificacion quirurgica Blueprint versiones 4.2.2 y 4.3.1 de Stryker por errores de software",
+      "producto": "Dispositivo Medico",
+      "ifa": "Software Blueprint versiones 4.2.2 y 4.3.1 - Stryker",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/blueprintr"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-18",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro voluntario de lotes de Spring-Wire Guide, Pressure Injectable PICC Kit y Arrow PICC con tecnologia Arrowg+ard Blue Advance de Teleflex",
+      "producto": "Dispositivo Medico",
+      "ifa": "Spring-Wire Guide, Pressure Injectable PICC Kit y Arrow PICC con Arrowg+ard Blue Advance - Teleflex / Arrow International",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/spring-wire-guide-pressure-injectable-picc-kit-arrow-picc-arrowgard-blue-advancer"
     },
     {
       "y": 2026,
