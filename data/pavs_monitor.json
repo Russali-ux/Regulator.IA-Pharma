@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-19T19:20:17Z",
-  "total": 3012,
+  "generatedAt": "2026-11-20T18:59:03Z",
+  "total": 3037,
   "stats": {
-    "total": 3012,
-    "thisYear": 1564,
+    "total": 3037,
+    "thisYear": 1589,
     "agencies": 28,
     "countries": 28
   },
@@ -38,21 +38,21 @@
     ],
     [
       "2026",
-      1564
+      1589
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      545
+      548
     ],
     [
       "BfArM",
-      334
+      336
     ],
     [
       "Health Canada",
-      316
+      323
     ],
     [
       "AEMPS",
@@ -64,7 +64,7 @@
     ],
     [
       "DIGEMID",
-      189
+      195
     ],
     [
       "TGA",
@@ -72,11 +72,11 @@
     ],
     [
       "FDA",
-      155
+      156
     ],
     [
       "MFDS",
-      139
+      142
     ],
     [
       "INVIMA",
@@ -84,6 +84,71 @@
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-11-20",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro de lote del reactivo de bioquimica LPa Calibrator de Randox Laboratories",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Reactivo de bioquimica LPa Calibrator - Randox Laboratories Ltd.",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/biochimie-reactif-lpa-calibrator-randox-laboratories"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-20",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre las sillas de ducha/inodoro moviles Raz de Raz Design Inc.",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sillas de ducha/inodoro moviles Raz - Raz Design Inc.",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/chaise-de-douche-toilette-mobile-raz-raz-design-inc"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-20",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote gyen20260505kr de la mascarilla sanitaria 브이핏황사방역마스크(KF94)(흰색) de 주식회사기연마스크 por eficiencia de captacion de particulas no conforme",
+      "producto": "Dispositivo Medico",
+      "ifa": "브이핏황사방역마스크(KF94)(흰색) (주식회사기연마스크) - lote gyen20260505kr",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202501796"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-20",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote 1001 de la mascarilla sanitaria 1.혜원클린프리미엄보건용마스크(KF94)(흰색) de 주식회사에스디클린 por eficiencia de captacion de particulas no conforme",
+      "producto": "Dispositivo Medico",
+      "ifa": "1.혜원클린프리미엄보건용마스크(KF94)(흰색) (주식회사에스디클린) - lote 1001",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBAI01"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-20",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote 1004 de la mascarilla sanitaria 닥터피앤비프리미엄보건용마스크(KF94)(흰색) de 주식회사에스디클린 por eficiencia de captacion de particulas no conforme",
+      "producto": "Dispositivo Medico",
+      "ifa": "닥터피앤비프리미엄보건용마스크(KF94)(흰색) (주식회사에스디클린) - lote 1004",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202501844"
+    },
     {
       "y": 2026,
       "fecha": "2026-11-19",
@@ -135,6 +200,266 @@
       "ifa": "Cables de alimentacion PN-0005746 y PN-0008460 de la consola Tablo y del TabloCart with Prefiltration Drawer - Outset Medical",
       "atc": "Sin ATC",
       "enlace": "https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/early-alert-outset-medical-updates-use-instructions-tablo-console-and-tablocart-prefiltration-drawer"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 137-2026: productos farmaceuticos falsificados incautados en acciones de control y vigilancia sanitaria",
+      "producto": "Farmaco",
+      "ifa": "APRONAX 550 mg tableta (lote 20702534); DOLO NEUROBION NF y DOLO NEUROBION FORTE (lotes 2120353 y M52725-1); DIOXAFLEX CB PLUS capsulas blandas (lote CNPZ)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-n137-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 138-2026: comercializacion ilegal de productos farmaceuticos y dispositivos medicos por redes sociales y pagina web por \"Esthetica Medica\"",
+      "producto": "Farmaco",
+      "ifa": "Toxina Botulinica Nobota Tipo A, Acido Hialuronico 7% La Sante, Radiesse (+) Lidocaine, Radiesse bioestimulador de hidroxiapatita de calcio 1.5 mL (Merz Aesthetics), Restylane Lidocaine, Restylane Lyft Lidocaine, Neuramis Volumen y Neuramis Deep Lidocaine, Ellanse",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-n138-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 139-2026: comercializacion por pagina web del producto farmaceutico NAD+ 1000 mg (CELIVIDA) sin registro sanitario",
+      "producto": "Farmaco",
+      "ifa": "NAD+ 1000 mg (producto farmaceutico dietetico comercializado por CELIVIDA)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-n139-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 140-2026: comercializacion ilegal por redes sociales del producto farmaceutico Elvenir 37.5 mg de procedencia desconocida",
+      "producto": "Farmaco",
+      "ifa": "Elvenir 37.5 mg comprimido recubierto",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-n140-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ALERTA DIGEMID N° 141-2026: comercializacion ilegal de productos farmaceuticos y dispositivos medicos por redes sociales por \"DyJ Medic\"",
+      "producto": "Farmaco",
+      "ifa": "Radiesse (+) Lidocaine; Otesaly Botulinum Toxin Type A 150 UI y 100 UI; Botox Botulinum Toxin Type A 150 y 100 unidades; Dysport toxina de Clostridium botulinum tipo A 500 unidades",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-n141-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Peru",
+      "agencia": "DIGEMID",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ALERTA DIGEMID N° 142-2026: retiro del mercado de un lote de guantes quirurgicos esteriles observado por resultado critico de control de calidad",
+      "producto": "Dispositivo Medico",
+      "ifa": "GUANTES QUIRURGICOS ESTERILES DE UN SOLO USO, modelo 8, caja x 50 pares, lote 20250502QX (RS DM27013E, Tianchang City Anrui Medical Equipments Co. Ltd., China; titular Drogueria Alkhofar S.A.C.)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.digemid.minsa.gob.pe/webDigemid/alertas-modificaciones/2026/alerta-digemid-n142-2026/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Peru",
+      "agencia": "CENADIM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "CENADIM: Health Canada advierte sobre el riesgo potencial de desarrollar rabdomiolisis con el uso de la combinacion de piperacilina y tazobactam",
+      "producto": "Farmaco",
+      "ifa": "Piperacilina / tazobactam",
+      "atc": "Sin ATC",
+      "enlace": "https://bvcenadim.digemid.minsa.gob.pe/index.php/noticias/584-health-canada-advierte-sobre-el-riesgo-potencial-de-desarrollar-rabdomiolisis"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANMAT: retiro del mercado de todos los lotes de SINAXIAL (monosialogangliosido porcino GM1) 20 mg y 100 mg inyectable de TRB PHARMA S.A.",
+      "producto": "Farmaco",
+      "ifa": "Monosialogangliosido porcino (GM1) - SINAXIAL 20 y SINAXIAL 100 inyectable, Certificado N° 39.097 (TRB PHARMA S.A.)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/retiro-del-mercado-de-todos-los-lotes-de-sinaxial"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Dual IBP Adapter de Philips Medizin Systeme Boeblingen GmbH (ref. 49009/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Dual IBP Adapter - Philips Medizin Systeme Boeblingen GmbH",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/10/2026/49009-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre YEASTONE BROTH, 11ML, 10/BOX de Thermo Fisher Scientific GB (ref. 53282/26)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "YEASTONE BROTH, 11ML, 10/BOX - Thermo Fisher Scientific GB",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/08/2026/53282-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre las gruas de techo sobre riel del sistema Likorall de Liko AB",
+      "producto": "Dispositivo Medico",
+      "ifa": "Grua de techo fija sobre riel - Sistema Likorall de grua plafonier sobre riel (Liko AB / Baxter)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/leve-personne-fixe-au-plafond-rail-systeme-likorall-de-leve-personne-plafonnier-sur-rail-liko-ab"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de lotes de Medline 0.9% Sodium Chloride Injection USP 10 ml en jeringa de lavado de 10 ml ZR por resultado microbiologico fuera de especificacion",
+      "producto": "Dispositivo Medico",
+      "ifa": "Medline 0.9% Sodium Chloride Injection, USP 10 ml en jeringa de lavado de 10 ml ZR (cat. EMZ111240, lotes 24IJA014 y 24IJA137) - Medline",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/medline-09-sodium-chloride-injection-usp-10ml-10ml-flush-syringe-zr"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Health Canada: actualizacion de las instrucciones de reprocesamiento manual del sistema de ultrasonido endoscopico y de los gastrovideoscopios ultrasonicos de Olympus",
+      "producto": "Dispositivo Medico",
+      "ifa": "Olympus Endoscopic Ultrasound System y Ultrasonic Gastrovideoscopes para procesadores de ultrasonido Aloka, modelo GF-UC140P-AL5 - Olympus",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/olympus-endoscopic-ultrasound-system-and-ultrasonic-gastrovideoscopes-aloka-ultrasound"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de la guia VascuPuncture PICC High Performance Guidewire por desprendimiento del recubrimiento hidrofilico",
+      "producto": "Dispositivo Medico",
+      "ifa": "VascuPuncture PICC High Performance Guidewire (cat. 18070280NW-05MHP y 18145280NW-05MHP)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/vascupuncturetm-picc-high-performance-guidewire"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de lotes de los tubos endotraqueales Portex de ICU Medical por variabilidad del plastificante de la resina",
+      "producto": "Dispositivo Medico",
+      "ifa": "Tubos endotraqueales Portex - ICU Medical",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/portextm-endotracheal-tubes"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de lotes de los kits de drenaje PleurX de BD por defectos del envase exterior",
+      "producto": "Dispositivo Medico",
+      "ifa": "Kits de drenaje PleurX - BD (Becton Dickinson)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/pleurxtm-drainage-kits"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Health Canada: aviso sobre el Philips Bridge Prep Kit por interaccion con el cateter con balon de oclusion Bridge",
+      "producto": "Dispositivo Medico",
+      "ifa": "Philips Bridge Prep Kit (guia InQwire Amplatz 0.035\") y cateter con balon de oclusion Bridge - Philips",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/philips-bridge-prep-kit"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de las bombas de balon intraaortico CARDIOSAVE Hybrid y CARDIOSAVE Rescue de Getinge por capacitores con polaridad invertida",
+      "producto": "Dispositivo Medico",
+      "ifa": "Bombas de balon intraaortico CARDIOSAVE Hybrid y CARDIOSAVE Rescue - Getinge",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/cardiosaver-hybrid-and-cardiosaver-rescue-intra-aortic-balloon-pumps"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "FDA Early Alert: B. Braun Medical actualiza las instrucciones de uso del Caresite Micro Luer Access Device",
+      "producto": "Dispositivo Medico",
+      "ifa": "Caresite Micro Luer Access Device, componente S5404000 - B. Braun Medical Inc.",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/early-alert-b-braun-medical-inc-updates-use-instructions-caresite-micro-luer-access-device"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Suecia",
+      "agencia": "LAKEMEDELSVERKET",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "LAKEMEDELSVERKET: nuevas recomendaciones de uso de anticonceptivos en mujeres tratadas con Mounjaro (tirzepatida)",
+      "producto": "Farmaco",
+      "ifa": "Tirzepatida (Mounjaro)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.lakemedelsverket.se/sv/nyheter/nya-rekommendationer-for-anvandning-av-preventivmedel-till-kvinnor-som-behandlas-med-mounjaro-tirzepatid"
     },
     {
       "y": 2026,
