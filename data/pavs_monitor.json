@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-23T22:26:29Z",
-  "total": 3037,
+  "generatedAt": "2026-11-24T21:00:12Z",
+  "total": 3084,
   "stats": {
-    "total": 3037,
-    "thisYear": 1589,
+    "total": 3084,
+    "thisYear": 1636,
     "agencies": 28,
-    "countries": 28
+    "countries": 29
   },
   "yearChart": [
     [
@@ -38,29 +38,29 @@
     ],
     [
       "2026",
-      1589
+      1636
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      548
+      557
     ],
     [
       "BfArM",
-      336
+      340
     ],
     [
       "Health Canada",
-      323
+      325
     ],
     [
       "AEMPS",
-      257
+      258
     ],
     [
       "MHRA",
-      234
+      236
     ],
     [
       "DIGEMID",
@@ -72,18 +72,538 @@
     ],
     [
       "FDA",
-      156
+      157
     ],
     [
       "MFDS",
-      142
+      146
     ],
     [
       "INVIMA",
-      114
+      135
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Peru",
+      "agencia": "CENADIM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "CENADIM: Agencia Espanola de Medicamentos y Productos Sanitarios (AEMPS) difunde nuevas recomendaciones anticonceptivas con tirzepatida",
+      "producto": "Farmaco",
+      "ifa": "Tirzepatida (Mounjaro)",
+      "atc": "Sin ATC",
+      "enlace": "https://bvcenadim.digemid.minsa.gob.pe/index.php/noticias/585-aemps-nuevas-recomendaciones-anticonceptivas-con-tirzepatida"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ANMAT: prohibicion de productos medicos ilegitimos de las marcas Metal Gauss e IMECO (Disposicion N° 7476/2026)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Tornillo Interferencial Romo 9 mm L 30 mm (B90-000-02-030, lote B145A2, PM 1358-14, Metal Gauss SA) y Tornillo Kurosaka 7 x 20 mm (T04.270.020, lote 31104, IMECO)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibe-distintos-productos-medicos-de-las-marcas-metal-gauss-e-imeco"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 408-2026 - falla del neuroestimulador implantable Vanta AdaptiveStim de Medtronic despues de cardioversion",
+      "producto": "Dispositivo Medico",
+      "ifa": "Vanta AdaptiveStim / Sistema de Neuroestimulacion para la Terapia contra el Dolor / Neuroestimulador Implantable Vanta AdaptiveStim, modelo 977006 (RS INVIMA 2023EBC-0027914, Medtronic Inc.)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/vantatm-adaptivestimtm-sistema-de-neuroestimulacion-para-la-terapia-contra-el-dolor-neuroestimulador-implantable-vanta-a"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 409-2026 - problemas de conexion en el conector Luer del manometro de control de presion del balon (Cuff) UNIVERSAL",
+      "producto": "Dispositivo Medico",
+      "ifa": "Tubos laringeos - Manometro para control de presion del balon (Cuff) UNIVERSAL, medidor de llenado-control de presion para balon neumotaponador (RS INVIMA 2018DM-0018398, LM Instruments S.A., lote 0000286088; fabricante VBM)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/manometro-para-control-de-presion-del-balon-cuff-universal"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 410-2026 - retiro de cateteres centrales de insercion periferica marca Arrow por desprendimiento del recubrimiento hidrofilo de la guia",
+      "producto": "Dispositivo Medico",
+      "ifa": "Cateteres centrales para insercion periferica marca Arrow (RS INVIMA 2022DM-0000097-R2, Teleflex Medical Colombia S.A.S., lotes 33F25C0067, 33F25D0002, 33F25G0031, 33F25B0401, 33F25D0101 y 33F25H083)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/cateteres-centrales-para-insercion-periferica-marca-arrow"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: informe de seguridad 157-2026 - lista maestra incorrecta en el kit Panocell-20 de Immucor",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Panocell 20 (RS INVIMA 2025RD-0002843-R2, Immucor Inc., lote 37605)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/panocell-20-157-2026"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: informe de seguridad 158-2026 - informacion incorrecta en la lista de fenotipos del reactivo Panoscreen III",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Panoscreen III, ref. 0002381 (RS INVIMA 2025RD-0002900-R2, Immucor Inc., lote 26137)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/panoscreen-iii"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: informe de seguridad 159-2026 - degradacion de la separacion cromatografica en el sistema D-100 Hemoglobin A1c de Bio-Rad",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "D-100 Hemoglobin A1c Analytical Calibrator / Cartridge Pack (RS INVIMA 2019RD-0005835, varios lotes)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/d-100tm-hemoglobin-a1c-analytical-calibratorcartridge-pack"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro del lote Z011 de Albumine humaine iodee [125I] (SERALB-125) de Cis bio international por defecto de engastado de la capsula de aluminio",
+      "producto": "Farmaco",
+      "ifa": "Albumina humana yodada [125I] - Albumine humaine iodee [125I] solucion inyectable, ref. SERALB-125, CIP 34009 564 445 2 6, lote Z011 (caducidad 17/12/2026), Laboratoire Cis Bio International",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/albumine-humaine-iodee-125i-cis-bio-international-solution-injectable-ref-seralb-125-laboratoire-cis-bio-international"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el cateter de imagen intravascular Ivus OptiCross de Boston Scientific",
+      "producto": "Dispositivo Medico",
+      "ifa": "Cateter de imagen intravascular Ivus OptiCross - Boston Scientific",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/catheter-dimagerie-intravasculaire-ivus-opticross-boston-scientific"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro del stent de reduccion del seno coronario Shockwave Reducer de Shockwave Medical",
+      "producto": "Dispositivo Medico",
+      "ifa": "Stent de reduccion del seno coronario Shockwave Reducer - Shockwave Medical",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/stent-de-reduction-du-sinus-coronaire-shockwave-reducer-shockwave-medical"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre los vaporizadores de sevoflurano utilizados con los sistemas de anestesia Flow-i, Flow-c y Flow-e de Getinge",
+      "producto": "Dispositivo Medico",
+      "ifa": "Vaporizadores de sevoflurano utilizados con los sistemas de anestesia Flow-i, Flow-c y Flow-e - Getinge",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/vaporisateur-de-sevoflurane-utilises-avec-les-systemes-danesthesie-flow-i-flow-c-et-flow-e-getinge"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre las monturas de gafas Meta modelos Adventurer / Fury / Starfire / Nova / Capri",
+      "producto": "Dispositivo Medico",
+      "ifa": "Monturas de gafas Meta, modelos Adventurer, Fury, Starfire, Nova y Capri - Meta Platforms Technologies, LLC",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/monture-de-lunettes-meta-modeles-adventurer-fury-starfire-nova-capri-meta-platforms-technologies-llc"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Reino Unido",
+      "agencia": "MHRA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MHRA: Class 4 Medicines Defect Notification EL(26)A/50 - omision de informacion de seguridad en el prospecto de Toradol 30 mg/mL solucion inyectable de Atnahs Pharma UK",
+      "producto": "Farmaco",
+      "ifa": "Ketorolaco trometamol - Toradol 30 mg/mL solucion para inyeccion (Atnahs Pharma UK Limited)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gov.uk/drug-device-alerts/class-4-medicines-defect-notification-atnahs-pharma-uk-limited-toradol-30-mg-slash-ml-solution-for-injection-el-26-a-slash-50"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Reino Unido",
+      "agencia": "MHRA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MHRA: Class 2 Medicines Recall EL(26)A/49 - retiro de un lote de Brintellix 5 mg comprimidos de Quadrant Pharmaceuticals (importacion paralela) por error de rotulado de la concentracion",
+      "producto": "Farmaco",
+      "ifa": "Vortioxetina - Brintellix 5 mg comprimidos recubiertos con pelicula (Quadrant Pharmaceuticals Limited, importacion paralela)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gov.uk/drug-device-alerts/class-2-medicines-recall-quadrant-pharmaceuticals-limited-parallel-import-brintellix-5-mg-film-coated-tablets-el-26-a-slash-49"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 398-2026 - defectos de empaque en las botellas de vacio y kits de drenaje PleurX de Becton Dickinson",
+      "producto": "Dispositivo Medico",
+      "ifa": "PleurX 1000 ml Botella de Vacio con Tubo de Drenaje, Kits de Drenaje PleurX y Kits de Inicio de Cateter Pleural PleurX (RS INVIMA 2022DM-0008823-R1, Becton Dickinson de Colombia Ltda., varios lotes)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/pleurx-1000-ml-botella-de-vacio-con-tubo-de-drenaje"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 399-2026 - endotoxinas elevadas en los sistemas de liberacion de endoprotesis aorticas Treovance y Relay de Terumo",
+      "producto": "Dispositivo Medico",
+      "ifa": "Endoprotesis Aortica Abdominal Treovance con Sistema de Liberacion Navitel (RS INVIMA 2024DM-0010887-R1) y Sistema de endoprotesis vascular toracica Relay Plus / Relay NBS (RS INVIMA 2018DM-0000586-R1), Terumo Colombia Andina S.A.S.",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/endoprotesis-aortica-abdominal-treovance-con-sistema-de-liberacion-navitel"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 400-2026 - vulnerabilidad de ciberseguridad en el sistema PACS (Centricity Universal Viewer y Centricity PACS-IW) de GE HealthCare",
+      "producto": "Dispositivo Medico",
+      "ifa": "PACS - Sistema de archivo, administracion y transferencia de imagenes medicas GE; Centricity Universal Viewer y Centricity PACS-IW (RS INVIMA 2021DM-000639, GE Healthcare Colombia S.A.S.)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/pacs-sistema-de-archivo-administracion-y-tranferencia-de-imagenes-medicas-ge"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 401-2026 - dos condiciones que pueden interrumpir la terapia en el Sistema PrisMax de hemodialisis",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistema PrisMax para Hemodialisis y Purificacion de Sangre Extracorporea (RS 2020EBC-0021267, Vantive S.A.S.; tarjeta principal PCBA Mainboard D8051 rev. A y B, basculas originales D6006)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/sistema-prismax"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 402-2026 - imprecision superior a la especificacion en el reactivo Atellica CH Apolipoprotein B (Apo B)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Atellica CH Apolipoprotein B (Apo B) (RS INVIMA 2018RD-0004860, Siemens Healthcare S.A.S., lote 252670)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/atellica-ch-apolipoprotein-b-apo-b"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 403-2026 - inversion de los valores de calibracion en los calibradores Access HIV Ag/Ab Combo de Beckman Coulter",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Access HIV Ag/Ab Combo Calibrators (RS INVIMA 2025RD-0009128, Beckman Coulter Colombia S.A.S., lotes 472067, 472224, 572049, 572162, 572277, 672059, 672147 y 672181)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/access-hiv-agab-combo-calibrators"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 404-2026 - fallas de calibracion y resultados falsamente negativos en el reactivo HemosIL AcuStar HIT-IgG (PF4-H)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "HemosIL AcuStar HIT-IgG (PF4-H) (RS INVIMA 2017RD-0004073, Werfen Colombia S.A.S., lotes B40006 y B38063)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/hemosil-acustar-hit-igg-pf4-h"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 405-2026 - sesgo positivo de los resultados de HbA1c con las VITROS Chemistry Products A1C Slides",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "VITROS Chemistry Products A1C Slides (RS 2022RD-0007683, Ortho-Clinical Diagnostics Colombia S.A.S., lotes 4800520619 y 3800449915)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/vitros-chemistry-products-a1c-slides"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 406-2026 - resultados falsamente elevados de troponina I cardiaca con los cartuchos I-STAT HS-TNI",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "I-STAT HS-TNI Cartridge (RS INVIMA 2025RD-0009526, Abbott Point of Care Inc., lotes que inician con A24, A25, B25, B26, C26 y D26)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/i-stat-hs-tni-cartridge"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 407-2026 - posible perdida de estabilidad en uso del reactivo Hierro Ferrozina / Iron Ferrozine",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Hierro Ferrozina / Iron Ferrozine (RS INVIMA 2026RD-0009861, Annar Diagnostica Import S.A.S., lotes 0207, 2283 y 504)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/hierro-ferrozina-iron-ferrozine"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: informe de seguridad 154-2026 - discrepancia en los valores asignados a los controles de TSH neonatal del N-TSH AccuBind ELISA",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "N-TSH AccuBind ELISA Test System, ref. 3425-300B y 3425-300D (RS INVIMA 2022RD-0007560, Annar Diagnostica Import S.A.S., lotes EIA-34K1C6, EIA-34K1F6, EIA-34K2G6, EIA-34K4A6 y EIA-34K2B6)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/ntsh-accubind-elisa-kit-192-wells-ntsh-accubind-elisa-kit-480-wells"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: informe de seguridad 155-2026 - perdida de estabilidad de la PTH intacta en el material de control Lyphochek Specialty Immunoassay Control",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Lyphochek Specialty Immunoassay Control (RS INVIMA 2021RD-0006578, Quik Quality Is The Key S.A.S., lote 88790)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/lyphochek-specialty-immunoassay-control"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: informe de seguridad 156-2026 - contaminacion cruzada por arrastre de reactivos en los analizadores Atellica CH y CI (HDL Cholesterol y Total Protein_2)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Atellica CH HDL Cholesterol (HDLC) (RS INVIMA 2022RD-0007335) y Atellica CH Total Protein_2 (TP_2) (RS INVIMA 2023RD-0008197), Siemens Healthcare S.A.S., todos los lotes de las referencias identificadas",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/atellica-ch-hdl-cholesterol-hdlc-atellica-ch-total-protein_2-tp_2"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "Health Canada: aviso publico sobre medicamentos no autorizados, incluidos medicamentos de prescripcion y peptidos inyectables, incautados a Canada Biogenix",
+      "producto": "Farmaco",
+      "ifa": "Medicamentos no autorizados marca Canada Biogenix: capsulas de fenbendazol, fenbendazol+ivermectina, azul de metileno; inyectables SLU-PP-332, NAD+ y agua bacteriostatica con 0,9% de alcohol bencilico; peptidos inyectables AOD-9604, BPC-157, CJC-1295, DSIP, epitalon, GHK-CU, GHRP-6, glutation, ipamorelina, kisspeptina, KPV, LL-37, melanotan, MOTS-C, oxitocina, PNC-27, PT-141, retatrutida, selank, semaglutida, semax, SS-31, TB-500, tesamorelina, timosina alfa-1, timulina, tirzepatida y VIP",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/unauthorized-drugs-including-prescription-drugs-and-injectable-peptides-seized-canada"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Automated Impella Controller de ABIOMED Inc. (ref. 49140/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Automated Impella Controller (AIC) - ABIOMED Inc.",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/10/2026/49140-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre SMOOTHBORE BREATHING SYSTEM de Intersurgical Ltd. (ref. 50519/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Smoothbore Breathing System - Intersurgical Ltd.",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/12/2026/50519-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro de los preservativos Amor Thin 12pc y Vibratissimo Mix 100pc de Amor Gummiwaren GmbH",
+      "producto": "Dispositivo Medico",
+      "ifa": "Preservativos Amor Thin 12pc y Vibratissimo Mix 100pc - Amor Gummiwaren GmbH",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/preservatifs-amor-thin-12pc-et-vibratissimo-mix-100pc-amor-gummiwaren-gmbh"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el software Functional MR V1.0 de Olea Medical",
+      "producto": "Dispositivo Medico",
+      "ifa": "Software Functional MR V1.0 - Olea Medical",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/logiciel-functional-mr-v1-0-olea-medical"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el PACS InteleShare de Intelerad Holdings USA Ltd.",
+      "producto": "Dispositivo Medico",
+      "ifa": "PACS InteleShare - Intelerad Holdings USA Ltd.",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/pacs-inteleshare-intelerad-holdings-usa-ltd-1"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: retiro del material auxiliar de raquis (broca de Kirschner de nitinol y espuma del sistema raquideo ES2) de Stryker Spine, Inc.",
+      "producto": "Dispositivo Medico",
+      "ifa": "Material ancillaire (raquis) - Broca de Kirschner de nitinol y espuma del sistema raquideo ES2 - Stryker Spine, Inc.",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/materiel-ancillaire-rachis-broche-de-kirschner-en-nitinol-mousse-du-systeme-rachidien-es2-stryker-spine-inc"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Irlanda",
+      "agencia": "HPRA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "HPRA: Drug Safety Newsletter Edicion 124 - recordatorio de precauciones para evitar la transferencia secundaria no intencionada de estradiol transdermico en spray y gel, especialmente a ninos",
+      "producto": "Farmaco",
+      "ifa": "Estradiol transdermico (spray y gel)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.hpra.ie/safety-information/safety-notices/article/drug-safety-newsletter---edition-124---23-november-2026"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote 2102E00700 de 알림타액상주25밀리그램/밀리리터 (pemetrexed disodico heptahidrato) de (주)보령 por posible exceso de impurezas en el ensayo de estabilidad",
+      "producto": "Farmaco",
+      "ifa": "알림타액상주25밀리그램/밀리리터 - pemetrexed disodico heptahidrato 25 mg/mL solucion inyectable ((주)보령) - lote 2102E00700",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202501037"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote 24001 de 틴자정150밀리그램 (nizatidina 150 mg) de 에이치엘비제약(주) por posible deteccion de NDMA por encima del limite",
+      "producto": "Farmaco",
+      "ifa": "Nizatidina - 틴자정150밀리그램 150 mg comprimido (에이치엘비제약(주)) - lote 24001",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201400450"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion de la mascarilla sanitaria 윈썬프리미엄보건방역마스크 (KF94, talla grande) de 주식회사 디케이글로벌 por eficiencia de captacion de particulas no conforme",
+      "producto": "Dispositivo Medico",
+      "ifa": "윈썬프리미엄보건방역마스크 (KF94)(대형)(흰색, 검정색) (주식회사 디케이글로벌)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202204470"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-22",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 397-2026 - resultados falsos positivos en la prueba rapida de embarazo HCG marca ALLTEST",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "HCG (Human Chorionic Gonadotropin) Pregnancy Rapid Test \"Cassette\" marca ALLTEST, ref. FHC-U202 (RS INVIMA 2022RD-0007695, Biolore Ltda., lote ATHCG25110029)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/hcg-human-chorionic-gonadotropin-pregnancy-rapid-test-cassette-prueba-rapida-de-embarazo-hcg-gonadotropina-corionica-hum"
+    },
     {
       "y": 2026,
       "fecha": "2026-11-20",
@@ -148,6 +668,84 @@
       "ifa": "닥터피앤비프리미엄보건용마스크(KF94)(흰색) (주식회사에스디클린) - lote 1004",
       "atc": "Sin ATC",
       "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202501844"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-20",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: alerta sanitaria 396-2026 - reactividad inesperada en la celula de tamizaje III del reactivo ID DIACELL I-II-III",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "ID DIACELL I-II-III (RS 2024RD-0009027, Biocientifica Ltda., lote 133842941 / IHD 45184.94.1)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/id-diacell-i-ii-iii-396-2026"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-20",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de los sistemas de endoprotesis Relay Pro y Treo de Bolton Medical por problema de esterilidad",
+      "producto": "Dispositivo Medico",
+      "ifa": "Relay Pro y Treo Stent-Graft Systems - Treo Abdominal Stent Graft System y Relay Pro Thoracic Stent-Graft System (Bolton Medical Inc. / Terumo Aortic), multiples modelos y lotes",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/relayr-pro-and-treor-stent-graft-systems"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-20",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Philips Bridge Balloon Prep Kit de Merit Medical Systems Inc. (ref. 47903/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Philips Bridge Balloon Prep Kit - Merit Medical Systems Inc.",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/07/2026/47903-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-20",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Centricity PACS; Enterprise Archive de GE Healthcare (ref. 53560/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Centricity PACS; Enterprise Archive - GE Healthcare",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/17/2026/53560-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-20",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "FDA Early Alert: Heraeus Medical Components retira determinadas guias vasculares por desprendimiento del recubrimiento hidrofilo",
+      "producto": "Dispositivo Medico",
+      "ifa": "Guias vasculares Navilyst Vascular Guidewire (H965457461, H965457471), Spectrum Vascular Guidewire (H965457461, H965457471) y Arrow Marked Guidewire (PW-18080-HN, PW-16130-HN) - Heraeus Medical Components (Heraeus Medevio)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/early-alert-heraeus-medical-components-removes-vascular-guidewires"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-20",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro y destruccion del lote 02BS2601 del tinte capilar 수자타헤나브라운 de 로아글로벌주식회사",
+      "producto": "Cosmetico",
+      "ifa": "수자타헤나브라운 (로아글로벌주식회사) - lote 02BS2601",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202303289"
     },
     {
       "y": 2026,
@@ -460,6 +1058,19 @@
       "ifa": "Tirzepatida (Mounjaro)",
       "atc": "Sin ATC",
       "enlace": "https://www.lakemedelsverket.se/sv/nyheter/nya-rekommendationer-for-anvandning-av-preventivmedel-till-kvinnor-som-behandlas-med-mounjaro-tirzepatid"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-19",
+      "pais": "Espana",
+      "agencia": "AEMPS",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AEMPS: actualizacion de las recomendaciones anticonceptivas durante el tratamiento con tirzepatida - Nota de seguridad MUH (FV) 04/2026",
+      "producto": "Farmaco",
+      "ifa": "Tirzepatida (Mounjaro)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aemps.gob.es/informa/la-aemps-informa-sobre-la-actualizacion-de-las-recomendaciones-anticonceptivas-durante-el-tratamiento-con-tirzepatida/"
     },
     {
       "y": 2026,
