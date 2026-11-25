@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-24T21:00:12Z",
-  "total": 3084,
+  "generatedAt": "2026-11-25T20:22:41Z",
+  "total": 3100,
   "stats": {
-    "total": 3084,
-    "thisYear": 1636,
+    "total": 3100,
+    "thisYear": 1652,
     "agencies": 28,
     "countries": 29
   },
@@ -38,13 +38,13 @@
     ],
     [
       "2026",
-      1636
+      1652
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      557
+      560
     ],
     [
       "BfArM",
@@ -52,15 +52,15 @@
     ],
     [
       "Health Canada",
-      325
+      329
     ],
     [
       "AEMPS",
-      258
+      260
     ],
     [
       "MHRA",
-      236
+      237
     ],
     [
       "DIGEMID",
@@ -80,10 +80,88 @@
     ],
     [
       "INVIMA",
-      135
+      139
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre las centrales de vigilancia BeneVision WorkStation / ViewStation de Shenzhen Mindray (R2635648)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Centrale de surveillance - BeneVision WorkStation / ViewStation (Shenzhen Mindray Bio-Medical Electronics Co., Ltd.)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/centrale-de-surveillance-benevision-workstation-viewstation-shenzhen-mindray-bio-medical-electronics-co-ltd"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre los sets de medicion invasiva de la presion con Xtrans o DPT-6000 de Codan pvb Critical Care (R2635832)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sets de mesure invasive de la pression avec Xtrans ou DPT-6000 (Codan pvb Critical Care GmbH)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/sets-de-mesure-invasive-de-la-pression-avec-xtrans-ou-dpt-6000-codan-pvb-critical-care-gmbh"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el kit antivaho Fred 2 para endoscopia de Medtronic / Covidien (R2635859)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Endoscope (accesorio) - Trousse anti-buee Fred 2 (Medtronic / Covidien LLC)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/endoscope-accessoire-trousse-anti-buee-fred-2-medtronic-covidien-llc"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Reino Unido",
+      "agencia": "MHRA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MHRA: Class 3 Medicines Recall EL(26)A/51 - retiro del lote 5GJ0551 de Bexarotene 75 mg capsulas blandas de Mercury Pharmaceuticals",
+      "producto": "Farmaco",
+      "ifa": "Bexaroteno - Bexarotene 75 mg soft capsules (Mercury Pharmaceuticals Limited) - lote 5GJ0551",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gov.uk/drug-device-alerts/class-3-medicines-recall-mercury-pharmaceuticals-limited-bexarotene-75-mg-soft-capsules-el-26-a-slash-51"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Austria",
+      "agencia": "BASG",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "BASG: retiro (Rueckruf) de lotes de los productos de tejido oseo Accell Connexus y OsteoSurge 100 de Orthofix por particulas plasticas",
+      "producto": "Dispositivo Medico",
+      "ifa": "Accell Connexus (matriz osea desmineralizada) y OsteoSurge 100 (Orthofix)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.basg.gv.at/marktbeobachtung/amtliche-nachrichten/detail/information-rueckruf-von-chargen-durch-orthofix-accell-connexus-und-osteosurge-100"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Belgica",
+      "agencia": "FAMHP",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "FAMHP: PRAC de noviembre de 2026 - inicio de la revision de seguridad de Deanxit y de una senal de seguridad relacionada con las inmunoglobulinas humanas normales",
+      "producto": "Farmaco",
+      "ifa": "Flupentixol/melitraceno (Deanxit) e inmunoglobulina humana normal",
+      "atc": "Sin ATC",
+      "enlace": "https://www.famhp.be/en/news/prac_november_2026_start_of_safety_review_of_the_medicine_deanxit_and_a_safety_signal_related"
+    },
     {
       "y": 2026,
       "fecha": "2026-11-24",
@@ -278,6 +356,110 @@
       "ifa": "Vortioxetina - Brintellix 5 mg comprimidos recubiertos con pelicula (Quadrant Pharmaceuticals Limited, importacion paralela)",
       "atc": "Sin ATC",
       "enlace": "https://www.gov.uk/drug-device-alerts/class-2-medicines-recall-quadrant-pharmaceuticals-limited-parallel-import-brintellix-5-mg-film-coated-tablets-el-26-a-slash-49"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: informe de seguridad 160-2026 - grieta en la ranura de la junta del esterilizador Solsus66 de Getinge",
+      "producto": "Dispositivo Medico",
+      "ifa": "Esterilizadores para uso en ambientes hospitalarios - Accesorios y repuestos; esterilizador Solsus66 (RS INVIMA 2024DM-0029342, Getinge Colombia S.A.S., varios lotes)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/esterilizadores-para-uso-en-ambientes-hospitalarios-accesorios-y-repuestos-esterilizadores-para-uso-en-ambientes-hospita"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: informe de seguridad 161-2026 - discrepancias en las instrucciones de uso en portugues de los cateteres de presion intracraneal Raumedic / Neurovent",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistema de cateter de presion de precision neuroquirurgico y accesorios Raumedic; cateteres de presion intracraneal Raumedic / Neurovent (RS INVIMA 2022DM-0007461-R1, La Instrumentadora S.A.S.)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/sistema-de-cateter-de-presion-de-precision-neuroquirurgico-y-accesorios-raumedic_cateteres-de-presion-intracraneal-raume"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: informe de seguridad 162-2026 - defecto de software que interrumpe el examen en equipos de resonancia magnetica Philips",
+      "producto": "Dispositivo Medico",
+      "ifa": "Equipos de Resonancia Magnetica / Resonadores Magneticos (RS 2024DM-0012079-R1, Philips Colombiana S.A.S., varias series - ver anexo)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/equipos-de-resonancia-magnetica-resonadores-magneticos-162-2026"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "INVIMA: informe de seguridad 163-2026 - reversion no notificada de las unidades de medida en los analizadores DxC 500i de Beckman Coulter",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "DXC 500i Clinical Analyzer - Analizador clinico / Modulo DxC 500 AU con modulo ISE, DxC500i (RS INVIMA 2024DM-0029677, Beckman Coulter, Inc.)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/dxc-500i-clinical-analyzer-analizador-clinico_modulo-dxc-500-au-con-modulo-ise-dxc500i"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: correccion de los dispositivos de acceso Luer y sets de extension CARESITE Micro de B. Braun por piston que permanece deprimido",
+      "producto": "Dispositivo Medico",
+      "ifa": "CARESITE Micro Luer Access Device y CARESITE Micro Smallbore / Extension Sets (B. Braun Medical Inc., multiples lotes, ref. 354265, 354269, 354276 y otras)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/caresite-micror-luer-access-device-and-extension-sets"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Health Canada: retirada del mercado canadiense de TAVNEOS (avacopan) y plan de transicion de pacientes",
+      "producto": "Farmaco",
+      "ifa": "Avacopan - TAVNEOS capsulas de 10 mg",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/tavneos-avacopan-canadian-patient-transition-and-market-withdrawal-plan"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de lotes de la jeringa de perdida de resistencia Teleflex por fecha de caducidad incorrecta en el etiquetado",
+      "producto": "Dispositivo Medico",
+      "ifa": "Teleflex Loss Of Resistance Syringe, ref. LR-05502 (Arrow International LLC, subsidiaria de Teleflex Incorporated, mas de 10 lotes)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/teleflextm-loss-resistance-syringe"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-24",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de la unidad base QinFlow Warrior Lite por blindaje mal ensamblado en la PCBA con riesgo de cortocircuito",
+      "producto": "Dispositivo Medico",
+      "ifa": "QinFlow Warrior Lite Base Unit (Quality In Flow - QinFlow Ltd.)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/qinflow-warrior-lite-base-unit"
     },
     {
       "y": 2026,
@@ -593,6 +775,19 @@
     },
     {
       "y": 2026,
+      "fecha": "2026-11-23",
+      "pais": "Espana",
+      "agencia": "AEMPS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "AEMPS (Nota Informativa PS, 48/2026): retirada de determinadas pastas Esenta Stomahesive por posibilidad de contaminacion con material extrano",
+      "producto": "Dispositivo Medico",
+      "ifa": "Pastas Esenta Stomahesive (Convatec Ltd., distribuidas en Espana por Convatec S.L. y Bidafarma) - determinados lotes",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aemps.gob.es/informa/la-aemps-informa-de-la-retirada-de-determinadas-pastas-esenta-stomahesive-debido-a-la-posibilidad-de-contaminacion-con-material-extrano/"
+    },
+    {
+      "y": 2026,
       "fecha": "2026-11-22",
       "pais": "Colombia",
       "agencia": "INVIMA",
@@ -746,6 +941,19 @@
       "ifa": "수자타헤나브라운 (로아글로벌주식회사) - lote 02BS2601",
       "atc": "Sin ATC",
       "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202303289"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-20",
+      "pais": "Espana",
+      "agencia": "AEMPS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "AEMPS (Nota Informativa PS, 47/2026): deteccion de un certificado de marcado CE falsificado de la empresa Nanjing Bestview Laser S&T Co., Ltd.",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas terapeuticos laser Nd:YAG de conmutacion Q (Q-Switched), sistemas terapeuticos laser de CO2 y sistemas terapeuticos laser de diodo (Nanjing Bestview Laser S&T Co., Ltd., China)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aemps.gob.es/informa/la-aemps-informa-sobre-la-deteccion-de-un-certificado-de-marcado-ce-falsificado-de-la-empresa-nanjing-bestview-laser-st-co-ltd/"
     },
     {
       "y": 2026,
