@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-26T19:59:13Z",
-  "total": 3100,
+  "generatedAt": "2026-11-27T19:48:12Z",
+  "total": 3145,
   "stats": {
-    "total": 3100,
-    "thisYear": 1652,
+    "total": 3145,
+    "thisYear": 1697,
     "agencies": 28,
     "countries": 29
   },
@@ -38,29 +38,29 @@
     ],
     [
       "2026",
-      1652
+      1697
     ]
   ],
   "agencyChart": [
     [
       "ANSM",
-      560
+      566
     ],
     [
       "BfArM",
-      340
+      347
     ],
     [
       "Health Canada",
-      329
+      339
     ],
     [
       "AEMPS",
-      260
+      261
     ],
     [
       "MHRA",
-      237
+      239
     ],
     [
       "DIGEMID",
@@ -72,18 +72,330 @@
     ],
     [
       "FDA",
-      157
+      159
     ],
     [
       "MFDS",
-      146
+      149
     ],
     [
       "INVIMA",
-      139
+      146
     ]
   ],
   "data": [
+    {
+      "y": 2026,
+      "fecha": "2026-11-27",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: rappel del reactivo de bioquimica Infinity Ammonia Standard Set de Fisher Diagnostics (rappel n. R2632634)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Infinity Ammonia Standard Set (reactivo de bioquimica para determinacion de amoniaco)",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/biochimie-reactif-infinity-ammonia-standard-set-fisher-diagnostics"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-27",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro del producto 휴트라돌세미정 de (주)휴온스 por exceso de la impureza N-nitroso-N-desmethyl-tramadol",
+      "producto": "Farmaco",
+      "ifa": "Tramadol clorhidrato / acetaminofen (휴트라돌세미정 comprimidos)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200712587"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-27",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro del medicamento herbal 현진백강잠 de (주)현진제약 por micotoxinas en el ensayo de pureza",
+      "producto": "Farmaco",
+      "ifa": "Baekgangjam (Bombyx batryticatus, material medicinal herbal)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200504476"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-27",
+      "pais": "Corea del Sur",
+      "agencia": "MFDS",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MFDS: retiro de la mascarilla sanitaria 제로가드덴탈형황사방역마스크(KF94)(대형,소형)(흰색) de 주식회사 제로가드 por eficiencia de captacion de particulas no conforme",
+      "producto": "Dispositivo Medico",
+      "ifa": "Mascarilla sanitaria 제로가드덴탈형황사방역마스크(KF94)(대형,소형)(흰색)",
+      "atc": "Sin ATC",
+      "enlace": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202600912"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-27",
+      "pais": "Europa",
+      "agencia": "EMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "EMA: conclusiones de la reunion del Comite para la Evaluacion de Riesgos en Farmacovigilancia (PRAC) del 23 al 26 de noviembre de 2026",
+      "producto": "Farmaco",
+      "ifa": "Varios",
+      "atc": "Sin ATC",
+      "enlace": "https://www.ema.europa.eu/en/news/meeting-highlights-pharmacovigilance-risk-assessment-committee-prac-23-26-november-2026"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-27",
+      "pais": "Dinamarca",
+      "agencia": "DINAMARCA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Agencia Danesa de Medicamentos: los medicamentos de venta libre para la caida del cabello con minoxidil pueden causar reacciones adversas graves en gatos y perros",
+      "producto": "Farmaco",
+      "ifa": "Minoxidil (solucion/espuma cutanea de venta libre para la alopecia)",
+      "atc": "Sin ATC",
+      "enlace": "https://laegemiddelstyrelsen.dk/en/news/2026/over-the-counter-hair-loss-medicines-for-human-use-can-cause-a-range-of-serious-adverse-reactions-in-cats-and-dogs/"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: rappel de los lotes 1316 y 1317 de Humexlib Estado Gripal paracetamol/vitamina C/feniramina 500 mg/200 mg/25 mg polvo para solucion oral de Laboratoires Urgo Healthcare",
+      "producto": "Farmaco",
+      "ifa": "Paracetamol / Acido ascorbico (vitamina C) / Feniramina",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/humexlib-etat-grippal-paracetamol-vitamine-c-pheniramine-500-mg-200-mg-25-mg-poudre-pour-solution-buvable-en-sachet-laboratoires-urgo-healthcare"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "ANSM: rappel del calentador de sangre Warrior Lite Base Unit de Quality In Flow Ltd (rappel n. R2635016)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Calentador de sangre y fluidos Warrior Lite Base Unit",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/rechauffeur-de-sang-warrior-lite-base-unit-quality-in-flow-ltd"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el ventilador de reanimacion Hamilton C6 de Hamilton Medical (informacion n. R2635857)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Ventilador de reanimacion Hamilton C6",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/ventilateur-de-reanimation-hamilton-c6-hamilton-medical-2"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre los mamografos 3Dimensions y Selenia Dimensions Systems de Hologic, Inc. (informacion n. R2633577)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas de mamografia 3Dimensions y Selenia Dimensions",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/mammographe-rx-3dimensions-and-selenia-dimensions-systems-hologic-inc"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Francia",
+      "agencia": "ANSM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANSM: informacion de seguridad sobre el software de biologia molecular SeqOne Platform de Seqone (informacion n. R2635455)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Software de biologia molecular SeqOne Platform",
+      "atc": "Sin ATC",
+      "enlace": "https://ansm.sante.fr/informations-de-securite/biologie-moleculaire-logiciel-seqone-platform-seqone"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Leon Plus Edition de Loewenstein Medical GmbH & Co. KG (ref. 54458/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Equipo de anestesia Leon Plus Edition",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/12/2026/54458-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre EUROLabOffice 4.0 de EUROIMMUN Medizinische Labordiagnostika AG (ref. 54559/26)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Software de laboratorio EUROLabOffice 4.0",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/08/2026/54559-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro/correccion de McKesson Radiology y Change Healthcare Radiology Solutions",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas de informacion radiologica McKesson Radiology y Change Healthcare Radiology Solutions",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/mckesson-radiology-and-change-healthcare-radiology-solutions"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Reino Unido",
+      "agencia": "MHRA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "MHRA Safety Roundup noviembre 2026 - Duvyzat (givinostat): recomendaciones provisionales de mitigacion del riesgo tras notificaciones de muertes de pacientes en tratamiento",
+      "producto": "Farmaco",
+      "ifa": "Givinostat (Duvyzat)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gov.uk/drug-device-alerts/mhra-safety-roundup-november-2026"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "INVIMA ALERTA SANITARIA N. 413-2026: productos fraudulentos ARTRI+PLUS y ARTROSIN PLUS capsulas",
+      "producto": "Farmaco",
+      "ifa": "ARTRI+PLUS y ARTROSIN PLUS capsulas",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/productos-fraudulentos-artriplus-y-artrosin-plus"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "INVIMA ALERTA SANITARIA N. 412-2026: comercializacion del producto fraudulento identificado como ARTI FORTE ARTRIVID LHA ORIGINAL",
+      "producto": "Farmaco",
+      "ifa": "ARTI FORTE ARTRIVID LHA ORIGINAL",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/comercializacion-del-producto-fraudulento-identificado-como-arti-forte-artrivid-lha"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "INVIMA ALERTA SANITARIA N. 411-2026: producto fraudulento '14-DAY' APPETITE CONTROL capsula marca Lanomiz natural",
+      "producto": "Farmaco",
+      "ifa": "'14-DAY' APPETITE CONTROL capsula (marca Lanomiz natural)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/14-day-appetite-control"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INVIMA INFORME DE SEGURIDAD N. 167-2026: riesgo de trombocitopenia asociado a acido acetilsalicilico (AAS)",
+      "producto": "Farmaco",
+      "ifa": "Acido acetilsalicilico (AAS)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/riesgo-de-trombocitopenia-asociado-a-acido-acetilsalicilico-aas"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INVIMA INFORME DE SEGURIDAD N. 166-2026: riesgo de deficiencia de vitamina B6 y convulsiones asociado al uso de carbidopa/levodopa",
+      "producto": "Farmaco",
+      "ifa": "Carbidopa / Levodopa",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/riesgo-de-deficiencia-de-vitamina-b6-y-convulsiones-asociado-al-uso-de-carbidopalevidopa"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS Alerta Sanitaria 338: falsificacion de OZEMPIC (semaglutida) y Saxenda (liraglutida) y comercializacion ilegal de semaglutida generica",
+      "producto": "Farmaco",
+      "ifa": "Semaglutida (OZEMPIC) / Liraglutida (Saxenda)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1118087/Alerta_Sanitaria_Novo_Nordisk_26112026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS Alerta Sanitaria 337: comercializacion ilegal de OFEV (nintedanib) capsulas",
+      "producto": "Farmaco",
+      "ifa": "Nintedanib (OFEV capsulas 100 mg y 150 mg)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1118086/Alerta_Sanitaria_Ofev_26112026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "México",
+      "agencia": "COFEPRIS",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "COFEPRIS Aviso de Riesgo: falsificacion de Filatil (filgrastim) 300 mcg/mL solucion inyectable",
+      "producto": "Farmaco",
+      "ifa": "Filgrastim (Filatil 300 mcg/mL solucion inyectable)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gob.mx/cms/uploads/attachment/file/1118084/Aviso_de_Riesgo_Filatil_26112026.pdf"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-26",
+      "pais": "Espana",
+      "agencia": "AEMPS",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "AEMPS (Nota Informativa PS, 49/2026): problema en la aplicacion para la diabetes MiniMed Go en dispositivos Android 15 que afecta a las alertas sonoras",
+      "producto": "Dispositivo Medico",
+      "ifa": "Aplicacion MiniMed Go (Medtronic Iberica S.A.) para sistemas de monitorizacion de glucosa",
+      "atc": "Sin ATC",
+      "enlace": "https://www.aemps.gob.es/informa/la-aemps-informa-de-un-problema-en-la-aplicacion-para-la-diabetes-minimed-go-en-dispositivos-android-15-que-afecta-a-las-alertas-sonoras/"
+    },
     {
       "y": 2026,
       "fecha": "2026-11-25",
@@ -161,6 +473,227 @@
       "ifa": "Flupentixol/melitraceno (Deanxit) e inmunoglobulina humana normal",
       "atc": "Sin ATC",
       "enlace": "https://www.famhp.be/en/news/prac_november_2026_start_of_safety_review_of_the_medicine_deanxit_and_a_safety_signal_related"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Cryo.s de Greiner Bio-One GmbH (ref. 51135/26)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Tubos de criopreservacion Cryo.s",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/08/2026/51135-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre el analizador automatico de coagulacion sanguinea de Sysmex Corporation (ref. 49953/26)",
+      "producto": "Dispositivo Medico de diagnostico in vitro",
+      "ifa": "Analizador automatico de coagulacion sanguinea (Sysmex)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/08/2026/49953-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Monitoring s.t. single, Xtrans, 3ml/h, ABSS de Codan pvb Critical Care GmbH (ref. 49449/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sets de medicion invasiva de la presion Monitoring s.t. single con Xtrans",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/10/2026/49449-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre OPMI Lumera i 6216 de Carl-Zeiss-Meditec AG (ref. 53222/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Microscopio quirurgico oftalmologico OPMI Lumera i 6216",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/14/2026/53222-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Alemania",
+      "agencia": "BfArM",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "BfArM: Informacion urgente de seguridad sobre Evoke System de Saluda Medical Pty Ltd (ref. 48343/26)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistema de neuroestimulacion medular implantable Evoke",
+      "atc": "Sin ATC",
+      "enlace": "https://www.bfarm.de/SharedDocs/Kundeninfos/DE/01/2026/48343-26_kundeninfo_de.html"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "Health Canada advierte sobre el riesgo muy raro pero grave de perdida de vision con los medicamentos con semaglutida",
+      "producto": "Farmaco",
+      "ifa": "Semaglutida (Ozempic, Rybelsus, Wegovy, Plosbrio, Poviztra y genericos)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/health-canada-warns-very-rare-serious-risk-vision-loss-semaglutide-drugs"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de diversos productos de salud natural de Clef des Champs Inc. por resultado fuera de especificacion (contaminacion microbiana)",
+      "producto": "Farmaco",
+      "ifa": "Diversos productos de salud natural marca Clef des Champs Inc.",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/various-clef-champs-inc-natural-health-products-out-specification-microbial"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de los puertos implantables SmartPort de AngioDynamics, Inc. (Navilyst Medical)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Puertos implantables SmartPort / kits SmartPort CT",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/smartport-implantable-ports"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: retiro de los desfibriladores HeartSine Samaritan PAD 350P/360P/500P de HeartSine Technologies (Stryker)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Desfibriladores externos automaticos HeartSine Samaritan PAD 350P / 360P / 500P",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/heartsiner-samaritanr-pad-350p360p500p"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: correccion urgente de dispositivo medico para la bomba de jeringa Novum IQ de Baxter Corporation",
+      "producto": "Dispositivo Medico",
+      "ifa": "Bomba de infusion de jeringa Novum IQ",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/novum-iq-syringe-pump"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "FDA: Tandem Diabetes retira las bombas de insulina Tandem Mobi por falsas alarmas de oclusion (retiro de la clase mas grave)",
+      "producto": "Dispositivo Medico",
+      "ifa": "Bombas de insulina Tandem Mobi con tecnologia interoperable",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/insulin-pump-recall-tandem-diabetes-removes-tandem-mobi-insulin-pumps"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "EE.UU.",
+      "agencia": "FDA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "FDA (Early Alert): ICU Medical retira tubos endotraqueales Portex por variabilidad del plastificante de la resina",
+      "producto": "Dispositivo Medico",
+      "ifa": "Tubos endotraqueales Portex",
+      "atc": "Sin ATC",
+      "enlace": "https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/early-alert-icu-medical-removes-portex-endotracheal-tubes"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Reino Unido",
+      "agencia": "MHRA",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "MHRA EL(26)A/52: Class 4 Medicines Defect Notification de Takeda UK Limited por error en las instrucciones de administracion y el etiquetado de PROSTAP PD DCS 1,88 mg",
+      "producto": "Farmaco",
+      "ifa": "Leuprorelina acetato (PROSTAP PD DCS 1,88 mg polvo y disolvente para suspension de liberacion prolongada en jeringa precargada)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.gov.uk/drug-device-alerts/class-4-medicines-defect-notification-takeda-uk-limited-prostap-pd-dcs-1-dot-88-mg-powder-and-solvent-for-prolonged-release-suspension-for-injection-in-pre-filled-syringe-el-26-a-slash-52"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INVIMA INFORME DE SEGURIDAD N. 165-2026: sistema de rayos X cardiovascular Allura Xper de Philips",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistema de rayos X cardiovascular Allura Xper (Philips Colombiana S.A.S., RS INVIMA 2019EBC-0002432-R1)",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/sistema-de-rayos-x-cardiovascular"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Colombia",
+      "agencia": "INVIMA",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "INVIMA INFORME DE SEGURIDAD N. 164-2026: sistemas de arco en C para cirugia Philips BV Endura, BV Pulsera, BV Vectra, Veradius y Zenition",
+      "producto": "Dispositivo Medico",
+      "ifa": "Sistemas moviles de rayos X con arco en C Philips BV Endura, BV Pulsera, BV Vectra, Veradius y Zenition",
+      "atc": "Sin ATC",
+      "enlace": "https://www.invima.gov.co/alertas-sanitarias/sistema-arco-en-c-para-cirugia-philips-sistema-arco-en-c-para-cirugia_bv-endura-bv-pulsera-bv-vectra-veradius-y-zenition"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "falsificacion",
+      "tipoLabel": "Falsificacion",
+      "titulo": "ANMAT Disposicion N. 7556/2026: prohibicion de uso, comercializacion y distribucion del producto medico SPRAY FRIO - GMP",
+      "producto": "Dispositivo Medico",
+      "ifa": "SPRAY FRIO - GMP, Industria Argentina, contenido neto 440 ml",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-prohibe-el-producto-spray-frio-gmp"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-11-25",
+      "pais": "Argentina",
+      "agencia": "ANMAT",
+      "tipo": "seguridad",
+      "tipoLabel": "Seguridad",
+      "titulo": "ANMAT Disposicion N. 7557/26: suspension de la elaboracion, comercializacion, importacion y uso de la rosiglitazona y de todas las especialidades medicinales que la contengan",
+      "producto": "Farmaco",
+      "ifa": "Rosiglitazona",
+      "atc": "Sin ATC",
+      "enlace": "https://www.argentina.gob.ar/noticias/anmat-suspendio-la-elaboracion-y-comercializacion-de-medicamentos-que-contienen"
     },
     {
       "y": 2026,
@@ -14045,6 +14578,58 @@
       "ifa": "Reactivo ID-Card LISS/Combs",
       "atc": "Sin ATC",
       "enlace": "https://ansm.sante.fr/informations-de-securite/immuno-hematologie-reactif-id-card-liss-combs-diamed"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-20",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro voluntario de IMRIS Table ORT 300 (Imris Imaging) por riesgo asociado al actuador lineal y al mecanismo de bloqueo de rotacion",
+      "producto": "Dispositivo Medico",
+      "ifa": "Mesa de quirofano Table ORT 300 (Imris Imaging), serie 10004515",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/imris-table-ort-300"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-20",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de Patient Information Centre iX (Philips) por fallo del watchdog que puede impedir la generacion o registro de alarmas",
+      "producto": "Dispositivo Medico",
+      "ifa": "Patient Information Centre iX (PIC iX), versiones 4.0 a 4.5 (Philips Medizin Systeme Boeblingen)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/patient-information-centre-ix"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-20",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de Theragun PRO (Therabody) por sobrecalentamiento del cargador y riesgo de evento termico",
+      "producto": "Dispositivo Medico",
+      "ifa": "Theragun PRO / cargador del dispositivo de masaje Theragun G4PRO (Therabody), modelos QR004C-RBA y TG-FC-50",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/theragun-pro"
+    },
+    {
+      "y": 2026,
+      "fecha": "2026-08-20",
+      "pais": "Canada",
+      "agencia": "Health Canada",
+      "tipo": "calidad",
+      "tipoLabel": "Calidad",
+      "titulo": "Health Canada: Retiro de Centricity Enterprise Archive y PACS Workstation (GE Healthcare) por posible asociacion incorrecta de imagenes migradas a un paciente equivocado",
+      "producto": "Dispositivo Medico",
+      "ifa": "Centricity Enterprise Archive (EA 8.0, EA 4.0) y PACS Workstation - Software (GE Healthcare)",
+      "atc": "Sin ATC",
+      "enlace": "https://recalls-rappels.canada.ca/en/alert-recall/centricitytm-enterprise-archive-and-pacs-workstation"
     },
     {
       "y": 2026,
